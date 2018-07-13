@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "GrantedToPour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GrantedToPour</h2>
+
+
+<style>
+    .reasonFont {
+        font-size: 20px;
+        margin-bottom: 20px !important;
+    }
+
+    .noticeInfo {
+        margin-top: 20px;
+        margin-bottom: 50px !important;
+        text-align: center;
+    }
+</style>
+<div class="row-fluid">
+    <!--/span-->
+    <div class="span12" id="content">
+        <div class="row-fluid">
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left">PERMISSION GRANTED TO POUR</div>
+                </div>
+                <div class="block-content collapse in">
+                    <div style="padding-left: 112px;">
+                        <div class="row">
+                            <div class="span12 reasonFont noticeInfo" style="margin-left:20px;">
+                                City of Portland, Bureau of Transportation, <br /> Sidewalk Maintenance
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12 noticeInfo">
+                                <div class="span6">
+                                    Affidavit #
+                                </div>
+                                <div class="span6">
+                                    Permit #
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12 reasonFont" style="margin-left:20px;">
+                                Address
+                            </div>
+                            <div class="span12">
+                                <textarea style="width:95%"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12 reasonFont noticeInfo">
+                                <div class="span4">
+                                    Sidewalk
+                                </div>
+                                <div class="span4">
+                                    Driveway
+                                </div>
+                                <div class="span4">
+                                    Curb
+                                </div>
+                                <div class="span4">
+                                    Partial
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="span12 reasonFont ">
+                                <div class="span6">
+
+                                    <div class="span12" style="margin-left:20px;">
+                                        Match existing joint pattern of abutting sidewalk, and use proper finishing tools after brooming lightly in direction opposite of pedestrian travel, unless otherwise directed.
+                                    </div>
+                                    <div class="span12 ">
+                                        Place construction/deep joints as indicated/marked/discussed.
+                                    </div>
+                                    <div class="span12">
+                                        Tool deep joints w/max 3/8" radius edger, with back to back shine.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12 reasonFont" style="margin-left:20px;">
+                                Other
+                            </div>
+                            <div class="span12">
+                                <textarea style="width:95%"></textarea>
+                            </div>
+                        </div>
+                        <div class="row reasonFont noticeInfo">
+                            Contractor/Property Owner is responsible for graffiti prevention <br /> and correction.
+                            A final inspection is required 2 days after concrete is poured,<br /> forms removed, backfill placed and compacted to grade.Call the<br /> Sidewalk Maintenance Office at 503-823-1711 to request a final<br /> inspection to close posting.
+                        </div>
+                        <div class="row reasonFont">
+                            <div class="span3">
+                                Contractor/Property Owner:
+                            </div>
+                            <div class="span9">
+                            </div>
+                        </div>
+                        <div class="row reasonFont">
+                            <div class="span3">
+                                Inspector
+                            </div>
+                            <div class="span3">
+                                Date :
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

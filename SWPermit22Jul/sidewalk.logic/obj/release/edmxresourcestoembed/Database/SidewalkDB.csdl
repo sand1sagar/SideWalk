@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SidewalkContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="DocType" />
+    </Key>
+    <Property Name="DocType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AffidavitActivity" Relationship="Self.FK_AffidavitActivity_Activity" FromRole="Activity" ToRole="AffidavitActivity" />
+  </EntityType>
+  <EntityType Name="Affidavit">
+    <Key>
+      <PropertyRef Name="AffidavitID" />
+    </Key>
+    <Property Name="AffidavitID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Inspector_Key" Type="Int32" />
+    <Property Name="InspectionDate" Type="DateTime" Precision="3" />
+    <Property Name="AffidavitStatus" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="VisioDiagram" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TrackIT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RNO" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="QtrSection" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="PropertyID" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="LegalDesc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Owner1" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="Owner2" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="Owner3" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerCity" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerState" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerZip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SiteAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SiteStreetNumber" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="SiteDistrict" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SiteStreetName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="SiteStreetDesignator" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SiteCity" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="SiteZip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CityRepair" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="OwnerRepair" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ContractorRepair" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="RepairDueDate" Type="DateTime" Precision="0" />
+    <Property Name="RepairNoticeSentDate" Type="DateTime" Precision="0" />
+    <Property Name="RepairNoticeSentBy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CityRepairStart" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CityRepairBy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HoldUntilDate" Type="DateTime" Precision="0" />
+    <Property Name="HoldUntilBy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="permit_no" Type="Int32" />
+    <Property Name="permit_issued" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="permit_extended" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="date_issued" Type="DateTime" Precision="3" />
+    <Property Name="date_expired" Type="DateTime" Precision="3" />
+    <Property Name="contractor" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="builder_board_no" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="date_cancelled" Type="DateTime" Precision="3" />
+    <Property Name="cancelled_by" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="last_action" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="0" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VisioRevision" Type="Int32" />
+    <NavigationProperty Name="Inspector" Relationship="Self.FK_Affidavit_Inspector" FromRole="Affidavit" ToRole="Inspector" />
+    <NavigationProperty Name="AffidavitActivity" Relationship="Self.FK_AffidavitDocumentHistory_Affidavit" FromRole="Affidavit" ToRole="AffidavitActivity" />
+    <NavigationProperty Name="AffidavitFinalInspection" Relationship="Self.FK_AffidavitFinalInspection_Affidavit" FromRole="Affidavit" ToRole="AffidavitFinalInspection" />
+    <NavigationProperty Name="AffidavitFormInspection" Relationship="Self.FK_AffidavitFormInspection_Affidavit" FromRole="Affidavit" ToRole="AffidavitFormInspection" />
+    <NavigationProperty Name="AffidavitStatus1" Relationship="Self.FK_AffidavitStatus_Affidavit" FromRole="Affidavit" ToRole="AffidavitStatus" />
+  </EntityType>
+  <EntityType Name="AffidavitActivity">
+    <Key>
+      <PropertyRef Name="AffidavitActivityKey" />
+    </Key>
+    <Property Name="AffidavitActivityKey" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Affidavit_Key" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DocType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DocDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DocAction" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DocUserID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Activity" Relationship="Self.FK_AffidavitActivity_Activity" FromRole="AffidavitActivity" ToRole="Activity" />
+    <NavigationProperty Name="Affidavit" Relationship="Self.FK_AffidavitDocumentHistory_Affidavit" FromRole="AffidavitActivity" ToRole="Affidavit" />
+  </EntityType>
+  <EntityType Name="AffidavitCosts">
+    <Key>
+      <PropertyRef Name="Affidavit_Key" />
+      <PropertyRef Name="CostType_Key" />
+    </Key>
+    <Property Name="Affidavit_Key" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CostType_Key" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ActionDt" Type="DateTime" Precision="3" />
+    <Property Name="Contract_Key" Type="Int32" />
+    <Property Name="Parking" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MoveIn" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Adjustment" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TotalCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Comments" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+    <Property Name="VisioDiagram" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="Batch_Key" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CostType" Relationship="Self.FK_AffidavitCosts_CostType" FromRole="AffidavitCosts" ToRole="CostType" />
+  </EntityType>
+  <EntityType Name="AffidavitCostsDetail">
+    <Key>
+      <PropertyRef Name="Affidavit_Key" />
+      <PropertyRef Name="CostType_Key" />
+      <PropertyRef Name="RepairItem_Key" />
+    </Key>
+    <Property Name="Affidavit_Key" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CostType_Key" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="RepairItem_Key" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unit" Type="Double" />
+    <Property Name="Rate" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="CostType" Relationship="Self.FK_AffidavitCostsDetail_CostType" FromRole="AffidavitCostsDetail" ToRole="CostType" />
+  </EntityType>
+  <EntityType Name="AffidavitFinalInspection">
+    <Key>
+      <PropertyRef Name="AffidavitID" />
+      <PropertyRef Name="InspectionDate" />
+    </Key>
+    <Property Name="AffidavitID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InspectionDate" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="InspectorID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RepairsComplete" Type="Boolean" />
+    <Property Name="Sidewalk" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Driveway" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Curb" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ContractorRepaired" Type="Boolean" />
+    <Property Name="ContractorRepairedNotCitySpec" Type="Boolean" />
+    <Property Name="OwnerRepaired" Type="Boolean" />
+    <Property Name="OwnerRepairedNotCitySpec" Type="Boolean" />
+    <Property Name="RemoveFormsToGrade" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MoreBackfill" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IncompleteRepairs" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MoreGrinding" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="RemoveMarkedAreas" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AsphaltWork" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Graffiti" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NoRightWayPermit" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Affidavit" Relationship="Self.FK_AffidavitFinalInspection_Affidavit" FromRole="AffidavitFinalInspection" ToRole="Affidavit" />
+  </EntityType>
+  <EntityType Name="AffidavitFormInspection">
+    <Key>
+      <PropertyRef Name="AffidavitID" />
+      <PropertyRef Name="InspectionDate" />
+    </Key>
+    <Property Name="AffidavitID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InspectionDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="InspectorID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PermissionGranted" Type="Boolean" />
+    <Property Name="Sidewalk" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Driveway" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Curb" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Partial" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PartialDesciption" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MatchJointPattern" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PlaceJoints" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="ToolDeepJoints" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NotReady" Type="Boolean" />
+    <Property Name="InsufficientBarricades" Type="Boolean" />
+    <Property Name="RemoveDebris" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NotDeep" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CurbHeight" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SawCutEdges" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PermitStatus" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Affidavit" Relationship="Self.FK_AffidavitFormInspection_Affidavit" FromRole="AffidavitFormInspection" ToRole="Affidavit" />
+  </EntityType>
+  <EntityType Name="AffidavitStatus">
+    <Key>
+      <PropertyRef Name="AffidavitID" />
+      <PropertyRef Name="StatusDate" />
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="AffidavitID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StatusDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="StatusID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Notes" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RepairBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PermittedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HoldDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Affidavit" Relationship="Self.FK_AffidavitStatus_Affidavit" FromRole="AffidavitStatus" ToRole="Affidavit" />
+    <NavigationProperty Name="Status" Relationship="Self.FK_AffidavitStatus_Status" FromRole="AffidavitStatus" ToRole="Status" />
+  </EntityType>
+  <EntityType Name="CityContract">
+    <Key>
+      <PropertyRef Name="ContractID" />
+    </Key>
+    <Property Name="ContractID" Type="Int32" Nullable="false" />
+    <Property Name="Contractor_Key" Type="Int32" />
+    <Property Name="RevisedDate" Type="DateTime" Precision="3" />
+    <Property Name="RevisedBy" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Byte" />
+    <Property Name="ContractorName_XXX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Contractor" Relationship="Self.FK_CityContract_Contractor" FromRole="CityContract" ToRole="Contractor" />
+  </EntityType>
+  <EntityType Name="Contractor">
+    <Key>
+      <PropertyRef Name="ContractorID" />
+    </Key>
+    <Property Name="ContractorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractorName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CCB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Contact" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="MBE" Type="Byte" />
+    <Property Name="WBE" Type="Byte" />
+    <Property Name="ESB" Type="Byte" />
+    <Property Name="Active" Type="Byte" />
+    <Property Name="CityContractor" Type="Byte" />
+    <NavigationProperty Name="CityContract" Relationship="Self.FK_CityContract_Contractor" FromRole="Contractor" ToRole="CityContract" />
+  </EntityType>
+  <EntityType Name="CostType">
+    <Key>
+      <PropertyRef Name="CostTypeID" />
+    </Key>
+    <Property Name="CostTypeID" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AffidavitCosts" Relationship="Self.FK_AffidavitCosts_CostType" FromRole="CostType" ToRole="AffidavitCosts" />
+    <NavigationProperty Name="AffidavitCostsDetail" Relationship="Self.FK_AffidavitCostsDetail_CostType" FromRole="CostType" ToRole="AffidavitCostsDetail" />
+  </EntityType>
+  <EntityType Name="Inspector">
+    <Key>
+      <PropertyRef Name="InspectorID" />
+    </Key>
+    <Property Name="InspectorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Staff_Key" Type="Int32" />
+    <Property Name="Active" Type="Boolean" />
+    <NavigationProperty Name="Affidavit" Relationship="Self.FK_Affidavit_Inspector" FromRole="Inspector" ToRole="Affidavit" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_Inspector_Staff" FromRole="Inspector" ToRole="Staff" />
+  </EntityType>
+  <EntityType Name="PrintCode">
+    <Key>
+      <PropertyRef Name="PrintCodeID" />
+    </Key>
+    <Property Name="PrintCodeID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PrintDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RepairItem" Relationship="Self.FK_RepairItem_RepairItemPrintCode" FromRole="PrintCode" ToRole="RepairItem" />
+  </EntityType>
+  <EntityType Name="RepairItem">
+    <Key>
+      <PropertyRef Name="RepairItemID" />
+    </Key>
+    <Property Name="RepairItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RepairItemType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UoM_Key" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PrintCode_Key" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="ShortDescription" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PrintCode" Relationship="Self.FK_RepairItem_RepairItemPrintCode" FromRole="RepairItem" ToRole="PrintCode" />
+    <NavigationProperty Name="UnitOfMeasure" Relationship="Self.FK_RepairItem_RepairItemUnitOfMeasure" FromRole="RepairItem" ToRole="UnitOfMeasure" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="PERNR" />
+    </Key>
+    <Property Name="PERNR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Supervisor" Type="Boolean" />
+    <Property Name="Inspector" Type="Boolean" />
+    <Property Name="Forms" Type="Boolean" />
+    <Property Name="Final" Type="Boolean" />
+    <Property Name="Permit" Type="Boolean" />
+    <Property Name="Active" Type="Boolean" />
+    <NavigationProperty Name="Inspector1" Relationship="Self.FK_Inspector_Staff" FromRole="Staff" ToRole="Inspector" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StatusDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Int16" />
+    <NavigationProperty Name="AffidavitStatus" Relationship="Self.FK_AffidavitStatus_Status" FromRole="Status" ToRole="AffidavitStatus" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UnitOfMeasure">
+    <Key>
+      <PropertyRef Name="UomID" />
+    </Key>
+    <Property Name="UomID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="RepairItem" Relationship="Self.FK_RepairItem_RepairItemUnitOfMeasure" FromRole="UnitOfMeasure" ToRole="RepairItem" />
+  </EntityType>
+  <EntityType Name="sw_posting">
+    <Key>
+      <PropertyRef Name="aff_no" />
+    </Key>
+    <Property Name="aff_no" Type="Int32" Nullable="false" />
+    <Property Name="qtr_sec" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="map_id" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="post_dt" Type="DateTime" Precision="3" />
+    <Property Name="acct_period" Type="Int32" />
+    <Property Name="property_id" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="property_id2" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="property_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="aff_status" Type="Int32" />
+    <Property Name="owner_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="attn1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="attn2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="st_no" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="district" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="st_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="designator" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="inspector_no" Type="Int32" />
+    <Property Name="city_owned_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="owner_resident_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="service_req_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="rep_by_city" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="rep_by_owner" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="partial_repair" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="vacant_lot_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="vacant_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="repair_dt" Type="DateTime" Precision="3" />
+    <Property Name="billed_dt" Type="DateTime" Precision="3" />
+    <Property Name="bill_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="hold_until_dt" Type="DateTime" Precision="3" />
+    <Property Name="permit_no" Type="Int32" />
+    <Property Name="permit_issued" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="permit_extended" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="date_issued" Type="DateTime" Precision="3" />
+    <Property Name="date_expired" Type="DateTime" Precision="3" />
+    <Property Name="contractor" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="builder_board_no" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="license_no" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="date_cancelled" Type="DateTime" Precision="3" />
+    <Property Name="cancelled_by" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="last_action" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="date_added" Type="DateTime" Precision="3" />
+    <Property Name="date_updated" Type="DateTime" Precision="3" />
+    <Property Name="notes" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="sent_dt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_AffidavitActivity_Activity">
+    <End Role="Activity" Type="Self.Activity" Multiplicity="1" />
+    <End Role="AffidavitActivity" Type="Self.AffidavitActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="DocType" />
+      </Principal>
+      <Dependent Role="AffidavitActivity">
+        <PropertyRef Name="DocType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Affidavit_Inspector">
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspector">
+        <PropertyRef Name="InspectorID" />
+      </Principal>
+      <Dependent Role="Affidavit">
+        <PropertyRef Name="Inspector_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitDocumentHistory_Affidavit">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitActivity" Type="Self.AffidavitActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitActivity">
+        <PropertyRef Name="Affidavit_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitFinalInspection_Affidavit">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitFinalInspection" Type="Self.AffidavitFinalInspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitFinalInspection">
+        <PropertyRef Name="AffidavitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitFormInspection_Affidavit">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitFormInspection" Type="Self.AffidavitFormInspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitFormInspection">
+        <PropertyRef Name="AffidavitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitStatus_Affidavit">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitStatus" Type="Self.AffidavitStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitStatus">
+        <PropertyRef Name="AffidavitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitCosts_CostType">
+    <End Role="CostType" Type="Self.CostType" Multiplicity="1" />
+    <End Role="AffidavitCosts" Type="Self.AffidavitCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CostType">
+        <PropertyRef Name="CostTypeID" />
+      </Principal>
+      <Dependent Role="AffidavitCosts">
+        <PropertyRef Name="CostType_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitCostsDetail_CostType">
+    <End Role="CostType" Type="Self.CostType" Multiplicity="1" />
+    <End Role="AffidavitCostsDetail" Type="Self.AffidavitCostsDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CostType">
+        <PropertyRef Name="CostTypeID" />
+      </Principal>
+      <Dependent Role="AffidavitCostsDetail">
+        <PropertyRef Name="CostType_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitStatus_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="1" />
+    <End Role="AffidavitStatus" Type="Self.AffidavitStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="AffidavitStatus">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CityContract_Contractor">
+    <End Role="Contractor" Type="Self.Contractor" Multiplicity="0..1" />
+    <End Role="CityContract" Type="Self.CityContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contractor">
+        <PropertyRef Name="ContractorID" />
+      </Principal>
+      <Dependent Role="CityContract">
+        <PropertyRef Name="Contractor_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inspector_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="PERNR" />
+      </Principal>
+      <Dependent Role="Inspector">
+        <PropertyRef Name="Staff_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RepairItem_RepairItemPrintCode">
+    <End Role="PrintCode" Type="Self.PrintCode" Multiplicity="0..1" />
+    <End Role="RepairItem" Type="Self.RepairItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrintCode">
+        <PropertyRef Name="PrintCodeID" />
+      </Principal>
+      <Dependent Role="RepairItem">
+        <PropertyRef Name="PrintCode_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RepairItem_RepairItemUnitOfMeasure">
+    <End Role="UnitOfMeasure" Type="Self.UnitOfMeasure" Multiplicity="0..1" />
+    <End Role="RepairItem" Type="Self.RepairItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnitOfMeasure">
+        <PropertyRef Name="UomID" />
+      </Principal>
+      <Dependent Role="RepairItem">
+        <PropertyRef Name="UoM_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Activity" EntityType="Self.Activity" />
+    <EntitySet Name="Affidavit" EntityType="Self.Affidavit" />
+    <EntitySet Name="AffidavitActivity" EntityType="Self.AffidavitActivity" />
+    <EntitySet Name="AffidavitCosts" EntityType="Self.AffidavitCosts" />
+    <EntitySet Name="AffidavitCostsDetail" EntityType="Self.AffidavitCostsDetail" />
+    <EntitySet Name="AffidavitFinalInspection" EntityType="Self.AffidavitFinalInspection" />
+    <EntitySet Name="AffidavitFormInspection" EntityType="Self.AffidavitFormInspection" />
+    <EntitySet Name="AffidavitStatus" EntityType="Self.AffidavitStatus" />
+    <EntitySet Name="CityContract" EntityType="Self.CityContract" />
+    <EntitySet Name="Contractor" EntityType="Self.Contractor" />
+    <EntitySet Name="CostType" EntityType="Self.CostType" />
+    <EntitySet Name="Inspector" EntityType="Self.Inspector" />
+    <EntitySet Name="PrintCode" EntityType="Self.PrintCode" />
+    <EntitySet Name="RepairItem" EntityType="Self.RepairItem" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="UnitOfMeasure" EntityType="Self.UnitOfMeasure" />
+    <EntitySet Name="sw_posting" EntityType="Self.sw_posting" />
+    <AssociationSet Name="FK_AffidavitActivity_Activity" Association="Self.FK_AffidavitActivity_Activity">
+      <End Role="Activity" EntitySet="Activity" />
+      <End Role="AffidavitActivity" EntitySet="AffidavitActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Affidavit_Inspector" Association="Self.FK_Affidavit_Inspector">
+      <End Role="Inspector" EntitySet="Inspector" />
+      <End Role="Affidavit" EntitySet="Affidavit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitDocumentHistory_Affidavit" Association="Self.FK_AffidavitDocumentHistory_Affidavit">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitActivity" EntitySet="AffidavitActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitFinalInspection_Affidavit" Association="Self.FK_AffidavitFinalInspection_Affidavit">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitFinalInspection" EntitySet="AffidavitFinalInspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitFormInspection_Affidavit" Association="Self.FK_AffidavitFormInspection_Affidavit">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitFormInspection" EntitySet="AffidavitFormInspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitStatus_Affidavit" Association="Self.FK_AffidavitStatus_Affidavit">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitStatus" EntitySet="AffidavitStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitCosts_CostType" Association="Self.FK_AffidavitCosts_CostType">
+      <End Role="CostType" EntitySet="CostType" />
+      <End Role="AffidavitCosts" EntitySet="AffidavitCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitCostsDetail_CostType" Association="Self.FK_AffidavitCostsDetail_CostType">
+      <End Role="CostType" EntitySet="CostType" />
+      <End Role="AffidavitCostsDetail" EntitySet="AffidavitCostsDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitStatus_Status" Association="Self.FK_AffidavitStatus_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="AffidavitStatus" EntitySet="AffidavitStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CityContract_Contractor" Association="Self.FK_CityContract_Contractor">
+      <End Role="Contractor" EntitySet="Contractor" />
+      <End Role="CityContract" EntitySet="CityContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inspector_Staff" Association="Self.FK_Inspector_Staff">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="Inspector" EntitySet="Inspector" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RepairItem_RepairItemPrintCode" Association="Self.FK_RepairItem_RepairItemPrintCode">
+      <End Role="PrintCode" EntitySet="PrintCode" />
+      <End Role="RepairItem" EntitySet="RepairItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RepairItem_RepairItemUnitOfMeasure" Association="Self.FK_RepairItem_RepairItemUnitOfMeasure">
+      <End Role="UnitOfMeasure" EntitySet="UnitOfMeasure" />
+      <End Role="RepairItem" EntitySet="RepairItem" />
+    </AssociationSet>
+    <EntitySet Name="Permit" EntityType="SidewalkContext.Permit" />
+    <EntitySet Name="PermitPayment" EntityType="SidewalkContext.PermitPayment" />
+    <AssociationSet Name="FK_PermitPayment_Permit" Association="SidewalkContext.FK_PermitPayment_Permit">
+      <End Role="Permit" EntitySet="Permit" />
+      <End Role="PermitPayment" EntitySet="PermitPayment" />
+    </AssociationSet>
+    <EntitySet Name="PermitStatus" EntityType="SidewalkContext.PermitStatus" />
+    <AssociationSet Name="FK_Permit_PermitStatus" Association="SidewalkContext.FK_Permit_PermitStatus">
+      <End Role="PermitStatus" EntitySet="PermitStatus" />
+      <End Role="Permit" EntitySet="Permit" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Permit">
+    <Key>
+      <PropertyRef Name="PermitID" />
+    </Key>
+    <Property Name="PermitID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PermitIssued" Type="Boolean" />
+    <Property Name="PermitExtended" Type="Boolean" />
+    <Property Name="DateIssued" Type="DateTime" Precision="3" />
+    <Property Name="DateExpired" Type="Boolean" />
+    <Property Name="BuilderBoardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateCanceled" Type="DateTime" Precision="3" />
+    <Property Name="CanceledBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastAction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicantType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContractorID" Type="Int64" />
+    <Property Name="AffidavitID" Type="Int64" />
+    <Property Name="TotalFee" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PermitStatus" Type="Int64" />
+    <NavigationProperty Name="PermitPayment" Relationship="SidewalkContext.FK_PermitPayment_Permit" FromRole="Permit" ToRole="PermitPayment" />
+    <NavigationProperty Name="PermitStatus1" Relationship="SidewalkContext.FK_Permit_PermitStatus" FromRole="Permit" ToRole="PermitStatus" />
+  </EntityType>
+  <EntityType Name="PermitPayment">
+    <Key>
+      <PropertyRef Name="PermitPaymentID" />
+    </Key>
+    <Property Name="PermitPaymentID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitID" Type="Int64" />
+    <Property Name="IssueDate" Type="DateTime" Precision="3" />
+    <Property Name="IssuedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApprovalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CheckNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Permit" Relationship="SidewalkContext.FK_PermitPayment_Permit" FromRole="PermitPayment" ToRole="Permit" />
+  </EntityType>
+  <Association Name="FK_PermitPayment_Permit">
+    <End Type="SidewalkContext.Permit" Role="Permit" Multiplicity="0..1" />
+    <End Type="SidewalkContext.PermitPayment" Role="PermitPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permit">
+        <PropertyRef Name="PermitID" />
+      </Principal>
+      <Dependent Role="PermitPayment">
+        <PropertyRef Name="PermitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PermitStatus">
+    <Key>
+      <PropertyRef Name="PermitStatusID" />
+    </Key>
+    <Property Name="PermitStatusID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitStatusValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Permit" Relationship="SidewalkContext.FK_Permit_PermitStatus" FromRole="PermitStatus" ToRole="Permit" />
+  </EntityType>
+  <Association Name="FK_Permit_PermitStatus">
+    <End Type="SidewalkContext.PermitStatus" Role="PermitStatus" Multiplicity="0..1" />
+    <End Type="SidewalkContext.Permit" Role="Permit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermitStatus">
+        <PropertyRef Name="PermitStatusID" />
+      </Principal>
+      <Dependent Role="Permit">
+        <PropertyRef Name="PermitStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

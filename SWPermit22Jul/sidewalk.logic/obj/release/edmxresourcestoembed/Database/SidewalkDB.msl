@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SidewalkContextStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Activity">
+      <EntityTypeMapping TypeName="SidewalkContext.Activity">
+        <MappingFragment StoreEntitySet="Activity">
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Affidavit">
+      <EntityTypeMapping TypeName="SidewalkContext.Affidavit">
+        <MappingFragment StoreEntitySet="Affidavit">
+          <ScalarProperty Name="AffidavitID" ColumnName="AffidavitID" />
+          <ScalarProperty Name="Inspector_Key" ColumnName="Inspector_Key" />
+          <ScalarProperty Name="InspectionDate" ColumnName="InspectionDate" />
+          <ScalarProperty Name="AffidavitStatus" ColumnName="AffidavitStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="VisioDiagram" ColumnName="VisioDiagram" />
+          <ScalarProperty Name="TrackIT" ColumnName="TrackIT" />
+          <ScalarProperty Name="RNO" ColumnName="RNO" />
+          <ScalarProperty Name="QtrSection" ColumnName="QtrSection" />
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+          <ScalarProperty Name="LegalDesc" ColumnName="LegalDesc" />
+          <ScalarProperty Name="Owner1" ColumnName="Owner1" />
+          <ScalarProperty Name="Owner2" ColumnName="Owner2" />
+          <ScalarProperty Name="Owner3" ColumnName="Owner3" />
+          <ScalarProperty Name="OwnerAddress" ColumnName="OwnerAddress" />
+          <ScalarProperty Name="OwnerCity" ColumnName="OwnerCity" />
+          <ScalarProperty Name="OwnerState" ColumnName="OwnerState" />
+          <ScalarProperty Name="OwnerZip" ColumnName="OwnerZip" />
+          <ScalarProperty Name="SiteAddress" ColumnName="SiteAddress" />
+          <ScalarProperty Name="SiteStreetNumber" ColumnName="SiteStreetNumber" />
+          <ScalarProperty Name="SiteDistrict" ColumnName="SiteDistrict" />
+          <ScalarProperty Name="SiteStreetName" ColumnName="SiteStreetName" />
+          <ScalarProperty Name="SiteStreetDesignator" ColumnName="SiteStreetDesignator" />
+          <ScalarProperty Name="SiteCity" ColumnName="SiteCity" />
+          <ScalarProperty Name="SiteZip" ColumnName="SiteZip" />
+          <ScalarProperty Name="CityRepair" ColumnName="CityRepair" />
+          <ScalarProperty Name="OwnerRepair" ColumnName="OwnerRepair" />
+          <ScalarProperty Name="ContractorRepair" ColumnName="ContractorRepair" />
+          <ScalarProperty Name="RepairDueDate" ColumnName="RepairDueDate" />
+          <ScalarProperty Name="RepairNoticeSentDate" ColumnName="RepairNoticeSentDate" />
+          <ScalarProperty Name="RepairNoticeSentBy" ColumnName="RepairNoticeSentBy" />
+          <ScalarProperty Name="CityRepairStart" ColumnName="CityRepairStart" />
+          <ScalarProperty Name="CityRepairBy" ColumnName="CityRepairBy" />
+          <ScalarProperty Name="HoldUntilDate" ColumnName="HoldUntilDate" />
+          <ScalarProperty Name="HoldUntilBy" ColumnName="HoldUntilBy" />
+          <ScalarProperty Name="permit_no" ColumnName="permit_no" />
+          <ScalarProperty Name="permit_issued" ColumnName="permit_issued" />
+          <ScalarProperty Name="permit_extended" ColumnName="permit_extended" />
+          <ScalarProperty Name="date_issued" ColumnName="date_issued" />
+          <ScalarProperty Name="date_expired" ColumnName="date_expired" />
+          <ScalarProperty Name="contractor" ColumnName="contractor" />
+          <ScalarProperty Name="builder_board_no" ColumnName="builder_board_no" />
+          <ScalarProperty Name="date_cancelled" ColumnName="date_cancelled" />
+          <ScalarProperty Name="cancelled_by" ColumnName="cancelled_by" />
+          <ScalarProperty Name="last_action" ColumnName="last_action" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="VisioRevision" ColumnName="VisioRevision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffidavitActivity">
+      <EntityTypeMapping TypeName="SidewalkContext.AffidavitActivity">
+        <MappingFragment StoreEntitySet="AffidavitActivity">
+          <ScalarProperty Name="AffidavitActivityKey" ColumnName="AffidavitActivityKey" />
+          <ScalarProperty Name="Affidavit_Key" ColumnName="Affidavit_Key" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="DocAction" ColumnName="DocAction" />
+          <ScalarProperty Name="DocUserID" ColumnName="DocUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffidavitCosts">
+      <EntityTypeMapping TypeName="SidewalkContext.AffidavitCosts">
+        <MappingFragment StoreEntitySet="AffidavitCosts">
+          <ScalarProperty Name="Affidavit_Key" ColumnName="Affidavit_Key" />
+          <ScalarProperty Name="CostType_Key" ColumnName="CostType_Key" />
+          <ScalarProperty Name="ActionDt" ColumnName="ActionDt" />
+          <ScalarProperty Name="Contract_Key" ColumnName="Contract_Key" />
+          <ScalarProperty Name="Parking" ColumnName="Parking" />
+          <ScalarProperty Name="MoveIn" ColumnName="MoveIn" />
+          <ScalarProperty Name="Adjustment" ColumnName="Adjustment" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="VisioDiagram" ColumnName="VisioDiagram" />
+          <ScalarProperty Name="Batch_Key" ColumnName="Batch_Key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffidavitCostsDetail">
+      <EntityTypeMapping TypeName="SidewalkContext.AffidavitCostsDetail">
+        <MappingFragment StoreEntitySet="AffidavitCostsDetail">
+          <ScalarProperty Name="Affidavit_Key" ColumnName="Affidavit_Key" />
+          <ScalarProperty Name="CostType_Key" ColumnName="CostType_Key" />
+          <ScalarProperty Name="RepairItem_Key" ColumnName="RepairItem_Key" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffidavitFinalInspection">
+      <EntityTypeMapping TypeName="SidewalkContext.AffidavitFinalInspection">
+        <MappingFragment StoreEntitySet="AffidavitFinalInspection">
+          <ScalarProperty Name="AffidavitID" ColumnName="AffidavitID" />
+          <ScalarProperty Name="InspectionDate" ColumnName="InspectionDate" />
+          <ScalarProperty Name="InspectorID" ColumnName="InspectorID" />
+          <ScalarProperty Name="RepairsComplete" ColumnName="RepairsComplete" />
+          <ScalarProperty Name="Sidewalk" ColumnName="Sidewalk" />
+          <ScalarProperty Name="Driveway" ColumnName="Driveway" />
+          <ScalarProperty Name="Curb" ColumnName="Curb" />
+          <ScalarProperty Name="ContractorRepaired" ColumnName="ContractorRepaired" />
+          <ScalarProperty Name="ContractorRepairedNotCitySpec" ColumnName="ContractorRepairedNotCitySpec" />
+          <ScalarProperty Name="OwnerRepaired" ColumnName="OwnerRepaired" />
+          <ScalarProperty Name="OwnerRepairedNotCitySpec" ColumnName="OwnerRepairedNotCitySpec" />
+          <ScalarProperty Name="RemoveFormsToGrade" ColumnName="RemoveFormsToGrade" />
+          <ScalarProperty Name="MoreBackfill" ColumnName="MoreBackfill" />
+          <ScalarProperty Name="IncompleteRepairs" ColumnName="IncompleteRepairs" />
+          <ScalarProperty Name="MoreGrinding" ColumnName="MoreGrinding" />
+          <ScalarProperty Name="RemoveMarkedAreas" ColumnName="RemoveMarkedAreas" />
+          <ScalarProperty Name="AsphaltWork" ColumnName="AsphaltWork" />
+          <ScalarProperty Name="Graffiti" ColumnName="Graffiti" />
+          <ScalarProperty Name="NoRightWayPermit" ColumnName="NoRightWayPermit" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffidavitFormInspection">
+      <EntityTypeMapping TypeName="SidewalkContext.AffidavitFormInspection">
+        <MappingFragment StoreEntitySet="AffidavitFormInspection">
+          <ScalarProperty Name="AffidavitID" ColumnName="AffidavitID" />
+          <ScalarProperty Name="InspectionDate" ColumnName="InspectionDate" />
+          <ScalarProperty Name="InspectorID" ColumnName="InspectorID" />
+          <ScalarProperty Name="PermissionGranted" ColumnName="PermissionGranted" />
+          <ScalarProperty Name="Sidewalk" ColumnName="Sidewalk" />
+          <ScalarProperty Name="Driveway" ColumnName="Driveway" />
+          <ScalarProperty Name="Curb" ColumnName="Curb" />
+          <ScalarProperty Name="Partial" ColumnName="Partial" />
+          <ScalarProperty Name="PartialDesciption" ColumnName="PartialDesciption" />
+          <ScalarProperty Name="MatchJointPattern" ColumnName="MatchJointPattern" />
+          <ScalarProperty Name="PlaceJoints" ColumnName="PlaceJoints" />
+          <ScalarProperty Name="ToolDeepJoints" ColumnName="ToolDeepJoints" />
+          <ScalarProperty Name="NotReady" ColumnName="NotReady" />
+          <ScalarProperty Name="InsufficientBarricades" ColumnName="InsufficientBarricades" />
+          <ScalarProperty Name="RemoveDebris" ColumnName="RemoveDebris" />
+          <ScalarProperty Name="NotDeep" ColumnName="NotDeep" />
+          <ScalarProperty Name="CurbHeight" ColumnName="CurbHeight" />
+          <ScalarProperty Name="SawCutEdges" ColumnName="SawCutEdges" />
+          <ScalarProperty Name="PermitStatus" ColumnName="PermitStatus" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AffidavitStatus">
+      <EntityTypeMapping TypeName="SidewalkContext.AffidavitStatus">
+        <MappingFragment StoreEntitySet="AffidavitStatus">
+          <ScalarProperty Name="AffidavitID" ColumnName="AffidavitID" />
+          <ScalarProperty Name="StatusDate" ColumnName="StatusDate" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="RepairBy" ColumnName="RepairBy" />
+          <ScalarProperty Name="PermittedBy" ColumnName="PermittedBy" />
+          <ScalarProperty Name="HoldDate" ColumnName="HoldDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CityContract">
+      <EntityTypeMapping TypeName="SidewalkContext.CityContract">
+        <MappingFragment StoreEntitySet="CityContract">
+          <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+          <ScalarProperty Name="Contractor_Key" ColumnName="Contractor_Key" />
+          <ScalarProperty Name="RevisedDate" ColumnName="RevisedDate" />
+          <ScalarProperty Name="RevisedBy" ColumnName="RevisedBy" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ContractorName_XXX" ColumnName="ContractorName_XXX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contractor">
+      <EntityTypeMapping TypeName="SidewalkContext.Contractor">
+        <MappingFragment StoreEntitySet="Contractor">
+          <ScalarProperty Name="ContractorID" ColumnName="ContractorID" />
+          <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
+          <ScalarProperty Name="CCB" ColumnName="CCB" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="MBE" ColumnName="MBE" />
+          <ScalarProperty Name="WBE" ColumnName="WBE" />
+          <ScalarProperty Name="ESB" ColumnName="ESB" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CityContractor" ColumnName="CityContractor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CostType">
+      <EntityTypeMapping TypeName="SidewalkContext.CostType">
+        <MappingFragment StoreEntitySet="CostType">
+          <ScalarProperty Name="CostTypeID" ColumnName="CostTypeID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inspector">
+      <EntityTypeMapping TypeName="SidewalkContext.Inspector">
+        <MappingFragment StoreEntitySet="Inspector">
+          <ScalarProperty Name="InspectorID" ColumnName="InspectorID" />
+          <ScalarProperty Name="Staff_Key" ColumnName="Staff_Key" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrintCode">
+      <EntityTypeMapping TypeName="SidewalkContext.PrintCode">
+        <MappingFragment StoreEntitySet="PrintCode">
+          <ScalarProperty Name="PrintCodeID" ColumnName="PrintCodeID" />
+          <ScalarProperty Name="PrintDescription" ColumnName="PrintDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RepairItem">
+      <EntityTypeMapping TypeName="SidewalkContext.RepairItem">
+        <MappingFragment StoreEntitySet="RepairItem">
+          <ScalarProperty Name="RepairItemID" ColumnName="RepairItemID" />
+          <ScalarProperty Name="RepairItemType" ColumnName="RepairItemType" />
+          <ScalarProperty Name="UoM_Key" ColumnName="UoM_Key" />
+          <ScalarProperty Name="PrintCode_Key" ColumnName="PrintCode_Key" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staff">
+      <EntityTypeMapping TypeName="SidewalkContext.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="PERNR" ColumnName="PERNR" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
+          <ScalarProperty Name="Inspector" ColumnName="Inspector" />
+          <ScalarProperty Name="Forms" ColumnName="Forms" />
+          <ScalarProperty Name="Final" ColumnName="Final" />
+          <ScalarProperty Name="Permit" ColumnName="Permit" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="SidewalkContext.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SidewalkContext.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitOfMeasure">
+      <EntityTypeMapping TypeName="SidewalkContext.UnitOfMeasure">
+        <MappingFragment StoreEntitySet="UnitOfMeasure">
+          <ScalarProperty Name="UomID" ColumnName="UomID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sw_posting">
+      <EntityTypeMapping TypeName="SidewalkContext.sw_posting">
+        <MappingFragment StoreEntitySet="sw_posting">
+          <ScalarProperty Name="aff_no" ColumnName="aff_no" />
+          <ScalarProperty Name="qtr_sec" ColumnName="qtr_sec" />
+          <ScalarProperty Name="map_id" ColumnName="map_id" />
+          <ScalarProperty Name="post_dt" ColumnName="post_dt" />
+          <ScalarProperty Name="acct_period" ColumnName="acct_period" />
+          <ScalarProperty Name="property_id" ColumnName="property_id" />
+          <ScalarProperty Name="property_id2" ColumnName="property_id2" />
+          <ScalarProperty Name="property_desc" ColumnName="property_desc" />
+          <ScalarProperty Name="aff_status" ColumnName="aff_status" />
+          <ScalarProperty Name="owner_name" ColumnName="owner_name" />
+          <ScalarProperty Name="attn1" ColumnName="attn1" />
+          <ScalarProperty Name="attn2" ColumnName="attn2" />
+          <ScalarProperty Name="st_no" ColumnName="st_no" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="st_name" ColumnName="st_name" />
+          <ScalarProperty Name="designator" ColumnName="designator" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="inspector_no" ColumnName="inspector_no" />
+          <ScalarProperty Name="city_owned_flag" ColumnName="city_owned_flag" />
+          <ScalarProperty Name="owner_resident_flag" ColumnName="owner_resident_flag" />
+          <ScalarProperty Name="service_req_flag" ColumnName="service_req_flag" />
+          <ScalarProperty Name="rep_by_city" ColumnName="rep_by_city" />
+          <ScalarProperty Name="rep_by_owner" ColumnName="rep_by_owner" />
+          <ScalarProperty Name="partial_repair" ColumnName="partial_repair" />
+          <ScalarProperty Name="vacant_lot_flag" ColumnName="vacant_lot_flag" />
+          <ScalarProperty Name="vacant_desc" ColumnName="vacant_desc" />
+          <ScalarProperty Name="repair_dt" ColumnName="repair_dt" />
+          <ScalarProperty Name="billed_dt" ColumnName="billed_dt" />
+          <ScalarProperty Name="bill_flag" ColumnName="bill_flag" />
+          <ScalarProperty Name="hold_until_dt" ColumnName="hold_until_dt" />
+          <ScalarProperty Name="permit_no" ColumnName="permit_no" />
+          <ScalarProperty Name="permit_issued" ColumnName="permit_issued" />
+          <ScalarProperty Name="permit_extended" ColumnName="permit_extended" />
+          <ScalarProperty Name="date_issued" ColumnName="date_issued" />
+          <ScalarProperty Name="date_expired" ColumnName="date_expired" />
+          <ScalarProperty Name="contractor" ColumnName="contractor" />
+          <ScalarProperty Name="builder_board_no" ColumnName="builder_board_no" />
+          <ScalarProperty Name="license_no" ColumnName="license_no" />
+          <ScalarProperty Name="date_cancelled" ColumnName="date_cancelled" />
+          <ScalarProperty Name="cancelled_by" ColumnName="cancelled_by" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="last_action" ColumnName="last_action" />
+          <ScalarProperty Name="date_added" ColumnName="date_added" />
+          <ScalarProperty Name="date_updated" ColumnName="date_updated" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="sent_dt" ColumnName="sent_dt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permit">
+      <EntityTypeMapping TypeName="SidewalkContext.Permit">
+        <MappingFragment StoreEntitySet="Permit">
+          <ScalarProperty Name="PermitStatus" ColumnName="PermitStatus" />
+          <ScalarProperty Name="TotalFee" ColumnName="TotalFee" />
+          <ScalarProperty Name="AffidavitID" ColumnName="AffidavitID" />
+          <ScalarProperty Name="ContractorID" ColumnName="ContractorID" />
+          <ScalarProperty Name="ApplicantType" ColumnName="ApplicantType" />
+          <ScalarProperty Name="LastAction" ColumnName="LastAction" />
+          <ScalarProperty Name="CanceledBy" ColumnName="CanceledBy" />
+          <ScalarProperty Name="DateCanceled" ColumnName="DateCanceled" />
+          <ScalarProperty Name="BuilderBoardNo" ColumnName="BuilderBoardNo" />
+          <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+          <ScalarProperty Name="DateIssued" ColumnName="DateIssued" />
+          <ScalarProperty Name="PermitExtended" ColumnName="PermitExtended" />
+          <ScalarProperty Name="PermitIssued" ColumnName="PermitIssued" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="PermitID" ColumnName="PermitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitPayment">
+      <EntityTypeMapping TypeName="SidewalkContext.PermitPayment">
+        <MappingFragment StoreEntitySet="PermitPayment">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="CheckNumber" ColumnName="CheckNumber" />
+          <ScalarProperty Name="ApprovalCode" ColumnName="ApprovalCode" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="IssuedBy" ColumnName="IssuedBy" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="PermitID" ColumnName="PermitID" />
+          <ScalarProperty Name="PermitPaymentID" ColumnName="PermitPaymentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitStatus">
+      <EntityTypeMapping TypeName="SidewalkContext.PermitStatus">
+        <MappingFragment StoreEntitySet="PermitStatus">
+          <ScalarProperty Name="PermitStatusValue" ColumnName="PermitStatusValue" />
+          <ScalarProperty Name="PermitStatusID" ColumnName="PermitStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

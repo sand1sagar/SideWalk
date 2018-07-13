@@ -1,0 +1,6 @@
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkWPF\obj\Debug\SidewalkWPF.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkWPF\obj\Debug\Affidavit.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkWPF\obj\Debug\Affidavit.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkWPF\obj\Debug\App.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkWPF\obj\Debug\SidewalkWPF_MarkupCompile.cache

@@ -1,0 +1,190 @@
+﻿<UserControl x:Class="SidewalkPermitWPF.Views.StaffPermitProcess"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:actb="clr-namespace:Aviad.WPF.Controls;assembly=Aviad.WPF.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             x:Name="mdiChild" Background="White"
+             DataContext="{Binding Main, Source={StaticResource Locator}}" Height="743">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="512*"/>
+            <ColumnDefinition Width="512*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <GroupBox Header="Applicant"  Margin="10,0,10,0" Height="306" VerticalAlignment="Top">
+                <StackPanel Margin="0,10,0,23">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <!--<RadioButton Margin="0,0,50,0" GroupName="applicantType" x:Name="rdoContractor" IsEnabled="False" Content="Contractor" IsChecked="{Binding Path=ContractorRadio, Mode=TwoWay}" />-->
+                        <RadioButton Margin="0,0,50,0" GroupName="applicantType" x:Name="rdoOwner" IsEnabled="False" Content="Property Owner" IsChecked="{Binding Path=OwnerRadio, Mode=TwoWay}"/>
+                        <RadioButton Margin="0,0,50,0" GroupName="applicantType" x:Name="rdoOther" IsEnabled="False" Content="Other" IsChecked="{Binding Path=OtherRadio, Mode=TwoWay}"/>
+                    </StackPanel>
+
+                    <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="CCB# : "/>
+                        <TextBox Width="299" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ContractorInfo.CCB,Mode=TwoWay}"/>
+                    </StackPanel>-->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Name : "/>
+                        <TextBox Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ApplicantInfo.Name,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Contact Name: "/>
+                        <TextBox Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ApplicantInfo.Contact,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Address : "/>
+                        <TextBox Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ApplicantInfo.Address,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap"  Width="135" Text="City : "/>
+                        <TextBox Width="100" Margin="0,0,20,0" IsEnabled="False" TextWrapping="Wrap" Text="{Binding ApplicantInfo.City,Mode=TwoWay}"/>
+                        <TextBlock TextWrapping="Wrap" Text="ST : "/>
+                        <TextBox Width="50" Margin="0,0,20,0" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ApplicantInfo.State,Mode=TwoWay}"/>
+                        <TextBlock TextWrapping="Wrap" Text="ZIP : "/>
+                        <TextBox Width="61" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ApplicantInfo.Zip,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Phone Number : "/>
+                        <TextBox Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ApplicantInfo.PhoneNumber, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Email : "/>
+                        <TextBox Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ApplicantInfo.Email,Mode=TwoWay}"/>
+                    </StackPanel>-->
+                </StackPanel>
+
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Column="1">
+            <GroupBox Header="Affidavit"  Margin="10,0,10,0" Height="306" VerticalAlignment="Top">
+                <StackPanel Margin="0,10,0,-3">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Affidavit # : "/>
+                        <TextBox Name="txtAffidavit" Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding AffidavitInfo.aff_no,Mode=TwoWay}"/>
+                        <!--<Button Content="Find" Command="{Binding SearchAffidavitCommand}" Margin="10,0,0,0" Width="51"/>-->
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Property Address : "/>
+                        <TextBox Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding PermitInfo.Permit.PropertyAddress,Mode=TwoWay}"/>
+                        <!--<Button Content="Find" Command="{Binding SearchAffidavitCommand}" Margin="10,0,0,0" Width="51" RenderTransformOrigin="0.965,0.329"/>-->
+                    </StackPanel>
+
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <!--<TextBlock TextWrapping="Wrap" Width="135" Text="Affidavit# : "/>
+                        <TextBox Width="130" Margin="0,0,20,0" IsEnabled="False" TextWrapping="Wrap" Text="{Binding AffidavitInfo.aff_no,Mode=TwoWay}"/>-->
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Inspector : "/>
+                        <TextBox Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding AffidavitInfo.Ins,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Margin="0,0,0,0" Text="Inspection Date : "/>
+                        <TextBox Width="119" TextWrapping="Wrap" IsEnabled="False" Text="{Binding AffidavitInfo.post_dt, StringFormat=d, Mode=TwoWay}" RenderTransformOrigin="0.396,-1.002"/>
+                        <TextBlock TextWrapping="Wrap" Width="77" Text="  Notice Sent : "/>
+                        <TextBox Width="103" TextWrapping="Wrap" IsEnabled="False"  Text="{Binding AffidavitInfo.sent_dt, StringFormat=d, Mode=TwoWay}"/>                       
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135"  Text="Property Owner : "/>
+                        <TextBox Width="300" TextWrapping="Wrap" IsEnabled="False" Text="{Binding AffidavitInfo.owner_name, Mode=TwoWay}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Property Description : "/>
+                        <TextBox Width="300" MinHeight="30" TextWrapping="Wrap" IsEnabled="False" Text="{Binding AffidavitInfo.property_desc, Mode=TwoWay}" Height="55"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <GroupBox Header="Permit Information"  Margin="10,10,10,0" Height="193" VerticalAlignment="Top">
+                <StackPanel Margin="0,10,0,0">
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Issue Date : "/>
+                        <TextBox Width="137" Margin="0,0,10,0" TextWrapping="Wrap" IsEnabled="False" Text="{Binding PermitPaymentInfo.IssueDate, StringFormat=d, Mode=TwoWay}"/>
+                        <TextBlock TextWrapping="Wrap" Width="100" Text="Issued By : "/>
+                        <TextBox x:Name="txtIssuedBy" Width="76" TextWrapping="Wrap" IsEnabled="True" Text="{Binding PermitPaymentInfo.IssuedBy,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel  Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Margin="0,0,35,0" Text="Payment Method: " HorizontalAlignment="Right"/>
+                        <RadioButton Margin="0,0,10,0" GroupName="paymentMethod" x:Name="rdoCard" Content="Credit/Debit" IsChecked="{Binding Path=CardRadio, Mode=TwoWay}" />
+                        <RadioButton Margin="0,0,10,0" GroupName="paymentMethod" x:Name="rdoCheck" Content="Check" IsChecked="{Binding Path=CheckRadio, Mode=TwoWay}"/>
+                        <RadioButton Margin="0,0,10,0" GroupName="paymentMethod" x:Name="rdoCash" Content="Cash" IsChecked="{Binding Path=CashRadio, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Approval code CC/DC : "/>
+                        <TextBox Width="130" Margin="0,0,20,0" TextWrapping="Wrap" Text="{Binding PermitPaymentInfo.ApprovalCode,Mode=TwoWay}" IsEnabled="{Binding IsChecked, ElementName=rdoCard}"/>
+                        <TextBlock TextWrapping="Wrap" Width="75" Text="Check No. : "/>
+                        <TextBox Width="100" TextWrapping="Wrap" Text="{Binding PermitPaymentInfo.CheckNumber,Mode=TwoWay}" IsEnabled="{Binding IsChecked, ElementName=rdoCheck}"/>
+                    </StackPanel>
+                    <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Status : "/>
+                        <ComboBox Width="130">
+                            <ComboBoxItem Content="Submitted"/>
+                            <ComboBoxItem Content="Accepted"/>
+                            <ComboBoxItem Content="Rejected"/>
+                            <ComboBoxItem Content="On Hold"/>
+                            <ComboBoxItem Content="Other"/>
+                        </ComboBox>
+                    </StackPanel>-->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Note : " RenderTransformOrigin="2.431,0.476"/>
+                        <TextBox Width="325" MinHeight="70" TextWrapping="Wrap" Text="{Binding PermitPaymentInfo.Notes,Mode=TwoWay}" RenderTransformOrigin="0.82,0.476"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Column="0" Grid.Row="1">
+            <GroupBox Header="Fee Computation"  Margin="10,0,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.486,1.742" Height="213">
+                <StackPanel Margin="0,0,0,10">
+                    <DataGrid Margin="0,0,0,10" Name="feeComputationGrid" IsEnabled="True" IsReadOnly="True" ItemsSource="{Binding AffidavitCostsDetails}" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <!--<DataGridTextColumn Width="*" Header="Action" Binding="{Binding action}" />
+                            <DataGridTextColumn Width="*" Header="Unit" Binding="{Binding unit}" />
+                            <DataGridTextColumn Width="*" Header="Action Type" Binding="{Binding action_type}" />
+                            <DataGridTextColumn Width="*" Header="Cost" Binding="{Binding cost}" />-->
+                            <DataGridTextColumn Width="3*" Header="Action Type" Binding="{Binding action_type}"/>
+                            <DataGridTextColumn Width="*" Header="Unit" Binding="{Binding unit}" />
+                            <DataGridTextColumn Width="*" Header="Rate" Binding="{Binding rate}" />
+                            <DataGridTextColumn Width="2*" Header="Cost" Binding="{Binding cost}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Total Fee : "/>
+                        <TextBox Name="txtTotalFee" Width="130" Margin="0,0,20,0" TextWrapping="Wrap" IsEnabled="False" Text="{Binding TotalFee,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Expiration Date : "/>
+                        <!--<TextBox Width="130" Margin="0,0,20,0" TextWrapping="Wrap" Text="{Binding ExpirationDate,Mode=TwoWay}"/>-->
+                        <DatePicker Margin="0,0,20,0" SelectedDate="{Binding ExpirationDate,Mode=TwoWay}" VerticalAlignment="Top" Width="130" />
+                    </StackPanel>
+                    <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Permit Number : "/>
+                        <TextBox Width="130" Margin="0,0,20,0" TextWrapping="Wrap" IsEnabled="False" Text="{Binding PermitNumber,Mode=TwoWay}"/>
+                    </StackPanel>-->
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" Margin="10,10,10,10" HorizontalAlignment="Center">
+                <Button Content="Accept" Height="40" Width="120" Margin="0,0,50,0" Command="{Binding AcceptPermitCommand}" IsEnabled="{Binding AcceptButtonModel}"/>
+                <Button Content="Cancel" Height="40" Width="120" Margin="0,0,50,0" Command="{Binding RejectPermitCommand}"  />
+                <Button Content="Hold" Height="40" Width="120" Margin="0,0,50,0" Command="{Binding HoldPermitCommand}"  />
+                <!--<Button Content="Don't Process" Width="120" Margin="0,0,50,0" Command="{Binding ResetCommand}" CommandParameter="{Binding EmpInfo}" />-->
+            </StackPanel>
+           
+        </Grid>
+    </Grid>
+</UserControl>

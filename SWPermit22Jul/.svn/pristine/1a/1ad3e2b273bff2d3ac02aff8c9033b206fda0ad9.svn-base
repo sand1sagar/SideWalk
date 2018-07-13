@@ -1,0 +1,431 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Sidewalk.Logic.Database;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+//using Oracle.DataAccess.Client;
+using log4net;
+using Oracle.ManagedDataAccess.Client;
+
+namespace Sidewalk.Logic
+{
+    public class ContractorLogic
+    {
+        log4net.ILog Log = log4net.LogManager.GetLogger(typeof(ContractorLogic));
+        SWPostEntities context = new SWPostEntities();
+        string oracleConnection = ConfigurationManager.ConnectionStrings["OracleConnection"].ToString();
+        //string temp = "Data Source=(DESCRIPTION =" +
+        //"(ADDRESS = (PROTOCOL = TCP)(HOST = tracsdev.city)(PORT = 1521))" +
+        //"(CONNECT_DATA =" +
+        //"(SERVER = DEDICATED)" +
+        //"(SERVICE_NAME = trv44.city)));" +
+        //"User Id= REPORTS;Password=<strong>reporting</strong>;";
+
+        string temp = "Data Source=(DESCRIPTION =" +
+        "(ADDRESS = (PROTOCOL = TCP)(HOST = tracsprod.city)(PORT = 1521))" +
+        "(CONNECT_DATA =" +
+        "(SERVER = DEDICATED)" +
+        "(SERVICE_NAME = trprod.city)));" +
+        "User Id= REPORTS;Password=<strong>reporting</strong>;";
+
+        public ContractorLogic()
+        {
+            context.Configuration.LazyLoadingEnabled = false;
+            context.Configuration.ProxyCreationEnabled = false;
+        }
+        /// <summary>
+        /// This method will search first for contractor licence number, if not found then it will search for contractor name  <add key="UseOracle" value="true" />
+        /// </summary>
+        /// <param name="ccbNumber"></param>
+        /// <returns></returns>
+        public CCBContractor SearchContractor(string ccbNumber)
+        {
+
+            CCBContractor result = new CCBContractor();
+            try
+            {
+                if (bool.Parse(ConfigurationManager.AppSettings["UseOracle"].ToString()))
+                {
+                    using (OracleConnection conn = new OracleConnection(oracleConnection))
+                    {
+
+                        using (OracleCommand command = conn.CreateCommand())
+                        {
+                            string sql = "SELECT S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_10, S_11, S_12, S_13, S_14," +
+                                "S_15, S_16, S_17, S_18, S_19, S_20, S_21, S_22, S_23, S_24, S_25, S_26, S_27, S_28, S_29" +
+                                " FROM AMANDA.CCB_DAILY_LICENSES where  S_1 like '%" + ccbNumber.ToUpper() + "%' order by S_1";
+
+                            //string sql = "SELECT S_1, S_4, S_5, S_6, S_7, S_8, S_9, S_27, S_28 FROM AMANDA.CCB_DAILY_LICENSES where  S_1 like '%" + ccbNumber.ToUpper() + "%' order by S_1";
+
+                            //string sql = "SELECT S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_10, S_11, S_12, S_13, S_14," +
+                            //  "S_15, S_16, S_17, S_18, S_19, S_20, S_21, S_22, S_23, S_24, S_25, S_26, S_27, S_28, S_29" +
+                            //  " FROM AMANDA.CCB_DAILY_LICENSES where UPPER(S_4) LIKE " + ccbNumber.ToUpper() + "%' or S_1 like '%" + ccbNumber.ToUpper() + "%'";
+                            command.CommandText = sql;
+                            conn.Open();
+                            OracleDataReader dataReader = command.ExecuteReader();
+                            while (dataReader.Read())
+                            {
+                                result.license_number = dataReader["S_1"].ToString();
+                                result.business_name = dataReader["S_4"].ToString().Replace("&", "AND");
+                                result.address = dataReader["S_5"].ToString();
+                                result.city = dataReader["S_6"].ToString();
+                                result.state = dataReader["S_7"].ToString();
+                                result.zip = dataReader["S_8"].ToString();
+                                result.business_telephone = dataReader["S_9"].ToString();
+                                result.rmi_name = dataReader["S_27"].ToString();
+                                //result.lic_exp_date = (DateTime)dataReader["S_28"];
+
+                            }
+                        }
+                        // Close and Dispose OracleConnection object
+                        conn.Close();
+                        conn.Dispose();
+                    }
+                    if (result.license_number == null)
+                    {
+                        using (OracleConnection conn = new OracleConnection(oracleConnection))
+                        {
+
+                            using (OracleCommand command = conn.CreateCommand())
+                            {
+                                string sql = "SELECT S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_10, S_11, S_12, S_13, S_14," +
+                                    "S_15, S_16, S_17, S_18, S_19, S_20, S_21, S_22, S_23, S_24, S_25, S_26, S_27, S_28, S_29" +
+                                    " FROM AMANDA.CCB_DAILY_LICENSES where  UPPER(S_4) LIKE " + ccbNumber.ToUpper() + "%'";
+
+                                //string sql = "SELECT S_1, S_4, S_5, S_6, S_7, S_8, S_9, S_27, S_28 FROM AMANDA.CCB_DAILY_LICENSES where  UPPER(S_4) LIKE " + ccbNumber.ToUpper() + "%' ";
+
+                                //string sql = "SELECT S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_10, S_11, S_12, S_13, S_14," +
+                                //  "S_15, S_16, S_17, S_18, S_19, S_20, S_21, S_22, S_23, S_24, S_25, S_26, S_27, S_28, S_29" +
+                                //  " FROM AMANDA.CCB_DAILY_LICENSES where UPPER(S_4) LIKE " + ccbNumber.ToUpper() + "%' or S_1 like '%" + ccbNumber.ToUpper() + "%'";
+                                command.CommandText = sql;
+                                conn.Open();
+                                OracleDataReader dataReader = command.ExecuteReader();
+                                while (dataReader.Read())
+                                {
+                                    result.license_number = dataReader["S_1"].ToString();
+                                    result.business_name = dataReader["S_4"].ToString().Replace("&", "AND").Substring(0, 50);
+                                    result.address = dataReader["S_5"].ToString();
+                                    result.city = dataReader["S_6"].ToString();
+                                    result.state = dataReader["S_7"].ToString();
+                                    result.zip = dataReader["S_8"].ToString();
+                                    result.business_telephone = dataReader["S_9"].ToString();
+                                    result.rmi_name = dataReader["S_27"].ToString();
+                                    //result.lic_exp_date = (DateTime)dataReader["S_28"];
+                                }
+                            }
+                            // Close and Dispose OracleConnection object
+                            conn.Close();
+                            conn.Dispose();
+                        }
+                    }
+                }
+                else
+                {
+                    using (SqlConnection con = new SqlConnection(ConnectionHelper.ConnectionString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand("getContractorDetailsByCCBNumber", con))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@ccbNumber", SqlDbType.NVarChar).Value = ccbNumber;
+                            con.Open();
+                            SqlDataReader dataReader = cmd.ExecuteReader();
+                            if (dataReader.HasRows)
+                            {
+                                while (dataReader.Read())
+                                {
+                                    result.license_number = dataReader["license_number"].ToString();
+                                    result.business_name = dataReader["business_name"].ToString().Replace("&", "AND");
+                                    result.address = dataReader["address"].ToString();
+                                    result.city = dataReader["city"].ToString();
+                                    result.state = dataReader["state"].ToString();
+                                    result.zip = dataReader["zip"].ToString();
+                                    result.business_telephone = dataReader["business_telephone"].ToString();
+                                    result.rmi_name = dataReader["rmi_name"].ToString();
+                                    //result.lic_exp_date = (DateTime)dataReader["lic_exp_date"];
+                                }
+                            }
+                        }
+                    }
+                    if (result.license_number == null)
+                    {
+                        using (SqlConnection con = new SqlConnection(ConnectionHelper.ConnectionString))
+                        {
+                            using (SqlCommand cmd = new SqlCommand("getContractorDetailsByName", con))
+                            {
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.Parameters.AddWithValue("@name", SqlDbType.NVarChar).Value = ccbNumber;
+                                con.Open();
+                                SqlDataReader dataReader = cmd.ExecuteReader();
+                                if (dataReader.HasRows)
+                                {
+                                    while (dataReader.Read())
+                                    {
+                                        result.license_number = dataReader["license_number"].ToString();
+                                        result.business_name = dataReader["business_name"].ToString().Replace("&", "AND");
+                                        result.address = dataReader["address"].ToString();
+                                        result.city = dataReader["city"].ToString();
+                                        result.state = dataReader["state"].ToString();
+                                        result.zip = dataReader["zip"].ToString();
+                                        result.business_telephone = dataReader["business_telephone"].ToString();
+                                        result.rmi_name = dataReader["rmi_name"].ToString();
+                                        //result.lic_exp_date = (DateTime)dataReader["lic_exp_date"];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                if (result != null && !string.IsNullOrEmpty(result.license_number))
+                {
+                    long licenseNumber = long.Parse(result.license_number);
+                    result.alias_name = string.Empty;
+                    var  contractorAlias = context.Contractor_Alias.Where(x => x.CCB_No.Equals(licenseNumber)).FirstOrDefault();
+                    if(contractorAlias!=null && !string.IsNullOrEmpty(contractorAlias.Alias))
+                    {
+                        result.alias_name = contractorAlias.Alias;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                result = null;
+            }
+            return result;
+        }
+        /// <summary>
+        /// this method will search contractor by keyword
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        public List<CCBContractor> SearchContractorByKeyword(string keyword)
+        {
+            List<CCBContractor> result = new List<CCBContractor>();
+            try
+            {
+                if (bool.Parse(ConfigurationManager.AppSettings["UseOracle"].ToString()))
+                {
+                    using (OracleConnection conn = new OracleConnection(oracleConnection))
+                    {
+
+                        using (OracleCommand command = conn.CreateCommand())
+                        {
+                            string sql = "SELECT S_1, S_2, S_3, S_4, S_5, S_6, S_7, S_8, S_9, S_10, S_11, S_12, S_13, S_14," +
+                              "S_15, S_16, S_17, S_18, S_19, S_20, S_21, S_22, S_23, S_24, S_25, S_26, S_27, S_28, S_29" +
+                              " FROM AMANDA.CCB_DAILY_LICENSES where UPPER(S_4) LIKE '%" + keyword.ToUpper() + "%' or S_1 like '%" + keyword.ToUpper() + "%' order by S_1";
+
+                            //string sql = "SELECT S_1, S_4, S_5, S_6, S_7, S_8, S_9, S_27, S_28 FROM AMANDA.CCB_DAILY_LICENSES where UPPER(S_4) LIKE '%" + keyword.ToUpper() + "%' or S_1 like '%" + keyword.ToUpper() + "%' order by S_1 ";
+
+                            command.CommandText = sql;
+                            conn.Open();
+                            {
+
+                                OracleDataReader dataReader = command.ExecuteReader();
+                                while (dataReader.Read())
+                                {
+                                    CCBContractor reader = new CCBContractor();
+                                    reader.license_number = dataReader["S_1"].ToString();
+                                    reader.business_name = dataReader["S_4"].ToString().Replace("&", "AND");
+                                    reader.address = dataReader["S_5"].ToString();
+                                    reader.city = dataReader["S_6"].ToString();
+                                    reader.state = dataReader["S_7"].ToString();
+                                    reader.zip = dataReader["S_8"].ToString();
+                                    reader.business_telephone = dataReader["S_9"].ToString();
+                                    reader.rmi_name = dataReader["S_27"].ToString();
+                                    //reader.lic_exp_date = (DateTime)dataReader["S_28"];
+                                    long licenseNumber = long.Parse(reader.license_number);
+                                    var alias = context.Contractor_Alias.Where(x => x.CCB_No.Equals(licenseNumber)).FirstOrDefault();
+                                    if (alias != null && !string.IsNullOrEmpty(alias.Alias))
+                                    {
+                                        reader.alias_name = alias.Alias;
+                                    }
+                                    result.Add(reader);
+                                }
+                            }
+                        }
+                        // Close and Dispose OracleConnection object
+                        conn.Close();
+                        conn.Dispose();
+                    }
+                }
+                else
+                {
+                    using (SqlConnection con = new SqlConnection(ConnectionHelper.ConnectionString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand("getContractorByKeyword", con))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@keyword", SqlDbType.NVarChar).Value = keyword;
+                            con.Open();
+                            SqlDataReader dataReader = cmd.ExecuteReader();
+                            if (dataReader.HasRows)
+                            {
+                                while (dataReader.Read())
+                                {
+                                    CCBContractor reader = new CCBContractor();
+                                    reader.license_number = dataReader["license_number"].ToString();
+                                    reader.business_name = dataReader["business_name"].ToString().Replace("&", "AND");
+                                    reader.address = dataReader["address"].ToString();
+                                    reader.city = dataReader["city"].ToString();
+                                    reader.state = dataReader["state"].ToString();
+                                    reader.zip = dataReader["zip"].ToString();
+                                    reader.business_telephone = dataReader["business_telephone"].ToString();
+                                    reader.rmi_name = dataReader["rmi_name"].ToString();
+                                    //reader.lic_exp_date = (DateTime)dataReader["lic_exp_date"];
+                                    long licenseNumber = long.Parse(reader.license_number);
+                                    var alias = context.Contractor_Alias.Where(x => x.CCB_No.Equals(licenseNumber)).FirstOrDefault();
+                                    if (alias != null && !string.IsNullOrEmpty(alias.Alias))
+                                    { 
+                                        reader.alias_name = alias.Alias;
+                                    }
+                                    result.Add(reader);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+
+        public bool SyncOracleSqlCCB()
+        {
+            bool finalResult = false;
+            List<CCB_DAILY_LICENSES> contractorList = new List<CCB_DAILY_LICENSES>();
+            string oracleConnection = ConfigurationManager.ConnectionStrings["OracleConnection"].ToString();
+            OracleConnection conn = new OracleConnection(oracleConnection);
+            try
+            {
+                using (conn = new OracleConnection(oracleConnection))
+                {
+
+                    using (OracleCommand command = conn.CreateCommand())
+                    {
+                        string sql = "SELECT S_1, S_4, S_5, S_6, S_7, S_8, S_9, S_27, S_28 FROM AMANDA.CCB_DAILY_LICENSES order by S_1";
+                        command.CommandText = sql;
+                        conn.Open();
+                        OracleDataReader dataReader = command.ExecuteReader();
+                        while (dataReader.Read())
+                        {
+                            CCB_DAILY_LICENSES result = new CCB_DAILY_LICENSES();
+                            result.license_number = (!string.IsNullOrEmpty(dataReader["S_1"].ToString())) ? long.Parse(dataReader["S_1"].ToString()) : 0;
+                            result.business_name = dataReader["S_4"].ToString().Replace("&", "AND");
+                            result.address = dataReader["S_5"].ToString();
+                            result.city = dataReader["S_6"].ToString();
+                            result.state = dataReader["S_7"].ToString();
+                            result.zip = dataReader["S_8"].ToString();
+                            result.business_telephone = (!string.IsNullOrEmpty(dataReader["S_9"].ToString())) ? long.Parse(dataReader["S_9"].ToString()) : 0;
+                            result.rmi_name = dataReader["S_27"].ToString();
+                            result.lic_exp_date = (!string.IsNullOrEmpty(dataReader["S_28"].ToString())) ? DateTime.Parse(dataReader["S_28"].ToString()) : DateTime.MinValue;
+                            result.CCB_Id = Guid.NewGuid();
+                            var alias = context.Contractor_Alias.Where(x => x.CCB_No.Equals(result.license_number)).FirstOrDefault();
+                            if (alias != null && !string.IsNullOrEmpty(alias.Alias))
+                            {
+                                result.alias_name = alias.Alias;
+                            }
+                            contractorList.Add(result);
+                        }
+                    }
+                    // Close and Dispose OracleConnection object
+                    conn.Close();
+                    conn.Dispose();
+                }
+                var existingCCB = context.CCB_DAILY_LICENSES.ToList();
+                context.CCB_DAILY_LICENSES.RemoveRange(existingCCB);
+                context.CCB_DAILY_LICENSES.AddRange(contractorList);
+                context.SaveChanges();
+                finalResult = true;
+            }
+            catch (Exception ex)
+            {
+                finalResult = false;
+                ErrorLog log = new ErrorLog();
+                log.LogId = Guid.NewGuid();
+                //log.CreatedDate = DateTime.UtcNow;
+                log.CreatedDate = DateTime.Now;
+                log.Message = ex.Message;
+                log.StackTrace = ex.StackTrace;
+                context.ErrorLog.Add(log);
+                context.SaveChanges();
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+                ErrorLog log = new ErrorLog();
+                if (finalResult)
+                {
+                    log.LogId = Guid.NewGuid();
+                    //log.CreatedDate = DateTime.UtcNow;
+                    log.CreatedDate = DateTime.Now;
+                    log.Message = "CCB Licenses from Oracle DB are Synced";
+                    log.StackTrace = "Success";
+                    context.ErrorLog.Add(log);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    log.LogId = Guid.NewGuid();
+                    //log.CreatedDate = DateTime.UtcNow;
+                    log.CreatedDate = DateTime.Now;
+                    log.Message = "CCB Licenses from Oracle DB are Not-Synced";
+                    log.StackTrace = "Failed";
+                    context.ErrorLog.Add(log);
+                    context.SaveChanges();
+                }
+            }
+            return finalResult;
+        }
+
+        public CCBContractor UpdateAliasName(CCBContractor model)
+        {
+            try
+            {
+                long licenseNumber = long.Parse(model.license_number);
+                var alias = context.Contractor_Alias.Where(x => x.CCB_No.Equals(licenseNumber)).FirstOrDefault();
+                if (alias != null && !string.IsNullOrEmpty(alias.Alias))
+                {
+                    alias.Alias = model.alias_name;
+                    context.SaveChanges();
+                }
+                else
+                {
+                    Contractor_Alias newAlias = new Contractor_Alias();
+                    newAlias.Alias = model.alias_name;
+                    newAlias.Business_Name = model.business_name;
+                    newAlias.CCB_No = long.Parse(model.license_number);
+                    newAlias.Contractor_Alias_Id = Guid.NewGuid();
+                    newAlias.Created_Date = DateTime.Now;
+                    context.Contractor_Alias.Add(newAlias);
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                model = null;
+            }
+            return model;
+        }
+
+        public List<CCBContractor> GetCCBAliasList()
+        {
+            List<CCBContractor> result = new List<CCBContractor>();
+            result = (from info in context.Contractor_Alias
+                      select new CCBContractor() {
+                          ccb_number=info.CCB_No,
+                          business_name=info.Business_Name,
+                          alias_name=info.Alias
+                      }).ToList<CCBContractor>();
+            return result;
+        }
+    }
+}

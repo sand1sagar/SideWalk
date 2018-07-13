@@ -1,0 +1,10 @@
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Release\Sidewalk.Logic.dll.config
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Release\Sidewalk.Logic.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Release\Sidewalk.Logic.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Release\EntityFramework.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Release\EntityFramework.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\obj\Release\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\obj\Release\Sidewalk.Logic.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\obj\Release\Sidewalk.Logic.pdb

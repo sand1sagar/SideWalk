@@ -1,0 +1,48 @@
+﻿using Sidewalk.Logic;
+using SidewalkUI.Common;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace SidewalkUI.Controllers
+{
+    public class HomeController : Controller
+    {
+        RepairItemLogic repairItemLogic = new RepairItemLogic();
+        public ActionResult Index()
+        {
+            var user = Request.LogonUserIdentity;
+           
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+            
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public JsonResult Token()
+        {
+            var user = Request.LogonUserIdentity;
+            string userName = user.Name.Split('\\')[1].ToString();
+            string expiryTime = DateTime.Now.AddHours(8).ToString();
+            var token = string.Format("{0}-{1}", userName, expiryTime);
+            token = Helper.Base64Encode(token);
+            return Json(token, JsonRequestBehavior.AllowGet);
+        }
+    }
+}

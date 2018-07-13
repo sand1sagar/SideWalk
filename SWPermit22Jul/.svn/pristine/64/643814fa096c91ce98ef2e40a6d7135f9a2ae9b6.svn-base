@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3d63d44aa56248619d4d24768afa3f22" Name="Diagram1" ZoomLevel="78">
+        <EntityTypeShape EntityType="SWPostModel.dtproperties" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.Permit" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.PermitApplicant" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.PermitCostsDetail" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.PermitFeeRate" Width="1.5" PointX="2.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.PermitHistory" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.PermitPayment" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.PermitStatus" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.ASSESSOR" Width="1.5" PointX="7.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWPostModel.sw_user" Width="1.5" PointX="9.75" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="SWPostModel.FK_Permit_PermitApplicant" ManuallyRouted="false" />
+        <AssociationConnector Association="SWPostModel.FK_Permit_PermitStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="SWPostModel.FK_PermitHistory_Permit" ManuallyRouted="false" />
+        <AssociationConnector Association="SWPostModel.FK_PermitPayment_Permit" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SWPostModel.ErrorLog" Width="1.5" PointX="10.375" PointY="4.75" />
+        <EntityTypeShape EntityType="SWPostModel.CCB_DAILY_LICENSES" Width="1.5" PointX="10.375" PointY="7.75" />
+        <EntityTypeShape EntityType="SWPostModel.Contractor_Alias" Width="1.5" PointX="12.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

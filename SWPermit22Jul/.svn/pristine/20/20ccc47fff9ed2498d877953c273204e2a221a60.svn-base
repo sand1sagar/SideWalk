@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="456d26cbd785460a95dc2272ac6464be" Name="Diagram1">
+        <EntityTypeShape EntityType="TempModel.Affidavit" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.AffidavitCosts" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.AffidavitCostsDetail" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.AffidavitCostsDetailObject" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.AffidavitDocumentHistory" Width="1.5" PointX="7.5" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.AffidavitNote" Width="1.5" PointX="7.5" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.CityContract" Width="1.5" PointX="8" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.Contractor" Width="1.5" PointX="5.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.CostType" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.Inspector" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.PermitFee" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.PermitFeeRate" Width="1.5" PointX="2.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.PrintCode" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.RepairItem" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.Staff" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.sw_action" Width="1.5" PointX="10.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.sw_action_detail" Width="1.5" PointX="10.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.sw_posting" Width="1.5" PointX="10.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.sysdiagrams" Width="1.5" PointX="12.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.UnitOfMeasure" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.UserProfile" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.webpages_Membership" Width="1.5" PointX="12.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.webpages_OAuthMembership" Width="1.5" PointX="12.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TempModel.webpages_Roles" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="TempModel.FK_Affidavit_Inspector" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_AffidavitDocumentHistory_Affidavit" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_AffidavitNote_Affidavit" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_AffidavitCosts_CostType" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_AffidavitCostsDetail_CostType" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_AffidavitCostsDetail_RepairItem" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_AffidavitCostsDetailObject_CostType" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_AffidavitCostsDetailObject_RepairItem" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_AffidavitDocumentHistory_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_CityContract_Contractor" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_Inspector_Staff" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_RepairItem_PrintCode" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.FK_RepairItem_RepairItem" ManuallyRouted="false" />
+        <AssociationConnector Association="TempModel.webpages_UsersInRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

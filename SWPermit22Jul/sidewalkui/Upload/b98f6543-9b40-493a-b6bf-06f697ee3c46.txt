@@ -1,0 +1,303 @@
+
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using SidewalkPermitWPF.Helper;
+using SidewalkPermitWPF.MessageInfrastructure;
+using SidewalkPermitWPF.Model;
+using SidewalkPermitWPF.Views;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+
+namespace SidewalkPermitWPF.ViewModel
+{
+    public class PermitViewModel : ViewModelBase
+    {
+        private readonly IDataService _dataService;
+        ObservableCollection<sw_contractor> _contractors;
+        ObservableCollection<sw_posting> _affidavits;
+        ObservableCollection<sw_action_detail> _affidavitCostDetail;
+        /// <summary>
+        /// Declaring EmployeeInfo object for Save and Messanger purpose
+        /// Passing Parameters from View to ViewModel
+        /// </summary>
+        sw_contractor _contractorInfo;
+        sw_posting _affidavitInfo;
+        sw_action_detail _affidavitCostDetailInfo;
+
+        /// <summary>
+        /// The declaration used in case of search affidavit
+        /// </summary>
+
+        string _totalFee;
+        string _expirationDate;
+        bool _contractorRadio;
+        bool _ownerRadio;
+        bool _otherRadio;
+        public string TotalFee
+        {
+            get { return _totalFee; }
+            set
+            {
+                _totalFee = value;
+                RaisePropertyChanged("TotalFee");
+            }
+        }
+        public string ExpirationDate
+        {
+            get { return _expirationDate; }
+            set
+            {
+                _expirationDate = value;
+                RaisePropertyChanged("ExpirationDate");
+            }
+        }
+        public bool ContractorRadio
+        {
+            get { return _contractorRadio; }
+            set
+            {
+                _contractorRadio = value;
+                RaisePropertyChanged("ContractorRadio");
+            }
+        }
+        public bool OwnerRadio
+        {
+            get { return _ownerRadio; }
+            set
+            {
+                _ownerRadio = value;
+                RaisePropertyChanged("OwnerRadio");
+            }
+        }
+        public bool OtherRadio
+        {
+            get { return _otherRadio; }
+            set
+            {
+                _otherRadio = value;
+                RaisePropertyChanged("OtherRadio");
+            }
+        }
+
+        public ObservableCollection<sw_contractor> Contractors
+        {
+            get { return _contractors; }
+            //Property's Setter calls RaisedPropertyChanged method which will internally raise 
+            //PropertyChanged event when the data from the collection changes.
+            set
+            {
+                _contractors = value;
+                RaisePropertyChanged("Contractors");
+            }
+        }
+        public ObservableCollection<sw_posting> Affidavits
+        {
+            
+            get { return _affidavits; }
+           
+            set
+            {
+                _affidavits = value;
+                RaisePropertyChanged("Affidavits");
+            }
+        }
+        public ObservableCollection<sw_action_detail> AffidavitCostsDetails
+        {
+
+            get { return _affidavitCostDetail; }
+
+            set
+            {
+                _affidavitCostDetail = value;
+                RaisePropertyChanged("AffidavitCostsDetails");
+            }
+        }
+
+        public sw_contractor ContractorInfo
+        {
+            get { return _contractorInfo; }
+            set
+            {
+                _contractorInfo = value;
+                RaisePropertyChanged("ContractorInfo");
+            }
+        }
+
+        public sw_posting AffidavitInfo
+        {
+            get { return _affidavitInfo; }
+            set
+            {
+                _affidavitInfo = value;
+                RaisePropertyChanged("AffidavitInfo");
+            }
+        }
+        public sw_action_detail AffidavitCostsDetailInfo
+        {
+            get { return _affidavitCostDetailInfo; }
+            set
+            {
+                _affidavitCostDetailInfo = value;
+                RaisePropertyChanged("AffidavitCostsDetailInfo");
+            }
+        }
+       
+
+      
+        public PermitViewModel(IDataService dataService)
+        {
+
+
+            ContractorInfo = new sw_contractor();
+            AffidavitInfo = new sw_posting();
+            AffidavitCostsDetails = new ObservableCollection<sw_action_detail>();
+            _dataService = dataService;
+            SearchContractorCommand = new RelayCommand(SearchContractor);
+            SearchAffidavitCommand = new RelayCommand(SearchAffidavit);
+            SubmitApplicationCommand = new RelayCommand(SubmitApplication);
+        }
+
+        #region Command Object Declarations
+        public RelayCommand SearchContractorCommand { get; set; }
+        public RelayCommand SearchAffidavitCommand { get; set; }
+        public RelayCommand SubmitApplicationCommand { get; set; }
+        //public RelayCommand<EmployeeInfo> SaveCommand { get; set; }
+        //public RelayCommand<EmployeeInfo> UpdateCommand { get; set; }
+        //public RelayCommand<EmployeeInfo> DeleteCommand { get; set; }
+        //public RelayCommand<EmployeeInfo> ResetCommand { get; set; }
+        
+        //public RelayCommand<EmployeeInfo> SendEmployeeCommand { get; set; }
+        #endregion
+
+
+        async void SearchContractor()
+        {
+            if (ContractorRadio)
+            {
+
+            }
+            ContractorInfo = await _dataService.GetContractor(ContractorInfo.license_no);
+            if(ContractorInfo==null)
+            {
+                ContractorInfo = new sw_contractor();
+            }
+        }
+
+        async void SearchAffidavit()
+        {
+            DateTime permitExpiry = DateTime.Now.AddDays(67.00);
+
+            //while (firstFriday.DayOfWeek != DayOfWeek.Friday)
+            //{
+            //   firstFriday = firstFriday.AddDays(1);
+            //}
+            ExpirationDate = permitExpiry.ToShortDateString();
+            AffidavitInfo = await _dataService.GetAffidavitByNumber(AffidavitInfo.aff_no.ToString());
+            AffidavitCostsDetails = await _dataService.GetAffidavitCostDetails(AffidavitInfo.aff_no.ToString(), "E");
+            TotalFee = "0";
+            foreach(var item in AffidavitCostsDetails)
+            {
+                TotalFee = (decimal.Parse(TotalFee) + item.cost).ToString();
+            }
+            if (double.Parse(TotalFee) >= 500.00)
+                TotalFee = "500";
+            else if (double.Parse(TotalFee) <= 60.00)
+                TotalFee = "60";
+        }
+
+        async void SubmitApplication()
+        {
+            Permit model = new Permit();
+            model.AffidavitID = long.Parse(AffidavitInfo.aff_no.ToString());
+            model.ContractorID = ContractorInfo.license_no;
+
+            model.PermitNo = "NA";
+            model.PermitIssued = false;
+            model.PermitExtended = false;
+            model.DateCanceled = DateTime.MaxValue;
+            model.DateIssued = DateTime.MaxValue;
+            model.BuilderBoardNo = string.Empty;
+            model.DateCanceled = DateTime.MaxValue;
+            model.CanceledBy = string.Empty;
+            model.LastAction = "Application Submitted";
+            if (ContractorRadio)
+                model.ApplicantType = "Contractor";
+            else if (OwnerRadio)
+                model.ApplicantType = "Owner";
+            else if (OtherRadio)
+                model.ApplicantType = "Other";
+            model.TotalFee = decimal.Parse(TotalFee);
+            model.PermitStatus = Constants.PermitStatus_Submitted;
+            model = await _dataService.InsertPermit(model);
+            if(model.PermitID>0)
+                MessageBox.Show("Permit application submitted successfully!");
+            else
+                MessageBox.Show("Something went wrong, please try again!");
+        }
+
+        void SendAffidavitInfo(sw_posting affidavit)
+        {
+            if (affidavit != null)
+            {
+                Messenger.Default.Send<MessageCommunicator>(new MessageCommunicator()
+                {
+                    AffidavitInfo = affidavit
+                });
+            }
+        }
+        void SendContractor(sw_contractor contracotr)
+        {
+            if (contracotr != null)
+            {
+                Messenger.Default.Send<MessageCommunicator>(new MessageCommunicator()
+                {
+                    ContractorInfo = contracotr
+                });
+            }
+        }
+
+        /// <summary>
+        /// Receives sent Employee from UI's DataGrid
+        /// and assign it to EmpInfo Notifiable property to
+        /// show at other view
+        /// </summary>
+        void ReceiveAffidavitInfo()
+        {
+            if (AffidavitInfo != null)
+            {
+                Messenger.Default.Register<MessageCommunicator>(this, (affidavit) =>
+                {
+                    this.AffidavitInfo = affidavit.AffidavitInfo;
+                });
+            }
+        }
+
+        void ReceiveContractor()
+        {
+            if (ContractorInfo != null)
+            {
+                Messenger.Default.Register<MessageCommunicator>(this, (contractor) =>
+                {
+                    this.ContractorInfo = contractor.ContractorInfo;
+                });
+            }
+        }
+
+        #region Custom Models
+
+        public class CustomProperties
+        {
+            public string TotalFee { get; set; }
+            public string ExpirationDate { get; set; }
+        }
+
+        #endregion
+    }
+  
+}

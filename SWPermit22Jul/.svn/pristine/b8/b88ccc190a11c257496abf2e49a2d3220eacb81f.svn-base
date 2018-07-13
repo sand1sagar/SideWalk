@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD0F653A-8327-4596-BD0B-76AE91985E89}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sidewalk.Logic</RootNamespace>
+    <AssemblyName>Sidewalk.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\app\client\sandeep\product\12.1.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\app\client\sandeep\product\12.1.0\client_1\odp.net\bin\4\EF6\Oracle.DataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\packages\Oracle\odp.net\managed\common\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AffidavitCostsLogic.cs" />
+    <Compile Include="Caching\CacheEngine.cs" />
+    <Compile Include="ConnectionHelper.cs" />
+    <Compile Include="ContractorLogic.cs" />
+    <Compile Include="Database\Affidavit.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AffidavitAttachment.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AffidavitStatus.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Affidavit_Old.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ASSESSOR.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CCB_DAILY_LICENSES.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Contractor_Alias.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CustomModels.cs" />
+    <Compile Include="Database\dtproperties.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\dt_getpropertiesbyid_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\dt_getpropertiesbyid_u_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ErrorLog.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getAffidavitByKeyword_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getAffidavitByParameter_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getAffidavitByProperty_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getAffidavitCostDetails_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getAffidavitDetails_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getAffidavitList_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getContractorByKeyword_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getContractorDetailsByCCBNumber_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\getContractorDetailsByName_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Permit.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PermitApplicant.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PermitCostsDetail.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PermitFee.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PermitFeeRate.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PermitHistory.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PermitPayment.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\PermitStatus.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\qip.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SidewalkDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SidewalkDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SidewalkDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SidewalkDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SidewalkDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sp_getAffidavitByParameter_swp_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sp_getAffidavitByProperty_swp_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sp_getAffidavitDetails_swp_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sp_getAffidavitList_swp_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SP_PermitReciept_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\sw_user.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ufnGetPostCostDetail_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ufnGetPostCostSummary_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PermitLogic.cs" />
+    <Compile Include="RepairItemLogic.cs" />
+    <Compile Include="ErrorLogLogic.cs" />
+    <Compile Include="AffidavitLogic.cs" />
+    <Compile Include="SidewalkLogic.cs" />
+    <Compile Include="PropertyDetailsLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Database\SidewalkDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SidewalkDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\SidewalkDB.edmx.diagram">
+      <DependentUpon>SidewalkDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\SidewalkDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SidewalkDB.edmx</DependentUpon>
+      <LastGenOutput>SidewalkDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\SidewalkDB.edmx.sql" />
+    <Content Include="Database\SidewalkDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SidewalkDB.edmx</DependentUpon>
+      <LastGenOutput>SidewalkDB.cs</LastGenOutput>
+    </Content>
+    <Content Include="OraOps12.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

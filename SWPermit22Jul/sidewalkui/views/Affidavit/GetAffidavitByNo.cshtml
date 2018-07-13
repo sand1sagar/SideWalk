@@ -1,0 +1,714 @@
+﻿@model SidewalkUI.Models.AffidavitDetailsViewModel
+@{
+    ViewBag.Title = "Affidavit Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<link href="~/vendors/uniform.default.css" rel="stylesheet" media="screen">
+<script src="~/vendors/jquery.uniform.min.js"></script>
+@*<link href="https://printjs-4de6.kxcdn.com/print.min.css" rel="stylesheet" media="screen">
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>*@
+<script type="text/javascript">
+    var AppURLSettings = AppURLSettings || {};
+    AppURLSettings.DoNotPour = '@Url.Action("DoNotPour", "FormInspection")';
+    AppURLSettings.GrantedToPour = '@Url.Action("GrantedToPour", "FormInspection")';
+    AppURLSettings.RepairsAreCompleteAndSatisfactory = '@Url.Action("RepairsAreCompleteAndSatisfactory", "FinalInspection")';
+    AppURLSettings.RepairsNotAcceptable = '@Url.Action("RepairsNotAcceptable", "FinalInspection")';
+    AppURLSettings.UpdateAffidavitStatus = '@Url.Action("UpdateAffidavitStatus", "Affidavit")';
+    //jQuery(document).ready(function() {
+    //   FormValidation.init();
+    //});
+
+
+    $(function () {
+        //$(".datepicker").datepicker();
+        $(".uniform_on").uniform();
+        //$(".chzn-select").chosen();
+        //$('.textarea').wysihtml5();
+        $('#btnFileUpload').click(function () {
+            $('#btnFileUpload').prop('disabled', true);
+            var formData = new FormData();
+            formData.append('AffidavitId', $('#hdnAffidavitId').val());
+            var totalFiles = document.getElementById("fileInputAttache").files.length;
+            for (var i = 0; i < totalFiles; i++) {
+                var file = document.getElementById("fileInputAttache").files[i];
+                var isDuplicate = false;
+                $.each($('#tblAttachment tbody tr td .hdn-display'), function (key, val) {
+                    if (file.name == val.defaultValue)
+                        isDuplicate = true;
+                });
+                if (!isDuplicate)
+                    formData.append('FileUpload', file);
+            }
+            console.log(formData);
+            $.ajax({
+                type: 'post',
+                url: '../Affidavit/Upload',
+                data: formData,
+                dataType: 'json',
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    if (result) {
+                        alert('Files uploaded successfully. Duplicate files will not be added.');
+                        $('#fileInputAttache').val('');
+                        $('#btnFileUpload').prop('disabled', false);
+                    }
+                },
+                error: function (errorInfo) {
+
+                }
+            }).done(function () {
+                $('#tblAttachment tbody').html('');
+                $.ajax({
+                    type: 'get',
+                    url: '../Affidavit/GetAffidavitAttachment?affidavitNo=' + $('#hdnAffidavitId').val(),
+                    success: function (result) {
+                        var dynamicList = '';
+                        $.each(result, function (i, key) {
+                            dynamicList += '<tr id="row-' + key.AttachmentId + '"><td><input type="checkbox" class="chk-select" id="chk-select-' + key.AttachmentId + '" checked="checked" /><input type="hidden" value="' + key.FileName + '" id="hdn-' + key.AttachmentId + '"/><input type="hidden" value="' + key.DisplayName + '" class="hdn-display" /></td><td>' + key.DisplayName + '</td>'
+                            if (key.FileName.indexOf('.pdf') != -1) {
+                                dynamicList += '<td><img src="/images/adobe_pdf_document_100836.jpg" width="30" />'
+                                dynamicList += '<img src="/Upload/' + key.FileName + '" width="30" style="display:none;" id="imgPrint-' + key.AttachmentId + '" /></td>'
+                            }
+                            else {
+                                dynamicList += '<td><img src="/Upload/' + key.FileName + '" width="30" id="imgPrint-' + key.AttachmentId + '"/></td>'
+                            }
+                            dynamicList += '<td><a href="javascript:void(0);" class="item-delete" id="delete-' + key.AttachmentId + '">Delete</a></td></tr>';
+                        });
+                        $('#tblAttachment tbody').html(dynamicList);
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+        });
+        $('#affidavitActions').on('change', function () {
+            switch (parseInt($(this).val())) {
+                case 1:
+                    if (confirm('Do you want to mark for form pour?') )
+                    {
+                        $.ajax({
+                            type: 'get',
+                            url: AppURLSettings.UpdateAffidavitStatus + '?affidavitNo=' + $('#hdnAffidavitId').val() + '&statusValue=' + $('#affidavitActions').val() + '&inspectorId=' + $('#hdnInspectorId').val(),
+                            success: function (result) {
+                                $('#txtAffidavitStatus').val(result);
+                            }
+                        });
+                    }
+                    return;
+                case 2:
+                    window.location = AppURLSettings.DoNotPour + '?affidavitNo=' + $('#hdnAffidavitId').val();
+                    return;
+                case 3:
+                    window.location = AppURLSettings.GrantedToPour + '?affidavitNo=' + $('#hdnAffidavitId').val();
+                    return;
+                case 4:
+                    //if (FormInspection.PermissionGranted) {
+                        if (confirm('Do you want to mark for final?')) {
+                            $.ajax({
+                                type: 'get',
+                                url: AppURLSettings.UpdateAffidavitStatus + '?affidavitNo=' + $('#hdnAffidavitId').val() + '&statusValue=' + $('#affidavitActions').val() + '&inspectorId=' + $('#hdnInspectorId').val(),
+                                success: function (result) {
+                                    $('#txtAffidavitStatus').val(result);
+                                }
+                            });
+                        }
+                    //}
+                    //else {
+                    //    window.alert("The Form inspection must pass before this.");
+                    //}
+                    return;
+                case 5:
+                    window.location = AppURLSettings.RepairsAreCompleteAndSatisfactory + '?affidavitNo=' + $('#hdnAffidavitId').val();
+                    return;
+                case 6:
+                    window.location = AppURLSettings.RepairsNotAcceptable + '?affidavitNo=' + $('#hdnAffidavitId').val();
+                    return;
+                default:
+
+            }
+
+        });
+        $('#chk-selectall').on('change', function () {
+            if ($(this).is(':checked')) {
+                $.each($('.chk-select'), function (i, key) {
+                    $(this).prop('checked', true);
+                });
+            }
+            else {
+                $.each($('.chk-select'), function (i, key) {
+                    $(this).prop('checked', false);
+                });
+            }
+        });
+        $('#btnPrintSelected').on('click', function () {
+            $.each($('.chk-select'), function (i, key) {
+                if ($(key).is(':checked')) {
+                    window.open($('#imgPrint-' + $(key).attr('id').split('-')[2] + '').attr('src'), '_blank').print();
+                }
+            });
+        });
+        $('#tblAttachment tbody').on('click', '.item-delete', function () {
+            if (confirm('Are you sure, you want to delete the selected file ?')) {
+                var id = $(this).attr('id').split('-')[1];
+                $.ajax({
+                    type: 'get',
+                    url: '../Affidavit/DeleteAffidavitAttachment?attachmentId=' + id,
+                    success: function (result) {
+                        if (result) {
+                            $('#row-' + id).remove();
+                        }
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            }
+        });
+        $('#btnCameraUpload').on('click', function () {
+            window.open('../Affidavit/Capture', 'Capture Image', 'width=700px,height=400px,left=100px,top=100px,resizable=no')
+        });
+        $('#rootwizard').bootstrapWizard({
+            onTabShow: function (tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index + 1;
+                var $percent = ($current / $total) * 100;
+                $('#rootwizard').find('.bar').css({ width: $percent + '%' });
+                // If it's the last tab then hide the last button and show the finish instead
+                if ($current >= $total) {
+                    $('#rootwizard').find('.pager .next').hide();
+                    $('#rootwizard').find('.pager .finish').show();
+                    $('#rootwizard').find('.pager .finish').removeClass('disabled');
+                } else {
+                    $('#rootwizard').find('.pager .next').show();
+                    $('#rootwizard').find('.pager .finish').hide();
+                }
+            }
+        });
+        $('#rootwizard .finish').click(function () {
+            alert('Finished!, Starting over!');
+            $('#rootwizard').find("a[href*='tab1']").trigger('click');
+        });
+    });
+</script>
+<div class="row-fluid">
+    <!--/span-->
+    <div id="printContent" style="width:100%;">
+
+    </div>
+    <div class="span12" id="content">
+        <div class="row-fluid">
+            <!-- block -->
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left">Affidavit Information</div>
+                </div>
+                <div class="block-content collapse in">
+                    <form action="#" id="form_sample_1" class="form-horizontal">
+                        <div class="alert alert-error hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            You have some form errors. Please check below.
+                        </div>
+                        <div class="alert alert-success hide">
+                            <button class="close" data-dismiss="alert"></button>
+                            Your form validation is successful!
+                        </div>
+                        @*<div>
+                                <button style='align-self:flex-end'>Search</button>
+                            </div>
+                            <div>
+                                <button style='align-items:flex-end'>Attach /View</button>
+                            </div>*@
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="span3">
+                                    <div class="control-group">
+                                        <label class="control-label">Affidavit Actions<span class="required"></span></label>
+                                        <div class="controls">
+                                            <select id="affidavitActions">
+                                                <option value="0" selected="selected">Select Form or Final Action</option>
+                                                <option value="1">Mark for Form pour</option>
+                                                <option value="2">Do not pour</option>
+                                                <option value="3">Permission granted to pour</option>
+                                                <option value="4">Mark for Final</option>
+                                                <option value="5">Repairs not acceptable</option>
+                                                <option value="6">Repairs complete and satisfactory</option>
+                                                
+                                                 
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="span12">
+                                <div class="span3">
+                                    <div class="control-group">
+                                        <label class="control-label">Affidavit<span class="required"></span></label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.AffidavitID, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                            @Html.HiddenFor(x => x.AffidavitInfo.AffidavitID, new { id = "hdnAffidavitId" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span3">
+                                    <div class="control-group">
+                                        <label class="control-label">Property Address<span class="required"></span></label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.PropertyDescription, new { @class = "m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span3">
+                                    <div class="control-group">
+                                        <label class="control-label">Status<span class="required"></span></label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.AffidavitHistory.OrderByDescending(y=>y.CreatedDate).FirstOrDefault().StatusValue, new { @class = "span12 m-wrap", @disabled = "disabled",id="txtAffidavitStatus" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span3">
+                                    <div class="control-group">
+                                        <label class="control-label">Posting Date<span class="required"></span></label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.InspectionDate, "{0:MM/dd/yyyy}", new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span12">
+                                <div class="control-group">
+                                    <label class="control-label" for="fileInput">Attachements</label>
+                                    <div class="controls">
+                                        <input class="input-file" id="fileInputAttache" type="file" multiple="multiple">
+                                        <button type="button" id="btnFileUpload" class="btn btn-primary">Upload Documents</button>
+                                        <button type="button" id="btnCameraUpload" class="btn btn-primary">Upload from camera</button>
+                                        <button type="button" id="btnPrintSelected" class="btn btn-primary">Print Selected</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span24">
+                                <table class="table" id="tblAttachment">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" class="chk-selectall" id="chk-selectall" /></th>
+                                            <th>File Name</th>
+                                            <th>Icon</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Attachments)
+                                        {
+                                            <tr id="row-@item.AttachmentId">
+                                                <td>
+                                                    <input type="checkbox" class="chk-select" id="chk-select-@item.AttachmentId" />
+                                                    <input type="hidden" value="@item.FileName" id="hdn-@item.AttachmentId" />
+                                                    <input type="hidden" value="@item.DisplayName" class="hdn-display" />
+                                                </td>
+                                                <td><a href="~/Upload/@item.FileName" target="_blank">@item.DisplayName</a></td>
+                                                @if (item.FileName.Contains(".pdf"))
+                                                {
+                                                    <td>
+                                                        <img src="~/images/adobe_pdf_document_100836.jpg" width="30" />
+                                                        <img src="~/Upload/@item.FileName" width="30" style="display:none;" id="imgPrint-@item.AttachmentId" />
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td><img src="~/Upload/@item.FileName" width="30" id="imgPrint-@item.AttachmentId" /></td>
+                                                }
+                                                <td><a href="javascript:void(0);" class="item-delete" id="delete-@item.AttachmentId">Delete</a></td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="row-fluid">
+                            <div class="span4">
+                                <!-- BEGIN FORM-->
+
+                                <fieldset>
+                                    <legend>Inspection</legend>
+
+                                    <div class="control-group">
+                                        <label class="control-label">Inspection Date</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.InspectionDate, "{0:MM/dd/yyyy}", new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Inspector</label>
+                                        <div class="controls">
+                                            @Html.HiddenFor(x => x.AffidavitInfo.InspectorId, new { id = "hdnInspectorId" })
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.Inspector.FullName, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Visio Diagram</label>
+                                        <div class="controls">
+                                            <a href="javascript:void(0);">Show</a>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Track IT</label>
+                                        <div class="controls">
+                                            <a href="https://www.portlandoregon.gov/trackit/index.cfm?action=ViewItem&item_id=@System.Text.RegularExpressions.Regex.Match(Model.AffidavitInfo.notes, @"\d+").Value" target="_blank">@System.Text.RegularExpressions.Regex.Match(Model.AffidavitInfo.notes, @"\d+").Value</a>
+                                            @*@Html.TextAreaFor(x => x.AffidavitInfo.notes, new { @class = "span12 m-wrap", @disabled = "disabled" })*@
+                                        </div>
+                                    </div>
+                                    @*<div class="control-group">
+                        <label class="control-label">RNUM</label>
+                        <div class="controls">
+                            @Html.TextBoxFor(x => x.AffidavitInfo.PropertyID, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                        </div>
+                    </div>*@
+                                    <div class="control-group">
+                                        <label class="control-label">PropertyID</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.PropertyID, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">QTR Section/State ID</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.QtrSection, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Legal Description</label>
+                                        <div class="controls">
+                                            @Html.TextAreaFor(x => x.AffidavitInfo.PropertyDescription, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+
+                                <!-- END FORM-->
+                            </div>
+                            <div class="span4">
+                                <fieldset>
+                                    <legend>Owner Information</legend>
+
+                                    <div class="control-group">
+                                        <label class="control-label">Owner</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.Owner1, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Address</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.PropertyDescription, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">City</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.SiteCity, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">State</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.SiteStreetName, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label">Zip</label>
+                                        <div class="controls">
+                                            @Html.TextBoxFor(x => x.AffidavitInfo.SiteZip, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                        </div>
+                                    </div>
+                                            <h5>Affidavit History</h5>
+
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Activity</th>
+                                                        <th>Activity Date</th>
+                                                        <th>Inspector</th>
+                                                        <th>Comments</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody style="font-size:x-small">
+                                                    @if (Model.AffidavitInfo.AffidavitHistory != null)
+                                                    {
+                                                        foreach (var item in Model.AffidavitInfo.AffidavitHistory.OrderByDescending(y => y.CreatedDate).Where(x => x.AffidavitId.Equals(Model.AffidavitInfo.AffidavitID)))
+                                                        {
+                                                            <tr>
+                                                                <td>@item.AffidavitStatus.StatusDescription</td>
+                                                                <td>@item.CreatedDate</td>
+                                                                <td>@item.Inspector.FullName</td>
+                                                                <td>@item.Comments </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                </tbody>
+                                            </table>
+
+                                        </fieldset>
+                                        </ div >
+</div>
+
+                                        @*< div class="span4">*@
+                                        <fieldset>
+                                            <legend>Permit Information</legend>
+
+                                            <div class="control-group">
+                                                <label class="control-label">Applicant Type</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.PermitApplicantInfo.ApplicantType, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Issued By</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.PermitInfo.IssuedBy, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">CCB#</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.AffidavitInfo.builder_board_no, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Name</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.AffidavitInfo.contractor, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Issued Date</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.PermitInfo.DateIssued, "{0:MM/dd/yyyy}", new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Expiration Date</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.PermitInfo.DateExpired, "{0:MM/dd/yyyy}", new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Extended Date</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.PermitInfo.DatePermitExtended, "{0:MM/dd/yyyy}", new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Permit Status</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.PermitInfo.PermitStatus1.PermitStatusValue, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Permit Fee</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.PermitInfo.TotalFee, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label">Permit#</label>
+                                                <div class="controls">
+                                                    @Html.TextBoxFor(x => x.PermitInfo.PermitNo, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        @*<fieldset>
+                <legend>Status Details</legend>
+                <div class="control-group">
+                    <label class="control-label">Posting Date</label>
+                    <div class="controls">
+                        @Html.TextBoxFor(x => x.PermitInfo.SubmissionDate, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Posted By</label>
+                    <div class="controls">
+                        @Html.TextBoxFor(x => x.PermitInfo.IssuedBy, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Send Date</label>
+                    <div class="controls">
+                        @Html.TextBoxFor(x => x.AffidavitInfo.permit_no, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Send By</label>
+                    <div class="controls">
+                        @Html.TextBoxFor(x => x.AffidavitInfo.permit_no, new { @class = "span12 m-wrap", @disabled = "disabled" })
+                    </div>
+                </div>
+            </fieldset>*@
+</div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="block-content collapse in">
+                                        <div class="span12">
+                                            <div id="rootwizard">
+                                                <div class="navbar">
+                                                    <div class="navbar-inner">
+                                                        <div class="container">
+                                                            <ul>
+                                                                <li><a href="#tab1" data-toggle="tab">Costs</a></li>
+                                                                <li><a href="#tab2" data-toggle="tab">Revisions</a></li>
+                                                                <li><a href="#tab3" data-toggle="tab">City Repair</a></li>
+                                                                <li><a href="#tab4" data-toggle="tab">Notes</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                @*<div id="bar" class="progress progress-striped active">
+                                    <div class="bar"></div>
+                                </div>*@
+                                                <div class="tab-content">
+                                                    <div class="tab-pane" id="tab1">
+                                                        <div class="span6">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Cost Type</th>
+                                                                        <th>Unit</th>
+                                                                        <th>Rate</th>
+                                                                        <th>Cost</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @if (Model.PermitCostInfo != null)
+                                                                    {
+                                                                        foreach (var item in Model.PermitCostInfo.Where(x => x.action.Equals("E")))
+                                                                        {
+                                                                            <tr>
+                                                                                <td>@item.action_type</td>
+                                                                                <td>@item.unit.ToString("0.00")</td>
+                                                                                <td>@item.rate</td>
+                                                                                <td>@item.cost.ToString("0.00")</td>
+                                                                            </tr>
+                                                                        }
+                                                                    }
+                                                                    else {
+                                                                        <tr>
+                                                                            <td colspan="4">No records found</td>
+                                                                        </tr>
+                                                                    }
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab2">
+                                                        <div class="span6">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Cost Type</th>
+                                                                        <th>Unit</th>
+                                                                        <th>Rate</th>
+                                                                        <th>Cost</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @if (Model.PermitCostInfo != null)
+                                                                    {
+                                                                        foreach (var item in Model.PermitCostInfo.Where(x => x.action.Equals("R")))
+                                                                        {
+                                                                            <tr>
+                                                                                <td>@item.action_type</td>
+                                                                                <td>@item.unit.ToString("0.00")</td>
+                                                                                <td>@item.rate</td>
+                                                                                <td>@item.cost.ToString("0.00")</td>
+                                                                            </tr>
+                                                                        }
+                                                                    }
+                                                                    else {
+                                                                        <tr>
+                                                                            <td colspan="4">No records found</td>
+                                                                        </tr>
+                                                                    }
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab3">
+                                                        <form class="form-horizontal">
+                                                            <fieldset>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" for="focusedInput">Company Name</label>
+                                                                    <div class="controls">
+                                                                        <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" for="focusedInput">Contact Name</label>
+                                                                    <div class="controls">
+                                                                        <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" for="focusedInput">Contact Phone</label>
+                                                                    <div class="controls">
+                                                                        <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab4">
+                                                        <form class="form-horizontal">
+                                                            <fieldset>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" for="focusedInput">Company Name</label>
+                                                                    <div class="controls">
+                                                                        <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" for="focusedInput">Contact Name</label>
+                                                                    <div class="controls">
+                                                                        <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" for="focusedInput">Contact Phone</label>
+                                                                    <div class="controls">
+                                                                        <input class="input-xlarge focused" id="focusedInput" type="text" value="">
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                        </form>
+                                                    </div>
+                                                    @*<ul class="pager wizard">
+                                        <li class="previous first" style="display:none;"><a href="javascript:void(0);">First</a></li>
+                                        <li class="previous"><a href="javascript:void(0);">Previous</a></li>
+                                        <li class="next last" style="display:none;"><a href="javascript:void(0);">Last</a></li>
+                                        <li class="next"><a href="javascript:void(0);">Next</a></li>
+                                        <li class="next finish" style="display:none;"><a href="javascript:;">Finish</a></li>
+                                    </ul>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="span12">
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Validate</button>
+                                    <button type="button" class="btn">Cancel</button>
+                                </div>
+                            </div>
+</form>
+                </div>
+
+            </div>
+            <!-- /block -->
+        </div>
+    </div>
+</div>

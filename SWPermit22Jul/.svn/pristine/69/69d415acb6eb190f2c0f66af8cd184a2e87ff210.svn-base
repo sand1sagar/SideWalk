@@ -1,0 +1,97 @@
+﻿using System.Web;
+using System.Web.Optimization;
+
+namespace SidewalkUI
+{
+    public class BundleConfig
+    {
+        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+        public static void RegisterBundles(BundleCollection bundles)
+        {
+            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                        "~/Scripts/jquery-{version}.js",
+                        "~/bootstrap/js/bootstrap.min.js",
+                        "~/vendors/easypiechart/jquery.easy-pie-chart.js",
+                        "~/Scripts/jquery.dataTables.min.js",
+                        "~/Scripts/dataTables.scroller.min.js",
+                        "~/assets/scripts.js",
+                        "~/assets/DT_bootstrap.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                        "~/Scripts/jquery.validate*"));
+
+            // Use the development version of Modernizr to develop with and learn from. Then, when you're
+            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+                        "~/Scripts/modernizr-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/respond.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/bootstrap/css/bootstrap.min.css",
+                      "~/bootstrap/css/bootstrap-responsive.min.css",
+                      "~/vendors/easypiechart/jquery.easy-pie-chart.css",
+                      "~/assets/styles.css",
+                      "~/assets/DT_bootstrap.css",
+                      "~/Content/jquery.dataTables.min.css",
+                      "~/Content/dataTables.scroller.min.css"));
+
+            #region Bluewhele Theme
+
+
+            bundles.Add(new StyleBundle("~/Content/Theme").Include(
+                      "~/Content/Theme/reset.css",
+                      "~/Content/Theme/text.css",
+                      "~/Content/Theme/grid.css",
+                       "~/Content/Theme/layout.css",
+                      "~/Content/Theme/nav.css",
+                      "~/Content/Theme/jquery.jqplot.min.css",
+                       "~/Content/Theme/table/demo_page.css",
+                      "~/Content/Theme/fancy-button/fancy-button.css",
+                      "~/Content/Theme/themes/base/jquery.ui.all.css"));
+
+
+            bundles.Add(new ScriptBundle("~/Theme/jquery").Include(
+                        "~/Scripts/jquery-1.6.4.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.core.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.widget.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.accordion.min.js",
+                        "~/Scripts/jquery-ui/jquery.effects.core.min.js",
+                         "~/Scripts/jquery-ui/jquery.effects.blind.min.js",
+                          "~/Scripts/jquery-ui/jquery.effects.explode.min.js",
+                        "~/Scripts/jquery-ui/jquery.effects.slide.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.mouse.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.sortable.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.datepicker.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.progressbar.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.draggable.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.position.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.resizable.min.js",
+                        "~/Scripts/jquery-ui/jquery.ui.dialog.min.js",
+                        "~/Scripts/jquery-ui/external/jquery.bgiframe-2.1.2.js",
+                        "~/Scripts/jqPlot/jquery.jqplot.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.barRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.pieRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.highlighter.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.pointLabels.min.js",
+                        "~/Scripts/table/jquery.dataTables.min.js",
+                        "~/Scripts/table/table.js",
+                        "~/Scripts/fancy-button/fancy-button.js",
+                        "~/Scripts/tiny-mce/jquery.tinymce.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.canvasTextRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.canvasAxisLabelRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.barRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.pieRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.highlighter.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.pointLabels.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.donutRenderer.min.js",
+                        "~/Scripts/jqPlot/plugins/jqplot.bubbleRenderer.min.js",
+                        "~/Scripts/setup.js"));
+            #endregion
+        }
+    }
+}

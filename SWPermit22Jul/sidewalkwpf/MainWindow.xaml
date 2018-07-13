@@ -1,0 +1,71 @@
+﻿<Window x:Class="SidewalkWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sidewalk Posting" 
+        xmlns:mdi="clr-namespace:WPF.MDI;assembly=WPF.MDI"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" Loaded="Window_Loaded"
+        DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Affidavit" Click="affidavit_Click">
+                </MenuItem>
+                <MenuItem Header="Permits">
+                    <MenuItem Header="Applicant Applies" />
+                    <MenuItem Header="Staff Review" />
+                </MenuItem>
+                <MenuItem Header="Form Inspections">
+                    <MenuItem Header="Mark for Form Pour"/>
+                    <MenuItem Header="Record Comments"/>
+                    <MenuItem Header="Do not Pour"/>
+                    <MenuItem Header="Permission Granted"/>
+                </MenuItem>
+                <MenuItem Header="Final Inspections">
+                    <MenuItem Header="Mark for Final"/>
+                    <MenuItem Header="Record Comments"/>
+                    <MenuItem Header="Repairs Not Acceptable"/>
+                    <MenuItem Header="Repairs Complete and Satisfactory"/>
+                </MenuItem>
+                <MenuItem Header="City Repair">
+                    <MenuItem Header="Mark Affidavit for City Repairs"/>
+                    <MenuItem Header="Process Order"/>
+                    <MenuItem Header="Expired Permits for a given week"/>
+                    <MenuItem Header="2nd Notice Letter"/>
+                    <MenuItem Header="Stop permit process for City Repairs"/>
+                </MenuItem>
+                <MenuItem Header="Notice">
+                    <MenuItem Header="Notice Letter"/>
+                    <MenuItem Header="2nd Notice Letter"/>
+                </MenuItem>
+                <MenuItem Header="Reports">
+                    <MenuItem Header="Weekly Posted Permits"/>
+                    <MenuItem Header="Expired Permits for a given week"/>
+                    <MenuItem Header="Expired Permits for specific contractor"/>
+                    <MenuItem Header="Expired Permits for all contractors"/>
+                    <MenuItem Header="Repairs Complete and Satisfactory"/>
+                    <MenuItem Header="Permit Information"/>
+                    <MenuItem Header="Affidavit Information"/>
+                    <MenuItem Header="Active"/>
+                    <MenuItem Header="Labels"/>
+                    <MenuItem Header="Expired"/>
+                </MenuItem>
+                <MenuItem Header="Setup">
+                    <MenuItem Header="Contractor"/>
+                    <MenuItem Header="City Contract"/>
+                    <MenuItem Header="Permit Fees"/>
+                    <MenuItem Header="Staff"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <DockPanel>
+            <mdi:MdiContainer Theme="Aero" DockPanel.Dock="Top" Margin="0 20 0 0" Name="MainMdiContainer" />
+        </DockPanel>
+    </Grid>
+</Window>

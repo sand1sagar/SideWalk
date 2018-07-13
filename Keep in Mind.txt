@@ -1,0 +1,10 @@
+
+Change the Clearwalk to check clear walk flag in sw_posting
+
+Apartment sidewalks will be HOA or Owner
+
+
+
+
+
+

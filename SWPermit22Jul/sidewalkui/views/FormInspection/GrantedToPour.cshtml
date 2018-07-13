@@ -1,0 +1,182 @@
+﻿
+@model SidewalkUI.Models.FormFinalInspectionViewModel
+@{
+    ViewBag.Title = "GrantedToPour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="row-fluid">
+
+    @using (Html.BeginForm("GrantedToPour", "FormInspection", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new
+    {
+        @class = "form-horizontal",
+        role = "form"
+    }))
+    {
+        <div class="span12" id="content">
+            <div class="row-fluid">
+                <div class="block">
+                    <div class="navbar navbar-inner block-header">
+                        <div class="muted pull-left">PERMISSION GRANTED TO POUR</div>
+                    </div>
+
+                    @Html.HiddenFor(x => x.FormInspection.AffidavitId)
+
+                    @Html.HiddenFor(x => x.FormInspection.NotReady)
+                    @Html.HiddenFor(x => x.FormInspection.InsufficientBarricades)
+                    @Html.HiddenFor(x => x.FormInspection.RemoveDebris)
+                    @Html.HiddenFor(x => x.FormInspection.NotDeep)
+                    @Html.HiddenFor(x => x.FormInspection.CurbHeight)
+                    @Html.HiddenFor(x => x.FormInspection.SawCutEdges)
+                    @Html.HiddenFor(x => x.FormInspection.NoPermit)
+                    @Html.HiddenFor(x => x.FormInspection.OtherDoNotPour)
+                    <div class="block-content collapse in">
+                        <div style="padding-left: 112px;">
+                            <div class="row">
+                                <div class="span12 reasonFont noticeInfo" style="margin-left:20px;">
+                                    City of Portland, Bureau of Transportation,
+                                    <br /> Sidewalk Maintenance
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="span12">
+                                    <div class="span4 reasonFont">
+                                        Affidavit #@Model.AffidavitDetails.AffidavitInfo.AffidavitID
+                                    </div>
+                                    <div class="span4 reasonFont">
+                                        Permit #
+                                        @if (Model.AffidavitDetails.PermitInfo != null)
+                                        {
+                                            @Model.AffidavitDetails.PermitInfo.PermitNo
+                                        }
+                                    </div>
+                                    <div class="span4 reasonFont">
+                                        Address : @Model.AffidavitDetails.AffidavitInfo.PropertyDescription
+                                    </div>
+                                </div>
+                            </div>
+                            <fieldset>
+                                <legend>Repair needed on</legend>
+                                <div class="row">
+                                    <div class="span12">
+                                        <div class="span12" style="margin-left:35px">
+                                            <div class="span3">
+                                                @Html.CheckBoxFor(x => x.FormInspection.Sidewalk, new { @class = "checkbox-custom" })
+                                                Sidewalk
+                                            </div>
+                                            <div class="span3">
+                                                @Html.CheckBoxFor(x => x.FormInspection.Driveway, new { @class = "checkbox-custom" })
+                                                Driveway
+                                            </div>
+                                            <div class="span3">
+                                                @Html.CheckBoxFor(x => x.FormInspection.Curb, new { @class = "checkbox-custom" })
+                                                Curb
+                                            </div>
+                                            <div class="span3">
+                                                @Html.CheckBoxFor(x => x.FormInspection.Partial, new { @class = "checkbox-custom" })
+                                                Partial
+                                            </div>
+                                            <div class="span12" style="margin-left:18px;align-content:center">
+                                                <br />
+                                                Partial Description : @Html.TextAreaFor(x => x.FormInspection.PartialDescription, new { @class = "textarea", style = "width:74%;" })
+                                                <br />
+                                                <br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        
+                        <fieldset>
+                            <legend>Comments on Repair</legend>
+
+                            <div class="row">
+                                <div class="span12" style="margin-left: 20px;">
+                                    <div class="span12">
+                                        <div class="span12">
+                                        </div>
+                                        <div class="span12" >
+                                            @Html.CheckBoxFor(x => x.FormInspection.MatchJointPattern, new { @class = "checkbox-custom" })
+                                            Match existing joint pattern of abutting sidewalk, and use proper finishing tools after brooming lightly in direction
+                                            opposite of pedestrian travel, unless otherwise directed.
+                                        </div>
+                                        <div class="span12">
+                                            @Html.CheckBoxFor(x => x.FormInspection.PlaceJoints, new { @class = "checkbox-custom" })
+                                            Place construction/deep joints as indicated/marked/discussed.
+                                        </div>
+                                        <div class="span12">
+                                            @Html.CheckBoxFor(x => x.FormInspection.ToolDeepJoints, new { @class = "checkbox-custom" })
+                                            Tool deep joints w/max 3/8" radius edger, with back to back shine.
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <div class="span12" style="margin-left:20px;align-content:center">
+                                <br />
+                                Other : @Html.TextAreaFor(x => x.FormInspection.OtherGrantedToPour, new { @class = "textarea", style = "width:80%;" })
+                                <br />
+                                <br />
+                            </div>
+                            <div style="margin-left:20px;">
+                                <br />
+                                Contractor/Property Owner is responsible for graffiti prevention and correction.
+                                <br />
+                                A final inspection is required 2 days after concrete is poured, forms removed, backfill placed and compacted to grade.
+                                <br />
+                                To complete the sidewalk repair process, you must schedule a final inspection at www.portlandoregon.gov/transportation/sidewalks or call 503-823-1711.
+
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                            </div>
+                            <div class="row reasonFont">
+                                <div class="span3">
+                                    Contractor/Property Owner:
+                                </div>
+                                <div class="span9">
+                                </div>
+                            </div>
+                            <div class="row reasonFont">
+                                <div class="span9">
+                                    Inspector : @Model.AffidavitDetails.AffidavitInfo.Inspector.FullName
+                                    @Html.HiddenFor(x => x.FormInspection.FormPassInspectorId)
+                                    @Html.HiddenFor(x => x.FormInspection.FormFailInspectorId)
+                                </div>
+
+                                <div class="span3">
+                                    Date : @DateTime.Now.ToShortDateString()
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="margin-left:0px;margin-right:80px">
+                                    The City of Portland complies with all non‐discrimination, Civil Rights laws including Civil Rights Title VI and
+
+                                    ADA Title II. To help ensure equal access to City programs, services and activities, the City of Portland will reasonably modify policies/procedures and
+
+                                    provide auxiliary aids/services to persons with disabilities. Call 503-823-5185, TTY 503-823-6868 or Oregon Relay Service: 711 with such requests, or visit
+
+                                    http://bit.ly/13EWaCg
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="span12 reasonFont noticeInfo">
+                                    <input type="submit" value="Save" class="btn-large" style="font-size:40px" />
+                                </div>
+                                <div class="span9">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    }
+</div>
+

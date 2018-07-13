@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWPostModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SWPost.dbo.sw_action' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sw_action">
+          <Property Name="aff_no" Type="int" />
+          <Property Name="action" Type="char" MaxLength="1" />
+          <Property Name="action_dt" Type="datetime" />
+          <Property Name="cost_dt" Type="datetime" />
+          <Property Name="contract_id" Type="int" />
+          <Property Name="special_cost" Type="money" />
+          <Property Name="move_in" Type="money" />
+          <Property Name="adjustment" Type="money" />
+          <Property Name="total_cost" Type="money" />
+          <Property Name="comments" Type="varchar" MaxLength="254" />
+          <Property Name="override" Type="char" MaxLength="1" />
+          <Property Name="fis_name" Type="varchar" MaxLength="12" />
+          <Property Name="batch_id" Type="varchar" MaxLength="28" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SWPost.dbo.sw_action_detail' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sw_action_detail">
+          <Property Name="aff_no" Type="int" />
+          <Property Name="action" Type="char" MaxLength="1" />
+          <Property Name="action_type" Type="varchar" MaxLength="20" />
+          <Property Name="unit" Type="float" />
+          <Property Name="cost" Type="money" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SWPost.dbo.sw_contractor' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sw_contractor">
+          <Property Name="contractor_id" Type="varchar" MaxLength="12" />
+          <Property Name="name" Type="varchar" MaxLength="40" />
+          <Property Name="contact" Type="varchar" MaxLength="40" />
+          <Property Name="address" Type="varchar" MaxLength="40" />
+          <Property Name="city" Type="varchar" MaxLength="24" />
+          <Property Name="state" Type="char" MaxLength="2" />
+          <Property Name="zip" Type="varchar" MaxLength="10" />
+          <Property Name="phone" Type="int" />
+          <Property Name="license_no" Type="varchar" MaxLength="10" />
+          <Property Name="mbe_status" Type="char" MaxLength="1" />
+          <Property Name="wbe_status" Type="char" MaxLength="1" />
+          <Property Name="esb_status" Type="char" MaxLength="1" />
+          <Property Name="active_flag" Type="char" MaxLength="1" />
+          <Property Name="phone1" Type="varchar" MaxLength="16" />
+          <Property Name="mbe" Type="tinyint" />
+          <Property Name="wbe" Type="tinyint" />
+          <Property Name="esb" Type="tinyint" />
+          <Property Name="active" Type="tinyint" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SWPost.dbo.sw_posting' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sw_posting">
+          <Property Name="aff_no" Type="int" />
+          <Property Name="qtr_sec" Type="varchar" MaxLength="12" />
+          <Property Name="map_id" Type="varchar" MaxLength="24" />
+          <Property Name="post_dt" Type="datetime" />
+          <Property Name="acct_period" Type="int" />
+          <Property Name="property_id" Type="varchar" MaxLength="24" />
+          <Property Name="property_id2" Type="varchar" MaxLength="24" />
+          <Property Name="property_desc" Type="varchar" MaxLength="255" />
+          <Property Name="aff_status" Type="int" />
+          <Property Name="owner_name" Type="varchar" MaxLength="40" />
+          <Property Name="attn1" Type="varchar" MaxLength="40" />
+          <Property Name="attn2" Type="varchar" MaxLength="40" />
+          <Property Name="st_no" Type="varchar" MaxLength="24" />
+          <Property Name="district" Type="varchar" MaxLength="2" />
+          <Property Name="st_name" Type="varchar" MaxLength="40" />
+          <Property Name="designator" Type="varchar" MaxLength="4" />
+          <Property Name="city" Type="varchar" MaxLength="24" />
+          <Property Name="zip" Type="varchar" MaxLength="10" />
+          <Property Name="inspector_no" Type="int" />
+          <Property Name="city_owned_flag" Type="char" MaxLength="1" />
+          <Property Name="owner_resident_flag" Type="char" MaxLength="1" />
+          <Property Name="service_req_flag" Type="char" MaxLength="1" />
+          <Property Name="rep_by_city" Type="char" MaxLength="1" />
+          <Property Name="rep_by_owner" Type="char" MaxLength="1" />
+          <Property Name="partial_repair" Type="char" MaxLength="1" />
+          <Property Name="vacant_lot_flag" Type="char" MaxLength="1" />
+          <Property Name="vacant_desc" Type="varchar" MaxLength="255" />
+          <Property Name="repair_dt" Type="datetime" />
+          <Property Name="billed_dt" Type="datetime" />
+          <Property Name="bill_flag" Type="char" MaxLength="1" />
+          <Property Name="hold_until_dt" Type="datetime" />
+          <Property Name="permit_no" Type="int" />
+          <Property Name="permit_issued" Type="varchar" MaxLength="3" />
+          <Property Name="permit_extended" Type="char" MaxLength="1" />
+          <Property Name="date_issued" Type="datetime" />
+          <Property Name="date_expired" Type="datetime" />
+          <Property Name="contractor" Type="varchar" MaxLength="40" />
+          <Property Name="builder_board_no" Type="varchar" MaxLength="6" />
+          <Property Name="license_no" Type="varchar" MaxLength="10" />
+          <Property Name="date_cancelled" Type="datetime" />
+          <Property Name="cancelled_by" Type="varchar" MaxLength="10" />
+          <Property Name="status" Type="char" MaxLength="1" />
+          <Property Name="last_action" Type="char" MaxLength="1" />
+          <Property Name="date_added" Type="datetime" />
+          <Property Name="date_updated" Type="datetime" />
+          <Property Name="notes" Type="varchar" MaxLength="255" />
+          <Property Name="sent_dt" Type="datetime" />
+          <Property Name="NEW_AFF" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+  <Function Name="ufnGetPostCostDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fy" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="nMonth" Type="varchar" MaxLength="10" />
+          <Property Name="sMonth" Type="varchar" MaxLength="16" />
+          <Property Name="post_dt" Type="datetime" />
+          <Property Name="aff_no" Type="int" />
+          <Property Name="aff_action" Type="char" MaxLength="1" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
+          <Property Name="cost" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="address" Type="varchar" MaxLength="100" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="ufnGetPostCostSummary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fynum" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="iYear" Type="int" />
+          <Property Name="sYear" Type="char" MaxLength="4" />
+          <Property Name="iMonth" Type="int" />
+          <Property Name="sMonth" Type="char" MaxLength="6" />
+          <Property Name="aff_no" Type="int" />
+          <Property Name="aff_action" Type="char" MaxLength="1" />
+          <Property Name="cost" Type="decimal" Precision="10" Scale="2" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="SWPostModelStoreContainer" />
+</Schema>

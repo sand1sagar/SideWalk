@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "DoNotPour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .reasonFont {
+        font-size: 20px;
+        margin-bottom: 20px !important;
+    }
+
+    .noticeInfo {
+        margin-top: 20px;
+        margin-bottom: 50px !important;
+        text-align: center;
+    }
+</style>
+<div class="row-fluid">
+    <!--/span-->
+    <div class="span12" id="content">
+        <div class="row-fluid">
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left">DO NOT POUR CONCRETE</div>
+                </div>
+                <div class="block-content collapse in">
+                    <div style="padding-left: 112px;">
+                        <div class="row">
+                            <div class="span12 reasonFont noticeInfo" style="margin-left:20px;">
+                                City of Portland, Bureau of Transportation, <br /> Sidewalk Maintenance
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12 noticeInfo">
+                                <div class="span6">
+                                    Affidavit #
+                                </div>
+                                <div class="span6">
+                                    Permit #
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12 reasonFont" style="margin-left:20px;">
+                                Address
+                            </div>
+                            <div class="span12">
+                                <textarea style="width:95%"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12 reasonFont noticeInfo">
+                                <div class="span4">
+                                    Sidewalk
+                                </div>
+                                <div class="span4">
+                                    Driveway
+                                </div>
+                                <div class="span4">
+                                    Curb
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="span12 reasonFont ">
+                                <div class="span6">
+
+                                    <div class="span12" style="margin-left:20px;">
+                                        Not ready/ Not Started
+                                    </div>
+                                    <div class="span12 ">
+                                        Place sufficient amount of barricades as required by city Right-of-Way permit for safety
+                                    </div>
+                                    <div class="span12">
+                                        Remove construction debris from city right-of-way.
+                                    </div>
+                                    <div class="span12">
+                                        Excavated areas are not deep enough throughout per city code (sidewalk 4" deep, Driveway 6" deep & 10" deep in d/w curb line )
+                                    </div>
+
+                                </div>
+                                <div class="span6">
+                                    <div class="12 reasonFont">
+                                        Curb to be 16" from top of curb (Example: 6" exposed, 10" below street)
+                                    </div>
+                                    <div class="12 reasonFont">
+                                        Saw cut spalled/Chipped edges vertically to full depth as marked.
+                                    </div>
+                                    <div class="12 reasonFont">
+                                        No permit/ permit expired.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12 reasonFont" style="margin-left:20px;">
+                                Other
+                            </div>
+                            <div class="span12">
+                                <textarea style="width:95%"></textarea>
+                            </div>
+                        </div>
+                        <div class="row reasonFont noticeInfo">
+                            Call the Sidewalk Maintenance Office at 503-823-1711 to request another form inspection after corrections have been made.
+                        </div>
+                        <div class="row reasonFont">
+                            <div class="span3">
+                                Contractor/Property Owner:
+                            </div>
+                            <div class="span9">
+                            </div>
+                        </div>
+                        <div class="row reasonFont">
+                            <div class="span3">
+                                Inspector
+                            </div>
+                            
+                            <div class="span3">
+                                Date :
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

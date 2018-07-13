@@ -1,0 +1,251 @@
+﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using SidewalkPermitWPF.Helper;
+using SidewalkPermitWPF.MessageInfrastructure;
+using SidewalkPermitWPF.Model;
+using SidewalkPermitWPF.Views;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using WPF.MDI;
+using PDX.PBOT.SWPermit.Reporting;
+using System.IO;
+using System.Diagnostics;
+using System.Configuration;
+
+namespace SidewalkPermitWPF.ViewModel
+{
+    public class PermitFeeViewModel : ViewModelBase
+    {
+        private readonly IDataService _dataService;
+
+        /// <summary>
+        /// Declaring EmployeeInfo object for Save and Messanger purpose
+        /// Passing Parameters from View to ViewModel
+        /// </summary>
+        PermitFee _permitFee;
+        MdiContainer _container;
+
+        /// <summary>
+        /// The declaration used in case of search affidavit
+        /// </summary>
+
+        string _minimumFeeId;
+
+        public string MinimumFeeId
+        {
+            get { return _minimumFeeId; }
+            set
+            {
+                _minimumFeeId = value;
+                RaisePropertyChanged("MinimumFeeId");
+            }
+        }
+
+        string _sidewalkFeeId;
+
+        public string SidewalkFeeId
+        {
+            get { return _sidewalkFeeId; }
+            set
+            {
+                _sidewalkFeeId = value;
+                RaisePropertyChanged("SidewalkFeeId");
+            }
+        }
+        string _maximumFee;
+
+        public string MaximumFee
+        {
+            get { return _maximumFee; }
+            set
+            {
+                _maximumFee = value;
+                RaisePropertyChanged("MaximumFee");
+            }
+        }
+        string _minimumFee;
+       
+        public string MinimumFee
+        {
+            get { return _minimumFee; }
+            set
+            {
+                _minimumFee = value;
+                RaisePropertyChanged("MinimumFee");
+            }
+        }
+
+        string _sidewalkFee;
+
+        public string SidewalkFee
+        {
+            get { return _sidewalkFee; }
+            set
+            {
+                _sidewalkFee = value;
+                RaisePropertyChanged("SidewalkFee");
+            }
+        }
+        string _driveFee;
+
+        public string DriveFee
+        {
+            get { return _driveFee; }
+            set
+            {
+                _driveFee = value;
+                RaisePropertyChanged("DriveFee");
+            }
+        }
+        string _driveFeeId;
+
+        public string DriveFeeId
+        {
+            get { return _driveFeeId; }
+            set
+            {
+                _driveFeeId = value;
+                RaisePropertyChanged("DriveFeeId");
+            }
+        }
+        string _curbFee;
+
+        public string CurbFee
+        {
+            get { return _curbFee; }
+            set
+            {
+                _curbFee = value;
+                RaisePropertyChanged("CurbFee");
+            }
+        }
+        string _curbFeeId;
+
+        public string CurbFeeId
+        {
+            get { return _curbFeeId; }
+            set
+            {
+                _curbFeeId = value;
+                RaisePropertyChanged("CurbFeeId");
+            }
+        }
+
+        public ObservableCollection<PermitFeeRate> PermitFeeRateList
+        {
+            get { return _permitFeeRate; }
+            set
+            {
+                _permitFeeRate = value;
+                RaisePropertyChanged("PermitFeeRateList");
+            }
+        }
+        ObservableCollection<PermitFeeRate> _permitFeeRate;
+        public PermitFee PermitFeeInfo
+        {
+            get { return _permitFee; }
+            set
+            {
+                _permitFee = value;
+                RaisePropertyChanged("PermitFeeInfo");
+            }
+        }
+
+   
+        /// <summary>
+        /// Commands
+        /// </summary>
+        //public RelayCommand SearchCCBCommand { get; set; }
+        public RelayCommand UpdateCommand { get; set; }
+        //public RelayCommand<long> deleteCCBCommand { get; set; }
+        
+        //public RelayCommand DeleteCCBCommand { get; set; }
+        public PermitFeeViewModel(IDataService dataService, MdiContainer container)
+        {
+            _container = container;
+            _dataService = dataService;
+            //SearchCCBCommand = new RelayCommand(SearchContractor);
+            UpdateCommand= new RelayCommand(UpdateFee);
+            //DeleteCCBCommand = new RelayCommand(DeleteContractor);
+            GetPermitFeeList();
+            string env = ConfigurationManager.AppSettings["AppEnvironment"];
+            PermitReportFactory.AppEnvironment = env;
+            //deleteCCBCommand = new RelayCommand<long>((s) => DeleteCCB(s));
+        }
+        async void GetPermitFeeList()
+        {
+            PermitFeeRateList = await _dataService.GetPermitFeeRate();
+            foreach (var item in PermitFeeRateList)
+            {
+                switch (item.PermitFeeID)
+                {
+                    case 1: SidewalkFee = item.CurrentRate.ToString();
+                        SidewalkFeeId = item.PermitFeeID.ToString();
+                        break;
+                    case 2:
+                        DriveFee = item.CurrentRate.ToString();
+                        DriveFeeId = item.PermitFeeID.ToString();
+                        break;
+                    case 3:
+                        CurbFee = item.CurrentRate.ToString();
+                        CurbFeeId = item.PermitFeeID.ToString();
+                        break;
+                }
+            }
+            PermitFeeInfo = await _dataService.GetPermitFee();
+            //MinimumFee = PermitFeeInfo.MinimumFee.ToString();
+            //MaximumFee = PermitFeeInfo.MaximumFee.ToString();
+            MinimumFee = double.Parse(PermitFeeInfo.MinimumFee.ToString()).ToString("0.00");
+            MaximumFee = double.Parse(PermitFeeInfo.MaximumFee.ToString()).ToString("0.00");
+            MinimumFeeId = PermitFeeInfo.PermitFeeId.ToString();
+        }
+        
+
+        async void UpdateFee()
+        {
+            PermitFeeRate sidewalkFee = new PermitFeeRate();
+            sidewalkFee.Status = true;
+            sidewalkFee.PermitFeeID = long.Parse(SidewalkFeeId);
+            sidewalkFee.CurrentRate = decimal.Parse(SidewalkFee);
+            sidewalkFee.NewEffectiveRate = decimal.Parse(SidewalkFee);
+            PermitFeeRate driveFee = new PermitFeeRate();
+            driveFee.Status = true;
+            driveFee.PermitFeeID = long.Parse(DriveFeeId);
+            driveFee.CurrentRate = decimal.Parse(DriveFee);
+            driveFee.NewEffectiveRate = decimal.Parse(DriveFee);
+            PermitFeeRate curbFee = new PermitFeeRate();
+            curbFee.Status = true;
+            curbFee.PermitFeeID = long.Parse(CurbFeeId);
+            curbFee.CurrentRate = decimal.Parse(CurbFee);
+            curbFee.NewEffectiveRate = decimal.Parse(CurbFee);
+            PermitFee minimumFee = new PermitFee();
+            await _dataService.UpdatePermitFeeRate(sidewalkFee);
+            await _dataService.UpdatePermitFeeRate(curbFee);
+            await _dataService.UpdatePermitFeeRate(driveFee);
+            minimumFee.MinimumFee = decimal.Parse(MinimumFee);
+            minimumFee.PermitFeeId = long.Parse(MinimumFeeId);
+            minimumFee.MaximumFee = decimal.Parse(MaximumFee);
+            await _dataService.UpdatePermitFee(minimumFee);
+            MessageBox.Show("Fee updated successfully.");
+        }
+
+        //async void DeleteCCB(long license_number)
+        //{
+        //    DialogResult result = MessageBox.Show("Are you sure that you want to delete the Alias?", "Delete Confirmation", MessageBoxButtons.YesNo);
+        //    if (result == DialogResult.Yes)
+        //    {
+        //        var contractorAlias = await _dataService.GetContractor(license_number.ToString());
+        //        await _dataService.DeleteAliasName(contractorAlias);
+        //        //MessageBox.Show("The Alias was deleted successfully.");
+        //    }
+        //    GetCCBAliasList();
+        //}
+
+    }
+}

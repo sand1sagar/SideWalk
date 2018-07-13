@@ -1,0 +1,239 @@
+﻿@model List<SidewalkUI.Models.NoticeLetterViewModel>
+@{
+    ViewBag.Title = "Notice Letter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = null;
+    int count = 1;
+}
+<style>
+    table.datatable-sidewalk {
+        max-width: 580px;
+    }
+
+        table.datatable-sidewalk th input {
+            height: 10px;
+            width: 100%;
+            float: left;
+        }
+</style>
+
+@*<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+@*<script src="//cdn.datatables.net/plug-ins/1.10.16/filtering/row-based/range_dates.js"></script>*@
+<script type="text/javascript">
+    var minDateFilter = "";
+    var maxDateFilter = "";
+    $.fn.dataTable.ext.search.push(
+	function (settings, data, dataIndex) {
+	    var min = parseInt($('#min').val(), 10);
+	    var max = parseInt($('#max').val(), 10);
+	    var age = parseFloat(data[0]) || 0; // use data for the age column
+
+	    if ((isNaN(min) && isNaN(max)) ||
+			 (isNaN(min) && age <= max) ||
+			 (min <= age && isNaN(max)) ||
+			 (min <= age && age <= max)) {
+	        return true;
+	    }
+	    return false;
+	}
+);
+//    $.fn.datatableext.afnfiltering.push(
+//	function (osettings, adata, idataindex) {
+//	    var ifini = document.getelementbyid('txtfromdate').value;
+//	    var iffin = document.getelementbyid('txttodate').value;
+//	    var istartdatecol = 6;
+//	    var ienddatecol = 7;
+
+//	    ifini = ifini.substring(6, 10) + ifini.substring(3, 5) + ifini.substring(0, 2);
+//	    iffin = iffin.substring(6, 10) + iffin.substring(3, 5) + iffin.substring(0, 2);
+
+//	    var datofini = adata[istartdatecol].substring(6, 10) + adata[istartdatecol].substring(3, 5) + adata[istartdatecol].substring(0, 2);
+//	    var datoffin = adata[ienddatecol].substring(6, 10) + adata[ienddatecol].substring(3, 5) + adata[ienddatecol].substring(0, 2);
+
+//	    if (ifini === "" && iffin === "") {
+//	        return true;
+//	    }
+//	    else if (ifini <= datofini && iffin === "") {
+//	        return true;
+//	    }
+//	    else if (iffin >= datoffin && ifini === "") {
+//	        return true;
+//	    }
+//	    else if (ifini <= datofini && iffin >= datoffin) {
+//	        return true;
+//	    }
+//	    return false;
+//	}
+//);
+
+    $(document).ready(function () {
+        $('#txtFromDate').datepicker({
+            //showOn: "button",
+            dateFormat: 'mm/dd/yyyy',
+            // buttonImage: "images/calendar.gif",
+            buttonImageOnly: false
+        }).on('changeDate', function (e) {
+            minDateFilter = new Date(this.value).getTime();
+            oTable.draw();
+        });
+        $("#txtToDate").datepicker({
+            showOn: "button",
+            dateFormat: 'mm/dd/yyyy',
+            // buttonImage: "images/calendar.gif",
+            buttonImageOnly: false
+        }).on('changeDate', function (e) {
+            maxDateFilter = new Date(this.value).getTime();
+            oTable.draw();
+        });
+        $('.datatable-sidewalk thead.filters th').each(function () {
+            var title = $('.datatable-sidewalk thead.filters th').eq($(this).index()).text();
+            $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+        });
+
+        var oTable = $('.datatable-sidewalk').DataTable({
+            "serverSide": true,
+            "ajax": {
+                "type": "POST",
+                "url": '/Letters/DataHandler?startDate=' + $('#txtFromDate').val() + '&endDate=' + $('#txtToDate').val(),
+                "contentType": 'application/json; charset=utf-8',
+                'data': function (data) {
+                    data.FromDate = $('#txtFromDate').val();
+                    data.ToDate = $('#txtToDate').val();
+                    data = JSON.stringify(data);
+                    return data;
+                }
+            },
+            //"dom": 'frtiS',
+            //"scrollX": 350,
+            //"scrollX": true,
+            //"scrollCollapse": true,
+            //"scroller": {
+            //    loadingIndicator: false
+            //},
+            "processing": true,
+            //"paging":         false,
+            //"columnDefs": [
+            //    { "width": 200, "targets": 0 }
+            //],
+            //fixedColumns: true,
+            //"pageLength": 10,
+            //""deferRender: true,
+            "columns": [
+            //{  "orderable": false, "className": "select-checkbox", "targets":   1},
+            // designator is being used for Inspector_name
+            {
+                "data": "aff_no",
+                "render": function (data, type, row) {
+                    return '<a href="/Affidavit/GetAffidavitByNo?affidavitNo=' + data + '">' + data + '</a>';
+                }
+            },
+            { "data": "property_desc" },
+            { "data": "owner_name" },
+            { "data": "property_id" },
+            {
+                "data": "post_dt",
+                "render": function (data) {
+                    var date = new Date(data);
+                    var month = date.getMonth() + 1;
+                    var dateValue = date.getDate();
+                    return (month.toString().length > 1 ? month : "0" + month) + "/" + (dateValue.toString().length > 1 ? dateValue : "0" + dateValue) + "/" + date.getFullYear();
+                }
+            },
+            //{ "data": "date_added" },
+            { "data": "notes" },
+            { "data": "designator" }
+
+            ],
+            //"select": {
+            //    "style":    "os",
+            //    "selector": "td:first-child"
+            //},
+            "order": [0, "desc"],
+            "fnInitComplete": function () {
+                //$($.fn.dataTable.tables(true)).DataTable().columns.adjust();
+            }
+            //,
+            //"fnServerData": function (sSource,oData,fnCallback) {
+            //    oData.push({ "name": "FromDate", "value": $('#txtFromDate').val() });
+            //    oData.push({ "name": "ToDate", "value": $('#txtToDate').val() });
+            //}
+        });
+        //oTable.row.add(['<input type="checkbox"></input>']).draw();
+        // Apply the search
+        oTable.columns().eq(0).each(function (colIdx) {
+            $('input', $('.filters th')[colIdx]).on('keyup change', function () {
+                oTable
+                    .column(colIdx)
+                    .search(this.value)
+                    .draw();
+            });
+        });
+       
+    });
+   
+   
+</script>
+<div class="row-fluid">
+    <!--/span-->
+    <div class="span12" id="content">
+        <div class="row-fluid">
+            <!-- block -->
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left">Notice Letter</div>
+                </div>
+                <div class="block-content collapse in">
+                    <div class="span12">
+                        <div class="span8" style="padding-left:250px;">
+                            From Date
+                            <input type="text" id="txtFromDate" value="@DateTime.Now.AddYears(-1).ToShortDateString()" class="datepicker" />
+                            To Date
+                            <input type="text" id="txtToDate" value="@DateTime.Now.ToShortDateString()" class="datepicker" />
+                        </div>
+                        <table cellpadding="0" style="width:100%" cellspacing="0" border="0" class="table table-striped table-bordered datatable-sidewalk">
+                            <thead>
+                                <tr>
+                                    @*<th></th>*@
+                                    <th>Affidavit</th>
+                                    <th>Property Address</th>
+                                    <th>Owner Name</th>
+                                    <th>Property Id</th>
+                                    <th>Inspection Date</th>
+                                    @*<th>Posting Date</th>*@
+                                    <th>TrackIT & Notes</th>
+                                    <th>Inspector</th>
+                                </tr>
+                            </thead>
+                            <thead class="filters">
+                                <tr>
+                                    @*<th></th>*@
+                                    <th>Affidavit</th>
+                                    <th>Property Address</th>
+                                    <th>Owner Name</th>
+                                    <th>Property Id</th>
+                                    <th>Inspectation Date</th>
+                                    @*<th>Posting Date</th>*@
+                                    <th>TrackIT & Notes</th>
+                                    <th>Inspector</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="span12">
+                        <input type="checkbox" id="chkPrintPermit" /> Print Affidavit       <br />
+                        <input type="checkbox" id="chkVisio" />       Print Visio Drawing   <br />
+                        <input type="checkbox" id="chkPermit" />      Print Permit          <br />
+                        <input type="checkbox" id="chkForm" />        Print Form Inspection <br />
+                        <input type="checkbox" id="chkFinal" />       Print Final Inspection <br />
+                        <br />
+                        <input type="button" value="Print" class="btn" id="btnPrint" />
+                    </div>
+                </div>
+            </div>
+            <!-- /block -->
+        </div>
+    </div>
+</div>

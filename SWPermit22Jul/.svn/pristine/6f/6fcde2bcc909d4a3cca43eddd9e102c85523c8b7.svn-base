@@ -1,0 +1,160 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sidewalk.Logic.Database
+{
+    /// <summary>
+    /// City contract Grid models [CityContract]
+    /// </summary>
+    public class RepairItemGridModel
+    {
+        public string Action { get; set; }
+        public string Print { get; set; }
+        public string UnitDescription { get; set; }
+        public string ShortDescription { get; set; }
+        public bool Flag { get; set; }
+    }
+
+    /// <summary>
+    /// Model for Affidavit document history [Affidavit]
+    /// </summary>
+    public class AffidavitDocHistoryGridModel
+    {
+        public string Type { get; set; }
+        public string Date { get; set; }
+        public string Status { get; set; }
+        public string User { get; set; }
+    }
+    /// <summary>
+    /// Model for Mark for city repair [MarkForCityRepair]
+    /// </summary>
+    public class MarkForCityRepairGridModel
+    {
+        public string Affidavit { get; set; }
+        public DateTime NoticeSent { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime PermitDate { get; set; }
+        public string PropertyID { get; set; }
+        public string Inspector { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime OnHold { get; set; }
+        public string SecondNoticeSent { get; set; }
+    }
+    /// <summary>
+    /// Model for contractor list [ContractorList]
+    /// </summary>
+    public class ContractorGridModel
+    {
+        public string CCB { get; set; }
+        public string Contractor { get; set; }
+        public string Contract { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string CityContractor { get; set; }
+        public string Active { get; set; }
+    }
+    /// <summary>
+    /// Model for Mark for final inspection [MarkForFinalInspection]
+    /// </summary>
+    public class MarkForFinalInspectionGridModel
+    {
+        public string Affidavit { get; set; }
+        public DateTime NoticeSent { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime PermitDate { get; set; }
+        public string PropertyID { get; set; }
+        public string Inspector { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime OnHold { get; set; }
+    }
+    /// <summary>
+    /// Model for Mark for form inspection [MarkForFormInspection]
+    /// </summary>
+    public class MarkForFormInspectionGridModel
+    {
+        public string Affidavit { get; set; }
+        public DateTime NoticeSent { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime PermitDate { get; set; }
+        public string PropertyID { get; set; }
+        public string Inspector { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime OnHold { get; set; }
+    }
+    /// <summary>
+    /// Model for Second Notice [SecondNotice]
+    /// </summary>
+    public class SecondNoticeGridModel
+    {
+        public string Affidavit { get; set; }
+        public DateTime NoticeSent { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime PermitDate { get; set; }
+        public string PropertyID { get; set; }
+        public string Inspector { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime OnHold { get; set; }
+        public DateTime SecondNoticeDate { get; set; }
+    }
+    /// <summary>
+    /// Model for action rates [PermitFee]
+    /// </summary>
+    public class ActionRatesGridModel
+    {
+        public string Type { get; set; }
+        public string Current { get; set; }
+        public string Action { get; set; }
+    }
+    /// <summary>
+    /// Model for staff permit review [PermitReview]
+    /// </summary>
+    public class StaffPermitReviewGridModel
+    {
+        public string CCB { get; set; }
+        public string Contractor { get; set; }
+        public string Affidavit { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime IssueBy { get; set; }
+        public DateTime IssueDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public DateTime SubmitDate { get; set; }
+        public string Status { get; set; }
+    }
+    /// <summary>
+    /// Model for staff search [StaffList]
+    /// </summary>
+    public class StaffSearchGridModel
+    {
+        public string PERNR { get; set; }
+        public string First { get; set; }
+        public string Last { get; set; }
+        public string UserID { get; set; }
+        public string Inspector { get; set; }
+        public string Active { get; set; }
+    }
+
+    /// <summary>
+    /// Model for Affidavit screen grid Cost & notes
+    /// </summary>
+    public class CostNotesGridModel
+    {
+        public string Item { get; set; }
+        public string Unit { get; set; }
+        public string Rate { get; set; }
+        public string Cost { get; set; }
+    }
+
+    /// <summary>
+    /// Model for affidavit screen status history grid
+    /// </summary>
+    public class StatusHistoryGrid
+    {
+        public string Item { get; set; }
+        public string Unit { get; set; }
+        public string Rate { get; set; }
+        public string Cost { get; set; }
+    }
+}

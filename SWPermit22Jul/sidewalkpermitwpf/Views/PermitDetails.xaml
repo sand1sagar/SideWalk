@@ -1,0 +1,38 @@
+﻿<Window x:Class="SidewalkPermitWPF.Views.PermitDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        mc:Ignorable="d ignore"
+        DataContext="{Binding ViewModelName, Source={StaticResource Locator}}" Height="200" Width="500">
+
+  <GroupBox Header="Fee Details" Grid.Column="0"  Margin="10,0,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="12" Grid.ColumnSpan="2">
+
+    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center">
+      <!--<StackPanel Orientation="Horizontal" Margin="0,10,0,10" Height="26">
+        <TextBlock TextWrapping="Wrap" Width="92" Text="Permit Number : "/>
+        <TextBox Width="130" Margin="0,0,20,0" TextWrapping="Wrap" IsEnabled="False" Text="{Binding PermitNumber,Mode=TwoWay}"/>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Margin="0,10,0,10" Height="26">
+        <TextBlock TextWrapping="Wrap" Width="92" Text="Expiration Date : "/>
+        <DatePicker Margin="0,0,20,0"  VerticalAlignment="Top" SelectedDate="{Binding ExpirationDate,Mode=TwoWay}" Width="117" Height="26" />
+      </StackPanel>-->
+            <DataGrid Margin="0,0,0,0" HorizontalContentAlignment="Right" Name="affidavitFee"  IsEnabled="True" IsReadOnly="True" ItemsSource="{Binding AffidavitCostsDetails}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+          <!--<DataGridTextColumn Width="*" Header="Action" Binding="{Binding action}" />-->
+                    <DataGridTextColumn Width="*" Header="Action Type" Binding="{Binding action_type}"/>
+                    <DataGridTextColumn Width="*" Header="Unit" Binding="{Binding unit}" />
+          <DataGridTextColumn Width="*" Header="Rate" Binding="{Binding rate}" />
+          <DataGridTextColumn Width="*" Header="Cost" Binding="{Binding cost}" />
+        </DataGrid.Columns>
+      </DataGrid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10" Height="26">
+                <TextBlock TextWrapping="Wrap" Width="72" Text="Total Fee : "/>
+                <TextBox Width="130" Margin="0,0,0,0" TextWrapping="Wrap" IsEnabled="False" Text="{Binding TotalFee, Mode=TwoWay}"/>
+            </StackPanel>
+        </StackPanel>
+
+  </GroupBox>
+
+</Window>

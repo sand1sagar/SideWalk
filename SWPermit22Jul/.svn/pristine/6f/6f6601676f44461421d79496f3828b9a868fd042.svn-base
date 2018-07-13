@@ -1,0 +1,159 @@
+﻿using GalaSoft.MvvmLight;
+using SidewalkPermitWPF.Helper;
+using SidewalkPermitWPF.Model;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SidewalkPermitWPF.ViewModel
+{
+    public class PermitDetailsViewModel:ViewModelBase
+    {
+        private readonly IDataService _dataService;
+        ObservableCollection<sw_action_detail> _affidavitCostDetail;
+        sw_posting _affidavitInfo;
+        PermitModel _permitInfo;
+        string _expirationDate;
+        string _totalFee;
+        string _permitNumber;
+        public DateTime _newExpireDate { get; set; }
+        public sw_posting AffidavitInfo
+        {
+            get { return _affidavitInfo; }
+            set
+            {
+                _affidavitInfo = value;
+                RaisePropertyChanged("AffidavitInfo");
+            }
+        }
+        public string TotalFee
+        {
+            get { return _totalFee; }
+            set
+            {
+                _totalFee = value;
+                RaisePropertyChanged("TotalFee");
+            }
+        }
+        public DateTime NewExpireDate
+        {
+            get { return _newExpireDate; }
+            set
+            {
+                _newExpireDate = value;
+                RaisePropertyChanged("NewExpireDate");
+            }
+        }
+        public string ExpirationDate
+        {
+            get { return _expirationDate; }
+            set
+            {
+                _expirationDate = value;
+                RaisePropertyChanged("ExpirationDate");
+            }
+        }
+        public PermitModel PermitInfo
+        {
+            get { return _permitInfo; }
+            set
+            {
+                _permitInfo = value;
+                RaisePropertyChanged("PermitInfo");
+            }
+        }
+        public string PermitNumber
+        {
+            get { return _permitNumber; }
+            set
+            {
+                _permitNumber = value;
+                RaisePropertyChanged("PermitNumber");
+            }
+        }
+        public ObservableCollection<sw_action_detail> AffidavitCostsDetails
+        {
+
+            get { return _affidavitCostDetail; }
+
+            set
+            {
+                _affidavitCostDetail = value;
+                RaisePropertyChanged("AffidavitCostsDetails");
+            }
+        }
+
+        public PermitDetailsViewModel(IDataService dataService, long affidavitId)
+        {
+            _dataService = dataService;
+            GetPermit(affidavitId);
+            AffidavitCostsDetails = new ObservableCollection<sw_action_detail>();
+            GetAffidavitCostsDetails(affidavitId.ToString());
+        }
+
+        async void GetPermit(long affidavitId)
+        {
+            AffidavitInfo = await _dataService.GetAffidavitByNumber(affidavitId.ToString()).ConfigureAwait(false);
+            var permit = await _dataService.GetPermitByAffidavit(affidavitId);
+            PermitNumber = permit.PermitID.ToString();
+            ExpirationDate = permit.DateExpired.Value.ToShortDateString();
+            
+        }
+        async void GetAffidavitCostsDetails(string affidavitNo)
+        {
+            var rateList = await _dataService.GetRepairItemRate();
+            var affidavitCostsDetails = await _dataService.GetAffidavitCostDetails(affidavitNo, "R");
+            TotalFee = "0.00";
+            foreach (var item in affidavitCostsDetails)
+            {
+                if (item.action_type.Equals(Constants.RepairItem_Sidewalk))
+                {
+                    item.rate = (decimal)rateList.Where(x => x.Action_Type.Equals(Constants.RepairItem_Sidewalk)).FirstOrDefault().CurrentRate;
+                    item.cost = decimal.Parse((item.unit * item.rate).ToString("0.00"));
+                    TotalFee = (decimal.Parse(TotalFee) + (item.unit * item.rate)).ToString("0.00");
+                    AffidavitCostsDetails.Add(item);
+                }
+                if (item.action_type.Equals(Constants.RepairItem_Driveway))
+                {
+                    item.rate = (decimal)rateList.Where(x => x.Action_Type.Equals(Constants.RepairItem_Driveway)).FirstOrDefault().CurrentRate;
+                    item.cost = decimal.Parse((item.unit * item.rate).ToString("0.00"));
+                    TotalFee = (decimal.Parse(TotalFee) + (item.unit * item.rate)).ToString("0.00");
+                    AffidavitCostsDetails.Add(item);
+                }
+                if (item.action_type.Contains("Curb"))
+                {
+                    item.rate = (decimal)rateList.Where(x => x.Action_Type.Equals(Constants.RepairItem_Curbs)).FirstOrDefault().CurrentRate;
+                    item.cost = decimal.Parse((item.unit * item.rate).ToString("0.00"));
+                    TotalFee = (decimal.Parse(TotalFee) + (item.unit * item.rate)).ToString("0.00");
+                    AffidavitCostsDetails.Add(item);
+                }
+
+                TotalFee = (decimal.Parse(TotalFee)).ToString("0.00");
+            }
+
+            if (double.Parse(TotalFee) >= 500.00)
+                TotalFee = "500.00";
+            else if (double.Parse(TotalFee) <= 60.00)
+                TotalFee = "60.00";
+            DateTime calculatedDate = DateTime.Now.AddDays(30);
+            DateTime affidavitDueDate = DateTime.Now;
+            if (AffidavitInfo != null)
+                affidavitDueDate = AffidavitInfo.post_dt.Value.AddDays(67);
+            
+            if (calculatedDate > affidavitDueDate)
+            {
+                ExpirationDate = calculatedDate.ToShortDateString();
+
+            }
+            else
+            {
+                ExpirationDate = affidavitDueDate.ToShortDateString();
+            }
+
+        }
+
+    }
+}

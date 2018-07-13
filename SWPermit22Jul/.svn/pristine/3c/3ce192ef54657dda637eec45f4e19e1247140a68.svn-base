@@ -1,0 +1,543 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Sidewalk.Logic.Database;
+
+namespace Sidewalk.Logic
+{
+    public class PermitLogic
+    {
+        SWPostEntities context = new SWPostEntities();
+        ContractorLogic contractorLogic;
+        AffidavitLogic affidavitLogic;
+        AffidavitCostsLogic affidavitCostLogic;
+        public PermitLogic()
+        {
+            affidavitLogic = new AffidavitLogic();
+            contractorLogic = new ContractorLogic();
+            affidavitCostLogic = new AffidavitCostsLogic();
+            context.Configuration.LazyLoadingEnabled = false;
+            context.Configuration.ProxyCreationEnabled = false;
+        }
+        /// <summary>
+        /// this method will get list of permits by its status
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns></returns>
+        public List<PermitModel> GetPermitsByStatus(string status)
+        {
+            List<PermitModel> result = new List<PermitModel>();
+            try
+            {
+                if (!string.IsNullOrEmpty(status))
+                {
+                    var permits = context.Permit.Include("PermitApplicant").Include("PermitStatus1").Where(x => x.PermitStatus1.PermitStatusValue.Equals(status)).ToList();
+                    if (permits != null)
+                    {
+                        foreach (var item in permits)
+                        {
+                            string affidavitID = item.AffidavitID.ToString();
+                            string contractorID = item.ContractorID.ToString();
+                            var permit = new PermitModel();
+                            item.PermitStatus1 = null;
+                            item.PermitApplicant.Permit = null;
+                            permit.Permit = item;
+                            permit.Applicant = item.PermitApplicant;
+
+                           // permit.Affidavit = affidavitLogic.GetAffidavitDetails(affidavitID);
+                           // permit.Contractor = contractorLogic.SearchContractor(contractorID);
+                            result.Add(permit);
+                        }
+                    }
+                }
+            }
+            //try
+            //{
+            //    if (!string.IsNullOrEmpty(status))
+            //    {
+            //        //var permits = context.Permit.Include("PermitStatus1").Where(x => x.PermitStatus1.PermitStatusValue.Equals(status)).OrderByDescending(x => x.DateIssued).ToList();
+            //        result = (from item in context.Permit.Include("PermitStatus1")
+            //                  join aff in context.sw_posting on item.AffidavitID equals aff.aff_no
+            //                  join app in context.PermitApplicant on item.ApplicantID equals app.ApplicantID
+            //                  where item.PermitStatus1.PermitStatusValue == status
+            //                  select new PermitModel()
+            //                  {
+            //                      Permit = item,
+            //                      Affidavit = aff,
+            //                      FullAddress = aff.st_no.Trim() + " " + aff.district.Trim() + " " + aff.st_name.Trim() + " " + aff.designator.Trim(),
+            //                      Applicant= app
+            //                  }).ToList<PermitModel>();
+            //        Parallel.ForEach(result, item =>
+            //        {
+            //            item.Contractor = contractorLogic.SearchContractor(item.Permit.ContractorID);
+            //            item.Permit.PermitApplicant = null;
+            //        });
+            //    }
+            //}
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// this method will get list of permits by its status
+        /// </summary>
+        /// <param name="applicantName"></param>
+        /// <returns></returns>
+        public List<PermitModel> GetPermitsByApplicant(string applicantName)
+        {
+            List<PermitModel> result = new List<PermitModel>();
+            try
+            {
+                if (!string.IsNullOrEmpty(applicantName))
+                {
+                    var permits = context.Permit.Include("PermitStatus1").Include("PermitApplicant").Where(x => x.PermitApplicant.Name == applicantName && x.PermitStatus1.PermitStatusValue.Equals("Submitted")).OrderByDescending(x => x.DateIssued).ToList();
+                    if (permits != null)
+                    {
+                        foreach (var item in permits)
+                        {
+                            string affidavitID = item.AffidavitID.ToString();
+                            string contractorID = item.ContractorID.ToString();
+                            var permit = new PermitModel();
+                            item.PermitStatus1 = null;
+                            permit.Permit = item;
+                            permit.Affidavit = affidavitLogic.GetAffidavitDetails(affidavitID);
+                            if (item.ApplicantType=="Contractor") 
+                                permit.Contractor = contractorLogic.SearchContractor(item.PermitApplicant.Name);
+                            else
+                                permit.Contractor = new CCBContractor();
+                            permit.AffidavitCostDetails = affidavitCostLogic.GetAffidavitCostDetails(affidavitID, "E");
+                            //        permit.Applicant = GetPermitApplicant(item.ApplicantID.Value);
+                            item.PermitApplicant.Permit = null;
+                            result.Add(permit);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+        /// <summary>
+        /// this method will create permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public Permit InsertPermit(Permit model)
+        {
+            try
+            {
+                string AffidavitID=model.AffidavitID.ToString();
+                model.NEW_AFF = affidavitLogic.GetAffidavitDetails(AffidavitID).NEW_AFF.ToString();
+                context.Permit.Add(model);
+                context.SaveChanges();
+                if (model.PermitID>0)
+                {
+                    context.SP_AfterInsertPermit(model.PermitID);
+                }
+            }
+            catch (Exception ex)
+            {
+                model = null;
+            }
+            return model;
+        }
+
+        /// <summary>
+        /// this method will remove permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool RemovePermit(long permitID)
+        {
+            bool result = false;
+            try
+            {
+                var permit = context.Permit.Where(x => x.PermitID.Equals(permitID)).FirstOrDefault();
+                if (permit != null)
+                {
+                    permit.PermitStatus = 3;
+                    context.SaveChanges();
+                    RemovePermitCostsDetail((long)permit.AffidavitID);
+                }
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                result = false;
+            }
+            return result;
+        }
+        /// <summary>
+        /// this method will update permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public Permit UpdatePermit(Permit model)
+        {
+            try
+            {
+                var permit = context.Permit.Where(x => x.PermitID.Equals(model.PermitID)).FirstOrDefault();
+                if (permit != null)
+                {
+                    permit.PermitNo = model.PermitNo;
+                    permit.DateIssued = model.DateIssued;
+                    permit.DateExpired = model.DateExpired;
+                    permit.DateExpiredNew = model.DateExpiredNew;
+                    permit.PermitIssued = model.PermitIssued;
+                    permit.LastAction = model.LastAction;
+                    permit.PermitStatus = model.PermitStatus;
+                    permit.ContractorID = model.ContractorID;
+                    permit.BuilderBoardNo = model.BuilderBoardNo;
+                    permit.ApplicantID = model.ApplicantID;
+                    permit.PermitExtended = model.PermitExtended;
+                    permit.DatePermitExtended = model.DatePermitExtended;
+                    permit.ApplicantType = model.ApplicantType;
+                    permit.ContractorID = model.ContractorID;
+                    permit.IssuedBy = model.IssuedBy;
+                    if (model.PermitStatus == 5)
+                    {
+                        permit.DateCancelled = DateTime.Now;
+                        permit.CancelledBy = model.CancelledBy;
+                        RemovePermitCostsDetail((long)model.AffidavitID);
+                    }
+                    
+                    context.SaveChanges();
+                    if (permit.PermitID>0 && permit.ApplicantID>0)
+                    {
+                        context.SP_AfterUpdatePermit(permit.PermitID, permit.ApplicantID);
+                    }
+                    model = permit;
+                }
+            }
+            catch (Exception ex)
+            {
+                model = null;
+            }
+            return model;
+        }
+
+        /// <summary>
+        /// this method will get permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public Permit GetPermitByAffidavit(long affidavitID)
+        {
+            var permit = context.Permit.Where(x => x.AffidavitID.Value.Equals(affidavitID) && (!x.PermitStatus.Value.Equals(5) && !x.PermitStatus.Value.Equals(3))).FirstOrDefault();
+            return permit;
+        }
+
+        public Permit GetCanceledPermitByAffidavit(long affidavitID)
+        {
+            var permit = context.Permit.Where(x => x.AffidavitID.Value.Equals(affidavitID) && x.PermitStatus.Value.Equals(5)).OrderByDescending(x => x.PermitID).FirstOrDefault();
+            //var permit = context.Permit.Where(x => x.AffidavitID.Value.Equals(affidavitID) && !x.PermitStatus.Value.Equals(3)).FirstOrDefault();
+            return permit;
+        }
+        /// <summary>
+        /// this method will get permit applicant
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+
+        public PermitApplicant GetPermitApplicant(long applicantID)
+        {
+            var permitApplicant = context.PermitApplicant.Where(x => x.ApplicantID.Equals(applicantID)).FirstOrDefault();
+            permitApplicant.Permit = null;
+            return permitApplicant;
+        }
+
+        public ApplicantPermitHistory GetApplicantHistory(string applicantName)
+        {
+            ApplicantPermitHistory history = new ApplicantPermitHistory();
+            var permits = (from item in context.PermitApplicant
+                           join permit in context.Permit on item.ApplicantID equals permit.ApplicantID
+                           where item.Name == applicantName
+                           select permit).ToList();
+
+            //var permitApplicant = context.PermitApplicant.Where(x => x.Name.Equals(applicantName)).Select(x => x.ApplicantID).ToArray();
+            //var permits = context.Permit.Where(x => permitApplicant.Contains((long)x.ApplicantID)).ToList<Permit>();
+            foreach (var item in permits)
+            {
+                //if (item.PermitStatus.Value.Equals(2))
+                //{
+                //    history.ActivePermits += 1;
+                //}
+                //if (item.PermitStatus.Value.Equals(2) && item.DateExpired.Value < DateTime.Now)
+                //{
+                //    history.ExpiredPermits += 1;
+                //}
+                //if (item.PermitStatus.Value.Equals(2) && DateTime.Now.AddDays(7) > item.DateExpired.Value && item.DateExpired.Value < DateTime.Now)
+                //{
+                //    history.ExpiringSoon += 1;
+                //}
+                if (item.PermitStatus.Value.Equals(2))
+                {
+                    history.AppliedPermits += 1;
+                    if(item.DateExpiredNew!=null)
+                    {
+                        item.DateExpired = item.DateExpiredNew;
+                    }
+                    if (DateTime.Now > item.DateExpired.Value)
+                    {
+                        history.ExpiredPermits += 1;
+                    }
+                    else if (DateTime.Now.AddDays(7) > item.DateExpired.Value)
+                    {
+                        history.ExpiringSoon += 1;
+                    }
+                }
+            }
+            return history;
+        }
+
+        public PermitPayment GetPermitPayment(long permitID)
+        {
+            var permitPayment = context.PermitPayment.Where(x => x.PermitID.Value.Equals(permitID)).FirstOrDefault();
+            permitPayment.Permit = null;
+            return permitPayment;
+        }
+        /// <summary>
+        /// this method will create payment towards a permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public PermitPayment InsertPermitPayment(PermitPayment model)
+        {
+            try
+            {
+                context.PermitPayment.Add(model);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                model = null;
+            }
+            return model;
+        }
+
+        /// <summary>
+        /// this method will create applicant towards a permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public PermitApplicant InsertPermitApplicant(PermitApplicant model)
+        {
+            try
+            {
+                model.CreatedDate = DateTime.Now;
+                context.PermitApplicant.Add(model);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                model = null;
+            }
+            return model;
+        }
+        /// <summary>
+        /// this method will update permit applicant
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public PermitApplicant UpdatePermitApplicant(PermitApplicant model)
+        {
+            try
+            {
+                var permitApplicant = context.PermitApplicant.Where(x => x.ApplicantID.Equals(model.ApplicantID)).FirstOrDefault();
+                if (permitApplicant != null)
+                {
+                    permitApplicant.ApplicantType = model.ApplicantType;
+                    permitApplicant.Name = model.Name;
+                    permitApplicant.Contact = model.Contact;
+                    permitApplicant.Address = model.Address;
+                    permitApplicant.City = model.City;
+                    permitApplicant.State = model.State;
+                    permitApplicant.Zip = model.Zip;
+                    permitApplicant.PhoneNumber = model.PhoneNumber;
+                    permitApplicant.Email = model.Email;
+                    permitApplicant.PermitID = model.PermitID;
+                    context.SaveChanges();
+                    model = permitApplicant;
+                }
+            }
+            catch (Exception ex)
+            {
+                model = null;
+            }
+            return model;
+        }
+
+        public PermitHistory InsertPermitHistory(PermitHistory model)
+        {
+            try
+            {
+                model.ActivityTime = DateTime.Now;
+                context.PermitHistory.Add(model);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                model = null;
+            }
+            return model;
+        }
+        public List<PermitHistory> GetPermitHistoryByPermit(long permitID)
+        {
+            List<PermitHistory> result = new List<PermitHistory>();
+            try
+            {
+                result = context.PermitHistory.Where(x => x.PermitID.Value.Equals(permitID)).OrderByDescending(x => x.ActivityTime).ToList();
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// this method will create applied permit affidavit costs
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public PermitCostsDetail InsertPermitCostsDetail(PermitCostsDetail model)
+        {
+            try
+            {
+                context.PermitCostsDetail.Add(model);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                model = null;
+            }
+            return model;
+        }
+
+        /// this method will remove applied permit affidavit costs
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool RemovePermitCostsDetail(long affidavitId)
+        {
+            bool result = false;
+            try
+            {
+                var costs = context.PermitCostsDetail.Where(x => x.AffidavitID.Value.Equals(affidavitId)).ToList();
+                if(costs!=null && costs.Count>0)
+                {
+                    context.PermitCostsDetail.RemoveRange(costs);
+                    context.SaveChanges();
+                }
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                result = false;
+            }
+            return result;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="affidavitID"></param>
+        /// <returns></returns>
+        public List<PermitCostsDetail> GetPermitCostsDetailByAffidavit(long affidavitID)
+        {
+            List<PermitCostsDetail> result = new List<PermitCostsDetail>();
+            try
+            {
+                result = context.PermitCostsDetail.Where(x => x.AffidavitID.Value.Equals(affidavitID)).ToList();
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+
+        public List<PermitFeeRate> GetPermitFeeRate()
+        {
+
+            List<PermitFeeRate> result = new List<PermitFeeRate>();
+            try
+            {
+                result = context.PermitFeeRate.ToList();
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+
+        public PermitFee GetPermitFee()
+        {
+
+            PermitFee result = new PermitFee();
+            try
+            {
+                result = context.PermitFee.FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+
+        public PermitFeeRate UpdatePermitFeeRate(PermitFeeRate model)
+        {
+            PermitFeeRate result = new PermitFeeRate();
+            try
+            {
+                var parmitfeeRate = context.PermitFeeRate.Where(x => x.PermitFeeID.Equals(model.PermitFeeID)).FirstOrDefault();
+                if(parmitfeeRate!=null)
+                {
+                    //parmitfeeRate.Action_Type = model.Action_Type;
+                    parmitfeeRate.CurrentRate = model.CurrentRate;
+                    parmitfeeRate.NewEffectiveRate = model.NewEffectiveRate;
+                    parmitfeeRate.Status = model.Status;
+                    context.SaveChanges();
+                }
+                result = parmitfeeRate;
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+
+        public PermitFee UpdatePermitFee(PermitFee  model)
+        {
+            PermitFee result = new PermitFee();
+            try
+            {
+                var permitFee = context.PermitFee.Where(x => x.PermitFeeId.Equals(model.PermitFeeId)).FirstOrDefault();
+                if (permitFee != null)
+                {
+                    permitFee.MaximumFee = model.MaximumFee;
+                    permitFee.MinimumFee = model.MinimumFee;
+                    permitFee.NewMaximumFee = model.NewMaximumFee;
+                    permitFee.NewMinimumFee = model.NewMinimumFee;
+                    permitFee.NewEffectiveDate = model.NewEffectiveDate;
+                    context.SaveChanges();
+                }
+                result = permitFee;
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+    }
+}

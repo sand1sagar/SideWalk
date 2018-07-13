@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWPostModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="ufnGetPostCostDetail_Result">
+    <Property Name="nMonth" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="sMonth" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="post_dt" Type="DateTime" />
+    <Property Name="aff_no" Type="Int32" />
+    <Property Name="aff_action" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="cost" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="ufnGetPostCostSummary_Result">
+    <Property Name="iYear" Type="Int32" />
+    <Property Name="sYear" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="iMonth" Type="Int32" />
+    <Property Name="sMonth" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="aff_no" Type="Int32" />
+    <Property Name="aff_action" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cost" Type="Decimal" Precision="10" Scale="2" />
+  </ComplexType>
+  <EntityContainer Name="SWPostEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="ufnGetPostCostDetail" ReturnType="Collection(SWPostModel.ufnGetPostCostDetail_Result)" IsComposable="true">
+      <Parameter Name="fy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ufnGetPostCostSummary" ReturnType="Collection(SWPostModel.ufnGetPostCostSummary_Result)" IsComposable="true">
+      <Parameter Name="fynum" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

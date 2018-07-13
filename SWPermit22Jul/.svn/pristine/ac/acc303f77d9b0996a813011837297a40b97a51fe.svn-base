@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap -->
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    @Styles.Render("~/Content/css")
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">Sidewalk Posting</a>
+                <div class="nav-collapse collapse">
+                    @Html.Partial("_LoginPartial")
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                Inspection <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu" id="menu1">
+                                <li>
+                                    <a href="/Affidavit/Index">Post Sidewalk</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete Inspection</a>
+                                </li>
+                                <li>
+                                    <a href="#">Create Affidavits from Inspections</a>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                Permits <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="#">Applicant Applies</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Staff Review</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                Affidavit <i class="caret"></i>
+                            </a>
+                            @*<ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="#">User List</a>
+                                </li>
+                            </ul>*@
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                City Repair <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="#">Process Order</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Expired Permits for a given week</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">2nd Notice Letter</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Mark Affidavit for City Repairs</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Stop permit process for City Repairs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                Form Inspection <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="#">Mark for Form Pour</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Record Comments</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Do not Pour</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Permission Granted</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                Final Inspection <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="#">Mark for Final</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Record Comments</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Repairs Not Acceptable</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Repairs Complete and Satisfactory</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                Letters <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="#">Notice Letter</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">2nd Notice Letter</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="#">Weekly Posted Permits</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Expired Permits for a given week</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Expired Permits for specific contractor</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Expired Permits for all contractors</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Repairs Complete and Satisfactory</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Permit Information</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Affidavit Information</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Active</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Labels</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                Setup <i class="caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="#">Contractor</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">City Contract</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Permit Fees</a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="#">Staff</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        @RenderBody()
+        <hr>
+        <footer>
+            <p>&copy; Sidewalk Posting @DateTime.Now.Year</p>
+        </footer>
+    </div>
+    <!--/.fluid-container-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    <script>
+        $(function () {
+            // Easy pie charts
+            $('.chart').easyPieChart({ animate: 1000 });
+        });
+    </script>
+</body>
+</html>

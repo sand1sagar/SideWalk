@@ -1,0 +1,12 @@
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Aviad.WPF.Controls.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Aviad.WPF.Controls_MarkupCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Aviad.WPF.Controls_MarkupCompile.lref
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Themes\Generic.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Aviad.WPF.Controls.g.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Aviad.WPF.Controls.Properties.Resources.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Aviad.WPF.Controls.csproj.GenerateResource.Cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Aviad.WPF.Controls.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\ACTB\obj\Debug\Aviad.WPF.Controls.pdb

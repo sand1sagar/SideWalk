@@ -1,0 +1,65 @@
+﻿using Quartz;
+using Quartz.Impl;
+using SidewalkUI.Api;
+using System;
+using System.Configuration;
+
+namespace SidewalkUI.JobScheduler
+{
+    public class JobScheduler
+    {
+
+        public static void Stop()
+        {
+            //IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
+            //scheduler.DeleteJob();
+        }
+        public static void Start()
+        {
+            log4net.ILog Log = log4net.LogManager.GetLogger(typeof(JobScheduler));
+            try
+            {
+                Log.Info("Job started.");
+                IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
+                scheduler.Start();
+
+                IJobDetail job = JobBuilder.Create<SyncJob>().Build();
+                ITrigger trigger = TriggerBuilder.Create()
+                    .WithDailyTimeIntervalSchedule
+                      (s =>
+                         s.WithIntervalInHours(int.Parse(ConfigurationManager.AppSettings["SchedulerInterval"].ToString()))
+                        .OnEveryDay()
+                        .StartingDailyAt(TimeOfDay.HourAndMinuteOfDay(int.Parse(ConfigurationManager.AppSettings["SchedulerHour"].ToString()), int.Parse(ConfigurationManager.AppSettings["SchedulerMinute"].ToString())))
+                      )
+                    .Build();
+
+                scheduler.ScheduleJob(job, trigger);
+                Log.Info("Job Scheduled.");
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                if (ex.InnerException != null)
+                    Log.Error(ex.InnerException);
+            }
+        }
+    }
+    public class SyncJob : IJob
+    {
+        log4net.ILog Log = log4net.LogManager.GetLogger(typeof(JobScheduler));
+        SidewalkApiController api = new SidewalkApiController();
+        public void Execute(IJobExecutionContext context)
+        {
+            try
+            {
+                api.SyncOracleSqlCCB();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                if (ex.InnerException != null)
+                    Log.Error(ex.InnerException);
+            }
+        }
+    }
+}

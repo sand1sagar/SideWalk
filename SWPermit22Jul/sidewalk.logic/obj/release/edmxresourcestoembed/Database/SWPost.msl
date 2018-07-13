@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SWPostModelStoreContainer" CdmEntityContainer="SWPostEntities">
+    <FunctionImportMapping FunctionName="SWPostModel.Store.ufnGetPostCostDetail" FunctionImportName="ufnGetPostCostDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SWPostModel.ufnGetPostCostDetail_Result">
+          <ScalarProperty Name="nMonth" ColumnName="nMonth" />
+          <ScalarProperty Name="sMonth" ColumnName="sMonth" />
+          <ScalarProperty Name="post_dt" ColumnName="post_dt" />
+          <ScalarProperty Name="aff_no" ColumnName="aff_no" />
+          <ScalarProperty Name="aff_action" ColumnName="aff_action" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionName="SWPostModel.Store.ufnGetPostCostSummary" FunctionImportName="ufnGetPostCostSummary">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SWPostModel.ufnGetPostCostSummary_Result">
+          <ScalarProperty Name="iYear" ColumnName="iYear" />
+          <ScalarProperty Name="sYear" ColumnName="sYear" />
+          <ScalarProperty Name="iMonth" ColumnName="iMonth" />
+          <ScalarProperty Name="sMonth" ColumnName="sMonth" />
+          <ScalarProperty Name="aff_no" ColumnName="aff_no" />
+          <ScalarProperty Name="aff_action" ColumnName="aff_action" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

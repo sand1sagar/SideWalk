@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="SidewalkPermitWPF.Views.ContractorAlias"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:actb="clr-namespace:Aviad.WPF.Controls;assembly=Aviad.WPF.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             x:Name="mdiChild" Background="White"
+             DataContext="{Binding Main, Source={StaticResource Locator}}" 
+             Height="Auto" Width="1500"  VerticalAlignment="Top" HorizontalAlignment="Center">
+
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="512*"/>
+            <ColumnDefinition Width="512*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,42.84">
+            <GroupBox Margin="10,0,10,10" Height="200" VerticalAlignment="Top">
+                <StackPanel Margin="0,10,0,0">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="CCB Number : "/>
+                        <TextBox Width="100" TextWrapping="Wrap" IsEnabled="True" Text="{Binding LicenseNumber,Mode=TwoWay}"/>
+                        <Button Content="Search" Height="Auto" Width="70" Margin="20,0,50,0" Command="{Binding SearchCCBCommand}" IsEnabled="{Binding AcceptButtonModel}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="Business Name: "/>
+                        <TextBox Width="700" TextWrapping="Wrap" IsEnabled="False" Text="{Binding ContractorInfo.business_name,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <TextBlock TextWrapping="Wrap" Width="135" Text="New Alias Name : "/>
+                        <TextBox Width="700" TextWrapping="Wrap" IsEnabled="True" CharacterCasing="Upper" Text="{Binding ContractorInfo.alias_name,Mode=TwoWay}"/>
+                    </StackPanel>
+                    <Button Content="Save" Height="40" Margin="407,20,941,0" FontSize="20"  Command="{Binding UpdateCCBCommand}" IsEnabled="{Binding AcceptButtonModel}"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <GroupBox Header="Existing Alias"  Margin="10,10,10,10" VerticalAlignment="Top" RenderTransformOrigin="0,0" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid >
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" HorizontalAlignment="Center">
+                    <DataGrid ItemsSource="{Binding CCBContractorList}" Width="1470" MaxHeight="500" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,10,10,10" AutoGenerateColumns="False" IsEnabled="True"  x:Name="TransTypesGrid" >
+                        <DataGrid.Columns>
+                            <!--<DataGridTextColumn Header="Affidavit#" Binding="{Binding Affidavit}" Width="*"></DataGridTextColumn>-->
+                            <DataGridTextColumn Header="CCB No." Binding="{Binding ccb_number}" Width="*"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Alias Name" Binding="{Binding alias_name}" Width="4*"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Business Name" Binding="{Binding business_name}" Width="10*"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,165 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<body style="" lang="EN-US" link="black" vlink="purple">
+    <div class="Section1">
+        <h1>
+            Oracle Data Provider for .NET<br>
+        </h1>
+        <div class="MsoNormal" style="text-align: center;" align="center">
+            <hr align="center" size="1" width="100%">
+        </div>
+        <p>
+            <big style="font-weight: bold;"><big><big>Release Notes</big></big></big>
+        </p>
+        <p><strong>Release 12.1.0.2.0 for ODAC 12c Release 4 Production</strong></p>
+        <h4>
+            September 2015<br>
+        </h4>
+        <h4>Copyright (c) Oracle Corporation 2015</h4>
+        <p>
+            This document provides information that supplements the Oracle Data Provider for .NET
+            (ODP.NET) documentation.
+        </p>
+        <h2>TABLE OF CONTENTS</h2>
+        <ul>
+            <li><a href="#Doc">Documentation Corrections and Additions</a></li>
+            <li><a href="#Managed Known Issues">ODP.NET, Managed Driver Tips, Limitations, and Known Issues</a></li>
+            <li><a href="#Unmanaged Known Issues">ODP.NET, Unmanaged Driver Tips, Limitations, and Known Issues</a></li>
+            <li><a href="#EF">Entity Framework Tips, Limitations, and Known Issues</a></li>
+        </ul>
+
+        <p>&nbsp;</p>
+        <a name="Doc"></a><h2>Documentation Corrections and Additions</h2>
+        This section contains information that corrects or adds to existing ODP.NET documentation.<br /><br />
+
+        <ol>
+            <li>
+                ODP.NET Entity Framework Database First and Model First applications using Entity Framework 6 
+                requires .NET Framework 4.5 or higher.
+            </li>
+            <li>
+                All Oracle database clients support interrupting database query execution,
+                such as through an ODP.NET command timeout.
+                The database server can be interrupted via either TCP/IP urgent
+                data or normal TCP/IP data, called out of band (OOB) or in band data,
+                respectively. Windows-based database servers only support in band
+                breaks, whereas all other (predominantly UNIX-based) database servers
+                can support OOB or in band breaks. ODP.NET, Managed Driver uses OOB breaks by
+                default with database servers that support it. For certain network
+                topologies, the routers or firewalls involved in the route to the
+                database may have been configured to drop urgent data or in band the data. If
+                the routers or firewalls can not be changed to handle urgent data
+                appropriately, then the ODP.NET, Managed Driver can be configured to utilize
+                in band breaks by setting the .NET configuration parameter disable_oob to
+                "on". The default value for disable_oob is "off". disable_oob can be set in the
+                &lt;settings&gt; of the .NET config file for &lt;oracle.manageddataaccess.client&gt;.
+                As with all ODP.NET, Managed Driver settings, disable_oob can be set in either the 
+                .NET config or sqlnet.ora files, whereas it can only be set for ODP.NET, Unmanaged 
+                Driver in the sqlnet.ora file.<br />
+            </li>
+       </ol>
+    <p>&nbsp;</p>
+
+
+    <a name="Managed Known Issues"></a><h2>ODP.NET, Managed Driver Tips, Limitations, and Known Issues</h2>
+    This section contains information that is specific to ODP.NET, Managed Driver.
+
+    <ol>
+	<li>OracleConnection object&#39;s OpenWithNewPassword() method invocation will result in 
+            an ORA-1017 error with 11.2.0.3.0 and earlier versions of the database. [Bug 12876992]<br/>
+    <br /></li>
+        <li>Stored functions/procedures in a PDB cannot be added to a .NET Entity Framework model. [Bug 17344899]<br/></li>
+    </ol>
+
+    <p>&nbsp;</p>
+
+    <a name="Unmanaged Known Issues"></a><h2>ODP.NET, Unmanaged Driver Tips, Limitations, and Known Issues</h2>
+    This section contains information that is specific to ODP.NET, Unmanaged Driver.
+
+    <ol>
+        <li>If SenderId is specified in OracleAQMessage object while enqueuing, the 
+            sender id of dequeued message will have &quot;@ODP.NE&quot; appended in the end. [Bug 
+            7315542]<br /><br /></li>
+
+        <li>An &quot;ORA-00942: table or view does not exist&quot; error may be thrown from Dequeue or 
+            DequeueArray method invocations when OracleAQDequeueOptions.DeliveryMode is 
+            specified as OracleAQMessageDeliveryMode.Buffered and 
+            OracleAQDequeueOptions.Correlation is specified and there are no messages 
+            available in the queue. [Bug 7343633]<br />
+            <br />
+        </li>
+        <li>Applications may not receive group notifications if GroupingInterval property on 
+            the OracleNotificationRequest object is set to 0. [Bug 7373765]<br />
+            <br />
+        </li>
+        <li>OracleConnection object&#39;s OpenWithNewPassword() method invocation will result in 
+            an ORA-1017 error with pre-11.2.0.3.0 database versions. [Bug 12876992]
+        </li>
+    </ol>
+    <p>&nbsp;</p>
+
+    <a name="EF"><h2>Entity Framework Tips, Limitations, and Known Issues</h2>
+    This section contains Entity Framework related information that pertains to both ODP.NET, Managed Driver and ODP.NET, Unmanaged Driver.
+    <ol>
+        <li>Interval Day to Second and Interval Year to Month column values cannot be 
+            compared to literals in a WHERE clause of a LINQ to Entities or an Entity SQL 
+            query.<br /><br /> </li>
+        <li>LINQ to Entities and Entity SQL (ESQL) queries that require the usage of SQL 
+            APPLY in the generated queries will cause SQL syntax error(s) if the Oracle 
+            Database being used does not support APPLY. In such cases, the inner exception 
+            message will indicate that APPLY is not supported by the database.<br /><br /> </li>
+        <li>ODP.NET does not currently support wildcards that accept character ranges for 
+            the LIKE operator in Entity SQL (i.e. [] and [^]). [Bug 11683837]<br /><br /> </li>
+        <li>Executing LINQ or ESQL query against tables with one or more column names 
+            that are close to or equal to the maximum length of identifiers (30 bytes) may 
+            encounter &quot;ORA-00972: identifier is too long&quot; error, due to the usage of alias 
+            identifier(s) in the generated SQL that exceed the limit.<br /><br /> </li>
+        <li>An &quot;ORA-00932: inconsistent datatypes: expected - got NCLOB&quot; error will be 
+            encountered when trying to bind a string that is equal to or greater than 2,000 
+            characters in length to an XMLType column or parameter. [Bug 12630958]<br /><br /> </li>
+        <li>An &quot;ORA-00932 : inconsistent datatypes&quot; error can be encountered if a string of 
+            2,000 or more characters, or a byte array with 4,000 bytes or more in length, is 
+            bound in a WHERE clause of a LINQ/ESQL query. The same error can be encountered 
+            if an entity property that maps to a BLOB, CLOB, NCLOB, LONG, LONG RAW, XMLTYPE 
+            column is used in a WHERE clause of a LINQ/ESQL query.<br /><br /> </li>
+        <li>An &quot;Arithmetic operation resulted in an overflow&quot; exception can be 
+            encountered when fetching numeric values that have more precision than what the 
+            .NET type can support. In such cases, the LINQ or ESQL query can &quot;cast&quot; the 
+            value to a particular .NET or EDM type to limit the precision and avoid the 
+            exception. This approach can be useful if the LINQ/ESQL query has 
+            computed/calculated columns which will store up to 38 precision in Oracle, which 
+            cannot be represented as .NET decimal unless the value is casted. <br /><br /></li>
+        <li>Oracle Database treats NULLs and empty strings the same. When executing string 
+            related operations on NULLS or empty strings, the result will be NULL. When 
+            comparing strings with NULLs, use the equals operator (i.e. &quot;x == NULL&quot;) in the 
+            LINQ query, which will in turn use the &quot;IS NULL&quot; condition in the generated SQL 
+            that will appropriately detect NULL-ness.<br /><br /></li>
+        <li>If an exception message of &quot;The store provider factory type 
+          &#39;Oracle.ManagedDataAccess.Client.OracleClientFactory&#39; does not implement the 
+          IServiceProvider interface.&quot; is encountered when executing an Entity Framework 
+          application with ODP.NET, the machine.config requires and entry for ODP.NET 
+          under the &lt;DbProviderFactories&gt; section. To resolve this issue by adding an 
+          entry in the machine.config, reinstall ODAC.<br /><br /></li>
+        <li>Creating a second instance of the context that derives from DbContext within 
+          an application and executing methods within the scope of that context that 
+          result in an interaction with the database may result in unexpected recreation 
+          of the database objects if the DropCreateDatabaseAlways database initializer is 
+          used.<br /><br />More Information: 
+          https://entityframework.codeplex.com/workitem/2362 <br /><br />Known Workarounds: <br />- Use a 
+          different database initializer, <br />- Use an operating system authenticated user for 
+          the connection, or <br />- Include &quot;Persist Security Info=true&quot; in the connection 
+          string (Warning: Turning on &quot;Persist Security Info&quot; will cause the password to 
+          remain as part of the connection string). <br /><br /></li>
+          <li>Deinstallation of ODP.NET versions that are prior to ODAC 12c Release 3 
+            production can cause entries with .NET 2.x assembly references to be entered in 
+            the .NET 4.0 machine.config. This can cause side-by-side execution errors unless 
+            config section entry for &quot;oracle.unmanageddataaccess.client&quot; that references 2.x 
+            version of Oracle.DataAccess.Client is manually removed from the .NET 4.0 
+            machine.config. It is also advised that a DbProviderFactories entry that 
+            references 2.x version of Oracle.DataAccess.Client be removed manually as well. <br /><br /></li>
+    </ol>
+
+</body>
+</html>

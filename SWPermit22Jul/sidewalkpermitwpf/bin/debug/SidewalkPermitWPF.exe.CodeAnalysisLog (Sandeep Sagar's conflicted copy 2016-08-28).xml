@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Targets>
+  <Target Name="H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe">
+   <Modules>
+    <Module Name="sidewalkpermitwpf.exe">
+     <Namespaces>
+      <Namespace Name="SidewalkPermitWPF.Model">
+       <Types>
+        <Type Name="Activity" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Activity.cs" Line="17">'Activity.Activity()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Activity..ctor()&#xD;&#xA;Activity.set_AffidavitActivity(ICollection&lt;AffidavitActivity&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Affidavit" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Affidavit.cs" Line="17">'Affidavit.Affidavit()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Affidavit..ctor()&#xD;&#xA;Affidavit.set_AffidavitActivity(ICollection&lt;AffidavitActivity&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Affidavit.cs" Line="17">'Affidavit.Affidavit()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Affidavit..ctor()&#xD;&#xA;Affidavit.set_AffidavitFinalInspection(ICollection&lt;AffidavitFinalInspection&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Affidavit.cs" Line="17">'Affidavit.Affidavit()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Affidavit..ctor()&#xD;&#xA;Affidavit.set_AffidavitFormInspection(ICollection&lt;AffidavitFormInspection&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Affidavit.cs" Line="17">'Affidavit.Affidavit()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Affidavit..ctor()&#xD;&#xA;Affidavit.set_AffidavitStatus1(ICollection&lt;AffidavitStatus&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Contractor" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Contractor.cs" Line="17">'Contractor.Contractor()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Contractor..ctor()&#xD;&#xA;Contractor.set_CityContract(ICollection&lt;CityContract&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CostType" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="CostType.cs" Line="17">'CostType.CostType()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;CostType..ctor()&#xD;&#xA;CostType.set_AffidavitCosts(ICollection&lt;AffidavitCosts&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Inspector" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Inspector.cs" Line="17">'Inspector.Inspector()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Inspector..ctor()&#xD;&#xA;Inspector.set_Affidavit(ICollection&lt;Affidavit&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Permit" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Permit.cs" Line="17">'Permit.Permit()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Permit..ctor()&#xD;&#xA;Permit.set_PermitPayment(ICollection&lt;PermitPayment&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermitApplicant" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="PermitApplicant.cs" Line="17">'PermitApplicant.PermitApplicant()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PermitApplicant..ctor()&#xD;&#xA;PermitApplicant.set_Permit(ICollection&lt;Permit&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermitStatus" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="PermitStatus.cs" Line="17">'PermitStatus.PermitStatus()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PermitStatus..ctor()&#xD;&#xA;PermitStatus.set_Permit(ICollection&lt;Permit&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PrintCode" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="PrintCode.cs" Line="17">'PrintCode.PrintCode()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PrintCode..ctor()&#xD;&#xA;PrintCode.set_RepairItem(ICollection&lt;RepairItem&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Staff" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Staff.cs" Line="17">'Staff.Staff()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Staff..ctor()&#xD;&#xA;Staff.set_Inspector1(ICollection&lt;Inspector&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Status" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="Status.cs" Line="17">'Status.Status()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Status..ctor()&#xD;&#xA;Status.set_AffidavitStatus(ICollection&lt;AffidavitStatus&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="UnitOfMeasure" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\Model" File="UnitOfMeasure.cs" Line="17">'UnitOfMeasure.UnitOfMeasure()' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;UnitOfMeasure..ctor()&#xD;&#xA;UnitOfMeasure.set_RepairItem(ICollection&lt;RepairItem&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SidewalkPermitWPF.ViewModel">
+       <Types>
+        <Type Name="ContractorPermitProcessViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(SidewalkPermitWPF.Model.IDataService,SidewalkPermitWPF.Model.PermitModel,WPF.MDI.MdiContainer)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\ViewModel" File="ContractorPermitProcessViewModel.cs" Line="328">'ContractorPermitProcessViewModel.ContractorPermitProcessViewModel(IDataService, PermitModel, MdiContainer)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ContractorPermitProcessViewModel..ctor(IDataService, PermitModel, MdiContainer)&#xD;&#xA;ContractorPermitProcessViewModel.set_AffidavitInfo(sw_posting):Void&#xD;&#xA;ObservableObject.RaisePropertyChanged(String):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="InitialStaffPermitSelectionViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(SidewalkPermitWPF.Model.IDataService)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\ViewModel" File="InitialStaffPermitSelectionViewModel.cs" Line="48">'InitialStaffPermitSelectionViewModel.InitialStaffPermitSelectionViewModel(IDataService)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;InitialStaffPermitSelectionViewModel..ctor(IDataService)&#xD;&#xA;InitialStaffPermitSelectionViewModel.set_SubmittedPermits(ObservableCollection&lt;PermitModel&gt;):Void&#xD;&#xA;ObservableObject.RaisePropertyChanged(String):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PermitViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(SidewalkPermitWPF.Model.IDataService)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\ViewModel" File="PermitViewModel.cs" Line="153">'PermitViewModel.PermitViewModel(IDataService)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;PermitViewModel..ctor(IDataService)&#xD;&#xA;PermitViewModel.set_ContractorInfo(sw_contractor):Void&#xD;&#xA;ObservableObject.RaisePropertyChanged(String):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ReviewModifyTransferPermitViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(SidewalkPermitWPF.Model.IDataService,SidewalkPermitWPF.Model.PermitModel,WPF.MDI.MdiContainer)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\ViewModel" File="ReviewModifyTransferPermitViewModel.cs" Line="283">'ReviewModifyTransferPermitViewModel.ReviewModifyTransferPermitViewModel(IDataService, PermitModel, MdiContainer)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;ReviewModifyTransferPermitViewModel..ctor(IDataService, PermitModel, MdiContainer)&#xD;&#xA;ReviewModifyTransferPermitViewModel.set_AffidavitInfo(sw_posting):Void&#xD;&#xA;ObservableObject.RaisePropertyChanged(String):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="StaffPermitProcessViewModel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(SidewalkPermitWPF.Model.IDataService,SidewalkPermitWPF.Model.PermitModel,WPF.MDI.MdiContainer)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="h:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\sidewalkpermitwpf\ViewModel" File="StaffPermitProcessViewModel.cs" Line="243">'StaffPermitProcessViewModel.StaffPermitProcessViewModel(IDataService, PermitModel, MdiContainer)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;StaffPermitProcessViewModel..ctor(IDataService, PermitModel, MdiContainer)&#xD;&#xA;StaffPermitProcessViewModel.set_AffidavitInfo(sw_posting):Void&#xD;&#xA;ObservableObject.RaisePropertyChanged(String):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SidewalkPermitWPF.Views">
+       <Types>
+        <Type Name="AutoCompleteTextBox" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2016-08-28 04:30:02Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implement IDisposable on 'AutoCompleteTextBox' because it creates members of the following IDisposable types: 'Timer'. If 'AutoCompleteTextBox' has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+   <Name>Do not call overridable methods in constructors</Name>
+   <Description>Virtual methods defined on the class should not be called from constructors. If a derived class has overridden the method, the derived class version will be called (before the derived class constructor is called).</Description>
+   <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182331.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="DependsOnFix">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}. If {0} has previously shipped, adding new members that implement IDisposable to this type is considered a breaking change to existing consumers.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

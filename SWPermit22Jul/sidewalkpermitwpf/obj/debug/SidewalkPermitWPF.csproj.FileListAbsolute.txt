@@ -1,0 +1,875 @@
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\NewPermit.baml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\NewPermit.g.cs
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\NewPermit.baml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\NewPermit.g.cs
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\NewPermit.baml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\NewPermit.g.cs
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\NewPermit.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\NewPermit.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\App.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\App.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\NewPermit.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\NewPermit.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\NewPermit.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\NewPermit.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\NewPermit.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\NewPermit.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.DataGrid.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.Toolkit.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\NewPermit.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\NewPermit.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.manifest
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.application
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.DataGrid.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.Toolkit.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ApprovedPermitsView.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitHistoryView.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PrintSubmittedPermitView.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ApprovedPermitsView.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitHistoryView.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PrintSubmittedPermitView.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Views.ApprovedPermitReport.resources
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\RdlCompile.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\RdlCompile.compiled
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe.manifest
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.application
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.manifest
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.application
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ApprovedPermitsView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitHistoryView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PrintSubmittedPermitView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ApprovedPermitsView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitHistoryView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PrintSubmittedPermitView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Views.ApprovedPermitReport.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\RdlCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\RdlCompile.compiled
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe.manifest
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.application
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.manifest
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.application
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Infrastructure.AppMetadata[4.6.0.0].dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Infrastructure.Cryptography[4.6.0.0].dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Reporting.SSRS[4.6.0.0].dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\PDX.PBOT.SWPermit.Reporting[4.6.0.0].dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Spire.License.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Spire.Pdf.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Microsoft.mshtml.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Infrastructure.AppMetadata[4.6.0.0].pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Infrastructure.Cryptography[4.6.0.0].pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Reporting.SSRS[4.6.0.0].pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\PDX.PBOT.SWPermit.Reporting[4.6.0.0].pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Spire.License.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\Spire.Pdf.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\ApprovedPermitsView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\PermitHistoryView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\PrintSubmittedPermitView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\About.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\ApprovedPermitsView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\PermitHistoryView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\PrintSubmittedPermitView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\About.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Views.ApprovedPermitReport.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Views.Form1.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\RdlCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\RdlCompile.compiled
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe.manifest
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.application
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.config
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.manifest
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.application
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.CodeAnalysisLog.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\SidewalkPermitWPF.exe.lastcodeanalysissucceeded
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Common.Logging.Core.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Common.Logging.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Infrastructure.AppMetadata[4.6.0.0].dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Infrastructure.Cryptography[4.6.0.0].dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Reporting.SSRS[4.6.0.0].dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\PDX.PBOT.SWPermit.Reporting[4.6.0.0].dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Spire.License.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Spire.Pdf.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\WPF.MDI.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\WPFTextBoxAutoComplete.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Microsoft.mshtml.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Aviad.WPF.Controls.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\WPF.MDI.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Common.Logging.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Common.Logging.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Common.Logging.Core.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Common.Logging.Core.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Infrastructure.AppMetadata[4.6.0.0].pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Infrastructure.Cryptography[4.6.0.0].pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\PDX.PBOT.Reporting.SSRS[4.6.0.0].pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\PDX.PBOT.SWPermit.Reporting[4.6.0.0].pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Spire.License.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\Spire.Pdf.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\ApprovedPermitsView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\NumberOfCopies.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PermitFeeView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PermitDetails.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PermitHistoryView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PrintSubmittedPermitView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\ContractorAlias.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\MainWindow.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\About.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\AutoCompleteTextbox.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\ApprovedPermitsView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\NumberOfCopies.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PermitFeeView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\InitialStaffPermitSelection.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PermitDetails.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PermitHistoryView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PrintSubmittedPermitView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PermitView.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\ReviewModifyTransferPermit.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\ContractorPermitProcess.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\ContractorAlias.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\StaffPermitProcess.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\App.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF_MarkupCompile.lref
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\App.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\MainWindow.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\About.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\Views\PermitView.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.g.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Properties.Resources.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Views.ApprovedPermitReport.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Views.CancelDialog.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.Views.Form1.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.csproj.GenerateResource.Cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\RdlCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\RdlCompile.compiled
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe.manifest
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.application
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.exe
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\SidewalkPermitWPF.pdb

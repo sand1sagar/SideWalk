@@ -1,0 +1,78 @@
+﻿<ul class="nav main">
+    <li >
+        <a href="javascript:"><span>Inspection</span></a>
+        <ul>
+            <li><a href="#">Post Sidewalk</a> </li>
+            <li><a href="#">Delete Inspection</a> </li>
+            <li><a href="#">Create Affidavits from Inspections</a> </li>
+            <li><a href="#">Page with Sidebar Example</a> </li>
+        </ul>
+    </li>
+    <li >
+        <a href="javascript:"><span>Permits</span></a>
+        <ul>
+            <li><a href="#">Applicant Applies</a> </li>
+            <li><a href="#">Staff Review</a> </li>
+        </ul>
+    </li>
+    <li ><a href="/Affidavit/Index"><span>Affidavit</span></a> </li>
+    <li >
+        <a href="javascript:"><span>City Repair</span></a>
+        <ul>
+            <li><a href="#">Process Order</a> </li>
+            <li><a href="#">Expired Permits for a given week</a> </li>
+            <li><a href="#">2nd Notice Letter</a> </li>
+            <li><a href="#">Mark Affidavit for City Repairs</a> </li>
+            <li><a href="#">Stop permit process for City Repairs</a> </li>
+        </ul>
+    </li>
+    <li >
+        <a href="javascript:"><span>Form Inspection</span></a>
+        <ul>
+            <li><a href="#">Mark for Form Pour</a> </li>
+            <li><a href="#">Record Comments</a> </li>
+            <li><a href="#">Do not Pour</a> </li>
+            <li><a href="#">Permission Granted</a> </li>
+        </ul>
+    </li>
+    <li >
+        <a href="javascript:"><span>Final Inspection</span></a>
+        <ul>
+            <li><a href="#">Mark for Final</a> </li>
+            <li><a href="#">Record Comments</a> </li>
+            <li><a href="#">Repairs Not Acceptable</a> </li>
+            <li><a href="#">Repairs Complete and Satisfactory</a> </li>
+        </ul>
+    </li>
+    <li >
+        <a href="javascript:"><span>Letters</span></a>
+        <ul>
+            <li><a href="#">Notice Letter</a> </li>
+            <li><a href="#">2nd Notice Letter</a> </li>
+        </ul>
+    </li>
+    <li >
+        <a href="javascript:"><span>Reports</span></a>
+        <ul>
+            <li><a href="#">Weekly Posted Permits</a> </li>
+            <li><a href="#">Expired Permits for a given week</a> </li>
+            <li><a href="#">Expired Permits for specific contractor</a> </li>
+            <li><a href="#">Expired Permits for all contractors</a> </li>
+            <li><a href="#">Repairs Complete and Satisfactory</a> </li>
+            <li><a href="#">Permit Information</a> </li>
+            <li><a href="#">Affidavit Information</a> </li>
+            <li><a href="#">Active</a> </li>
+            <li><a href="#">Labels</a> </li>
+            <li><a href="#">Expired</a> </li>
+        </ul>
+    </li>
+    <li >
+        <a href="javascript:"><span>Setup</span></a>
+        <ul>
+            <li><a href="#">Contractor</a> </li>
+            <li><a href="#">City Contract</a> </li>
+            <li><a href="#">Permit Fees</a> </li>
+            <li><a href="#">Staff</a> </li>
+        </ul>
+    </li>
+</ul>

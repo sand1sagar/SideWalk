@@ -1,0 +1,53 @@
+
+If Transfer doesn't work: Uncomment the Textbox including mmvmcommand in ReviewModifyTransferPermit.xaml
+
+
+Data Source=pdotsqldev;Initial Catalog=SWPostDEV;Integrated Security=True
+Connection String in SidewalkUI>Webconfig>connectionStrings>Data Source>Server Explorer View in Visual Studio>Add Connection>Microsoft Sql Server(SQLClient)>Server name>pdotsqldev>Select or enter a database name> F4 on pdotsqldev\apps.SWPostDEV.dbo
+
+Permit tables use Entity framework & Linq because of presence of primary key and rest will use ADO.NET code.
+___________________________________________
+
+Questions: 
+Contractor CCB is not present for all entries, Name is there for all the contractors.
+
+___________________________________________
+Modifications:
+
+>>> In SidewalkWPF>MainWindowXaml Remove: Icon="C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\SidewalkWPF\Images\favicon.ico"
+
+>>> Connection string in SidewalkUI>Web.config:
+<add name="Entities" connectionString="metadata=res://*/Database.SidewalkDB.csdl|res://*/Database.SidewalkDB.ssdl|res://*/Database.SidewalkDB.msl;provider=System.Data.SqlClient;provider connection string=&quot;
+
+Data Source=pdotsqldev;Initial Catalog=SWPost;Integrated Security=True;
+
+MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+<add name="SidewalkConnection" connectionString="
+
+Data Source=pdotsqldev;Initial Catalog=SWPost;Integrated Security=True;
+
+"/>
+
+>>> SidewalkPermitWPF>App.config>Make baseUri 27144 active
+
+>>> Run Custom Tool SidewalkPermitWPF>Model>DatabaseModel.tt
+
+
+
+
+____________________________________________________________________________________________
+Modifications:
+
+
+
+
+>>> Run Custom Tool SidewalkPermitWPF>Model>DatabaseModel.tt
+
+>>> Comment the lines with mdi in  SidewalkPermitWPF>mainwindow.xaml.cs
+
+permitview.xaml
+perviewmodel.cs
+
+st_no district st_name designator(1345 se miller st)
+sw_address
+own_addr

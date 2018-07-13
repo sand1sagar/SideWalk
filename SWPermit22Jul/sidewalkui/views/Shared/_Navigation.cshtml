@@ -1,0 +1,230 @@
+﻿@if (Convert.ToBoolean(Session["HomePage"]) == false)
+{
+    int affidavitId = 0;
+    if (!string.IsNullOrEmpty(Session["AffidavitId"] != null ? Session["AffidavitId"].ToString() : ""))
+    {
+        affidavitId = int.Parse(Session["AffidavitId"].ToString());
+    }
+    bool inspectionStatus = false;
+    if (Session["FormInspectionStatus"] != null)
+    {
+        inspectionStatus = bool.Parse(Session["FormInspectionStatus"].ToString());
+        //ViewData["inspectionStatus"] = inspectionStatus;
+        ViewBag.InspectionStatusValue = inspectionStatus;
+    }
+
+    <ul class="nav">
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                Inspection <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu" id="menu1">
+                <li>
+                    <a href="~/Affidavit/Index">Post Sidewalk</a>
+                </li>
+                <li>
+                    <a href="#">Delete Inspection</a>
+                </li>
+                <li>
+                    <a href="#">Create Affidavits from Inspections</a>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Permits <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="#">Applicant Applies</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Staff Review</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Affidavit <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+                @*<li>
+                        <a tabindex="-1" href="">Edit Affidavit</a>
+                    </li>*@
+                <li>
+                    <a tabindex="-1" href="~/Affidavit/Index">Affidavit List</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                City Repair <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="#">Process Order</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Expired Permits for a given week</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">2nd Notice Letter</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Mark Affidavit for City Repairs</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Stop permit process for City Repairs</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Form Inspection <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="#" class="cls-affidavit-update" id="@affidavitId-1">Mark for Form Pour</a>
+                </li>
+                @*<li>
+                        <a tabindex="-1" href="#">Record Comments</a>
+                    </li>*@
+                <li>
+                    @if (affidavitId > 0)
+                {
+                        <a tabindex="-1" href="/FormInspection/DoNotPour?affidavitNo=@affidavitId">Do Not Pour</a>
+                    }
+                    else
+                    {
+                        <a tabindex="-1" href="#">Do Not Pour</a>
+                    }
+                </li>
+                <li>
+                    @if (affidavitId > 0)
+                    {
+                        <a tabindex="-1" href="/FormInspection/GrantedToPour?affidavitNo=@affidavitId">Permission Granted to Pour</a>
+                    }
+                    else
+                    {
+                        <a tabindex="-1" href="#">Permission Granted to Pour</a>
+                    }
+
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown" id="final-inspection-btn">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Final Inspection <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="#" class="cls-affidavit-update" id="@affidavitId-4">Mark for Final</a>
+                </li>
+                @*<li>
+                        <a tabindex="-1" href="#">Record Comments</a>
+                    </li>*@
+                <li>
+                    @if (affidavitId > 0)
+                {
+                        <a tabindex="-1" href="/FinalInspection/RepairsNotAcceptable?affidavitNo=@affidavitId">Repairs Not Acceptable</a>
+                    }
+                    else
+                    {
+                        <a tabindex="-1" href="#">Repairs Not Acceptable</a>
+                    }
+                </li>
+                <li>
+                    @if (affidavitId > 0)
+                    {
+                        <a tabindex="-1" href="/FinalInspection/RepairsAreCompleteandSatisfactory?affidavitNo=@affidavitId">Repairs Complete and Satisfactory</a>
+                    }
+                    else
+                    {
+                        <a tabindex="-1" href="#">Repairs Complete and Satisfactory</a>
+                    }
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Letters <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="~/Letters/NoticeLetter">Notice Letter</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">2nd Notice Letter</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Reports <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="#">Weekly Posted Permits</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Expired Permits for a given week</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Expired Permits for specific contractor</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Expired Permits for all contractors</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Repairs Complete and Satisfactory</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Permit Information</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Affidavit Information</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Active</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Labels</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Setup <i class="caret"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a tabindex="-1" href="#">Contractor</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">City Contract</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Permit Fees</a>
+                </li>
+                <li>
+                    <a tabindex="-1" href="#">Staff</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+}
+<script>
+    $(document).ready(function () {
+        @*debugger;
+        var sample = ('@ViewBag.InspectionStatusValue').toLowerCase();*@
+        if (('@ViewBag.InspectionStatusValue').toLowerCase() !== "true") {
+            $('#final-inspection-btn').addClass('final-inspection');
+        }
+    });
+</script>
+<style>
+    .final-inspection {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+</style>

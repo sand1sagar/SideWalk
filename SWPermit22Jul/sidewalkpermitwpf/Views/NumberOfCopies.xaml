@@ -1,0 +1,32 @@
+﻿<Window x:Class="SidewalkPermitWPF.Views.NumberOfCopies"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        mc:Ignorable="d ignore"
+        DataContext="{Binding ViewModelName, Source={StaticResource Locator}}"
+        Title="Number of copies" Height="150" Width="500" WindowStartupLocation="CenterScreen">
+  
+    <Grid Grid.Row="0" Grid.Column="0">
+        <GroupBox Header="Print Copy Information" Grid.Column="0" Grid.Row="0"  Margin="10,0,10,0" Height="auto" VerticalAlignment="Top" FontFamily="Calibri" FontSize="12">
+            <StackPanel Orientation="Horizontal"  Margin="0,0,0,0">
+                <StackPanel Margin="0,0,0,0" Grid.Column="0" Orientation="Vertical" Width="461">
+
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock Text= "Please enter number of copies you want to print:" Margin="50,0,0,0 "/>
+                        <TextBox Width="50" Height="20" x:Name="ResponseTextBox" MaxLength="1" Margin="20,0,0,0"  PreviewTextInput="NumberValidationTextBox"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="280,0,-76,10">
+                        <Button Content="OK" Width="80" Click="btnOK_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+    <!--<Grid>
+    </Grid>-->
+</Window>
+
+
+ 

@@ -1,0 +1,149 @@
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\Sandeep\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Downloads\Sidewalk SVN (8)\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\sandeep.modi\Desktop\Sidewalk SVN\Sidewalk SVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk SVN WorkPC\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\sandeep\Desktop\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk Permit\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\log4net.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\log4net.xml
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\sandeep.modi\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\log4net.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Oracle.DataAccess.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Oracle.DataAccess.EntityFramework.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\bin\Debug\log4net.xml
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+H:\Sidewalk\Dropbox\Sidewalk Project\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\log4net.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Oracle.DataAccess.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Oracle.DataAccess.EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\bin\Debug\log4net.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\Sidewalk Permit 1-23\Sidewalk Permit\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\log4net.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\Oracle.DataAccess.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\Oracle.DataAccess.EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\bin\Debug\log4net.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll.config
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\Sidewalk.Logic.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\AutoMapper.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\log4net.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\Oracle.DataAccess.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\Oracle.DataAccess.EntityFramework.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\AutoMapper.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\EntityFramework.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\bin\Debug\log4net.xml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\obj\Debug\Sidewalk.Logic.pdb

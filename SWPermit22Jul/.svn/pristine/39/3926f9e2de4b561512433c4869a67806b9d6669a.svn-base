@@ -1,0 +1,277 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sidewalk.Logic.Database
+{
+
+    public partial class sw_posting
+    {
+        public string InspectorName { get; set; }
+        public string PropertyDescription { get; set; }
+        public int aff_no { get; set; }
+        public string qtr_sec { get; set; }
+        public string map_id { get; set; }
+        public Nullable<System.DateTime> post_dt { get; set; }
+        public Nullable<int> acct_period { get; set; }
+        public string property_id { get; set; }
+        public string property_id2 { get; set; }
+        public string property_desc { get; set; }
+        public Nullable<int> aff_status { get; set; }
+        public string owner_name { get; set; }
+        public string attn1 { get; set; }
+        public string attn2 { get; set; }
+        public string st_no { get; set; }
+        public string district { get; set; }
+        public string st_name { get; set; }
+        public string designator { get; set; }
+        public string city { get; set; }
+        public string zip { get; set; }
+        public Nullable<int> inspector_no { get; set; }
+        public string city_owned_flag { get; set; }
+        public string owner_resident_flag { get; set; }
+        public string service_req_flag { get; set; }
+        public string rep_by_city { get; set; }
+        public string rep_by_owner { get; set; }
+        public string partial_repair { get; set; }
+        public string vacant_lot_flag { get; set; }
+        public string vacant_desc { get; set; }
+        public Nullable<System.DateTime> repair_dt { get; set; }
+        public Nullable<System.DateTime> billed_dt { get; set; }
+        public string bill_flag { get; set; }
+        public Nullable<System.DateTime> hold_until_dt { get; set; }
+        public Nullable<int> permit_no { get; set; }
+        public string permit_issued { get; set; }
+        public string permit_extended { get; set; }
+        public Nullable<System.DateTime> date_issued { get; set; }
+        public Nullable<System.DateTime> date_expired { get; set; }
+        public string contractor { get; set; }
+        public string builder_board_no { get; set; }
+        public string license_no { get; set; }
+        public Nullable<System.DateTime> date_cancelled { get; set; }
+        public string cancelled_by { get; set; }
+        public string status { get; set; }
+        public string last_action { get; set; }
+        public Nullable<System.DateTime> date_added { get; set; }
+        public Nullable<System.DateTime> date_updated { get; set; }
+        public string notes { get; set; }
+        public Nullable<System.DateTime> sent_dt { get; set; }
+        public string NEW_AFF { get; set; }
+        public bool NEW_ClearWalk { get; set; }
+        public Nullable<System.DateTime> NEW_RepairDueDate { get; set; }
+        public string inspector_name { get; set; }
+        public string fname { get; set; }
+    }
+    /// <summary>
+    /// City contract Grid models [CityContract]
+    /// </summary>
+    public class RepairItemGridModel
+    {
+        public string Action { get; set; }
+        public string Print { get; set; }
+        public string UnitDescription { get; set; }
+        public string ShortDescription { get; set; }
+        public bool Flag { get; set; }
+    }
+
+    /// <summary>
+    /// Model for Affidavit document history [Affidavit]
+    /// </summary>
+    public class AffidavitActivityHistoryGridModel
+    {
+        public string Type { get; set; }
+        public string Date { get; set; }
+        public string Status { get; set; }
+        public string User { get; set; }
+    }
+    /// <summary>
+    /// Model for Mark for city repair [MarkForCityRepair]
+    /// </summary>
+    public class MarkForCityRepairGridModel
+    {
+        public string Affidavit { get; set; }
+        public DateTime NoticeSent { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime PermitDate { get; set; }
+        public string PropertyID { get; set; }
+        public string Inspector { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime OnHold { get; set; }
+        public string SecondNoticeSent { get; set; }
+    }
+    /// <summary>
+    /// Model for contractor list [ContractorList]
+    /// </summary>
+    public class ContractorGridModel
+    {
+        public string CCB { get; set; }
+        public string Contractor { get; set; }
+        public string Contract { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string CityContractor { get; set; }
+        public string Active { get; set; }
+    }
+    /// <summary>
+    /// Model for Mark for final inspection [MarkForFinalInspection]
+    /// </summary>
+    public class MarkForFinalInspectionGridModel
+    {
+        public string Affidavit { get; set; }
+        public DateTime NoticeSent { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime PermitDate { get; set; }
+        public string PropertyID { get; set; }
+        public string Inspector { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime OnHold { get; set; }
+    }
+    /// <summary>
+    /// Model for Mark for form inspection [MarkForFormInspection]
+    /// </summary>
+    public class MarkForFormInspectionGridModel
+    {
+        public string Affidavit { get; set; }
+        public DateTime NoticeSent { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime PermitDate { get; set; }
+        public string PropertyID { get; set; }
+        public string Inspector { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime OnHold { get; set; }
+    }
+    /// <summary>
+    /// Model for Second Notice [SecondNotice]
+    /// </summary>
+    public class SecondNoticeGridModel
+    {
+        public string Affidavit { get; set; }
+        public DateTime NoticeSent { get; set; }
+        public DateTime DueDate { get; set; }
+        public DateTime PermitDate { get; set; }
+        public string PropertyID { get; set; }
+        public string Inspector { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime OnHold { get; set; }
+        public DateTime SecondNoticeDate { get; set; }
+    }
+    /// <summary>
+    /// Model for action rates [PermitFee]
+    /// </summary>
+    public class ActionRatesGridModel
+    {
+        public string Type { get; set; }
+        public string Current { get; set; }
+        public string Action { get; set; }
+    }
+    /// <summary>
+    /// Model for staff permit review [PermitReview]
+    /// </summary>
+    public class StaffPermitReviewGridModel
+    {
+        public string CCB { get; set; }
+        public string Contractor { get; set; }
+        public string Affidavit { get; set; }
+        public string PropertyAddress { get; set; }
+        public DateTime IssueBy { get; set; }
+        public DateTime IssueDate { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public DateTime SubmitDate { get; set; }
+        public string Status { get; set; }
+    }
+    /// <summary>
+    /// Model for staff search [StaffList]
+    /// </summary>
+    public class StaffSearchGridModel
+    {
+        public string PERNR { get; set; }
+        public string First { get; set; }
+        public string Last { get; set; }
+        public string UserID { get; set; }
+        public string Inspector { get; set; }
+        public string Active { get; set; }
+    }
+
+    /// <summary>
+    /// Model for Affidavit screen grid Cost & notes
+    /// </summary>
+    public class CostNotesGridModel
+    {
+        public string Item { get; set; }
+        public string Unit { get; set; }
+        public string Rate { get; set; }
+        public string Cost { get; set; }
+    }
+
+    /// <summary>
+    /// Model for affidavit screen status history grid
+    /// </summary>
+    public class StatusHistoryGrid
+    {
+        public string Date { get; set; }
+        public string Status { get; set; }
+        public string ChangedBy { get; set; }
+        public string Note { get; set; }
+    }
+    /// <summary>
+    /// Permit custom model
+    /// </summary>
+    public class PermitModel
+    {
+        public Permit Permit { get; set; }
+        public sw_posting Affidavit { get; set; }
+        public CCBContractor Contractor { get; set; }
+        public PermitApplicant Applicant { get; set; }
+        public List<sw_action_detail> AffidavitCostDetails { get; set; }
+        public bool IsChecked { get; set; }
+        public string FullAddress { get; set; }
+    }
+    /// <summary>
+    /// CCB model for contractor
+    /// </summary>
+    public class CCBContractor
+    {
+        public string business_name { get; set; }
+        public string rmi_name { get; set; }
+        public string address { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string zip { get; set; }
+        public string business_telephone { get; set; }
+        public string license_number { get; set; }
+        public long ccb_number { get; set; }
+        public string alias_name { get; set; }
+    }
+   
+    /// <summary>
+    /// models for sidewalk action details and rate
+    /// </summary>
+    public class sw_action_detail
+    {
+        public int aff_no { get; set; }
+        public string action { get; set; }
+        public string action_type { get; set; }
+        public float unit { get; set; }
+        public decimal cost { get; set; }
+        public decimal rate { get; set; }
+
+    }
+    /// <summary>
+    /// models to get permit history
+    /// </summary>
+    public class ApplicantPermitHistory
+    {
+        public int AppliedPermits { get; set; }
+        public int ExpiredPermits { get; set; }
+        public int ExpiringSoon { get; set; }
+    }
+    public partial class Affidavit
+    {
+        public string InspectorName { get; set; }
+        public string PropertyDescription { get; set; }
+        public string CurrentOwner { get; set; }
+
+    }
+}

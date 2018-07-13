@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="SidewalkPermitWPF.Views.InitialStaffPermitSelection"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:actb="clr-namespace:Aviad.WPF.Controls;assembly=Aviad.WPF.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" xmlns:System="clr-namespace:System;assembly=mscorlib"
+             x:Name="mdiChild" Background="White" MinWidth="850"
+             DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <Grid Margin="0,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="512*"/>
+            <ColumnDefinition Width="512*"/>
+        </Grid.ColumnDefinitions>-->
+        <GroupBox Header="Search Permits"  Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,0" Grid.Row="0">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,10">
+                    <TextBlock TextWrapping="Wrap" Width="50" Text="Name : "/>
+                    <TextBox Width="130" Margin="0,0,20,0" TextWrapping="Wrap" Text="{Binding ApplicantName,Mode=TwoWay}" IsEnabled="{Binding IsChecked, ElementName=rdoCard}"/>
+                    <TextBlock TextWrapping="Wrap" Width="50" Text="CCB# : "/>
+                    <TextBox Width="100" Margin="0,0,20,0" TextWrapping="Wrap" Text="{Binding CCBNumber,Mode=TwoWay}" />
+                    <TextBlock TextWrapping="Wrap" Width="75" Text="Affidavit No. : "/>
+                    <TextBox Width="100" TextWrapping="Wrap" Margin="0,0,20,0" Text="{Binding AffidavitNumber,Mode=TwoWay}" IsEnabled="{Binding IsChecked, ElementName=rdoCheck}"/>
+                    <Button Content="Search" Width="60" Margin="20,0,0,0" Command="{Binding SearchPermitCommand}" />
+                    <Button Content="Clear" Width="60" Margin="20,0,0,0" Command="{Binding ClearFilterCommand}" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Applied Permits"  Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,0" Grid.Row="1">
+            <StackPanel>
+                <DataGrid Margin="0,0,0,10" Name="SubmittedPermits" MaxHeight="900" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding SubmittedPermits}" AutoGenerateColumns="False" IsEnabled="True" >
+                    <DataGrid.Columns>
+                        <DataGridHyperlinkColumn Width="4*" Binding="{Binding View}" ContentBinding="{Binding Permit.PermitID}" Header="Application" IsReadOnly="True" CanUserSort="False">
+                            <DataGridHyperlinkColumn.ElementStyle>
+                                <Style TargetType="TextBlock">
+                                    <EventSetter Event="Hyperlink.Click" Handler="OnHyperlinkClick" />
+                                </Style>
+                            </DataGridHyperlinkColumn.ElementStyle>
+                        </DataGridHyperlinkColumn>
+                        <DataGridTextColumn Width="5*" Header="CCB#" Binding="{Binding Permit.ID}" IsReadOnly="True" Visibility="Hidden" />
+                        <!--<DataGridTextColumn Width="*" Header="CCB#" Binding="{Binding Contractor.license_no}" IsReadOnly="True" />-->
+                        <DataGridTextColumn Width="4*" Header="Applicant Type" Binding="{Binding Permit.PermitApplicant.ApplicantType}" IsReadOnly="True" />
+                        <DataGridTextColumn Width="12*" Header="Name" Binding="{Binding Permit.PermitApplicant.Name}" IsReadOnly="True" />
+                        <DataGridTextColumn Width="4*" Header="CCB#" Binding="{Binding Permit.BuilderBoardNo}" IsReadOnly="True" />
+                        <DataGridTextColumn Width="4*" Header="Affidavit#" Binding="{Binding Permit.AffidavitID}" IsReadOnly="True"/>
+                        <DataGridTextColumn Width="8*" Header="Property address" Binding="{Binding Permit.PropertyAddress}" IsReadOnly="True"/>
+                        <DataGridTextColumn Width="4*" Header="Permit Fee" Binding="{Binding Permit.TotalFee}" IsReadOnly="True"/>
+                        <DataGridTextColumn Width="4*" Header="Date Applied" Binding="{Binding Permit.SubmissionDate, StringFormat=d}" IsReadOnly="True" />
+
+                        <!--<DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Command="{Binding ShowPermitCommand}" CommandParameter="{Binding Permit.ID}" Content="View" Margin="10,0,0,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>-->
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </GroupBox>
+       </Grid>
+</UserControl>

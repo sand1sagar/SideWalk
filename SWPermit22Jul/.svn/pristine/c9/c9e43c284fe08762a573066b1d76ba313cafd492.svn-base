@@ -1,0 +1,395 @@
+﻿using System;
+using System.Collections.Generic;
+using SidewalkPermitWPF.Helper;
+using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+
+namespace SidewalkPermitWPF.Model
+{
+    public class DataService : IDataService
+    {
+        /// <summary>
+        /// this method will call web api for get list of affidavit
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<sw_posting>> GetAffidavit()
+        {
+            List<sw_posting> result = new List<sw_posting>();
+            result = await HelperClass.GetResponse(result, "GetAffidavit");
+            return result;
+        }
+        //C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\sidewalkpermitwpf\Model\DataService.cs
+        /// <summary>
+        /// this method will call web api for get affidavit by keyword
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        public async Task<ObservableCollection<sw_posting>> GetAffidavitByKeyword(string keyword)
+        {
+            ObservableCollection<sw_posting> result = new ObservableCollection<sw_posting>();
+
+            result = await HelperClass.GetResponse(result, "GetAffidavitByKeyword?keyword=" + keyword);
+            return result;
+        }
+
+        /// <summary>
+        /// this method will call web api for get affidavit by keyword
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        public async Task<ObservableCollection<sw_posting>> GetAffidavitByPropertyKeyword(string keyword)
+        {
+            ObservableCollection<sw_posting> result = new ObservableCollection<sw_posting>();
+
+            result = await HelperClass.GetResponse(result, "GetAffidavitByPropertyKeyword?keyword=" + keyword);
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get affidavit by number
+        /// </summary>
+        /// <param name="affidavitNumber"></param>
+        /// <returns></returns>
+        public async Task<sw_posting> GetAffidavitByNumber(string affidavitNumber)
+        {
+            sw_posting result = new sw_posting();
+
+            result = await HelperClass.GetResponse(result, "GetAffidavitByNumber?affidavitNumber=" + affidavitNumber);
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get affidavit cost details by affidavit number and cost type
+        /// </summary>
+        /// <param name="affidavitId"></param>
+        /// <param name="costTypeKey"></param>
+        /// <returns></returns>
+        public async Task<ObservableCollection<sw_action_detail>> GetAffidavitCostDetails(string affidavitId, string costTypeKey)
+        {
+            ObservableCollection<sw_action_detail> result = new ObservableCollection<sw_action_detail>();
+            if (!string.IsNullOrEmpty(affidavitId) && !string.IsNullOrEmpty(costTypeKey))
+            {
+                result = await HelperClass.GetResponse(result, "GetAffidavitCostDetails?affidavitID=" + affidavitId + "&costTypeKey=" + costTypeKey);
+            }
+
+            return result;
+        }
+
+        public async Task<ObservableCollection<PermitCostsDetail>> GetPermitCostsDetail(string affidavitId)
+        {
+            ObservableCollection<PermitCostsDetail> result = new ObservableCollection<PermitCostsDetail>();
+            if (!string.IsNullOrEmpty(affidavitId))
+            {
+                result = await HelperClass.GetResponse(result, "GetPermitCostsDetail?affidavitID=" + affidavitId);
+            }
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get contractor by ccb number
+        /// </summary>
+        /// <param name="ccbNumber"></param>
+        /// <returns></returns>
+        public async Task<CCBContractor> GetContractor(string ccbNumber)
+        {
+            CCBContractor result = new CCBContractor();
+            result = await HelperClass.GetResponse(result, "SearchContractor?ccbNumber=" + ccbNumber);
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get contractor by keyword
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
+        public async Task<ObservableCollection<CCBContractor>> GetContractorByKeyword(string keyword)
+        {
+            ObservableCollection<CCBContractor> result = new ObservableCollection<CCBContractor>();
+            result = await HelperClass.GetResponse(result, "SearchContractorByKeyword?keyword=" + keyword);
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for create permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<Permit> InsertPermit(Permit model)
+        {
+
+            model = await HelperClass.PostResponse(model, "InsertPermit");
+
+            return model;
+        }
+        /// <summary>
+        /// this method will call web api for create permit application payment
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<PermitPayment> InsertPermitPayment(PermitPayment model)
+        {
+
+            model = await HelperClass.PostResponse(model, "InsertPermitPayment");
+
+            return model;
+        }
+
+        /// <summary>
+        /// this method will call web api for create permit applicant
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<PermitApplicant> InsertPermitApplicant(PermitApplicant model)
+        {
+
+            model = await HelperClass.PostResponse(model, "InsertPermitApplicant");
+
+            return model;
+        }
+        /// <summary>
+        /// this method will call web api for delete permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<Permit> DeletePermit(Permit model)
+        {
+
+            model = await HelperClass.PostResponse(model, "DeletePermit");
+
+            return model;
+        }
+        /// <summary>
+        /// this method will call web api for delete permit payment
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<PermitPayment> DeletePermitPayment(PermitPayment model)
+        {
+
+            model = await HelperClass.PostResponse(model, "DeletePermitPayment");
+            return model;
+        }
+        /// <summary>
+        /// this method will call web api for delete permit applicant
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<PermitApplicant> DeletePermitApplicant(PermitApplicant model)
+        {
+
+            model = await HelperClass.PostResponse(model, "DeletePermitApplicant");
+
+            return model;
+        }
+        /// <summary>
+        /// this method will call web api for update permit
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<Permit> UpdatePermit(Permit model)
+        {
+
+            model = await HelperClass.PostResponse(model, "UpdatePermit");
+
+            return model;
+        }
+        /// <summary>
+        /// this method will call web api for update permit applicant
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<PermitApplicant> UpdatePermitApplicant(PermitApplicant model)
+        {
+
+            model = await HelperClass.PostResponse(model, "UpdatePermitApplicant");
+
+            return model;
+        }
+        /// <summary>
+        /// this method will call web api for remove permit
+        /// </summary>
+        /// <param name="permitID"></param>
+        /// <returns></returns>
+        public async Task<bool> RemovePermit(long permitID)
+        {
+            bool result = false;
+
+            result = await HelperClass.GetResponse(result, "RemovePermit?permitID=" + permitID);
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get permit by affidavit number
+        /// </summary>
+        /// <param name="affidavitID"></param>
+        /// <returns></returns>
+        public async Task<Permit> GetPermitByAffidavit(long affidavitID)
+        {
+            Permit result = new Permit();
+
+            result = await HelperClass.GetResponse(result, "GetPermitByAffidavit?affidavitid=" + affidavitID);
+
+            return result;
+        }
+        public async Task<Permit> GetCanceledPermitByAffidavit(long affidavitID)
+        {
+            Permit result = new Permit();
+
+            result = await HelperClass.GetResponse(result, "GetCanceledPermitByAffidavit?affidavitid=" + affidavitID);
+
+            return result;
+        }
+
+        /// <summary>
+        /// this method will call web api for get permmit by status
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns></returns>
+        public async Task<ObservableCollection<PermitModel>> GetPermitByStatus(string status)
+        {
+            ObservableCollection<PermitModel> result = new ObservableCollection<PermitModel>();
+
+            if (!string.IsNullOrEmpty(status))
+            {
+                result = await HelperClass.GetResponse(result, "GetPermitsByStatus?status=" + status);
+            }
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get permit by applicant
+        /// </summary>
+        /// <param name="applicantName"></param>
+        /// <returns></returns>
+        public async Task<ObservableCollection<PermitModel>> GetPermitsByApplicant(string applicantName)
+        {
+            ObservableCollection<PermitModel> result = new ObservableCollection<PermitModel>();
+
+            if (!string.IsNullOrEmpty(applicantName))
+            {
+                result = await HelperClass.GetResponse(result, "GetPermitsByApplicant?applicantName=" + applicantName);
+            }
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get permit payment by permit id
+        /// </summary>
+        /// <param name="permitID"></param>
+        /// <returns></returns>
+        public async Task<PermitPayment> GetPermitPayment(long permitID)
+        {
+            PermitPayment result = new PermitPayment();
+
+            result = await HelperClass.GetResponse(result, "GetPermitPayment?permitID=" + permitID);
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get permit applicant by applicant id
+        /// </summary>
+        /// <param name="applicantID"></param>
+        /// <returns></returns>
+        public async Task<PermitApplicant> GetPermitApplicant(long applicantID)
+        {
+            PermitApplicant result = new PermitApplicant();
+            result = await HelperClass.GetResponse(result, "GetPermitApplicant?applicantID=" + applicantID);
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get permit history of applicant
+        /// </summary>
+        /// <param name="applicantName"></param>
+        /// <returns></returns>
+        public async Task<ApplicantPermitHistory> GetApplicantHistory(string applicantName)
+        {
+            ApplicantPermitHistory result = new ApplicantPermitHistory();
+
+            result = await HelperClass.GetResponse(result, "GetApplicantHistory?applicantName=" + applicantName);
+
+            return result;
+        }
+        /// <summary>
+        /// this method will call web api for get repair items rate
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<PermitFeeRate>> GetRepairItemRate()
+        {
+            List<PermitFeeRate> result = new List<PermitFeeRate>();
+
+            result = await HelperClass.GetResponse(result, "GetRepairItemRate");
+
+            return result;
+        }
+
+        /// <summary>
+        /// this method will call web api for create permit history
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task<PermitHistory> InsertPermitHistory(long permitId, string status, string comment)
+        {
+            PermitHistory model = new PermitHistory();
+
+            model.PermitID = permitId;
+            model.Status = status;
+            model.Comments = comment;
+            model = await HelperClass.PostResponse(model, "InsertPermitHistory");
+
+            return model;
+        }
+        /// <summary>
+        /// this method will get history of permit by permit id 
+        /// </summary>
+        /// <param name="permitID"></param>
+        /// <returns></returns>
+        public async Task<List<PermitHistory>> GetPermitHistoryByPermit(long permitID)
+        {
+            List<PermitHistory> result = new List<PermitHistory>();
+
+            result = await HelperClass.GetResponse(result, "GetPermitHistoryByPermit?permitID=" + permitID);
+
+            return result;
+        }
+
+        public async Task<PermitCostsDetail> InsertPermitCostsDetail(PermitCostsDetail model)
+        {
+
+            model = await HelperClass.PostResponse(model, "InsertPermitCostsDetail");
+
+            return model;
+        }
+        public async Task<List<PermitCostsDetail>> GetPermitCostsDetailByAffidavit(long affidavitID)
+        {
+            List<PermitCostsDetail> result = new List<PermitCostsDetail>();
+
+            result = await HelperClass.GetResponse(result, "GetPermitCostsDetailByAffidavit?affidavitID=" + affidavitID);
+
+            return result;
+        }
+
+        public async Task<bool> InsertErrorLog(ErrorLog model)
+        {
+            bool result = false;
+
+            await HelperClass.PostResponse(model, "InsertErrorLog");
+            result = true;
+
+            return result;
+        }
+        public async Task<CCBContractor> UpdateAliasName(CCBContractor model)
+        {
+            return await HelperClass.PostResponse(model, "UpdateAliasName");
+        }
+        public async Task<bool> DeleteAliasName(CCBContractor model)
+        {
+            bool result = false;
+            await HelperClass.PostResponse(model, "DeleteAliasName");
+            return result;
+        }
+        public async Task<ObservableCollection<CCBContractor>> GetCCBAliasList()
+        {
+            ObservableCollection<CCBContractor> result = new ObservableCollection<CCBContractor>();
+            return await HelperClass.GetResponse(result, "GetCCBAliasList");
+        }
+    }
+}

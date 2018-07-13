@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78EB57C3-54D7-45B6-9B8B-8DD03AB71EB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SidewalkWindowsApp</RootNamespace>
+    <AssemblyName>SidewalkWindowsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Affidavit\Affidavit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Affidavit\Affidavit.Designer.cs">
+      <DependentUpon>Affidavit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Affidavit\ChangeStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Affidavit\ChangeStatus.Designer.cs">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CityContract\CityContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CityContract\CityContract.Designer.cs">
+      <DependentUpon>CityContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CityRepair\MarkForCityRepair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CityRepair\MarkForCityRepair.Designer.cs">
+      <DependentUpon>MarkForCityRepair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contractor\ContractorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contractor\ContractorList.Designer.cs">
+      <DependentUpon>ContractorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contractor\NewContractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contractor\NewContractor.Designer.cs">
+      <DependentUpon>NewContractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection\FinalInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inspection\FinalInspection.Designer.cs">
+      <DependentUpon>FinalInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection\FormInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inspection\FormInspection.Designer.cs">
+      <DependentUpon>FormInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection\MarkForFinalInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inspection\MarkForFinalInspection.Designer.cs">
+      <DependentUpon>MarkForFinalInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inspection\MarkForFormInspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inspection\MarkForFormInspection.Designer.cs">
+      <DependentUpon>MarkForFormInspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Affidavit.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AffidavitCosts.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AffidavitCostsDetail.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AffidavitCostsDetailObject.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AffidavitDocumentHistory.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AffidavitModel.cs" />
+    <Compile Include="Models\AffidavitNote.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CityContract.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contractor.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CostType.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatabaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatabaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inspector.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PermitFee.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PermitFeeRate.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrintCode.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RepairItem.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Staff.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sw_action.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sw_action_detail.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sw_posting.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnitOfMeasure.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserProfile.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\webpages_Membership.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\webpages_OAuthMembership.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\webpages_Roles.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Notice\SecondNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice\SecondNotice.Designer.cs">
+      <DependentUpon>SecondNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notice\SidewalkRepairNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice\SidewalkRepairNotice.Designer.cs">
+      <DependentUpon>SidewalkRepairNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permit\NewActionRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permit\NewActionRate.Designer.cs">
+      <DependentUpon>NewActionRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permit\PermitApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permit\PermitApplication.Designer.cs">
+      <DependentUpon>PermitApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permit\PermitFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permit\PermitFee.Designer.cs">
+      <DependentUpon>PermitFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permit\PermitReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permit\PermitReview.Designer.cs">
+      <DependentUpon>PermitReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff\StaffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\StaffList.Designer.cs">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Affidavit\Affidavit.resx">
+      <DependentUpon>Affidavit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Affidavit\ChangeStatus.resx">
+      <DependentUpon>ChangeStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CityContract\CityContract.resx">
+      <DependentUpon>CityContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CityRepair\MarkForCityRepair.resx">
+      <DependentUpon>MarkForCityRepair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contractor\ContractorList.resx">
+      <DependentUpon>ContractorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contractor\NewContractor.resx">
+      <DependentUpon>NewContractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inspection\FinalInspection.resx">
+      <DependentUpon>FinalInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inspection\FormInspection.resx">
+      <DependentUpon>FormInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inspection\MarkForFinalInspection.resx">
+      <DependentUpon>MarkForFinalInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inspection\MarkForFormInspection.resx">
+      <DependentUpon>MarkForFormInspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notice\SecondNotice.resx">
+      <DependentUpon>SecondNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notice\SidewalkRepairNotice.resx">
+      <DependentUpon>SidewalkRepairNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permit\NewActionRate.resx">
+      <DependentUpon>NewActionRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permit\PermitApplication.resx">
+      <DependentUpon>PermitApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permit\PermitFee.resx">
+      <DependentUpon>PermitFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permit\PermitReview.resx">
+      <DependentUpon>PermitReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Staff\StaffList.resx">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Models\DatabaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DatabaseModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Models\DatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DatabaseModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sidewalk.Logic\Sidewalk.Logic.csproj">
+      <Project>{cd0f653a-8327-4596-bd0b-76ae91985e89}</Project>
+      <Name>Sidewalk.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

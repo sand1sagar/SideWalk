@@ -1,0 +1,1096 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWPostModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SWPostTest.ArcMap_Admin.PORT_TAXLOTS_PDX' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PORT_TAXLOTS_PDX">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="AREA" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="STATE_ID" Type="nvarchar" MaxLength="20" />
+    <Property Name="RNO" Type="nvarchar" MaxLength="35" />
+    <Property Name="OWNER1" Type="nvarchar" MaxLength="35" />
+    <Property Name="OWNER2" Type="nvarchar" MaxLength="35" />
+    <Property Name="OWNER3" Type="nvarchar" MaxLength="35" />
+    <Property Name="OWNERADDR" Type="nvarchar" MaxLength="35" />
+    <Property Name="OWNERCITY" Type="nvarchar" MaxLength="28" />
+    <Property Name="OWNERSTATE" Type="nvarchar" MaxLength="2" />
+    <Property Name="OWNERZIP" Type="nvarchar" MaxLength="10" />
+    <Property Name="SITEADDR" Type="nvarchar" MaxLength="37" />
+    <Property Name="SITECITY" Type="nvarchar" MaxLength="30" />
+    <Property Name="SITE_STATE" Type="nvarchar" MaxLength="6" />
+    <Property Name="SITEZIP" Type="nvarchar" MaxLength="10" />
+    <Property Name="LEGAL_DESC" Type="nvarchar" MaxLength="250" />
+    <Property Name="TAXCODE" Type="nvarchar" MaxLength="7" />
+    <Property Name="PROP_CODE" Type="nvarchar" MaxLength="4" />
+    <Property Name="PRPCD_DESC" Type="nvarchar" MaxLength="50" />
+    <Property Name="LANDUSE" Type="nvarchar" MaxLength="4" />
+    <Property Name="YEARBUILT" Type="nvarchar" MaxLength="10" />
+    <Property Name="BLDGSQFT" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="BEDROOMS" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="FLOORS" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="UNITS" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="MKTVALYR1" Type="nvarchar" MaxLength="4" />
+    <Property Name="LANDVAL1" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="BLDGVAL1" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TOTALVAL1" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="MKTVALYR2" Type="nvarchar" MaxLength="4" />
+    <Property Name="LANDVAL2" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="BLDGVAL2" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TOTALVAL2" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="MKTVALYR3" Type="nvarchar" MaxLength="11" />
+    <Property Name="LANDVAL3" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="BLDGVAL3" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="TOTALVAL3" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="SALEDATE" Type="nvarchar" MaxLength="11" />
+    <Property Name="SALEPRICE" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="ACC_STATUS" Type="nvarchar" MaxLength="1" />
+    <Property Name="A_T_SQFT" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="A_T_ACRES" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="FRONTAGE" Type="numeric" Precision="38" Scale="8" />
+    <Property Name="COUNTY" Type="nvarchar" MaxLength="2" />
+    <Property Name="SOURCE" Type="nvarchar" MaxLength="10" />
+    <Property Name="PROPERTYID" Type="nvarchar" MaxLength="7" />
+    <Property Name="TLID" Type="nvarchar" MaxLength="25" />
+    <Property Name="Shape" Type="geometry" />
+  </EntityType>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="DocType" />
+    </Key>
+    <Property Name="DocType" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Affidavit">
+    <Key>
+      <PropertyRef Name="AffidavitID" />
+    </Key>
+    <Property Name="AffidavitID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InspectorId" Type="int" />
+    <Property Name="InspectionDate" Type="datetime" />
+    <Property Name="Status" Type="int" />
+    <Property Name="VisioDiagram" Type="varchar" MaxLength="50" />
+    <Property Name="TrackIT" Type="nchar" MaxLength="10" />
+    <Property Name="RNO" Type="varchar" MaxLength="24" />
+    <Property Name="QtrSection" Type="varchar" MaxLength="12" />
+    <Property Name="PropertyID" Type="varchar" MaxLength="7" />
+    <Property Name="LegalDesc" Type="varchar" MaxLength="255" />
+    <Property Name="Owner1" Type="varchar" MaxLength="40" />
+    <Property Name="Owner2" Type="varchar" MaxLength="35" />
+    <Property Name="Owner3" Type="varchar" MaxLength="35" />
+    <Property Name="OwnerAddress" Type="varchar" MaxLength="50" />
+    <Property Name="OwnerCity" Type="varchar" MaxLength="28" />
+    <Property Name="OwnerState" Type="varchar" MaxLength="2" />
+    <Property Name="OwnerZip" Type="varchar" MaxLength="10" />
+    <Property Name="SiteAddress" Type="varchar" MaxLength="100" />
+    <Property Name="SiteStreetNumber" Type="varchar" MaxLength="24" />
+    <Property Name="SiteDistrict" Type="varchar" MaxLength="2" />
+    <Property Name="SiteStreetName" Type="varchar" MaxLength="40" />
+    <Property Name="SiteStreetDesignator" Type="varchar" MaxLength="4" />
+    <Property Name="SiteCity" Type="varchar" MaxLength="24" />
+    <Property Name="SiteZip" Type="varchar" MaxLength="10" />
+    <Property Name="CityRepair" Type="char" MaxLength="1" />
+    <Property Name="OwnerRepair" Type="char" MaxLength="1" />
+    <Property Name="ContractorRepair" Type="char" MaxLength="1" />
+    <Property Name="RepairDueDate" Type="smalldatetime" />
+    <Property Name="RepairNoticeSentDate" Type="datetime" />
+    <Property Name="RepairNoticeSentBy" Type="varchar" MaxLength="10" />
+    <Property Name="CityRepairStart" Type="char" MaxLength="1" />
+    <Property Name="CityRepairBy" Type="varchar" MaxLength="10" />
+    <Property Name="HoldUntilDate" Type="datetime" />
+    <Property Name="HoldUntilBy" Type="varchar" MaxLength="10" />
+    <Property Name="permit_no" Type="int" />
+    <Property Name="permit_issued" Type="varchar" MaxLength="3" />
+    <Property Name="permit_extended" Type="char" MaxLength="1" />
+    <Property Name="PermitIssuedDate" Type="datetime" />
+    <Property Name="PermitExpiredDate" Type="datetime" />
+    <Property Name="contractor" Type="varchar" MaxLength="40" />
+    <Property Name="builder_board_no" Type="varchar" MaxLength="6" />
+    <Property Name="date_cancelled" Type="datetime" />
+    <Property Name="cancelled_by" Type="varchar" MaxLength="10" />
+    <Property Name="last_action" Type="char" MaxLength="1" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="varchar" MaxLength="10" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="VisioRevision" Type="int" />
+    <Property Name="New_Aff" Type="varchar" MaxLength="10" />
+    <Property Name="New_RepairDueDate" Type="smalldatetime" />
+    <Property Name="NEW_ClearWalk" Type="bit" />
+  </EntityType>
+  <EntityType Name="Affidavit_Old">
+    <Key>
+      <PropertyRef Name="AffidavitId" />
+    </Key>
+    <Property Name="AffidavitId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AffidavitNumber" Type="bigint" Nullable="false" />
+    <Property Name="QTRSection" Type="varchar" MaxLength="12" />
+    <Property Name="MapId" Type="varchar" MaxLength="24" />
+    <Property Name="PostedDate" Type="datetime" />
+    <Property Name="AffidavitStatus" Type="bit" />
+    <Property Name="InspectorNo" Type="bigint" />
+    <Property Name="RepaireByCity" Type="bit" />
+    <Property Name="RepaireByOwner" Type="bit" />
+    <Property Name="PartialRepair" Type="bit" />
+    <Property Name="RepairDate" Type="datetime" />
+    <Property Name="HoldDate" Type="datetime" />
+    <Property Name="ContractorName" Type="varchar" MaxLength="40" />
+    <Property Name="BuilderBoardNumber" Type="varchar" MaxLength="6" />
+    <Property Name="DateCancelled" Type="datetime" />
+    <Property Name="CancelledBy" Type="varchar" MaxLength="10" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="Notes" Type="varchar" MaxLength="255" />
+    <Property Name="SentDate" Type="datetime" />
+    <Property Name="NEW_AFF" Type="varchar" MaxLength="10" />
+    <Property Name="NEW_RepairDueDate" Type="smalldatetime" />
+    <Property Name="NEW_ClearWalk" Type="bit" />
+  </EntityType>
+  <EntityType Name="AffidavitAttachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AffidavitId" Type="bigint" Nullable="false" />
+    <Property Name="DisplayName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AffidavitFinalInspection">
+    <Key>
+      <PropertyRef Name="FinalInspectionId" />
+    </Key>
+    <Property Name="FinalInspectionId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AffidavitID" Type="bigint" Nullable="false" />
+    <Property Name="InspectionDate" Type="datetime" Nullable="false" />
+    <Property Name="Sidewalk" Type="bit" Nullable="false" />
+    <Property Name="Driveway" Type="bit" Nullable="false" />
+    <Property Name="Curb" Type="bit" Nullable="false" />
+    <Property Name="ContractorRepaired" Type="bit" Nullable="false" />
+    <Property Name="ContractorRepairedNotCitySpec" Type="bit" Nullable="false" />
+    <Property Name="OwnerRepaired" Type="bit" Nullable="false" />
+    <Property Name="OwnerRepairedNotCitySpec" Type="bit" Nullable="false" />
+    <Property Name="OtherRepairsAreCompleteAndSatisfactory" Type="nvarchar(max)" />
+    <Property Name="CompletionDate" Type="datetime" />
+    <Property Name="RepairsComplete" Type="bit" Nullable="false" />
+    <Property Name="RemoveFormsToGrade" Type="bit" Nullable="false" />
+    <Property Name="MoreBackfill" Type="bit" Nullable="false" />
+    <Property Name="IncompleteRepairs" Type="bit" Nullable="false" />
+    <Property Name="MoreGrinding" Type="bit" Nullable="false" />
+    <Property Name="RemoveMarkedAreas" Type="bit" Nullable="false" />
+    <Property Name="AsphaltWork" Type="bit" Nullable="false" />
+    <Property Name="Graffiti" Type="bit" Nullable="false" />
+    <Property Name="NoRightWayPermit" Type="bit" Nullable="false" />
+    <Property Name="OtherRepairsNotAcceptable" Type="nvarchar(max)" />
+    <Property Name="FinalFailDate" Type="datetime" />
+    <Property Name="FinalFailInspectorId" Type="int" />
+    <Property Name="FinalPassInspectorId" Type="int" />
+  </EntityType>
+  <EntityType Name="AffidavitFormInspection">
+    <Key>
+      <PropertyRef Name="FormInspectionId" />
+    </Key>
+    <Property Name="FormInspectionId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AffidavitId" Type="bigint" Nullable="false" />
+    <Property Name="InspectionDate" Type="datetime" Nullable="false" />
+    <Property Name="Sidewalk" Type="bit" Nullable="false" />
+    <Property Name="Driveway" Type="bit" Nullable="false" />
+    <Property Name="Curb" Type="bit" Nullable="false" />
+    <Property Name="Partial" Type="bit" Nullable="false" />
+    <Property Name="PartialDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="MatchJointPattern" Type="bit" Nullable="false" />
+    <Property Name="PlaceJoints" Type="bit" Nullable="false" />
+    <Property Name="ToolDeepJoints" Type="bit" Nullable="false" />
+    <Property Name="OtherGrantedToPour" Type="nvarchar(max)" />
+    <Property Name="CompletionDate" Type="datetime" />
+    <Property Name="PermissionGranted" Type="bit" Nullable="false" />
+    <Property Name="NotReady" Type="bit" Nullable="false" />
+    <Property Name="InsufficientBarricades" Type="bit" Nullable="false" />
+    <Property Name="RemoveDebris" Type="bit" Nullable="false" />
+    <Property Name="NotDeep" Type="bit" Nullable="false" />
+    <Property Name="CurbHeight" Type="bit" Nullable="false" />
+    <Property Name="SawCutEdges" Type="bit" Nullable="false" />
+    <Property Name="NoPermit" Type="bit" Nullable="false" />
+    <Property Name="AddCrushedRock" Type="bit" Nullable="false" />
+    <Property Name="OtherDoNotPour" Type="nvarchar(max)" />
+    <Property Name="FormFailDate" Type="datetime" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="50" />
+    <Property Name="FormFailInspectorId" Type="int" />
+    <Property Name="FormPassInspectorId" Type="int" />
+  </EntityType>
+  <EntityType Name="AffidavitHistory">
+    <Key>
+      <PropertyRef Name="AffidavitHistoryId" />
+    </Key>
+    <Property Name="AffidavitHistoryId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AffidavitId" Type="bigint" Nullable="false" />
+    <Property Name="AffidavitStatusId" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="StatusValue" Type="nvarchar" MaxLength="50" />
+    <Property Name="InspectorId" Type="int" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AffidavitStatus">
+    <Key>
+      <PropertyRef Name="AffidavitStatusId" />
+    </Key>
+    <Property Name="AffidavitStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="StatusDescription" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SWPostTest.dbo.ASSESSOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ASSESSOR">
+    <Key>
+      <PropertyRef Name="PROPERTY_ID" />
+      <PropertyRef Name="MARKET_VALUE_YEAR1" />
+      <PropertyRef Name="ASSESSED_VALUE_YEAR1" />
+      <PropertyRef Name="MARKET_VALUE_YEAR2" />
+      <PropertyRef Name="ASSESSED_VALUE_YEAR2" />
+      <PropertyRef Name="EXEMPTION_VALUE_YEAR1" />
+      <PropertyRef Name="EXEMPTION_VALUE_YEAR2" />
+      <PropertyRef Name="EXEMPTION_VALUE_YEAR3" />
+    </Key>
+    <Property Name="RNUM" Type="varchar" MaxLength="10" />
+    <Property Name="STATE_ID" Type="varchar" MaxLength="22" />
+    <Property Name="NEW_STATE_ID" Type="varchar" MaxLength="22" />
+    <Property Name="PROPERTY_ID" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="OWNER1" Type="varchar" MaxLength="35" />
+    <Property Name="OWNER2" Type="varchar" MaxLength="35" />
+    <Property Name="OWNER3" Type="varchar" MaxLength="35" />
+    <Property Name="OWNER_ADDRESS" Type="varchar" MaxLength="35" />
+    <Property Name="OWNER_CITY" Type="varchar" MaxLength="28" />
+    <Property Name="OWNER_STATE" Type="char" MaxLength="2" />
+    <Property Name="OWNER_ZIP" Type="varchar" MaxLength="10" />
+    <Property Name="SITE_ADDRESS_NUMBER" Type="varchar" MaxLength="11" />
+    <Property Name="SITE_STREET_DIRECTION" Type="varchar" MaxLength="2" />
+    <Property Name="SITE_STREET_NAME" Type="varchar" MaxLength="28" />
+    <Property Name="SITE_STREET_TYPE" Type="varchar" MaxLength="4" />
+    <Property Name="SITE_UNIT_TYPE" Type="varchar" MaxLength="8" />
+    <Property Name="SITE_UNIT_NUMBER" Type="varchar" MaxLength="5" />
+    <Property Name="SITE_ADDRESS_FULL" Type="varchar" MaxLength="37" />
+    <Property Name="SITE_CITY" Type="varchar" MaxLength="30" />
+    <Property Name="SITE_STATE" Type="varchar" MaxLength="6" />
+    <Property Name="SITE_ZIP" Type="varchar" MaxLength="8" />
+    <Property Name="SITE_CITY_STATE_ZIP" Type="varchar" MaxLength="26" />
+    <Property Name="INSTRUMENT_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="MAP_NUMBER" Type="varchar" MaxLength="9" />
+    <Property Name="LEGAL_DESCRIPTION" Type="varchar" MaxLength="250" />
+    <Property Name="LOT" Type="varchar" MaxLength="23" />
+    <Property Name="BLOCK" Type="varchar" MaxLength="14" />
+    <Property Name="TAXCODE" Type="varchar" MaxLength="7" />
+    <Property Name="PARCEL_SQUARE_FEET" Type="int" />
+    <Property Name="PARCEL_WIDTH_FOOTAGE" Type="int" />
+    <Property Name="PARCEL_LENGTH_FOOTAGE" Type="smallint" />
+    <Property Name="PROPERTY_CODE" Type="varchar" MaxLength="2" />
+    <Property Name="PROPERTY_CODE_DESC" Type="varchar" MaxLength="50" />
+    <Property Name="LANDUSE" Type="varchar" MaxLength="4" />
+    <Property Name="YEAR_BUILT" Type="varchar" MaxLength="10" />
+    <Property Name="BLDGSQFT" Type="int" />
+    <Property Name="NUMBER_OF_BEDROOMS" Type="int" />
+    <Property Name="NUMBER_OF_STORIES" Type="int" />
+    <Property Name="NUMBER_OF_UNITS" Type="int" />
+    <Property Name="MARKET_VALUE_YEAR1" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MARKET_VALUE_LAND1" Type="int" />
+    <Property Name="MARKET_VALUE_IMPROVEMENTS1" Type="int" />
+    <Property Name="MARKET_VALUE_TOTAL1" Type="int" />
+    <Property Name="MARKET_EXEMPTION_VALUE1" Type="int" />
+    <Property Name="M50_ASSESSED_VALUE1" Type="int" />
+    <Property Name="ASSESSED_VALUE_YEAR1" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ASSESSED_VALUE1" Type="int" />
+    <Property Name="MARKET_VALUE_YEAR2" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="MARKET_VALUE_LAND2" Type="int" />
+    <Property Name="MARKET_VALUE_IMPROVEMENTS2" Type="int" />
+    <Property Name="MARKET_VALUE_TOTAL2" Type="int" />
+    <Property Name="MARKET_EXEMPTION_VALUE2" Type="int" />
+    <Property Name="M50_ASSESSED_VALUE2" Type="int" />
+    <Property Name="ASSESSED_VALUE_YEAR2" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ASSESSED_VALUE2" Type="int" />
+    <Property Name="MARKET_VALUE_YEAR3" Type="varchar" MaxLength="30" />
+    <Property Name="MARKET_VALUE_LAND3" Type="int" />
+    <Property Name="MARKET_VALUE_IMPROVEMENTS3" Type="int" />
+    <Property Name="MARKET_VALUE_TOTAL3" Type="int" />
+    <Property Name="MARKET_EXEMPTION_VALUE3" Type="int" />
+    <Property Name="M50_ASSESSED_VALUE3" Type="int" />
+    <Property Name="ASSESSED_VALUE_YEAR3" Type="varchar" MaxLength="30" />
+    <Property Name="ASSESSED_VALUE3" Type="int" />
+    <Property Name="SALEDATE" Type="varchar" MaxLength="30" />
+    <Property Name="SALEPRICE" Type="int" />
+    <Property Name="EXEMPTION_VALUE_YEAR1" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="EXEMPTION_VALUE_LAND1" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EXEMPTION_VALUE_IMPROVEMENTS1" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EXEMPTION_VALUE_YEAR2" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="EXEMPTION_VALUE_LAND2" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EXEMPTION_VALUE_IMPROVEMENTS2" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EXEMPTION_VALUE_YEAR3" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="EXEMPTION_VALUE_LAND3" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="EXEMPTION_VALUE_IMPROVEMENTS3" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="COUNTY" Type="varchar" MaxLength="1" />
+    <Property Name="ACCOUNT_STATUS_CODE" Type="char" MaxLength="1" />
+    <Property Name="RATIO_CODE" Type="char" MaxLength="3" />
+    <Property Name="IS_CONDO" Type="tinyint" />
+    <Property Name="PARENT_ID" Type="varchar" MaxLength="22" />
+    <Property Name="IS_FAKE_PARENT" Type="tinyint" />
+    <Property Name="SAME_OWNER_SITE_ADDR" Type="int" />
+    <Property Name="X_COORD" Type="int" />
+    <Property Name="Y_COORD" Type="int" />
+  </EntityType>
+  <EntityType Name="CCB_DAILY_LICENSES">
+    <Key>
+      <PropertyRef Name="CCB_Id" />
+    </Key>
+    <Property Name="CCB_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="license_number" Type="bigint" Nullable="false" />
+    <Property Name="registration_type" Type="nvarchar" MaxLength="2" />
+    <Property Name="county_code" Type="int" />
+    <Property Name="business_name" Type="nvarchar" MaxLength="200" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="state" Type="nvarchar" MaxLength="2" />
+    <Property Name="zip" Type="nvarchar" MaxLength="15" />
+    <Property Name="business_telephone" Type="bigint" />
+    <Property Name="fax_number" Type="bigint" />
+    <Property Name="S_11" Type="nvarchar" MaxLength="2000" />
+    <Property Name="S_12" Type="nvarchar" MaxLength="2000" />
+    <Property Name="S_13" Type="nvarchar" MaxLength="2000" />
+    <Property Name="ins_co_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ins_amount" Type="bigint" />
+    <Property Name="ins_due_to_exp" Type="date" />
+    <Property Name="claims_filed" Type="int" />
+    <Property Name="exempt_nonexempt_status" Type="nvarchar" MaxLength="20" />
+    <Property Name="sic_codes" Type="nvarchar" MaxLength="175" />
+    <Property Name="endorsements" Type="nvarchar" MaxLength="50" />
+    <Property Name="r_bond_co_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="r_bond_amount" Type="bigint" />
+    <Property Name="r_bond_due_to_exp" Type="date" />
+    <Property Name="c_bond_co_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="c_bond_amount" Type="bigint" />
+    <Property Name="c_bond_due_to_exp" Type="date" />
+    <Property Name="rmi_name" Type="nvarchar" MaxLength="55" />
+    <Property Name="lic_exp_date" Type="date" />
+    <Property Name="S_29" Type="nvarchar" MaxLength="2000" />
+    <Property Name="alias_name" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Contractor_Alias">
+    <Key>
+      <PropertyRef Name="Contractor_Alias_Id" />
+    </Key>
+    <Property Name="Contractor_Alias_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CCB_No" Type="bigint" Nullable="false" />
+    <Property Name="Business_Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Alias" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="objectid" Type="int" />
+    <Property Name="property" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvalue" Type="image" />
+    <Property Name="version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="StackTrace" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inspector">
+    <Key>
+      <PropertyRef Name="InspectorId" />
+    </Key>
+    <Property Name="InspectorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Permit">
+    <Key>
+      <PropertyRef Name="PermitID" />
+    </Key>
+    <Property Name="PermitID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PermitNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PermitIssued" Type="nvarchar" MaxLength="50" />
+    <Property Name="PermitExtended" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateIssued" Type="datetime" />
+    <Property Name="DateExpired" Type="datetime" />
+    <Property Name="BuilderBoardNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateCancelled" Type="datetime" />
+    <Property Name="CancelledBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastAction" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApplicantType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContractorID" Type="nvarchar" MaxLength="200" />
+    <Property Name="AffidavitID" Type="bigint" />
+    <Property Name="TotalFee" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PermitStatus" Type="bigint" />
+    <Property Name="ApplicantID" Type="bigint" />
+    <Property Name="SubmissionDate" Type="datetime" />
+    <Property Name="PropertyAddress" Type="nvarchar(max)" />
+    <Property Name="DateExpiredNew" Type="datetime" />
+    <Property Name="IssuedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="DatePermitExtended" Type="datetime" />
+    <Property Name="NEW_AFF" Type="nvarchar" MaxLength="50" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="PermitApplicant">
+    <Key>
+      <PropertyRef Name="ApplicantID" />
+    </Key>
+    <Property Name="ApplicantID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="PermitID" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ContactPhoneNumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PermitCostsDetail">
+    <Key>
+      <PropertyRef Name="PermitCostID" />
+    </Key>
+    <Property Name="PermitCostID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AffidavitID" Type="bigint" />
+    <Property Name="CostType" Type="nvarchar" MaxLength="50" />
+    <Property Name="RepairItem" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Cost" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="PermitFee">
+    <Key>
+      <PropertyRef Name="PermitFeeId" />
+    </Key>
+    <Property Name="PermitFeeId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MinimumFee" Type="smallmoney" />
+    <Property Name="MaximumFee" Type="smallmoney" />
+    <Property Name="NewEffectiveDate" Type="smalldatetime" />
+    <Property Name="NewMinimumFee" Type="smallmoney" />
+    <Property Name="NewMaximumFee" Type="smallmoney" />
+  </EntityType>
+  <EntityType Name="PermitFeeRate">
+    <Key>
+      <PropertyRef Name="PermitFeeID" />
+    </Key>
+    <Property Name="PermitFeeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Action_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrentRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NewEffectiveRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PermitHistory">
+    <Key>
+      <PropertyRef Name="PermitHistoryID" />
+    </Key>
+    <Property Name="PermitHistoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PermitID" Type="bigint" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="ActivityTime" Type="datetime" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PermitPayment">
+    <Key>
+      <PropertyRef Name="PermitPaymentID" />
+    </Key>
+    <Property Name="PermitPaymentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PermitID" Type="bigint" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="IssuedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaymentMethod" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApprovalCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CheckNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="PermitStatus">
+    <Key>
+      <PropertyRef Name="PermitStatusID" />
+    </Key>
+    <Property Name="PermitStatusID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PermitStatusValue" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SWPostTest.dbo.sw_user' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="sw_user">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="batchlistdays" Type="int" />
+  </EntityType>
+  <EntityType Name="UnitOfMeasure">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UomID" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="qip">
+    <Key>
+      <PropertyRef Name="OBJECTID" />
+    </Key>
+    <Property Name="OBJECTID" Type="int" Nullable="false" />
+    <Property Name="AREA" Type="numeric" Precision="14" Scale="3" />
+    <Property Name="PERIMETER" Type="numeric" Precision="14" Scale="3" />
+    <Property Name="QTRSEC_" Type="numeric" Precision="11" Scale="0" />
+    <Property Name="QTRSEC_ID" Type="numeric" Precision="11" Scale="0" />
+    <Property Name="QTRNO" Type="nvarchar" MaxLength="4" />
+    <Property Name="QTRSEC" Type="nvarchar" MaxLength="7" />
+    <Property Name="SHIFT" Type="nvarchar" MaxLength="1" />
+    <Property Name="FULLSEC" Type="nvarchar" MaxLength="1" />
+    <Property Name="EZONE" Type="nvarchar" MaxLength="1" />
+    <Property Name="FOURSEC" Type="nvarchar" MaxLength="8" />
+    <Property Name="QTRNUM" Type="smallint" />
+    <Property Name="TOWN" Type="nvarchar" MaxLength="4" />
+    <Property Name="SECT" Type="nvarchar" MaxLength="6" />
+    <Property Name="Shape" Type="int" />
+  </EntityType>
+  <Association Name="FK_Affidavit_Affidavit">
+    <End Role="AffidavitStatus" Type="Self.AffidavitStatus" Multiplicity="0..1" />
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AffidavitStatus">
+        <PropertyRef Name="AffidavitStatusId" />
+      </Principal>
+      <Dependent Role="Affidavit">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Affidavit_Inspector">
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspector">
+        <PropertyRef Name="InspectorId" />
+      </Principal>
+      <Dependent Role="Affidavit">
+        <PropertyRef Name="InspectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitActivity_Activity">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitHistory" Type="Self.AffidavitHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitHistory">
+        <PropertyRef Name="AffidavitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitFinalInspection_Affidavit">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitFinalInspection" Type="Self.AffidavitFinalInspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitFinalInspection">
+        <PropertyRef Name="AffidavitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitFinalInspection_Inspector">
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
+    <End Role="AffidavitFinalInspection" Type="Self.AffidavitFinalInspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspector">
+        <PropertyRef Name="InspectorId" />
+      </Principal>
+      <Dependent Role="AffidavitFinalInspection">
+        <PropertyRef Name="FinalPassInspectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitFinalInspection_Inspector_Pour">
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
+    <End Role="AffidavitFinalInspection" Type="Self.AffidavitFinalInspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspector">
+        <PropertyRef Name="InspectorId" />
+      </Principal>
+      <Dependent Role="AffidavitFinalInspection">
+        <PropertyRef Name="FinalFailInspectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitFormInspection_Affidavit">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitFormInspection" Type="Self.AffidavitFormInspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitFormInspection">
+        <PropertyRef Name="AffidavitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitFormInspection_Inspector_Fail">
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
+    <End Role="AffidavitFormInspection" Type="Self.AffidavitFormInspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspector">
+        <PropertyRef Name="InspectorId" />
+      </Principal>
+      <Dependent Role="AffidavitFormInspection">
+        <PropertyRef Name="FormFailInspectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitFormInspection_Inspector_Pass">
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
+    <End Role="AffidavitFormInspection" Type="Self.AffidavitFormInspection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspector">
+        <PropertyRef Name="InspectorId" />
+      </Principal>
+      <Dependent Role="AffidavitFormInspection">
+        <PropertyRef Name="FormPassInspectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitHistory_AffidavitHistory">
+    <End Role="AffidavitStatus" Type="Self.AffidavitStatus" Multiplicity="1" />
+    <End Role="AffidavitHistory" Type="Self.AffidavitHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AffidavitStatus">
+        <PropertyRef Name="AffidavitStatusId" />
+      </Principal>
+      <Dependent Role="AffidavitHistory">
+        <PropertyRef Name="AffidavitStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitHistory_Inspector">
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
+    <End Role="AffidavitHistory" Type="Self.AffidavitHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspector">
+        <PropertyRef Name="InspectorId" />
+      </Principal>
+      <Dependent Role="AffidavitHistory">
+        <PropertyRef Name="InspectorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permit_PermitApplicant">
+    <End Role="PermitApplicant" Type="Self.PermitApplicant" Multiplicity="0..1" />
+    <End Role="Permit" Type="Self.Permit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermitApplicant">
+        <PropertyRef Name="ApplicantID" />
+      </Principal>
+      <Dependent Role="Permit">
+        <PropertyRef Name="ApplicantID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permit_PermitStatus">
+    <End Role="PermitStatus" Type="Self.PermitStatus" Multiplicity="0..1" />
+    <End Role="Permit" Type="Self.Permit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PermitStatus">
+        <PropertyRef Name="PermitStatusID" />
+      </Principal>
+      <Dependent Role="Permit">
+        <PropertyRef Name="PermitStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermitHistory_Permit">
+    <End Role="Permit" Type="Self.Permit" Multiplicity="0..1" />
+    <End Role="PermitHistory" Type="Self.PermitHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permit">
+        <PropertyRef Name="PermitID" />
+      </Principal>
+      <Dependent Role="PermitHistory">
+        <PropertyRef Name="PermitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PermitPayment_Permit">
+    <End Role="Permit" Type="Self.Permit" Multiplicity="0..1" />
+    <End Role="PermitPayment" Type="Self.PermitPayment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permit">
+        <PropertyRef Name="PermitID" />
+      </Principal>
+      <Dependent Role="PermitPayment">
+        <PropertyRef Name="PermitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="getAffidavitByKeyword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="keyword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getAffidavitByParameter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="affidavitId" Type="varchar" Mode="In" />
+    <Parameter Name="propertyId" Type="varchar" Mode="In" />
+    <Parameter Name="inspectionDate" Type="varchar" Mode="In" />
+    <Parameter Name="postingDate" Type="varchar" Mode="In" />
+    <Parameter Name="trackId" Type="varchar" Mode="In" />
+    <Parameter Name="inspectorName" Type="varchar" Mode="In" />
+    <Parameter Name="propertoyAddress" Type="varchar" Mode="In" />
+    <Parameter Name="previouslyPrinted" Type="varchar" Mode="In" />
+    <Parameter Name="fromDate" Type="varchar" Mode="In" />
+    <Parameter Name="todate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getAffidavitByProperty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="keyword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getAffidavitCostDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="affidavitId" Type="nvarchar" Mode="In" />
+    <Parameter Name="costTypeKey" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getAffidavitDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="affidavitId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getAffidavitList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="getContractorByKeyword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="keyword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getContractorDetailsByCCBNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ccbNumber" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getContractorDetailsByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_AfterInsertPermit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PermitId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="SP_AfterUpdatePermit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PermitId" Type="bigint" Mode="In" />
+    <Parameter Name="ApplicantId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="sp_getAffidavitByParameter_swp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="affidavitId" Type="varchar" Mode="In" />
+    <Parameter Name="propertyId" Type="varchar" Mode="In" />
+    <Parameter Name="inspectionDate" Type="varchar" Mode="In" />
+    <Parameter Name="postingDate" Type="varchar" Mode="In" />
+    <Parameter Name="trackId" Type="varchar" Mode="In" />
+    <Parameter Name="inspectorName" Type="varchar" Mode="In" />
+    <Parameter Name="propertyAddress" Type="varchar" Mode="In" />
+    <Parameter Name="previouslyPrinted" Type="varchar" Mode="In" />
+    <Parameter Name="fromDate" Type="varchar" Mode="In" />
+    <Parameter Name="todate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getAffidavitByProperty_swp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="keyword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getAffidavitDetails_swp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="affidavitId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_getAffidavitList_swp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ufnGetNewAffidavitID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="AffNo" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="ufnGetPostCostDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fy" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="nMonth" Type="varchar" MaxLength="10" />
+          <Property Name="sMonth" Type="varchar" MaxLength="16" />
+          <Property Name="post_dt" Type="datetime" />
+          <Property Name="aff_no" Type="int" />
+          <Property Name="aff_action" Type="char" MaxLength="1" />
+          <Property Name="status" Type="varchar" MaxLength="3" />
+          <Property Name="cost" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="address" Type="varchar" MaxLength="100" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="ufnGetPostCostSummary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fynum" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="iYear" Type="int" />
+          <Property Name="sYear" Type="char" MaxLength="4" />
+          <Property Name="iMonth" Type="int" />
+          <Property Name="sMonth" Type="char" MaxLength="6" />
+          <Property Name="aff_no" Type="int" />
+          <Property Name="aff_action" Type="char" MaxLength="1" />
+          <Property Name="cost" Type="decimal" Precision="10" Scale="2" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="SWPostModelStoreContainer">
+    <EntitySet Name="Activity" EntityType="Self.Activity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Affidavit" EntityType="Self.Affidavit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Affidavit_Old" EntityType="Self.Affidavit_Old" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitAttachment" EntityType="Self.AffidavitAttachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitFinalInspection" EntityType="Self.AffidavitFinalInspection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitFormInspection" EntityType="Self.AffidavitFormInspection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitHistory" EntityType="Self.AffidavitHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitStatus" EntityType="Self.AffidavitStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CCB_DAILY_LICENSES" EntityType="Self.CCB_DAILY_LICENSES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contractor_Alias" EntityType="Self.Contractor_Alias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ErrorLog" EntityType="Self.ErrorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inspector" EntityType="Self.Inspector" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Permit" EntityType="Self.Permit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitApplicant" EntityType="Self.PermitApplicant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitCostsDetail" EntityType="Self.PermitCostsDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitFee" EntityType="Self.PermitFee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitFeeRate" EntityType="Self.PermitFeeRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitHistory" EntityType="Self.PermitHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitPayment" EntityType="Self.PermitPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitStatus" EntityType="Self.PermitStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnitOfMeasure" EntityType="Self.UnitOfMeasure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PORT_TAXLOTS_PDX" EntityType="Self.PORT_TAXLOTS_PDX" store:Type="Tables" store:Schema="ArcMap_Admin">
+      <DefiningQuery>SELECT 
+    [PORT_TAXLOTS_PDX].[OBJECTID] AS [OBJECTID], 
+    [PORT_TAXLOTS_PDX].[AREA] AS [AREA], 
+    [PORT_TAXLOTS_PDX].[STATE_ID] AS [STATE_ID], 
+    [PORT_TAXLOTS_PDX].[RNO] AS [RNO], 
+    [PORT_TAXLOTS_PDX].[OWNER1] AS [OWNER1], 
+    [PORT_TAXLOTS_PDX].[OWNER2] AS [OWNER2], 
+    [PORT_TAXLOTS_PDX].[OWNER3] AS [OWNER3], 
+    [PORT_TAXLOTS_PDX].[OWNERADDR] AS [OWNERADDR], 
+    [PORT_TAXLOTS_PDX].[OWNERCITY] AS [OWNERCITY], 
+    [PORT_TAXLOTS_PDX].[OWNERSTATE] AS [OWNERSTATE], 
+    [PORT_TAXLOTS_PDX].[OWNERZIP] AS [OWNERZIP], 
+    [PORT_TAXLOTS_PDX].[SITEADDR] AS [SITEADDR], 
+    [PORT_TAXLOTS_PDX].[SITECITY] AS [SITECITY], 
+    [PORT_TAXLOTS_PDX].[SITE_STATE] AS [SITE_STATE], 
+    [PORT_TAXLOTS_PDX].[SITEZIP] AS [SITEZIP], 
+    [PORT_TAXLOTS_PDX].[LEGAL_DESC] AS [LEGAL_DESC], 
+    [PORT_TAXLOTS_PDX].[TAXCODE] AS [TAXCODE], 
+    [PORT_TAXLOTS_PDX].[PROP_CODE] AS [PROP_CODE], 
+    [PORT_TAXLOTS_PDX].[PRPCD_DESC] AS [PRPCD_DESC], 
+    [PORT_TAXLOTS_PDX].[LANDUSE] AS [LANDUSE], 
+    [PORT_TAXLOTS_PDX].[YEARBUILT] AS [YEARBUILT], 
+    [PORT_TAXLOTS_PDX].[BLDGSQFT] AS [BLDGSQFT], 
+    [PORT_TAXLOTS_PDX].[BEDROOMS] AS [BEDROOMS], 
+    [PORT_TAXLOTS_PDX].[FLOORS] AS [FLOORS], 
+    [PORT_TAXLOTS_PDX].[UNITS] AS [UNITS], 
+    [PORT_TAXLOTS_PDX].[MKTVALYR1] AS [MKTVALYR1], 
+    [PORT_TAXLOTS_PDX].[LANDVAL1] AS [LANDVAL1], 
+    [PORT_TAXLOTS_PDX].[BLDGVAL1] AS [BLDGVAL1], 
+    [PORT_TAXLOTS_PDX].[TOTALVAL1] AS [TOTALVAL1], 
+    [PORT_TAXLOTS_PDX].[MKTVALYR2] AS [MKTVALYR2], 
+    [PORT_TAXLOTS_PDX].[LANDVAL2] AS [LANDVAL2], 
+    [PORT_TAXLOTS_PDX].[BLDGVAL2] AS [BLDGVAL2], 
+    [PORT_TAXLOTS_PDX].[TOTALVAL2] AS [TOTALVAL2], 
+    [PORT_TAXLOTS_PDX].[MKTVALYR3] AS [MKTVALYR3], 
+    [PORT_TAXLOTS_PDX].[LANDVAL3] AS [LANDVAL3], 
+    [PORT_TAXLOTS_PDX].[BLDGVAL3] AS [BLDGVAL3], 
+    [PORT_TAXLOTS_PDX].[TOTALVAL3] AS [TOTALVAL3], 
+    [PORT_TAXLOTS_PDX].[SALEDATE] AS [SALEDATE], 
+    [PORT_TAXLOTS_PDX].[SALEPRICE] AS [SALEPRICE], 
+    [PORT_TAXLOTS_PDX].[ACC_STATUS] AS [ACC_STATUS], 
+    [PORT_TAXLOTS_PDX].[A_T_SQFT] AS [A_T_SQFT], 
+    [PORT_TAXLOTS_PDX].[A_T_ACRES] AS [A_T_ACRES], 
+    [PORT_TAXLOTS_PDX].[FRONTAGE] AS [FRONTAGE], 
+    [PORT_TAXLOTS_PDX].[COUNTY] AS [COUNTY], 
+    [PORT_TAXLOTS_PDX].[SOURCE] AS [SOURCE], 
+    [PORT_TAXLOTS_PDX].[PROPERTYID] AS [PROPERTYID], 
+    [PORT_TAXLOTS_PDX].[TLID] AS [TLID], 
+    [PORT_TAXLOTS_PDX].[Shape] AS [Shape]
+    FROM [ArcMap_Admin].[PORT_TAXLOTS_PDX] AS [PORT_TAXLOTS_PDX]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ASSESSOR" EntityType="Self.ASSESSOR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ASSESSOR].[RNUM] AS [RNUM], 
+    [ASSESSOR].[STATE_ID] AS [STATE_ID], 
+    [ASSESSOR].[NEW_STATE_ID] AS [NEW_STATE_ID], 
+    [ASSESSOR].[PROPERTY_ID] AS [PROPERTY_ID], 
+    [ASSESSOR].[OWNER1] AS [OWNER1], 
+    [ASSESSOR].[OWNER2] AS [OWNER2], 
+    [ASSESSOR].[OWNER3] AS [OWNER3], 
+    [ASSESSOR].[OWNER_ADDRESS] AS [OWNER_ADDRESS], 
+    [ASSESSOR].[OWNER_CITY] AS [OWNER_CITY], 
+    [ASSESSOR].[OWNER_STATE] AS [OWNER_STATE], 
+    [ASSESSOR].[OWNER_ZIP] AS [OWNER_ZIP], 
+    [ASSESSOR].[SITE_ADDRESS_NUMBER] AS [SITE_ADDRESS_NUMBER], 
+    [ASSESSOR].[SITE_STREET_DIRECTION] AS [SITE_STREET_DIRECTION], 
+    [ASSESSOR].[SITE_STREET_NAME] AS [SITE_STREET_NAME], 
+    [ASSESSOR].[SITE_STREET_TYPE] AS [SITE_STREET_TYPE], 
+    [ASSESSOR].[SITE_UNIT_TYPE] AS [SITE_UNIT_TYPE], 
+    [ASSESSOR].[SITE_UNIT_NUMBER] AS [SITE_UNIT_NUMBER], 
+    [ASSESSOR].[SITE_ADDRESS_FULL] AS [SITE_ADDRESS_FULL], 
+    [ASSESSOR].[SITE_CITY] AS [SITE_CITY], 
+    [ASSESSOR].[SITE_STATE] AS [SITE_STATE], 
+    [ASSESSOR].[SITE_ZIP] AS [SITE_ZIP], 
+    [ASSESSOR].[SITE_CITY_STATE_ZIP] AS [SITE_CITY_STATE_ZIP], 
+    [ASSESSOR].[INSTRUMENT_NUMBER] AS [INSTRUMENT_NUMBER], 
+    [ASSESSOR].[MAP_NUMBER] AS [MAP_NUMBER], 
+    [ASSESSOR].[LEGAL_DESCRIPTION] AS [LEGAL_DESCRIPTION], 
+    [ASSESSOR].[LOT] AS [LOT], 
+    [ASSESSOR].[BLOCK] AS [BLOCK], 
+    [ASSESSOR].[TAXCODE] AS [TAXCODE], 
+    [ASSESSOR].[PARCEL_SQUARE_FEET] AS [PARCEL_SQUARE_FEET], 
+    [ASSESSOR].[PARCEL_WIDTH_FOOTAGE] AS [PARCEL_WIDTH_FOOTAGE], 
+    [ASSESSOR].[PARCEL_LENGTH_FOOTAGE] AS [PARCEL_LENGTH_FOOTAGE], 
+    [ASSESSOR].[PROPERTY_CODE] AS [PROPERTY_CODE], 
+    [ASSESSOR].[PROPERTY_CODE_DESC] AS [PROPERTY_CODE_DESC], 
+    [ASSESSOR].[LANDUSE] AS [LANDUSE], 
+    [ASSESSOR].[YEAR_BUILT] AS [YEAR_BUILT], 
+    [ASSESSOR].[BLDGSQFT] AS [BLDGSQFT], 
+    [ASSESSOR].[NUMBER_OF_BEDROOMS] AS [NUMBER_OF_BEDROOMS], 
+    [ASSESSOR].[NUMBER_OF_STORIES] AS [NUMBER_OF_STORIES], 
+    [ASSESSOR].[NUMBER_OF_UNITS] AS [NUMBER_OF_UNITS], 
+    [ASSESSOR].[MARKET_VALUE_YEAR1] AS [MARKET_VALUE_YEAR1], 
+    [ASSESSOR].[MARKET_VALUE_LAND1] AS [MARKET_VALUE_LAND1], 
+    [ASSESSOR].[MARKET_VALUE_IMPROVEMENTS1] AS [MARKET_VALUE_IMPROVEMENTS1], 
+    [ASSESSOR].[MARKET_VALUE_TOTAL1] AS [MARKET_VALUE_TOTAL1], 
+    [ASSESSOR].[MARKET_EXEMPTION_VALUE1] AS [MARKET_EXEMPTION_VALUE1], 
+    [ASSESSOR].[M50_ASSESSED_VALUE1] AS [M50_ASSESSED_VALUE1], 
+    [ASSESSOR].[ASSESSED_VALUE_YEAR1] AS [ASSESSED_VALUE_YEAR1], 
+    [ASSESSOR].[ASSESSED_VALUE1] AS [ASSESSED_VALUE1], 
+    [ASSESSOR].[MARKET_VALUE_YEAR2] AS [MARKET_VALUE_YEAR2], 
+    [ASSESSOR].[MARKET_VALUE_LAND2] AS [MARKET_VALUE_LAND2], 
+    [ASSESSOR].[MARKET_VALUE_IMPROVEMENTS2] AS [MARKET_VALUE_IMPROVEMENTS2], 
+    [ASSESSOR].[MARKET_VALUE_TOTAL2] AS [MARKET_VALUE_TOTAL2], 
+    [ASSESSOR].[MARKET_EXEMPTION_VALUE2] AS [MARKET_EXEMPTION_VALUE2], 
+    [ASSESSOR].[M50_ASSESSED_VALUE2] AS [M50_ASSESSED_VALUE2], 
+    [ASSESSOR].[ASSESSED_VALUE_YEAR2] AS [ASSESSED_VALUE_YEAR2], 
+    [ASSESSOR].[ASSESSED_VALUE2] AS [ASSESSED_VALUE2], 
+    [ASSESSOR].[MARKET_VALUE_YEAR3] AS [MARKET_VALUE_YEAR3], 
+    [ASSESSOR].[MARKET_VALUE_LAND3] AS [MARKET_VALUE_LAND3], 
+    [ASSESSOR].[MARKET_VALUE_IMPROVEMENTS3] AS [MARKET_VALUE_IMPROVEMENTS3], 
+    [ASSESSOR].[MARKET_VALUE_TOTAL3] AS [MARKET_VALUE_TOTAL3], 
+    [ASSESSOR].[MARKET_EXEMPTION_VALUE3] AS [MARKET_EXEMPTION_VALUE3], 
+    [ASSESSOR].[M50_ASSESSED_VALUE3] AS [M50_ASSESSED_VALUE3], 
+    [ASSESSOR].[ASSESSED_VALUE_YEAR3] AS [ASSESSED_VALUE_YEAR3], 
+    [ASSESSOR].[ASSESSED_VALUE3] AS [ASSESSED_VALUE3], 
+    [ASSESSOR].[SALEDATE] AS [SALEDATE], 
+    [ASSESSOR].[SALEPRICE] AS [SALEPRICE], 
+    [ASSESSOR].[EXEMPTION_VALUE_YEAR1] AS [EXEMPTION_VALUE_YEAR1], 
+    [ASSESSOR].[EXEMPTION_VALUE_LAND1] AS [EXEMPTION_VALUE_LAND1], 
+    [ASSESSOR].[EXEMPTION_VALUE_IMPROVEMENTS1] AS [EXEMPTION_VALUE_IMPROVEMENTS1], 
+    [ASSESSOR].[EXEMPTION_VALUE_YEAR2] AS [EXEMPTION_VALUE_YEAR2], 
+    [ASSESSOR].[EXEMPTION_VALUE_LAND2] AS [EXEMPTION_VALUE_LAND2], 
+    [ASSESSOR].[EXEMPTION_VALUE_IMPROVEMENTS2] AS [EXEMPTION_VALUE_IMPROVEMENTS2], 
+    [ASSESSOR].[EXEMPTION_VALUE_YEAR3] AS [EXEMPTION_VALUE_YEAR3], 
+    [ASSESSOR].[EXEMPTION_VALUE_LAND3] AS [EXEMPTION_VALUE_LAND3], 
+    [ASSESSOR].[EXEMPTION_VALUE_IMPROVEMENTS3] AS [EXEMPTION_VALUE_IMPROVEMENTS3], 
+    [ASSESSOR].[COUNTY] AS [COUNTY], 
+    [ASSESSOR].[ACCOUNT_STATUS_CODE] AS [ACCOUNT_STATUS_CODE], 
+    [ASSESSOR].[RATIO_CODE] AS [RATIO_CODE], 
+    [ASSESSOR].[IS_CONDO] AS [IS_CONDO], 
+    [ASSESSOR].[PARENT_ID] AS [PARENT_ID], 
+    [ASSESSOR].[IS_FAKE_PARENT] AS [IS_FAKE_PARENT], 
+    [ASSESSOR].[SAME_OWNER_SITE_ADDR] AS [SAME_OWNER_SITE_ADDR], 
+    [ASSESSOR].[X_COORD] AS [X_COORD], 
+    [ASSESSOR].[Y_COORD] AS [Y_COORD]
+    FROM [dbo].[ASSESSOR] AS [ASSESSOR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sw_user" EntityType="Self.sw_user" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [sw_user].[username] AS [username], 
+    [sw_user].[batchlistdays] AS [batchlistdays]
+    FROM [dbo].[sw_user] AS [sw_user]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="qip" EntityType="Self.qip" store:Type="Tables" store:Schema="rose\RANGER">
+      <DefiningQuery>SELECT 
+    [qip].[OBJECTID] AS [OBJECTID], 
+    [qip].[AREA] AS [AREA], 
+    [qip].[PERIMETER] AS [PERIMETER], 
+    [qip].[QTRSEC_] AS [QTRSEC_], 
+    [qip].[QTRSEC_ID] AS [QTRSEC_ID], 
+    [qip].[QTRNO] AS [QTRNO], 
+    [qip].[QTRSEC] AS [QTRSEC], 
+    [qip].[SHIFT] AS [SHIFT], 
+    [qip].[FULLSEC] AS [FULLSEC], 
+    [qip].[EZONE] AS [EZONE], 
+    [qip].[FOURSEC] AS [FOURSEC], 
+    [qip].[QTRNUM] AS [QTRNUM], 
+    [qip].[TOWN] AS [TOWN], 
+    [qip].[SECT] AS [SECT], 
+    [qip].[Shape] AS [Shape]
+    FROM [rose\RANGER].[qip] AS [qip]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Affidavit_Affidavit" Association="Self.FK_Affidavit_Affidavit">
+      <End Role="AffidavitStatus" EntitySet="AffidavitStatus" />
+      <End Role="Affidavit" EntitySet="Affidavit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Affidavit_Inspector" Association="Self.FK_Affidavit_Inspector">
+      <End Role="Inspector" EntitySet="Inspector" />
+      <End Role="Affidavit" EntitySet="Affidavit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitActivity_Activity" Association="Self.FK_AffidavitActivity_Activity">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitHistory" EntitySet="AffidavitHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitFinalInspection_Affidavit" Association="Self.FK_AffidavitFinalInspection_Affidavit">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitFinalInspection" EntitySet="AffidavitFinalInspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitFinalInspection_Inspector" Association="Self.FK_AffidavitFinalInspection_Inspector">
+      <End Role="Inspector" EntitySet="Inspector" />
+      <End Role="AffidavitFinalInspection" EntitySet="AffidavitFinalInspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitFinalInspection_Inspector_Pour" Association="Self.FK_AffidavitFinalInspection_Inspector_Pour">
+      <End Role="Inspector" EntitySet="Inspector" />
+      <End Role="AffidavitFinalInspection" EntitySet="AffidavitFinalInspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitFormInspection_Affidavit" Association="Self.FK_AffidavitFormInspection_Affidavit">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitFormInspection" EntitySet="AffidavitFormInspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitFormInspection_Inspector_Fail" Association="Self.FK_AffidavitFormInspection_Inspector_Fail">
+      <End Role="Inspector" EntitySet="Inspector" />
+      <End Role="AffidavitFormInspection" EntitySet="AffidavitFormInspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitFormInspection_Inspector_Pass" Association="Self.FK_AffidavitFormInspection_Inspector_Pass">
+      <End Role="Inspector" EntitySet="Inspector" />
+      <End Role="AffidavitFormInspection" EntitySet="AffidavitFormInspection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitHistory_AffidavitHistory" Association="Self.FK_AffidavitHistory_AffidavitHistory">
+      <End Role="AffidavitStatus" EntitySet="AffidavitStatus" />
+      <End Role="AffidavitHistory" EntitySet="AffidavitHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitHistory_Inspector" Association="Self.FK_AffidavitHistory_Inspector">
+      <End Role="Inspector" EntitySet="Inspector" />
+      <End Role="AffidavitHistory" EntitySet="AffidavitHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permit_PermitApplicant" Association="Self.FK_Permit_PermitApplicant">
+      <End Role="PermitApplicant" EntitySet="PermitApplicant" />
+      <End Role="Permit" EntitySet="Permit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permit_PermitStatus" Association="Self.FK_Permit_PermitStatus">
+      <End Role="PermitStatus" EntitySet="PermitStatus" />
+      <End Role="Permit" EntitySet="Permit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermitHistory_Permit" Association="Self.FK_PermitHistory_Permit">
+      <End Role="Permit" EntitySet="Permit" />
+      <End Role="PermitHistory" EntitySet="PermitHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PermitPayment_Permit" Association="Self.FK_PermitPayment_Permit">
+      <End Role="Permit" EntitySet="Permit" />
+      <End Role="PermitPayment" EntitySet="PermitPayment" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

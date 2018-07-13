@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+  <!--<connectionStrings>
+    <add name="SidewalkPermitWPF.Properties.Settings.SWPostConnectionString"
+      connectionString="Data Source=pdotsqldev;Initial Catalog=SWPost;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>-->
+  <appSettings>
+    <!--Change: Choose the server and Environment-->
+    
+    <!--Prod-->
+    <!--<add key="BaseUri" value="https://pdotweb1/apps/permitappapi/api/sidewalkapi/" />
+    <add key="AppEnvironment" value="Production" />
+    <add key="PDFPath" value="\\pdotfile1\apps\SidewalkPosting\Documents\PDF\"/>-->
+    
+    <!--Test-->
+    <!--<add key="BaseUri" value="https://pdotweb1/apps/permitappapitest/api/sidewalkapi/" />
+    <add key="AppEnvironment" value="Testing" />
+    <add key="PDFPath" value="\\pdotfile1\apps\SidewalkPosting\Documents\PDF\Test\"/>-->
+    
+    <!--Dev-->
+    <add key="BaseUri" value="http://localhost:27144/api/sidewalkapi/"/>
+    <add key="PDFPath" value="\\pdotfile1\apps\SidewalkPosting\Documents\PDF\Test\"/>
+    <add key="AppEnvironment" value="Testing" /> 
+    
+    <add key="Host" value="smtp.gmail.com" />
+    <add key="From" value="MaintenanceOff@gmail.com" />
+    <add key="Password" value="bom12345" />
+    <add key="Port" value="587" />
+    <add key="TimeOut" value="0" />
+    <add key="Subject" value="Your Permit/s Are Approved" />
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+    <add key="IsKiosk" value="false" />
+    <!--<add key="PdfPath" value="C:\PermitPDF\"/>-->
+    <!--<add key="PdfPath" value="\\pbotfile\apps\SidewalkPosting\PermitPDF\"/>-->
+    <add key="ClientSettingsProvider.ConnectionStringName" value="DefaultConnection" />
+  </appSettings>
+  
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6" />
+  </startup>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+  </entityFramework>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientWindowsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" connectionStringName="DefaultConnection" credentialsProvider="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" connectionStringName="DefaultConnection" />
+      </providers>
+    </roleManager>
+  </system.web>
+  <!--<connectionStrings>
+    <add name="DefaultConnection" connectionString="Data Source = |SQL/CE|" />
+  </connectionStrings>-->
+</configuration>

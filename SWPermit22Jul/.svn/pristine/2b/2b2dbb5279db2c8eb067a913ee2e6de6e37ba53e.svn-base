@@ -1,0 +1,507 @@
+﻿@model Sidewalk.Logic.Database.SidewalkPost
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNew.cshtml";
+}
+<div class="box round first fullpage">
+    <h2>
+        Affidavit
+    </h2>
+    <div class="col-12">
+        <div class="block ">
+            <table class="form">
+                <tr>
+                    <td colspan="3">
+                        <fieldset class="row-wise">
+                            <legend>Search</legend>
+                            <table>
+                                <tr>
+                                    <td class="col1"><label>Affidavit</label></td>
+                                    <td class="col2">Property Address</td>
+                                    <td class="col3">Status</td>
+                                    <td class="col4">Inspector</td>
+                                    <td class="col5">Inspection Date</td>
+                                    <td class="col6"></td>
+                                    <td class="col7"></td>
+                                    <td class="col8"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col1">
+                                        <a class="btn-mini btn-black btn-arrow-left"><span></span>Left</a>
+                                        <input type="text" class="mini" />
+                                        <a class="btn-mini btn-black btn-arrow-right"><span></span>Right</a>
+                                    </td>
+                                    <td class="col2"><input type="text" class="grumble" /></td>
+                                    <td class="col3"><input type="text" class="medium" /></td>
+                                    <td class="col4"><input type="text" class="medium" /></td>
+                                    <td class="col5"><input type="text" class="medium" /></td>
+                                    <td class="col6"><button class="btn btn-navy">Find</button></td>
+                                    <td class="col7"><button class="btn btn-navy">Change Status</button></td>
+                                    <td class="col8"><button class="btn btn-navy">Attach/View</button></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Inspection</legend>
+                            <form>
+                                <table class="form">
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Track IT
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" id="grumble" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                Property ID
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="grumble" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>
+                                                RNUM
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input type="text" class="grumble" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="vertical-align: top; padding-top: 9px;">
+                                            <label>
+                                                Legal Description
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <textarea class="tinymce"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Owner Information</legend>
+                            <form>
+                                <table class="form">
+                                    <tr>
+                                        <td colspan="3">
+                                            <input type="text" id="grumble" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <input type="text" id="grumble" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" id="grumble" />
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <button class="btn btn-navy">Update</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <input type="text" id="grumble" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <input type="text" id="grumble" />
+                                        </td>
+                                        <td class="col2">
+                                            <label>
+                                                St
+                                            </label>
+                                            <input type="text" class="mini" />
+                                        </td>
+                                        <td class="col3">
+                                            <label>
+                                                ZIP
+                                            </label>
+                                            <input type="text" class="mini" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Permit Information</legend>
+                            <form>
+                                <table class="form">
+                                    <tr>
+                                        <td class="col1">
+                                            <input type="radio" name="rd1" />
+                                            Contractor
+                                        </td>
+                                        <td class="col2">
+                                            <input type="radio" name="rd1" />
+                                            Property Owner
+                                        </td>
+                                        <td class="col3">
+                                            <input type="radio" name="rd1" />
+                                            Other
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                CCB#
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="mini" />
+                                            <input type="text" class="medium" />
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Issue Date
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                By
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Expiration Date
+                                            </label>
+                                        </td>
+                                        <td class="col1">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                        <td class="col1">
+                                            <button class="btn small btn-navy">Modify</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Permit Fee
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Permit Status
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Alt Permit#
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Affidavit History</legend>
+                            <form>
+                                <table class="data display datatable" id="example">
+                                    <thead>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>UserID</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+                                            <td>Trident</td>
+                                            <td>
+                                                Internet
+                                                Explorer 4.0
+                                            </td>
+                                            <td>Win 95+</td>
+                                            <td class="center"> 4</td>
+                                        </tr>
+                                        <tr class="even gradeC">
+                                            <td>Trident</td>
+                                            <td>
+                                                Internet
+                                                Explorer 5.0
+                                            </td>
+                                            <td>Win 95+</td>
+                                            <td class="center">5</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>Trident</td>
+                                            <td>
+                                                Internet
+                                                Explorer 5.5
+                                            </td>
+                                            <td>Win 95+</td>
+                                            <td class="center">5.5</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>Trident</td>
+                                            <td>
+                                                Internet
+                                                Explorer 6
+                                            </td>
+                                            <td>Win 98+</td>
+                                            <td class="center">6</td>
+                                        </tr>
+                                        <tr class="odd gradeA">
+                                            <td>Trident</td>
+                                            <td>Internet Explorer 7</td>
+                                            <td>Win XP SP2+</td>
+                                            <td class="center">7</td>
+                                        </tr>
+                                        <tr class="even gradeA">
+                                            <td>Trident</td>
+                                            <td>AOL browser (AOL desktop)</td>
+                                            <td>Win XP</td>
+                                            <td class="center">6</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Gecko</td>
+                                            <td>Firefox 1.0</td>
+                                            <td>Win 98+ / OSX.2+</td>
+                                            <td class="center">1.7</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Gecko</td>
+                                            <td>Firefox 1.5</td>
+                                            <td>Win 98+ / OSX.2+</td>
+                                            <td class="center">1.8</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Gecko</td>
+                                            <td>Firefox 2.0</td>
+                                            <td>Win 98+ / OSX.2+</td>
+                                            <td class="center">1.8</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Gecko</td>
+                                            <td>Firefox 3.0</td>
+                                            <td>Win 2k+ / OSX.3+</td>
+                                            <td class="center">1.9</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Gecko</td>
+                                            <td>Camino 1.0</td>
+                                            <td>OSX.2+</td>
+                                            <td class="center">1.8</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Gecko</td>
+                                            <td>Camino 1.5</td>
+                                            <td>OSX.3+</td>
+                                            <td class="center">1.8</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Gecko</td>
+                                            <td>Netscape 7.2</td>
+                                            <td>Win 95+ / Mac OS 8.6-9.2</td>
+                                            <td class="center">1.7</td>
+                                        </tr>
+                                        <tr class="gradeA">
+                                            <td>Gecko</td>
+                                            <td>Netscape Browser 8</td>
+                                            <td>Win 98SE+</td>
+                                            <td class="center">1.7</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Affidavit Details</legend>
+                            <form>
+                                <table class="form">
+
+
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Repair Notice Sent
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Repair Due Date
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Form Inspection
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Inspection By
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Completed
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Completed By
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <input type="radio" name="rd1" />
+                                            Contractor
+                                        </td>
+                                        <td class="col2">
+                                            <input type="radio" name="rd1" />
+                                            Property Owner
+                                        </td>
+                                        <td class="col3">
+                                            <input type="radio" name="rd1" />
+                                            City
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Cancel Date
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Cancel By
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                On Hold Until
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                On Hold By
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Certified Date
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col1">
+                                            <label>
+                                                Recertified Date
+                                            </label>
+                                        </td>
+                                        <td class="col2">
+                                            <input type="text" class="medium" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>

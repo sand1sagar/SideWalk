@@ -1,0 +1,20 @@
+﻿SidewalkPermitWPF
+
+
+winexe
+C#
+.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\obj\Debug\
+SidewalkPermitWPF
+none
+false
+CODE_ANALYSIS;DEBUG;TRACE
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\SidewalkPermitWPF\App.xaml
+16-1927317603
+
+841171717472
+102-887979681
+MainWindow.xaml;Skins\MainSkin.xaml;Views\About.xaml;Views\AutoCompleteTextbox.xaml;Views\ApprovedPermitsView.xaml;Views\NumberOfCopies.xaml;Views\PermitFeeView.xaml;Views\InitialStaffPermitSelection.xaml;Views\PermitDetails.xaml;Views\PermitHistoryView.xaml;Views\PrintSubmittedPermitView.xaml;Views\PermitView.xaml;Views\ReviewModifyTransferPermit.xaml;Views\ContractorPermitProcess.xaml;Views\ContractorAlias.xaml;Views\StaffPermitProcess.xaml;
+
+False
+

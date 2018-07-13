@@ -1,0 +1,1916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SWPostModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SWPostTest.dbo.ASSESSOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ASSESSOR">
+          <Key>
+            <PropertyRef Name="PROPERTY_ID" />
+            <PropertyRef Name="MARKET_VALUE_YEAR1" />
+            <PropertyRef Name="ASSESSED_VALUE_YEAR1" />
+            <PropertyRef Name="MARKET_VALUE_YEAR2" />
+            <PropertyRef Name="ASSESSED_VALUE_YEAR2" />
+            <PropertyRef Name="EXEMPTION_VALUE_YEAR1" />
+            <PropertyRef Name="EXEMPTION_VALUE_YEAR2" />
+            <PropertyRef Name="EXEMPTION_VALUE_YEAR3" />
+          </Key>
+          <Property Name="RNUM" Type="varchar" MaxLength="10" />
+          <Property Name="STATE_ID" Type="varchar" MaxLength="22" />
+          <Property Name="NEW_STATE_ID" Type="varchar" MaxLength="22" />
+          <Property Name="PROPERTY_ID" Type="char" MaxLength="7" Nullable="false" />
+          <Property Name="OWNER1" Type="varchar" MaxLength="35" />
+          <Property Name="OWNER2" Type="varchar" MaxLength="35" />
+          <Property Name="OWNER3" Type="varchar" MaxLength="35" />
+          <Property Name="OWNER_ADDRESS" Type="varchar" MaxLength="35" />
+          <Property Name="OWNER_CITY" Type="varchar" MaxLength="28" />
+          <Property Name="OWNER_STATE" Type="char" MaxLength="2" />
+          <Property Name="OWNER_ZIP" Type="varchar" MaxLength="10" />
+          <Property Name="SITE_ADDRESS_NUMBER" Type="varchar" MaxLength="11" />
+          <Property Name="SITE_STREET_DIRECTION" Type="varchar" MaxLength="2" />
+          <Property Name="SITE_STREET_NAME" Type="varchar" MaxLength="28" />
+          <Property Name="SITE_STREET_TYPE" Type="varchar" MaxLength="4" />
+          <Property Name="SITE_UNIT_TYPE" Type="varchar" MaxLength="8" />
+          <Property Name="SITE_UNIT_NUMBER" Type="varchar" MaxLength="5" />
+          <Property Name="SITE_ADDRESS_FULL" Type="varchar" MaxLength="37" />
+          <Property Name="SITE_CITY" Type="varchar" MaxLength="30" />
+          <Property Name="SITE_STATE" Type="varchar" MaxLength="6" />
+          <Property Name="SITE_ZIP" Type="varchar" MaxLength="8" />
+          <Property Name="SITE_CITY_STATE_ZIP" Type="varchar" MaxLength="26" />
+          <Property Name="INSTRUMENT_NUMBER" Type="varchar" MaxLength="50" />
+          <Property Name="MAP_NUMBER" Type="varchar" MaxLength="9" />
+          <Property Name="LEGAL_DESCRIPTION" Type="varchar" MaxLength="250" />
+          <Property Name="LOT" Type="varchar" MaxLength="23" />
+          <Property Name="BLOCK" Type="varchar" MaxLength="14" />
+          <Property Name="TAXCODE" Type="varchar" MaxLength="7" />
+          <Property Name="PARCEL_SQUARE_FEET" Type="int" />
+          <Property Name="PARCEL_WIDTH_FOOTAGE" Type="int" />
+          <Property Name="PARCEL_LENGTH_FOOTAGE" Type="smallint" />
+          <Property Name="PROPERTY_CODE" Type="varchar" MaxLength="2" />
+          <Property Name="PROPERTY_CODE_DESC" Type="varchar" MaxLength="50" />
+          <Property Name="LANDUSE" Type="varchar" MaxLength="4" />
+          <Property Name="YEAR_BUILT" Type="varchar" MaxLength="10" />
+          <Property Name="BLDGSQFT" Type="int" />
+          <Property Name="NUMBER_OF_BEDROOMS" Type="int" />
+          <Property Name="NUMBER_OF_STORIES" Type="int" />
+          <Property Name="NUMBER_OF_UNITS" Type="int" />
+          <Property Name="MARKET_VALUE_YEAR1" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="MARKET_VALUE_LAND1" Type="int" />
+          <Property Name="MARKET_VALUE_IMPROVEMENTS1" Type="int" />
+          <Property Name="MARKET_VALUE_TOTAL1" Type="int" />
+          <Property Name="MARKET_EXEMPTION_VALUE1" Type="int" />
+          <Property Name="M50_ASSESSED_VALUE1" Type="int" />
+          <Property Name="ASSESSED_VALUE_YEAR1" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ASSESSED_VALUE1" Type="int" />
+          <Property Name="MARKET_VALUE_YEAR2" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="MARKET_VALUE_LAND2" Type="int" />
+          <Property Name="MARKET_VALUE_IMPROVEMENTS2" Type="int" />
+          <Property Name="MARKET_VALUE_TOTAL2" Type="int" />
+          <Property Name="MARKET_EXEMPTION_VALUE2" Type="int" />
+          <Property Name="M50_ASSESSED_VALUE2" Type="int" />
+          <Property Name="ASSESSED_VALUE_YEAR2" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ASSESSED_VALUE2" Type="int" />
+          <Property Name="MARKET_VALUE_YEAR3" Type="varchar" MaxLength="30" />
+          <Property Name="MARKET_VALUE_LAND3" Type="int" />
+          <Property Name="MARKET_VALUE_IMPROVEMENTS3" Type="int" />
+          <Property Name="MARKET_VALUE_TOTAL3" Type="int" />
+          <Property Name="MARKET_EXEMPTION_VALUE3" Type="int" />
+          <Property Name="M50_ASSESSED_VALUE3" Type="int" />
+          <Property Name="ASSESSED_VALUE_YEAR3" Type="varchar" MaxLength="30" />
+          <Property Name="ASSESSED_VALUE3" Type="int" />
+          <Property Name="SALEDATE" Type="varchar" MaxLength="30" />
+          <Property Name="SALEPRICE" Type="int" />
+          <Property Name="EXEMPTION_VALUE_YEAR1" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="EXEMPTION_VALUE_LAND1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_IMPROVEMENTS1" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_YEAR2" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="EXEMPTION_VALUE_LAND2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_IMPROVEMENTS2" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_YEAR3" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="EXEMPTION_VALUE_LAND3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_IMPROVEMENTS3" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="COUNTY" Type="varchar" MaxLength="1" />
+          <Property Name="ACCOUNT_STATUS_CODE" Type="char" MaxLength="1" />
+          <Property Name="RATIO_CODE" Type="char" MaxLength="3" />
+          <Property Name="IS_CONDO" Type="tinyint" />
+          <Property Name="PARENT_ID" Type="varchar" MaxLength="22" />
+          <Property Name="IS_FAKE_PARENT" Type="tinyint" />
+          <Property Name="SAME_OWNER_SITE_ADDR" Type="int" />
+          <Property Name="X_COORD" Type="int" />
+          <Property Name="Y_COORD" Type="int" />
+        </EntityType>
+        <EntityType Name="CCB_DAILY_LICENSES">
+          <Key>
+            <PropertyRef Name="CCB_Id" />
+          </Key>
+          <Property Name="CCB_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="license_number" Type="bigint" Nullable="false" />
+          <Property Name="registration_type" Type="nvarchar" MaxLength="2" />
+          <Property Name="county_code" Type="int" />
+          <Property Name="business_name" Type="nvarchar" MaxLength="200" />
+          <Property Name="address" Type="nvarchar" MaxLength="100" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+          <Property Name="state" Type="nvarchar" MaxLength="2" />
+          <Property Name="zip" Type="nvarchar" MaxLength="15" />
+          <Property Name="business_telephone" Type="bigint" />
+          <Property Name="fax_number" Type="bigint" />
+          <Property Name="S_11" Type="nvarchar" MaxLength="2000" />
+          <Property Name="S_12" Type="nvarchar" MaxLength="2000" />
+          <Property Name="S_13" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ins_co_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="ins_amount" Type="bigint" />
+          <Property Name="ins_due_to_exp" Type="date" />
+          <Property Name="claims_filed" Type="int" />
+          <Property Name="exempt_nonexempt_status" Type="nvarchar" MaxLength="20" />
+          <Property Name="sic_codes" Type="nvarchar" MaxLength="175" />
+          <Property Name="endorsements" Type="nvarchar" MaxLength="50" />
+          <Property Name="r_bond_co_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="r_bond_amount" Type="bigint" />
+          <Property Name="r_bond_due_to_exp" Type="date" />
+          <Property Name="c_bond_co_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="c_bond_amount" Type="bigint" />
+          <Property Name="c_bond_due_to_exp" Type="date" />
+          <Property Name="rmi_name" Type="nvarchar" MaxLength="55" />
+          <Property Name="lic_exp_date" Type="date" />
+          <Property Name="S_29" Type="nvarchar" MaxLength="2000" />
+          <Property Name="alias_name" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Contractor_Alias">
+          <Key>
+            <PropertyRef Name="Contractor_Alias_Id" />
+          </Key>
+          <Property Name="Contractor_Alias_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CCB_No" Type="bigint" Nullable="false" />
+          <Property Name="Business_Name" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Alias" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Created_Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dtproperties">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="objectid" Type="int" />
+          <Property Name="property" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="value" Type="varchar" MaxLength="255" />
+          <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+          <Property Name="lvalue" Type="image" />
+          <Property Name="version" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="StackTrace" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permit">
+          <Key>
+            <PropertyRef Name="PermitID" />
+          </Key>
+          <Property Name="PermitID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PermitNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="PermitIssued" Type="nvarchar" MaxLength="50" />
+          <Property Name="PermitExtended" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateIssued" Type="datetime" />
+          <Property Name="DateExpired" Type="datetime" />
+          <Property Name="BuilderBoardNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateCancelled" Type="datetime" />
+          <Property Name="CancelledBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastAction" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApplicantType" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContractorID" Type="nvarchar" MaxLength="200" />
+          <Property Name="AffidavitID" Type="bigint" />
+          <Property Name="TotalFee" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="PermitStatus" Type="bigint" />
+          <Property Name="ApplicantID" Type="bigint" />
+          <Property Name="SubmissionDate" Type="datetime" />
+          <Property Name="PropertyAddress" Type="nvarchar(max)" />
+          <Property Name="DateExpiredNew" Type="datetime" />
+          <Property Name="IssuedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="DatePermitExtended" Type="datetime" />
+          <Property Name="NEW_AFF" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="PermitApplicant">
+          <Key>
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="ApplicantID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicantType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="PermitID" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ContactPhoneNumber" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PermitCostsDetail">
+          <Key>
+            <PropertyRef Name="PermitCostID" />
+          </Key>
+          <Property Name="PermitCostID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AffidavitID" Type="bigint" />
+          <Property Name="CostType" Type="nvarchar" MaxLength="50" />
+          <Property Name="RepairItem" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Rate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Cost" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="PermitFee">
+          <Key>
+            <PropertyRef Name="PermitFeeId" />
+          </Key>
+          <Property Name="PermitFeeId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MinimumFee" Type="smallmoney" />
+          <Property Name="MaximumFee" Type="smallmoney" />
+          <Property Name="NewEffectiveDate" Type="smalldatetime" />
+          <Property Name="NewMinimumFee" Type="smallmoney" />
+          <Property Name="NewMaximumFee" Type="smallmoney" />
+        </EntityType>
+        <EntityType Name="PermitFeeRate">
+          <Key>
+            <PropertyRef Name="PermitFeeID" />
+          </Key>
+          <Property Name="PermitFeeID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Action_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrentRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NewEffectiveRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PermitHistory">
+          <Key>
+            <PropertyRef Name="PermitHistoryID" />
+          </Key>
+          <Property Name="PermitHistoryID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PermitID" Type="bigint" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="ActivityTime" Type="datetime" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PermitPayment">
+          <Key>
+            <PropertyRef Name="PermitPaymentID" />
+          </Key>
+          <Property Name="PermitPaymentID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PermitID" Type="bigint" />
+          <Property Name="IssueDate" Type="datetime" />
+          <Property Name="IssuedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentMethod" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApprovalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CheckNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="PermitStatus">
+          <Key>
+            <PropertyRef Name="PermitStatusID" />
+          </Key>
+          <Property Name="PermitStatusID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PermitStatusValue" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SWPostTest.dbo.sw_user' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="sw_user">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="char" MaxLength="32" Nullable="false" />
+          <Property Name="batchlistdays" Type="int" />
+        </EntityType>
+        <Association Name="FK_Permit_PermitApplicant">
+          <End Role="PermitApplicant" Type="Self.PermitApplicant" Multiplicity="0..1" />
+          <End Role="Permit" Type="Self.Permit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PermitApplicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="Permit">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Permit_PermitStatus">
+          <End Role="PermitStatus" Type="Self.PermitStatus" Multiplicity="0..1" />
+          <End Role="Permit" Type="Self.Permit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PermitStatus">
+              <PropertyRef Name="PermitStatusID" />
+            </Principal>
+            <Dependent Role="Permit">
+              <PropertyRef Name="PermitStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PermitHistory_Permit">
+          <End Role="Permit" Type="Self.Permit" Multiplicity="0..1" />
+          <End Role="PermitHistory" Type="Self.PermitHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permit">
+              <PropertyRef Name="PermitID" />
+            </Principal>
+            <Dependent Role="PermitHistory">
+              <PropertyRef Name="PermitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PermitPayment_Permit">
+          <End Role="Permit" Type="Self.Permit" Multiplicity="0..1" />
+          <End Role="PermitPayment" Type="Self.PermitPayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permit">
+              <PropertyRef Name="PermitID" />
+            </Principal>
+            <Dependent Role="PermitPayment">
+              <PropertyRef Name="PermitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="getAffidavitByKeyword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="keyword" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getAffidavitByParameter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="affidavitId" Type="varchar" Mode="In" />
+          <Parameter Name="propertyId" Type="varchar" Mode="In" />
+          <Parameter Name="inspectionDate" Type="varchar" Mode="In" />
+          <Parameter Name="postingDate" Type="varchar" Mode="In" />
+          <Parameter Name="trackId" Type="varchar" Mode="In" />
+          <Parameter Name="inspectorName" Type="varchar" Mode="In" />
+          <Parameter Name="propertoyAddress" Type="varchar" Mode="In" />
+          <Parameter Name="previouslyPrinted" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="getAffidavitByProperty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="keyword" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getAffidavitCostDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="affidavitId" Type="nvarchar" Mode="In" />
+          <Parameter Name="costTypeKey" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getAffidavitDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="affidavitId" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getAffidavitList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getContractorByKeyword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="keyword" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getContractorDetailsByCCBNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ccbNumber" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="getContractorDetailsByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_AfterInsertPermit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PermitId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="SP_AfterUpdatePermit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PermitId" Type="bigint" Mode="In" />
+          <Parameter Name="ApplicantId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="ufnGetNewAffidavitID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="AffNo" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="ufnGetPostCostDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fy" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="nMonth" Type="varchar" MaxLength="10" />
+                <Property Name="sMonth" Type="varchar" MaxLength="16" />
+                <Property Name="post_dt" Type="datetime" />
+                <Property Name="aff_no" Type="int" />
+                <Property Name="aff_action" Type="char" MaxLength="1" />
+                <Property Name="status" Type="varchar" MaxLength="3" />
+                <Property Name="cost" Type="decimal" Precision="10" Scale="2" />
+                <Property Name="address" Type="varchar" MaxLength="100" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="ufnGetPostCostSummary" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fynum" Type="int" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="iYear" Type="int" />
+                <Property Name="sYear" Type="char" MaxLength="4" />
+                <Property Name="iMonth" Type="int" />
+                <Property Name="sMonth" Type="char" MaxLength="6" />
+                <Property Name="aff_no" Type="int" />
+                <Property Name="aff_action" Type="char" MaxLength="1" />
+                <Property Name="cost" Type="decimal" Precision="10" Scale="2" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <EntityContainer Name="SWPostModelStoreContainer">
+          <EntitySet Name="CCB_DAILY_LICENSES" EntityType="Self.CCB_DAILY_LICENSES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contractor_Alias" EntityType="Self.Contractor_Alias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ErrorLog" EntityType="Self.ErrorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Permit" EntityType="Self.Permit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermitApplicant" EntityType="Self.PermitApplicant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermitCostsDetail" EntityType="Self.PermitCostsDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermitFee" EntityType="Self.PermitFee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermitFeeRate" EntityType="Self.PermitFeeRate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermitHistory" EntityType="Self.PermitHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermitPayment" EntityType="Self.PermitPayment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermitStatus" EntityType="Self.PermitStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ASSESSOR" EntityType="Self.ASSESSOR" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ASSESSOR].[RNUM] AS [RNUM], 
+    [ASSESSOR].[STATE_ID] AS [STATE_ID], 
+    [ASSESSOR].[NEW_STATE_ID] AS [NEW_STATE_ID], 
+    [ASSESSOR].[PROPERTY_ID] AS [PROPERTY_ID], 
+    [ASSESSOR].[OWNER1] AS [OWNER1], 
+    [ASSESSOR].[OWNER2] AS [OWNER2], 
+    [ASSESSOR].[OWNER3] AS [OWNER3], 
+    [ASSESSOR].[OWNER_ADDRESS] AS [OWNER_ADDRESS], 
+    [ASSESSOR].[OWNER_CITY] AS [OWNER_CITY], 
+    [ASSESSOR].[OWNER_STATE] AS [OWNER_STATE], 
+    [ASSESSOR].[OWNER_ZIP] AS [OWNER_ZIP], 
+    [ASSESSOR].[SITE_ADDRESS_NUMBER] AS [SITE_ADDRESS_NUMBER], 
+    [ASSESSOR].[SITE_STREET_DIRECTION] AS [SITE_STREET_DIRECTION], 
+    [ASSESSOR].[SITE_STREET_NAME] AS [SITE_STREET_NAME], 
+    [ASSESSOR].[SITE_STREET_TYPE] AS [SITE_STREET_TYPE], 
+    [ASSESSOR].[SITE_UNIT_TYPE] AS [SITE_UNIT_TYPE], 
+    [ASSESSOR].[SITE_UNIT_NUMBER] AS [SITE_UNIT_NUMBER], 
+    [ASSESSOR].[SITE_ADDRESS_FULL] AS [SITE_ADDRESS_FULL], 
+    [ASSESSOR].[SITE_CITY] AS [SITE_CITY], 
+    [ASSESSOR].[SITE_STATE] AS [SITE_STATE], 
+    [ASSESSOR].[SITE_ZIP] AS [SITE_ZIP], 
+    [ASSESSOR].[SITE_CITY_STATE_ZIP] AS [SITE_CITY_STATE_ZIP], 
+    [ASSESSOR].[INSTRUMENT_NUMBER] AS [INSTRUMENT_NUMBER], 
+    [ASSESSOR].[MAP_NUMBER] AS [MAP_NUMBER], 
+    [ASSESSOR].[LEGAL_DESCRIPTION] AS [LEGAL_DESCRIPTION], 
+    [ASSESSOR].[LOT] AS [LOT], 
+    [ASSESSOR].[BLOCK] AS [BLOCK], 
+    [ASSESSOR].[TAXCODE] AS [TAXCODE], 
+    [ASSESSOR].[PARCEL_SQUARE_FEET] AS [PARCEL_SQUARE_FEET], 
+    [ASSESSOR].[PARCEL_WIDTH_FOOTAGE] AS [PARCEL_WIDTH_FOOTAGE], 
+    [ASSESSOR].[PARCEL_LENGTH_FOOTAGE] AS [PARCEL_LENGTH_FOOTAGE], 
+    [ASSESSOR].[PROPERTY_CODE] AS [PROPERTY_CODE], 
+    [ASSESSOR].[PROPERTY_CODE_DESC] AS [PROPERTY_CODE_DESC], 
+    [ASSESSOR].[LANDUSE] AS [LANDUSE], 
+    [ASSESSOR].[YEAR_BUILT] AS [YEAR_BUILT], 
+    [ASSESSOR].[BLDGSQFT] AS [BLDGSQFT], 
+    [ASSESSOR].[NUMBER_OF_BEDROOMS] AS [NUMBER_OF_BEDROOMS], 
+    [ASSESSOR].[NUMBER_OF_STORIES] AS [NUMBER_OF_STORIES], 
+    [ASSESSOR].[NUMBER_OF_UNITS] AS [NUMBER_OF_UNITS], 
+    [ASSESSOR].[MARKET_VALUE_YEAR1] AS [MARKET_VALUE_YEAR1], 
+    [ASSESSOR].[MARKET_VALUE_LAND1] AS [MARKET_VALUE_LAND1], 
+    [ASSESSOR].[MARKET_VALUE_IMPROVEMENTS1] AS [MARKET_VALUE_IMPROVEMENTS1], 
+    [ASSESSOR].[MARKET_VALUE_TOTAL1] AS [MARKET_VALUE_TOTAL1], 
+    [ASSESSOR].[MARKET_EXEMPTION_VALUE1] AS [MARKET_EXEMPTION_VALUE1], 
+    [ASSESSOR].[M50_ASSESSED_VALUE1] AS [M50_ASSESSED_VALUE1], 
+    [ASSESSOR].[ASSESSED_VALUE_YEAR1] AS [ASSESSED_VALUE_YEAR1], 
+    [ASSESSOR].[ASSESSED_VALUE1] AS [ASSESSED_VALUE1], 
+    [ASSESSOR].[MARKET_VALUE_YEAR2] AS [MARKET_VALUE_YEAR2], 
+    [ASSESSOR].[MARKET_VALUE_LAND2] AS [MARKET_VALUE_LAND2], 
+    [ASSESSOR].[MARKET_VALUE_IMPROVEMENTS2] AS [MARKET_VALUE_IMPROVEMENTS2], 
+    [ASSESSOR].[MARKET_VALUE_TOTAL2] AS [MARKET_VALUE_TOTAL2], 
+    [ASSESSOR].[MARKET_EXEMPTION_VALUE2] AS [MARKET_EXEMPTION_VALUE2], 
+    [ASSESSOR].[M50_ASSESSED_VALUE2] AS [M50_ASSESSED_VALUE2], 
+    [ASSESSOR].[ASSESSED_VALUE_YEAR2] AS [ASSESSED_VALUE_YEAR2], 
+    [ASSESSOR].[ASSESSED_VALUE2] AS [ASSESSED_VALUE2], 
+    [ASSESSOR].[MARKET_VALUE_YEAR3] AS [MARKET_VALUE_YEAR3], 
+    [ASSESSOR].[MARKET_VALUE_LAND3] AS [MARKET_VALUE_LAND3], 
+    [ASSESSOR].[MARKET_VALUE_IMPROVEMENTS3] AS [MARKET_VALUE_IMPROVEMENTS3], 
+    [ASSESSOR].[MARKET_VALUE_TOTAL3] AS [MARKET_VALUE_TOTAL3], 
+    [ASSESSOR].[MARKET_EXEMPTION_VALUE3] AS [MARKET_EXEMPTION_VALUE3], 
+    [ASSESSOR].[M50_ASSESSED_VALUE3] AS [M50_ASSESSED_VALUE3], 
+    [ASSESSOR].[ASSESSED_VALUE_YEAR3] AS [ASSESSED_VALUE_YEAR3], 
+    [ASSESSOR].[ASSESSED_VALUE3] AS [ASSESSED_VALUE3], 
+    [ASSESSOR].[SALEDATE] AS [SALEDATE], 
+    [ASSESSOR].[SALEPRICE] AS [SALEPRICE], 
+    [ASSESSOR].[EXEMPTION_VALUE_YEAR1] AS [EXEMPTION_VALUE_YEAR1], 
+    [ASSESSOR].[EXEMPTION_VALUE_LAND1] AS [EXEMPTION_VALUE_LAND1], 
+    [ASSESSOR].[EXEMPTION_VALUE_IMPROVEMENTS1] AS [EXEMPTION_VALUE_IMPROVEMENTS1], 
+    [ASSESSOR].[EXEMPTION_VALUE_YEAR2] AS [EXEMPTION_VALUE_YEAR2], 
+    [ASSESSOR].[EXEMPTION_VALUE_LAND2] AS [EXEMPTION_VALUE_LAND2], 
+    [ASSESSOR].[EXEMPTION_VALUE_IMPROVEMENTS2] AS [EXEMPTION_VALUE_IMPROVEMENTS2], 
+    [ASSESSOR].[EXEMPTION_VALUE_YEAR3] AS [EXEMPTION_VALUE_YEAR3], 
+    [ASSESSOR].[EXEMPTION_VALUE_LAND3] AS [EXEMPTION_VALUE_LAND3], 
+    [ASSESSOR].[EXEMPTION_VALUE_IMPROVEMENTS3] AS [EXEMPTION_VALUE_IMPROVEMENTS3], 
+    [ASSESSOR].[COUNTY] AS [COUNTY], 
+    [ASSESSOR].[ACCOUNT_STATUS_CODE] AS [ACCOUNT_STATUS_CODE], 
+    [ASSESSOR].[RATIO_CODE] AS [RATIO_CODE], 
+    [ASSESSOR].[IS_CONDO] AS [IS_CONDO], 
+    [ASSESSOR].[PARENT_ID] AS [PARENT_ID], 
+    [ASSESSOR].[IS_FAKE_PARENT] AS [IS_FAKE_PARENT], 
+    [ASSESSOR].[SAME_OWNER_SITE_ADDR] AS [SAME_OWNER_SITE_ADDR], 
+    [ASSESSOR].[X_COORD] AS [X_COORD], 
+    [ASSESSOR].[Y_COORD] AS [Y_COORD]
+    FROM [dbo].[ASSESSOR] AS [ASSESSOR]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="sw_user" EntityType="Self.sw_user" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [sw_user].[username] AS [username], 
+    [sw_user].[batchlistdays] AS [batchlistdays]
+    FROM [dbo].[sw_user] AS [sw_user]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Permit_PermitApplicant" Association="Self.FK_Permit_PermitApplicant">
+            <End Role="PermitApplicant" EntitySet="PermitApplicant" />
+            <End Role="Permit" EntitySet="Permit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Permit_PermitStatus" Association="Self.FK_Permit_PermitStatus">
+            <End Role="PermitStatus" EntitySet="PermitStatus" />
+            <End Role="Permit" EntitySet="Permit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PermitHistory_Permit" Association="Self.FK_PermitHistory_Permit">
+            <End Role="Permit" EntitySet="Permit" />
+            <End Role="PermitHistory" EntitySet="PermitHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PermitPayment_Permit" Association="Self.FK_PermitPayment_Permit">
+            <End Role="Permit" EntitySet="Permit" />
+            <End Role="PermitPayment" EntitySet="PermitPayment" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SWPostModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="ufnGetPostCostDetail_Result">
+          <Property Name="nMonth" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sMonth" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="post_dt" Type="DateTime" />
+          <Property Name="aff_no" Type="Int32" />
+          <Property Name="aff_action" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="cost" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </ComplexType>
+        <ComplexType Name="ufnGetPostCostSummary_Result">
+          <Property Name="iYear" Type="Int32" />
+          <Property Name="sYear" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="iMonth" Type="Int32" />
+          <Property Name="sMonth" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="aff_no" Type="Int32" />
+          <Property Name="aff_action" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cost" Type="Decimal" Precision="10" Scale="2" />
+        </ComplexType>
+        <EntityType Name="dtproperties">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="property" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="objectid" Type="Int32" />
+          <Property Name="property" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="uvalue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="version" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permit">
+          <Key>
+            <PropertyRef Name="PermitID" />
+          </Key>
+          <Property Name="PermitID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PermitNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PermitIssued" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PermitExtended" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateIssued" Type="DateTime" Precision="3" />
+          <Property Name="DateExpired" Type="DateTime" Precision="3" />
+          <Property Name="BuilderBoardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateCancelled" Type="DateTime" Precision="3" />
+          <Property Name="CancelledBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastAction" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicantType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContractorID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AffidavitID" Type="Int64" />
+          <Property Name="TotalFee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="PermitStatus" Type="Int64" />
+          <Property Name="ApplicantID" Type="Int64" />
+          <Property Name="SubmissionDate" Type="DateTime" Precision="3" />
+          <Property Name="PropertyAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateExpiredNew" Type="DateTime" Precision="3" />
+          <Property Name="IssuedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DatePermitExtended" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="PermitApplicant" Relationship="Self.FK_Permit_PermitApplicant" FromRole="Permit" ToRole="PermitApplicant" />
+          <NavigationProperty Name="PermitStatus1" Relationship="Self.FK_Permit_PermitStatus" FromRole="Permit" ToRole="PermitStatus" />
+          <NavigationProperty Name="PermitHistory" Relationship="Self.FK_PermitHistory_Permit" FromRole="Permit" ToRole="PermitHistory" />
+          <NavigationProperty Name="PermitPayment" Relationship="Self.FK_PermitPayment_Permit" FromRole="Permit" ToRole="PermitPayment" />
+          <Property Name="NEW_AFF" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PermitApplicant">
+          <Key>
+            <PropertyRef Name="ApplicantID" />
+          </Key>
+          <Property Name="ApplicantID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicantType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Zip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PermitID" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ContactPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Permit" Relationship="Self.FK_Permit_PermitApplicant" FromRole="PermitApplicant" ToRole="Permit" />
+        </EntityType>
+        <EntityType Name="PermitCostsDetail">
+          <Key>
+            <PropertyRef Name="PermitCostID" />
+          </Key>
+          <Property Name="PermitCostID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AffidavitID" Type="Int64" />
+          <Property Name="CostType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RepairItem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Rate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Cost" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="PermitFeeRate">
+          <Key>
+            <PropertyRef Name="PermitFeeID" />
+          </Key>
+          <Property Name="PermitFeeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Action_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NewEffectiveRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PermitHistory">
+          <Key>
+            <PropertyRef Name="PermitHistoryID" />
+          </Key>
+          <Property Name="PermitHistoryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PermitID" Type="Int64" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ActivityTime" Type="DateTime" Precision="3" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Permit" Relationship="Self.FK_PermitHistory_Permit" FromRole="PermitHistory" ToRole="Permit" />
+        </EntityType>
+        <EntityType Name="PermitPayment">
+          <Key>
+            <PropertyRef Name="PermitPaymentID" />
+          </Key>
+          <Property Name="PermitPaymentID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PermitID" Type="Int64" />
+          <Property Name="IssueDate" Type="DateTime" Precision="3" />
+          <Property Name="IssuedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ApprovalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CheckNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Permit" Relationship="Self.FK_PermitPayment_Permit" FromRole="PermitPayment" ToRole="Permit" />
+        </EntityType>
+        <EntityType Name="PermitStatus">
+          <Key>
+            <PropertyRef Name="PermitStatusID" />
+          </Key>
+          <Property Name="PermitStatusID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PermitStatusValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Permit" Relationship="Self.FK_Permit_PermitStatus" FromRole="PermitStatus" ToRole="Permit" />
+        </EntityType>
+        <EntityType Name="ASSESSOR">
+          <Key>
+            <PropertyRef Name="PROPERTY_ID" />
+            <PropertyRef Name="MARKET_VALUE_YEAR1" />
+            <PropertyRef Name="ASSESSED_VALUE_YEAR1" />
+            <PropertyRef Name="MARKET_VALUE_YEAR2" />
+            <PropertyRef Name="ASSESSED_VALUE_YEAR2" />
+            <PropertyRef Name="EXEMPTION_VALUE_YEAR1" />
+            <PropertyRef Name="EXEMPTION_VALUE_YEAR2" />
+            <PropertyRef Name="EXEMPTION_VALUE_YEAR3" />
+          </Key>
+          <Property Name="RNUM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="STATE_ID" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="NEW_STATE_ID" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="PROPERTY_ID" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="OWNER1" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="OWNER2" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="OWNER3" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="OWNER_ADDRESS" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="OWNER_CITY" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+          <Property Name="OWNER_STATE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="OWNER_ZIP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_ADDRESS_NUMBER" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_STREET_DIRECTION" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_STREET_NAME" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_STREET_TYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_UNIT_TYPE" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_UNIT_NUMBER" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_ADDRESS_FULL" Type="String" MaxLength="37" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_CITY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_STATE" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_ZIP" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="SITE_CITY_STATE_ZIP" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="INSTRUMENT_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MAP_NUMBER" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="LEGAL_DESCRIPTION" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="LOT" Type="String" MaxLength="23" FixedLength="false" Unicode="false" />
+          <Property Name="BLOCK" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="TAXCODE" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="PARCEL_SQUARE_FEET" Type="Int32" />
+          <Property Name="PARCEL_WIDTH_FOOTAGE" Type="Int32" />
+          <Property Name="PARCEL_LENGTH_FOOTAGE" Type="Int16" />
+          <Property Name="PROPERTY_CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="PROPERTY_CODE_DESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LANDUSE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="YEAR_BUILT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BLDGSQFT" Type="Int32" />
+          <Property Name="NUMBER_OF_BEDROOMS" Type="Int32" />
+          <Property Name="NUMBER_OF_STORIES" Type="Int32" />
+          <Property Name="NUMBER_OF_UNITS" Type="Int32" />
+          <Property Name="MARKET_VALUE_YEAR1" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MARKET_VALUE_LAND1" Type="Int32" />
+          <Property Name="MARKET_VALUE_IMPROVEMENTS1" Type="Int32" />
+          <Property Name="MARKET_VALUE_TOTAL1" Type="Int32" />
+          <Property Name="MARKET_EXEMPTION_VALUE1" Type="Int32" />
+          <Property Name="M50_ASSESSED_VALUE1" Type="Int32" />
+          <Property Name="ASSESSED_VALUE_YEAR1" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ASSESSED_VALUE1" Type="Int32" />
+          <Property Name="MARKET_VALUE_YEAR2" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MARKET_VALUE_LAND2" Type="Int32" />
+          <Property Name="MARKET_VALUE_IMPROVEMENTS2" Type="Int32" />
+          <Property Name="MARKET_VALUE_TOTAL2" Type="Int32" />
+          <Property Name="MARKET_EXEMPTION_VALUE2" Type="Int32" />
+          <Property Name="M50_ASSESSED_VALUE2" Type="Int32" />
+          <Property Name="ASSESSED_VALUE_YEAR2" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ASSESSED_VALUE2" Type="Int32" />
+          <Property Name="MARKET_VALUE_YEAR3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MARKET_VALUE_LAND3" Type="Int32" />
+          <Property Name="MARKET_VALUE_IMPROVEMENTS3" Type="Int32" />
+          <Property Name="MARKET_VALUE_TOTAL3" Type="Int32" />
+          <Property Name="MARKET_EXEMPTION_VALUE3" Type="Int32" />
+          <Property Name="M50_ASSESSED_VALUE3" Type="Int32" />
+          <Property Name="ASSESSED_VALUE_YEAR3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ASSESSED_VALUE3" Type="Int32" />
+          <Property Name="SALEDATE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SALEPRICE" Type="Int32" />
+          <Property Name="EXEMPTION_VALUE_YEAR1" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EXEMPTION_VALUE_LAND1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_IMPROVEMENTS1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_YEAR2" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EXEMPTION_VALUE_LAND2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_IMPROVEMENTS2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_YEAR3" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EXEMPTION_VALUE_LAND3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="EXEMPTION_VALUE_IMPROVEMENTS3" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="COUNTY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ACCOUNT_STATUS_CODE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="RATIO_CODE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="IS_CONDO" Type="Byte" />
+          <Property Name="PARENT_ID" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="IS_FAKE_PARENT" Type="Byte" />
+          <Property Name="SAME_OWNER_SITE_ADDR" Type="Int32" />
+          <Property Name="X_COORD" Type="Int32" />
+          <Property Name="Y_COORD" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sw_user">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="batchlistdays" Type="Int32" />
+        </EntityType>
+        <Association Name="FK_Permit_PermitApplicant">
+          <End Role="PermitApplicant" Type="Self.PermitApplicant" Multiplicity="0..1" />
+          <End Role="Permit" Type="Self.Permit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PermitApplicant">
+              <PropertyRef Name="ApplicantID" />
+            </Principal>
+            <Dependent Role="Permit">
+              <PropertyRef Name="ApplicantID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Permit_PermitStatus">
+          <End Role="PermitStatus" Type="Self.PermitStatus" Multiplicity="0..1" />
+          <End Role="Permit" Type="Self.Permit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PermitStatus">
+              <PropertyRef Name="PermitStatusID" />
+            </Principal>
+            <Dependent Role="Permit">
+              <PropertyRef Name="PermitStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PermitHistory_Permit">
+          <End Role="Permit" Type="Self.Permit" Multiplicity="0..1" />
+          <End Role="PermitHistory" Type="Self.PermitHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permit">
+              <PropertyRef Name="PermitID" />
+            </Principal>
+            <Dependent Role="PermitHistory">
+              <PropertyRef Name="PermitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PermitPayment_Permit">
+          <End Role="Permit" Type="Self.Permit" Multiplicity="0..1" />
+          <End Role="PermitPayment" Type="Self.PermitPayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permit">
+              <PropertyRef Name="PermitID" />
+            </Principal>
+            <Dependent Role="PermitPayment">
+              <PropertyRef Name="PermitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SWPostEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="dtproperties" EntityType="Self.dtproperties" />
+          <EntitySet Name="Permit" EntityType="Self.Permit" />
+          <EntitySet Name="PermitApplicant" EntityType="Self.PermitApplicant" />
+          <EntitySet Name="PermitCostsDetail" EntityType="Self.PermitCostsDetail" />
+          <EntitySet Name="PermitFeeRate" EntityType="Self.PermitFeeRate" />
+          <EntitySet Name="PermitHistory" EntityType="Self.PermitHistory" />
+          <EntitySet Name="PermitPayment" EntityType="Self.PermitPayment" />
+          <EntitySet Name="PermitStatus" EntityType="Self.PermitStatus" />
+          <EntitySet Name="ASSESSOR" EntityType="Self.ASSESSOR" />
+          <EntitySet Name="sw_user" EntityType="Self.sw_user" />
+          <AssociationSet Name="FK_Permit_PermitApplicant" Association="Self.FK_Permit_PermitApplicant">
+            <End Role="PermitApplicant" EntitySet="PermitApplicant" />
+            <End Role="Permit" EntitySet="Permit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Permit_PermitStatus" Association="Self.FK_Permit_PermitStatus">
+            <End Role="PermitStatus" EntitySet="PermitStatus" />
+            <End Role="Permit" EntitySet="Permit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PermitHistory_Permit" Association="Self.FK_PermitHistory_Permit">
+            <End Role="Permit" EntitySet="Permit" />
+            <End Role="PermitHistory" EntitySet="PermitHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PermitPayment_Permit" Association="Self.FK_PermitPayment_Permit">
+            <End Role="Permit" EntitySet="Permit" />
+            <End Role="PermitPayment" EntitySet="PermitPayment" />
+          </AssociationSet>
+          <FunctionImport Name="ufnGetPostCostDetail" IsComposable="true" ReturnType="Collection(SWPostModel.ufnGetPostCostDetail_Result)">
+          <Parameter Name="fy" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ufnGetPostCostSummary" IsComposable="true" ReturnType="Collection(SWPostModel.ufnGetPostCostSummary_Result)">
+          <Parameter Name="fynum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dt_addtosourcecontrol">
+            <Parameter Name="vchSourceSafeINI" Mode="In" Type="String" />
+            <Parameter Name="vchProjectName" Mode="In" Type="String" />
+            <Parameter Name="vchComment" Mode="In" Type="String" />
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_addtosourcecontrol_u">
+            <Parameter Name="vchSourceSafeINI" Mode="In" Type="String" />
+            <Parameter Name="vchProjectName" Mode="In" Type="String" />
+            <Parameter Name="vchComment" Mode="In" Type="String" />
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_adduserobject" />
+          <FunctionImport Name="dt_adduserobject_vcs">
+          <Parameter Name="vchProperty" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_checkinobject">
+            <Parameter Name="chObjectType" Mode="In" Type="String" />
+            <Parameter Name="vchObjectName" Mode="In" Type="String" />
+            <Parameter Name="vchComment" Mode="In" Type="String" />
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+            <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+            <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+            <Parameter Name="txStream1" Mode="In" Type="String" />
+            <Parameter Name="txStream2" Mode="In" Type="String" />
+            <Parameter Name="txStream3" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_checkinobject_u">
+            <Parameter Name="chObjectType" Mode="In" Type="String" />
+            <Parameter Name="vchObjectName" Mode="In" Type="String" />
+            <Parameter Name="vchComment" Mode="In" Type="String" />
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+            <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+            <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+            <Parameter Name="txStream1" Mode="In" Type="String" />
+            <Parameter Name="txStream2" Mode="In" Type="String" />
+            <Parameter Name="txStream3" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_checkoutobject">
+            <Parameter Name="chObjectType" Mode="In" Type="String" />
+            <Parameter Name="vchObjectName" Mode="In" Type="String" />
+            <Parameter Name="vchComment" Mode="In" Type="String" />
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+            <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+            <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dt_checkoutobject_u">
+            <Parameter Name="chObjectType" Mode="In" Type="String" />
+            <Parameter Name="vchObjectName" Mode="In" Type="String" />
+            <Parameter Name="vchComment" Mode="In" Type="String" />
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+            <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+            <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dt_displayoaerror">
+            <Parameter Name="iObject" Mode="In" Type="Int32" />
+            <Parameter Name="iresult" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dt_displayoaerror_u">
+            <Parameter Name="iObject" Mode="In" Type="Int32" />
+            <Parameter Name="iresult" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dt_droppropertiesbyid">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="property" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_dropuserobjectbyid">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dt_generateansiname">
+          <Parameter Name="name" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_getobjwithprop" ReturnType="Collection(Int32)">
+            <Parameter Name="property" Mode="In" Type="String" />
+            <Parameter Name="value" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_getobjwithprop_u" ReturnType="Collection(Int32)">
+            <Parameter Name="property" Mode="In" Type="String" />
+            <Parameter Name="uvalue" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_getpropertiesbyid" ReturnType="Collection(SWPostModel.dt_getpropertiesbyid_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="property" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_getpropertiesbyid_u" ReturnType="Collection(SWPostModel.dt_getpropertiesbyid_u_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="property" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_getpropertiesbyid_vcs">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="property" Mode="In" Type="String" />
+            <Parameter Name="value" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_getpropertiesbyid_vcs_u">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="property" Mode="In" Type="String" />
+            <Parameter Name="value" Mode="InOut" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_isundersourcecontrol">
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+            <Parameter Name="iWhoToo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dt_isundersourcecontrol_u">
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+            <Parameter Name="iWhoToo" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="dt_removefromsourcecontrol" />
+          <FunctionImport Name="dt_setpropertybyid">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="property" Mode="In" Type="String" />
+            <Parameter Name="value" Mode="In" Type="String" />
+            <Parameter Name="lvalue" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="dt_setpropertybyid_u">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="property" Mode="In" Type="String" />
+            <Parameter Name="uvalue" Mode="In" Type="String" />
+            <Parameter Name="lvalue" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="dt_validateloginparams">
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_validateloginparams_u">
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_vcsenabled" />
+          <FunctionImport Name="dt_verstamp006" ReturnType="Collection(Int32)" />
+          <FunctionImport Name="dt_whocheckedout">
+            <Parameter Name="chObjectType" Mode="In" Type="String" />
+            <Parameter Name="vchObjectName" Mode="In" Type="String" />
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="dt_whocheckedout_u">
+            <Parameter Name="chObjectType" Mode="In" Type="String" />
+            <Parameter Name="vchObjectName" Mode="In" Type="String" />
+            <Parameter Name="vchLoginName" Mode="In" Type="String" />
+            <Parameter Name="vchPassword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getAffidavitByKeyword" ReturnType="Collection(SWPostModel.getAffidavitByKeyword_Result)">
+          <Parameter Name="keyword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getAffidavitByProperty" ReturnType="Collection(SWPostModel.getAffidavitByProperty_Result)">
+          <Parameter Name="keyword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getAffidavitCostDetails" ReturnType="Collection(SWPostModel.getAffidavitCostDetails_Result)">
+            <Parameter Name="affidavitId" Mode="In" Type="String" />
+            <Parameter Name="costTypeKey" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getAffidavitDetails" ReturnType="Collection(SWPostModel.getAffidavitDetails_Result)">
+          <Parameter Name="affidavitId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getAffidavitList" ReturnType="Collection(SWPostModel.getAffidavitList_Result)" />
+          <FunctionImport Name="getContractorByKeyword" ReturnType="Collection(SWPostModel.getContractorByKeyword_Result)">
+          <Parameter Name="keyword" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getContractorDetailsByCCBNumber" ReturnType="Collection(SWPostModel.getContractorDetailsByCCBNumber_Result)">
+          <Parameter Name="ccbNumber" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getContractorDetailsByName" ReturnType="Collection(SWPostModel.getContractorDetailsByName_Result)">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_PermitReciept" ReturnType="Collection(SWPostModel.SP_PermitReciept_Result)">
+            <Parameter Name="PermitID" Mode="In" Type="String" />
+            <Parameter Name="AffidavitID" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_AfterInsertPermit">
+          <Parameter Name="PermitId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="SP_AfterUpdatePermit">
+            <Parameter Name="PermitId" Mode="In" Type="Int64" />
+            <Parameter Name="ApplicantId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <EntitySet Name="ErrorLog" EntityType="SWPostModel.ErrorLog" />
+          <EntitySet Name="CCB_DAILY_LICENSES" EntityType="SWPostModel.CCB_DAILY_LICENSES" />
+          <EntitySet Name="Contractor_Alias" EntityType="SWPostModel.Contractor_Alias" />
+          <EntitySet Name="PermitFee" EntityType="SWPostModel.PermitFee" />
+          <FunctionImport Name="getAffidavitByParameter" ReturnType="Collection(SWPostModel.getAffidavitByParameter_Result)">
+            <Parameter Name="affidavitId" Mode="In" Type="String" />
+            <Parameter Name="propertyId" Mode="In" Type="String" />
+            <Parameter Name="inspectionDate" Mode="In" Type="String" />
+            <Parameter Name="postingDate" Mode="In" Type="String" />
+            <Parameter Name="trackId" Mode="In" Type="String" />
+            <Parameter Name="inspectorName" Mode="In" Type="String" />
+            <Parameter Name="propertoyAddress" Mode="In" Type="String" />
+            <Parameter Name="previouslyPrinted" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="dt_getpropertiesbyid_Result">
+          <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
+          <Property Type="Int32" Name="version" Nullable="false" />
+          <Property Type="String" Name="value" Nullable="true" MaxLength="255" />
+          <Property Type="Binary" Name="lvalue" Nullable="true" MaxLength="Max" />
+        </ComplexType>
+        <ComplexType Name="dt_getpropertiesbyid_u_Result">
+          <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
+          <Property Type="Int32" Name="version" Nullable="false" />
+          <Property Type="String" Name="uvalue" Nullable="true" MaxLength="255" />
+          <Property Type="Binary" Name="lvalue" Nullable="true" MaxLength="Max" />
+        </ComplexType>
+        <ComplexType Name="getAffidavitByKeyword_Result">
+          <Property Type="Int32" Name="aff_no" Nullable="true" />
+          <Property Type="String" Name="qtr_sec" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="map_id" Nullable="true" MaxLength="24" />
+          <Property Type="DateTime" Name="post_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="acct_period" Nullable="true" />
+          <Property Type="String" Name="property_id" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_id2" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_desc" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="aff_status" Nullable="true" />
+          <Property Type="String" Name="owner_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn1" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn2" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="st_no" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="district" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="st_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="designator" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="inspector_no" Nullable="true" />
+          <Property Type="String" Name="city_owned_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="owner_resident_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="service_req_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_city" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_owner" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="partial_repair" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_lot_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_desc" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="repair_dt" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="billed_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="bill_flag" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="hold_until_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="permit_no" Nullable="true" />
+          <Property Type="String" Name="permit_issued" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="permit_extended" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_issued" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_expired" Nullable="true" Precision="23" />
+          <Property Type="String" Name="contractor" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="builder_board_no" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="license_no" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="date_cancelled" Nullable="true" Precision="23" />
+          <Property Type="String" Name="cancelled_by" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="last_action" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_added" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_updated" Nullable="true" Precision="23" />
+          <Property Type="String" Name="notes" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="sent_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NEW_AFF" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="NEW_RepairDueDate" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="NEW_ClearWalk" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="getAffidavitByProperty_Result">
+          <Property Type="Int32" Name="aff_no" Nullable="true" />
+          <Property Type="String" Name="qtr_sec" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="map_id" Nullable="true" MaxLength="24" />
+          <Property Type="DateTime" Name="post_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="acct_period" Nullable="true" />
+          <Property Type="String" Name="property_id" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_id2" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_desc" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="aff_status" Nullable="true" />
+          <Property Type="String" Name="owner_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn1" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn2" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="st_no" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="district" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="st_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="designator" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="inspector_no" Nullable="true" />
+          <Property Type="String" Name="city_owned_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="owner_resident_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="service_req_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_city" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_owner" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="partial_repair" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_lot_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_desc" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="repair_dt" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="billed_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="bill_flag" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="hold_until_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="permit_no" Nullable="true" />
+          <Property Type="String" Name="permit_issued" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="permit_extended" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_issued" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_expired" Nullable="true" Precision="23" />
+          <Property Type="String" Name="contractor" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="builder_board_no" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="license_no" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="date_cancelled" Nullable="true" Precision="23" />
+          <Property Type="String" Name="cancelled_by" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="last_action" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_added" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_updated" Nullable="true" Precision="23" />
+          <Property Type="String" Name="notes" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="sent_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NEW_AFF" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="NEW_RepairDueDate" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="NEW_ClearWalk" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="getAffidavitCostDetails_Result">
+          <Property Type="Int32" Name="aff_no" Nullable="true" />
+          <Property Type="String" Name="action" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="action_type" Nullable="true" MaxLength="20" />
+          <Property Type="Double" Name="unit" Nullable="true" />
+          <Property Type="Decimal" Name="cost" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="getAffidavitDetails_Result">
+          <Property Type="Int32" Name="aff_no" Nullable="true" />
+          <Property Type="String" Name="qtr_sec" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="map_id" Nullable="true" MaxLength="24" />
+          <Property Type="DateTime" Name="post_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="acct_period" Nullable="true" />
+          <Property Type="String" Name="property_id" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_id2" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_desc" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="aff_status" Nullable="true" />
+          <Property Type="String" Name="owner_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn1" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn2" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="st_no" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="district" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="st_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="designator" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="inspector_no" Nullable="true" />
+          <Property Type="String" Name="city_owned_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="owner_resident_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="service_req_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_city" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_owner" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="partial_repair" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_lot_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_desc" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="repair_dt" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="billed_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="bill_flag" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="hold_until_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="permit_no" Nullable="true" />
+          <Property Type="String" Name="permit_issued" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="permit_extended" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_issued" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_expired" Nullable="true" Precision="23" />
+          <Property Type="String" Name="contractor" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="builder_board_no" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="license_no" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="date_cancelled" Nullable="true" Precision="23" />
+          <Property Type="String" Name="cancelled_by" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="last_action" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_added" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_updated" Nullable="true" Precision="23" />
+          <Property Type="String" Name="notes" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="sent_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NEW_AFF" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="NEW_RepairDueDate" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="NEW_ClearWalk" Nullable="true" />
+          <Property Type="Int32" Name="inspector_no1" Nullable="true" />
+          <Property Type="String" Name="lname" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="fname" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="inspector_name" Nullable="true" MaxLength="36" />
+          <Property Type="Byte" Name="active" Nullable="true" />
+          <Property Type="String" Name="network_username" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="phone" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="getAffidavitList_Result">
+          <Property Type="Int32" Name="aff_no" Nullable="true" />
+          <Property Type="String" Name="qtr_sec" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="map_id" Nullable="true" MaxLength="24" />
+          <Property Type="DateTime" Name="post_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="acct_period" Nullable="true" />
+          <Property Type="String" Name="property_id" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_id2" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_desc" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="aff_status" Nullable="true" />
+          <Property Type="String" Name="owner_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn1" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn2" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="st_no" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="district" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="st_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="designator" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="inspector_no" Nullable="true" />
+          <Property Type="String" Name="city_owned_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="owner_resident_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="service_req_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_city" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_owner" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="partial_repair" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_lot_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_desc" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="repair_dt" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="billed_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="bill_flag" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="hold_until_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="permit_no" Nullable="true" />
+          <Property Type="String" Name="permit_issued" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="permit_extended" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_issued" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_expired" Nullable="true" Precision="23" />
+          <Property Type="String" Name="contractor" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="builder_board_no" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="license_no" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="date_cancelled" Nullable="true" Precision="23" />
+          <Property Type="String" Name="cancelled_by" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="last_action" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_added" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_updated" Nullable="true" Precision="23" />
+          <Property Type="String" Name="notes" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="sent_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NEW_AFF" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="NEW_RepairDueDate" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="NEW_ClearWalk" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="getContractorByKeyword_Result">
+          <Property Type="Int64" Name="license_number" Nullable="false" />
+          <Property Type="String" Name="business_name" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="address" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="state" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="15" />
+          <Property Type="Int64" Name="business_telephone" Nullable="true" />
+          <Property Type="String" Name="rmi_name" Nullable="true" MaxLength="55" />
+        </ComplexType>
+        <ComplexType Name="getContractorDetailsByCCBNumber_Result">
+          <Property Type="Int64" Name="license_number" Nullable="false" />
+          <Property Type="String" Name="business_name" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="address" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="state" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="15" />
+          <Property Type="Int64" Name="business_telephone" Nullable="true" />
+          <Property Type="String" Name="rmi_name" Nullable="true" MaxLength="55" />
+        </ComplexType>
+        <ComplexType Name="getContractorDetailsByName_Result">
+          <Property Type="String" Name="contractor_id" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="contact" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="address" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="state" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="phone" Nullable="true" />
+          <Property Type="String" Name="license_no" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="mbe_status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="wbe_status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="esb_status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="active_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="phone1" Nullable="true" MaxLength="16" />
+          <Property Type="Byte" Name="mbe" Nullable="true" />
+          <Property Type="Byte" Name="wbe" Nullable="true" />
+          <Property Type="Byte" Name="esb" Nullable="true" />
+          <Property Type="Byte" Name="active" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_PermitReciept_Result">
+          <Property Type="Decimal" Name="Unit" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int64" Name="PermitID" Nullable="false" />
+          <Property Type="String" Name="PermitNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PermitIssued" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PermitExtended" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DateIssued" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DateExpired" Nullable="true" Precision="23" />
+          <Property Type="String" Name="BuilderBoardNo" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DateCancelled" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CancelledBy" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LastAction" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApplicantType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ContractorID" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="AffidavitID" Nullable="true" />
+          <Property Type="Decimal" Name="TotalFee" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Int64" Name="PermitStatus" Nullable="true" />
+          <Property Type="Int64" Name="ApplicantID" Nullable="true" />
+          <Property Type="DateTime" Name="SubmissionDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="PropertyAddress" Nullable="true" />
+          <Property Type="DateTime" Name="DateExpiredNew" Nullable="true" Precision="23" />
+          <Property Type="String" Name="IssuedBy" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DatePermitExtended" Nullable="true" Precision="23" />
+          <Property Type="String" Name="qtr_sec" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="map_id" Nullable="true" MaxLength="24" />
+          <Property Type="DateTime" Name="post_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="acct_period" Nullable="true" />
+          <Property Type="String" Name="property_id" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_id2" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_desc" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="aff_status" Nullable="true" />
+          <Property Type="String" Name="owner_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn1" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn2" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="st_no" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="district" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="st_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="designator" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="inspector_no" Nullable="true" />
+          <Property Type="String" Name="city_owned_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="owner_resident_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="service_req_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_city" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_owner" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="partial_repair" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_lot_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_desc" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="repair_dt" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="billed_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="bill_flag" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="hold_until_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="permit_no" Nullable="true" />
+          <Property Type="String" Name="permit_issued" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="permit_extended" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_issued" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_expired" Nullable="true" Precision="23" />
+          <Property Type="String" Name="contractor" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="builder_board_no" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="license_no" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="date_cancelled" Nullable="true" Precision="23" />
+          <Property Type="String" Name="cancelled_by" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="last_action" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_added" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_updated" Nullable="true" Precision="23" />
+          <Property Type="String" Name="notes" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="sent_dt" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="PermitStatusID" Nullable="false" />
+          <Property Type="String" Name="PermitStatusValue" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApplicantZip" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Contact" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="State" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="City1" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="PermitPaymentID" Nullable="false" />
+          <Property Type="DateTime" Name="IssueDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="PaymentMethod" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ApprovalCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CheckNumber" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="AffidavitID1" Nullable="true" />
+          <Property Type="String" Name="CostType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="RepairItem" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Cost" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="Guid" Nullable="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="StackTrace" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="CCB_DAILY_LICENSES">
+          <Key>
+            <PropertyRef Name="CCB_Id" />
+          </Key>
+          <Property Name="CCB_Id" Type="Guid" Nullable="false" />
+          <Property Name="license_number" Type="Int64" Nullable="false" />
+          <Property Name="registration_type" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="county_code" Type="Int32" />
+          <Property Name="business_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="zip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="business_telephone" Type="Int64" />
+          <Property Name="fax_number" Type="Int64" />
+          <Property Name="S_11" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="S_12" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="S_13" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ins_co_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ins_amount" Type="Int64" />
+          <Property Name="ins_due_to_exp" Type="DateTime" Precision="0" />
+          <Property Name="claims_filed" Type="Int32" />
+          <Property Name="exempt_nonexempt_status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="sic_codes" Type="String" MaxLength="175" FixedLength="false" Unicode="true" />
+          <Property Name="endorsements" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="r_bond_co_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="r_bond_amount" Type="Int64" />
+          <Property Name="r_bond_due_to_exp" Type="DateTime" Precision="0" />
+          <Property Name="c_bond_co_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="c_bond_amount" Type="Int64" />
+          <Property Name="c_bond_due_to_exp" Type="DateTime" Precision="0" />
+          <Property Name="rmi_name" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+          <Property Name="lic_exp_date" Type="DateTime" Precision="0" />
+          <Property Name="S_29" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="alias_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contractor_Alias">
+          <Key>
+            <PropertyRef Name="Contractor_Alias_Id" />
+          </Key>
+          <Property Name="Contractor_Alias_Id" Type="Guid" Nullable="false" />
+          <Property Name="CCB_No" Type="Int64" Nullable="false" />
+          <Property Name="Business_Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Alias" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="PermitFee">
+          <Key>
+            <PropertyRef Name="PermitFeeId" />
+          </Key>
+          <Property Name="PermitFeeId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MinimumFee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="MaximumFee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="NewEffectiveDate" Type="DateTime" Precision="0" />
+          <Property Name="NewMinimumFee" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="NewMaximumFee" Type="Decimal" Precision="10" Scale="4" />
+        </EntityType>
+        <ComplexType Name="getAffidavitByParameter_Result">
+          <Property Type="Int32" Name="aff_no" Nullable="true" />
+          <Property Type="String" Name="qtr_sec" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="map_id" Nullable="true" MaxLength="24" />
+          <Property Type="DateTime" Name="post_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="acct_period" Nullable="true" />
+          <Property Type="String" Name="property_id" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_id2" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="property_desc" Nullable="true" MaxLength="255" />
+          <Property Type="Int32" Name="aff_status" Nullable="true" />
+          <Property Type="String" Name="owner_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn1" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="attn2" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="st_no" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="district" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="st_name" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="designator" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="city" Nullable="true" MaxLength="24" />
+          <Property Type="String" Name="zip" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="inspector_no" Nullable="true" />
+          <Property Type="String" Name="city_owned_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="owner_resident_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="service_req_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_city" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="rep_by_owner" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="partial_repair" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_lot_flag" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="vacant_desc" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="repair_dt" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="billed_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="bill_flag" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="hold_until_dt" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="permit_no" Nullable="true" />
+          <Property Type="String" Name="permit_issued" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="permit_extended" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_issued" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_expired" Nullable="true" Precision="23" />
+          <Property Type="String" Name="contractor" Nullable="true" MaxLength="40" />
+          <Property Type="String" Name="builder_board_no" Nullable="true" MaxLength="6" />
+          <Property Type="String" Name="license_no" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="date_cancelled" Nullable="true" Precision="23" />
+          <Property Type="String" Name="cancelled_by" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="last_action" Nullable="true" MaxLength="1" />
+          <Property Type="DateTime" Name="date_added" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="date_updated" Nullable="true" Precision="23" />
+          <Property Type="String" Name="notes" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="sent_dt" Nullable="true" Precision="23" />
+          <Property Type="String" Name="NEW_AFF" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="NEW_RepairDueDate" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="NEW_ClearWalk" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SWPostModelStoreContainer" CdmEntityContainer="SWPostEntities">
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.dtproperties)">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permit">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.Permit)">
+        <MappingFragment StoreEntitySet="Permit">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="PermitID" ColumnName="PermitID" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="PermitIssued" ColumnName="PermitIssued" />
+          <ScalarProperty Name="PermitExtended" ColumnName="PermitExtended" />
+          <ScalarProperty Name="DateIssued" ColumnName="DateIssued" />
+          <ScalarProperty Name="DateExpired" ColumnName="DateExpired" />
+          <ScalarProperty Name="BuilderBoardNo" ColumnName="BuilderBoardNo" />
+          <ScalarProperty Name="DateCancelled" ColumnName="DateCancelled" />
+          <ScalarProperty Name="CancelledBy" ColumnName="CancelledBy" />
+          <ScalarProperty Name="LastAction" ColumnName="LastAction" />
+          <ScalarProperty Name="ApplicantType" ColumnName="ApplicantType" />
+          <ScalarProperty Name="ContractorID" ColumnName="ContractorID" />
+          <ScalarProperty Name="AffidavitID" ColumnName="AffidavitID" />
+          <ScalarProperty Name="TotalFee" ColumnName="TotalFee" />
+          <ScalarProperty Name="PermitStatus" ColumnName="PermitStatus" />
+          <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <ScalarProperty Name="SubmissionDate" ColumnName="SubmissionDate" />
+          <ScalarProperty Name="PropertyAddress" ColumnName="PropertyAddress" />
+          <ScalarProperty Name="DateExpiredNew" ColumnName="DateExpiredNew" />
+          <ScalarProperty Name="IssuedBy" ColumnName="IssuedBy" />
+          <ScalarProperty Name="DatePermitExtended" ColumnName="DatePermitExtended" />
+          <ScalarProperty Name="NEW_AFF" ColumnName="NEW_AFF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitApplicant">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.PermitApplicant)">
+        <MappingFragment StoreEntitySet="PermitApplicant">
+          <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+          <ScalarProperty Name="ApplicantType" ColumnName="ApplicantType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PermitID" ColumnName="PermitID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ContactPhoneNumber" ColumnName="ContactPhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitCostsDetail">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.PermitCostsDetail)">
+        <MappingFragment StoreEntitySet="PermitCostsDetail">
+          <ScalarProperty Name="PermitCostID" ColumnName="PermitCostID" />
+          <ScalarProperty Name="AffidavitID" ColumnName="AffidavitID" />
+          <ScalarProperty Name="CostType" ColumnName="CostType" />
+          <ScalarProperty Name="RepairItem" ColumnName="RepairItem" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitFeeRate">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.PermitFeeRate)">
+        <MappingFragment StoreEntitySet="PermitFeeRate">
+          <ScalarProperty Name="PermitFeeID" ColumnName="PermitFeeID" />
+          <ScalarProperty Name="Action_Type" ColumnName="Action_Type" />
+          <ScalarProperty Name="CurrentRate" ColumnName="CurrentRate" />
+          <ScalarProperty Name="NewEffectiveRate" ColumnName="NewEffectiveRate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitHistory">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.PermitHistory)">
+        <MappingFragment StoreEntitySet="PermitHistory">
+          <ScalarProperty Name="PermitHistoryID" ColumnName="PermitHistoryID" />
+          <ScalarProperty Name="PermitID" ColumnName="PermitID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ActivityTime" ColumnName="ActivityTime" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitPayment">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.PermitPayment)">
+        <MappingFragment StoreEntitySet="PermitPayment">
+          <ScalarProperty Name="PermitPaymentID" ColumnName="PermitPaymentID" />
+          <ScalarProperty Name="PermitID" ColumnName="PermitID" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="IssuedBy" ColumnName="IssuedBy" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="ApprovalCode" ColumnName="ApprovalCode" />
+          <ScalarProperty Name="CheckNumber" ColumnName="CheckNumber" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitStatus">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.PermitStatus)">
+        <MappingFragment StoreEntitySet="PermitStatus">
+          <ScalarProperty Name="PermitStatusID" ColumnName="PermitStatusID" />
+          <ScalarProperty Name="PermitStatusValue" ColumnName="PermitStatusValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASSESSOR">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.ASSESSOR)">
+        <MappingFragment StoreEntitySet="ASSESSOR">
+          <ScalarProperty Name="PROPERTY_ID" ColumnName="PROPERTY_ID" />
+          <ScalarProperty Name="MARKET_VALUE_YEAR1" ColumnName="MARKET_VALUE_YEAR1" />
+          <ScalarProperty Name="ASSESSED_VALUE_YEAR1" ColumnName="ASSESSED_VALUE_YEAR1" />
+          <ScalarProperty Name="MARKET_VALUE_YEAR2" ColumnName="MARKET_VALUE_YEAR2" />
+          <ScalarProperty Name="ASSESSED_VALUE_YEAR2" ColumnName="ASSESSED_VALUE_YEAR2" />
+          <ScalarProperty Name="EXEMPTION_VALUE_YEAR1" ColumnName="EXEMPTION_VALUE_YEAR1" />
+          <ScalarProperty Name="EXEMPTION_VALUE_YEAR2" ColumnName="EXEMPTION_VALUE_YEAR2" />
+          <ScalarProperty Name="EXEMPTION_VALUE_YEAR3" ColumnName="EXEMPTION_VALUE_YEAR3" />
+          <ScalarProperty Name="RNUM" ColumnName="RNUM" />
+          <ScalarProperty Name="STATE_ID" ColumnName="STATE_ID" />
+          <ScalarProperty Name="NEW_STATE_ID" ColumnName="NEW_STATE_ID" />
+          <ScalarProperty Name="OWNER1" ColumnName="OWNER1" />
+          <ScalarProperty Name="OWNER2" ColumnName="OWNER2" />
+          <ScalarProperty Name="OWNER3" ColumnName="OWNER3" />
+          <ScalarProperty Name="OWNER_ADDRESS" ColumnName="OWNER_ADDRESS" />
+          <ScalarProperty Name="OWNER_CITY" ColumnName="OWNER_CITY" />
+          <ScalarProperty Name="OWNER_STATE" ColumnName="OWNER_STATE" />
+          <ScalarProperty Name="OWNER_ZIP" ColumnName="OWNER_ZIP" />
+          <ScalarProperty Name="SITE_ADDRESS_NUMBER" ColumnName="SITE_ADDRESS_NUMBER" />
+          <ScalarProperty Name="SITE_STREET_DIRECTION" ColumnName="SITE_STREET_DIRECTION" />
+          <ScalarProperty Name="SITE_STREET_NAME" ColumnName="SITE_STREET_NAME" />
+          <ScalarProperty Name="SITE_STREET_TYPE" ColumnName="SITE_STREET_TYPE" />
+          <ScalarProperty Name="SITE_UNIT_TYPE" ColumnName="SITE_UNIT_TYPE" />
+          <ScalarProperty Name="SITE_UNIT_NUMBER" ColumnName="SITE_UNIT_NUMBER" />
+          <ScalarProperty Name="SITE_ADDRESS_FULL" ColumnName="SITE_ADDRESS_FULL" />
+          <ScalarProperty Name="SITE_CITY" ColumnName="SITE_CITY" />
+          <ScalarProperty Name="SITE_STATE" ColumnName="SITE_STATE" />
+          <ScalarProperty Name="SITE_ZIP" ColumnName="SITE_ZIP" />
+          <ScalarProperty Name="SITE_CITY_STATE_ZIP" ColumnName="SITE_CITY_STATE_ZIP" />
+          <ScalarProperty Name="INSTRUMENT_NUMBER" ColumnName="INSTRUMENT_NUMBER" />
+          <ScalarProperty Name="MAP_NUMBER" ColumnName="MAP_NUMBER" />
+          <ScalarProperty Name="LEGAL_DESCRIPTION" ColumnName="LEGAL_DESCRIPTION" />
+          <ScalarProperty Name="LOT" ColumnName="LOT" />
+          <ScalarProperty Name="BLOCK" ColumnName="BLOCK" />
+          <ScalarProperty Name="TAXCODE" ColumnName="TAXCODE" />
+          <ScalarProperty Name="PARCEL_SQUARE_FEET" ColumnName="PARCEL_SQUARE_FEET" />
+          <ScalarProperty Name="PARCEL_WIDTH_FOOTAGE" ColumnName="PARCEL_WIDTH_FOOTAGE" />
+          <ScalarProperty Name="PARCEL_LENGTH_FOOTAGE" ColumnName="PARCEL_LENGTH_FOOTAGE" />
+          <ScalarProperty Name="PROPERTY_CODE" ColumnName="PROPERTY_CODE" />
+          <ScalarProperty Name="PROPERTY_CODE_DESC" ColumnName="PROPERTY_CODE_DESC" />
+          <ScalarProperty Name="LANDUSE" ColumnName="LANDUSE" />
+          <ScalarProperty Name="YEAR_BUILT" ColumnName="YEAR_BUILT" />
+          <ScalarProperty Name="BLDGSQFT" ColumnName="BLDGSQFT" />
+          <ScalarProperty Name="NUMBER_OF_BEDROOMS" ColumnName="NUMBER_OF_BEDROOMS" />
+          <ScalarProperty Name="NUMBER_OF_STORIES" ColumnName="NUMBER_OF_STORIES" />
+          <ScalarProperty Name="NUMBER_OF_UNITS" ColumnName="NUMBER_OF_UNITS" />
+          <ScalarProperty Name="MARKET_VALUE_LAND1" ColumnName="MARKET_VALUE_LAND1" />
+          <ScalarProperty Name="MARKET_VALUE_IMPROVEMENTS1" ColumnName="MARKET_VALUE_IMPROVEMENTS1" />
+          <ScalarProperty Name="MARKET_VALUE_TOTAL1" ColumnName="MARKET_VALUE_TOTAL1" />
+          <ScalarProperty Name="MARKET_EXEMPTION_VALUE1" ColumnName="MARKET_EXEMPTION_VALUE1" />
+          <ScalarProperty Name="M50_ASSESSED_VALUE1" ColumnName="M50_ASSESSED_VALUE1" />
+          <ScalarProperty Name="ASSESSED_VALUE1" ColumnName="ASSESSED_VALUE1" />
+          <ScalarProperty Name="MARKET_VALUE_LAND2" ColumnName="MARKET_VALUE_LAND2" />
+          <ScalarProperty Name="MARKET_VALUE_IMPROVEMENTS2" ColumnName="MARKET_VALUE_IMPROVEMENTS2" />
+          <ScalarProperty Name="MARKET_VALUE_TOTAL2" ColumnName="MARKET_VALUE_TOTAL2" />
+          <ScalarProperty Name="MARKET_EXEMPTION_VALUE2" ColumnName="MARKET_EXEMPTION_VALUE2" />
+          <ScalarProperty Name="M50_ASSESSED_VALUE2" ColumnName="M50_ASSESSED_VALUE2" />
+          <ScalarProperty Name="ASSESSED_VALUE2" ColumnName="ASSESSED_VALUE2" />
+          <ScalarProperty Name="MARKET_VALUE_YEAR3" ColumnName="MARKET_VALUE_YEAR3" />
+          <ScalarProperty Name="MARKET_VALUE_LAND3" ColumnName="MARKET_VALUE_LAND3" />
+          <ScalarProperty Name="MARKET_VALUE_IMPROVEMENTS3" ColumnName="MARKET_VALUE_IMPROVEMENTS3" />
+          <ScalarProperty Name="MARKET_VALUE_TOTAL3" ColumnName="MARKET_VALUE_TOTAL3" />
+          <ScalarProperty Name="MARKET_EXEMPTION_VALUE3" ColumnName="MARKET_EXEMPTION_VALUE3" />
+          <ScalarProperty Name="M50_ASSESSED_VALUE3" ColumnName="M50_ASSESSED_VALUE3" />
+          <ScalarProperty Name="ASSESSED_VALUE_YEAR3" ColumnName="ASSESSED_VALUE_YEAR3" />
+          <ScalarProperty Name="ASSESSED_VALUE3" ColumnName="ASSESSED_VALUE3" />
+          <ScalarProperty Name="SALEDATE" ColumnName="SALEDATE" />
+          <ScalarProperty Name="SALEPRICE" ColumnName="SALEPRICE" />
+          <ScalarProperty Name="EXEMPTION_VALUE_LAND1" ColumnName="EXEMPTION_VALUE_LAND1" />
+          <ScalarProperty Name="EXEMPTION_VALUE_IMPROVEMENTS1" ColumnName="EXEMPTION_VALUE_IMPROVEMENTS1" />
+          <ScalarProperty Name="EXEMPTION_VALUE_LAND2" ColumnName="EXEMPTION_VALUE_LAND2" />
+          <ScalarProperty Name="EXEMPTION_VALUE_IMPROVEMENTS2" ColumnName="EXEMPTION_VALUE_IMPROVEMENTS2" />
+          <ScalarProperty Name="EXEMPTION_VALUE_LAND3" ColumnName="EXEMPTION_VALUE_LAND3" />
+          <ScalarProperty Name="EXEMPTION_VALUE_IMPROVEMENTS3" ColumnName="EXEMPTION_VALUE_IMPROVEMENTS3" />
+          <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+          <ScalarProperty Name="ACCOUNT_STATUS_CODE" ColumnName="ACCOUNT_STATUS_CODE" />
+          <ScalarProperty Name="RATIO_CODE" ColumnName="RATIO_CODE" />
+          <ScalarProperty Name="IS_CONDO" ColumnName="IS_CONDO" />
+          <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
+          <ScalarProperty Name="IS_FAKE_PARENT" ColumnName="IS_FAKE_PARENT" />
+          <ScalarProperty Name="SAME_OWNER_SITE_ADDR" ColumnName="SAME_OWNER_SITE_ADDR" />
+          <ScalarProperty Name="X_COORD" ColumnName="X_COORD" />
+          <ScalarProperty Name="Y_COORD" ColumnName="Y_COORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sw_user">
+      <EntityTypeMapping TypeName="IsTypeOf(SWPostModel.sw_user)">
+        <MappingFragment StoreEntitySet="sw_user">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="batchlistdays" ColumnName="batchlistdays" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_AfterInsertPermit" FunctionName="SWPostModel.Store.SP_AfterInsertPermit" />
+          <FunctionImportMapping FunctionImportName="SP_AfterUpdatePermit" FunctionName="SWPostModel.Store.SP_AfterUpdatePermit" />
+          <EntitySetMapping Name="ErrorLog">
+            <EntityTypeMapping TypeName="SWPostModel.ErrorLog">
+              <MappingFragment StoreEntitySet="ErrorLog">
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="LogId" ColumnName="LogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CCB_DAILY_LICENSES">
+            <EntityTypeMapping TypeName="SWPostModel.CCB_DAILY_LICENSES">
+              <MappingFragment StoreEntitySet="CCB_DAILY_LICENSES">
+                <ScalarProperty Name="alias_name" ColumnName="alias_name" />
+                <ScalarProperty Name="S_29" ColumnName="S_29" />
+                <ScalarProperty Name="lic_exp_date" ColumnName="lic_exp_date" />
+                <ScalarProperty Name="rmi_name" ColumnName="rmi_name" />
+                <ScalarProperty Name="c_bond_due_to_exp" ColumnName="c_bond_due_to_exp" />
+                <ScalarProperty Name="c_bond_amount" ColumnName="c_bond_amount" />
+                <ScalarProperty Name="c_bond_co_name" ColumnName="c_bond_co_name" />
+                <ScalarProperty Name="r_bond_due_to_exp" ColumnName="r_bond_due_to_exp" />
+                <ScalarProperty Name="r_bond_amount" ColumnName="r_bond_amount" />
+                <ScalarProperty Name="r_bond_co_name" ColumnName="r_bond_co_name" />
+                <ScalarProperty Name="endorsements" ColumnName="endorsements" />
+                <ScalarProperty Name="sic_codes" ColumnName="sic_codes" />
+                <ScalarProperty Name="exempt_nonexempt_status" ColumnName="exempt_nonexempt_status" />
+                <ScalarProperty Name="claims_filed" ColumnName="claims_filed" />
+                <ScalarProperty Name="ins_due_to_exp" ColumnName="ins_due_to_exp" />
+                <ScalarProperty Name="ins_amount" ColumnName="ins_amount" />
+                <ScalarProperty Name="ins_co_name" ColumnName="ins_co_name" />
+                <ScalarProperty Name="S_13" ColumnName="S_13" />
+                <ScalarProperty Name="S_12" ColumnName="S_12" />
+                <ScalarProperty Name="S_11" ColumnName="S_11" />
+                <ScalarProperty Name="fax_number" ColumnName="fax_number" />
+                <ScalarProperty Name="business_telephone" ColumnName="business_telephone" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="business_name" ColumnName="business_name" />
+                <ScalarProperty Name="county_code" ColumnName="county_code" />
+                <ScalarProperty Name="registration_type" ColumnName="registration_type" />
+                <ScalarProperty Name="license_number" ColumnName="license_number" />
+                <ScalarProperty Name="CCB_Id" ColumnName="CCB_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contractor_Alias">
+            <EntityTypeMapping TypeName="SWPostModel.Contractor_Alias">
+              <MappingFragment StoreEntitySet="Contractor_Alias">
+                <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+                <ScalarProperty Name="Alias" ColumnName="Alias" />
+                <ScalarProperty Name="Business_Name" ColumnName="Business_Name" />
+                <ScalarProperty Name="CCB_No" ColumnName="CCB_No" />
+                <ScalarProperty Name="Contractor_Alias_Id" ColumnName="Contractor_Alias_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PermitFee">
+            <EntityTypeMapping TypeName="SWPostModel.PermitFee">
+              <MappingFragment StoreEntitySet="PermitFee">
+                <ScalarProperty Name="NewMaximumFee" ColumnName="NewMaximumFee" />
+                <ScalarProperty Name="NewMinimumFee" ColumnName="NewMinimumFee" />
+                <ScalarProperty Name="NewEffectiveDate" ColumnName="NewEffectiveDate" />
+                <ScalarProperty Name="MaximumFee" ColumnName="MaximumFee" />
+                <ScalarProperty Name="MinimumFee" ColumnName="MinimumFee" />
+                <ScalarProperty Name="PermitFeeId" ColumnName="PermitFeeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="getAffidavitByParameter" FunctionName="SWPostModel.Store.getAffidavitByParameter">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SWPostModel.getAffidavitByParameter_Result">
+                <ScalarProperty Name="aff_no" ColumnName="aff_no" />
+                <ScalarProperty Name="qtr_sec" ColumnName="qtr_sec" />
+                <ScalarProperty Name="map_id" ColumnName="map_id" />
+                <ScalarProperty Name="post_dt" ColumnName="post_dt" />
+                <ScalarProperty Name="acct_period" ColumnName="acct_period" />
+                <ScalarProperty Name="property_id" ColumnName="property_id" />
+                <ScalarProperty Name="property_id2" ColumnName="property_id2" />
+                <ScalarProperty Name="property_desc" ColumnName="property_desc" />
+                <ScalarProperty Name="aff_status" ColumnName="aff_status" />
+                <ScalarProperty Name="owner_name" ColumnName="owner_name" />
+                <ScalarProperty Name="attn1" ColumnName="attn1" />
+                <ScalarProperty Name="attn2" ColumnName="attn2" />
+                <ScalarProperty Name="st_no" ColumnName="st_no" />
+                <ScalarProperty Name="district" ColumnName="district" />
+                <ScalarProperty Name="st_name" ColumnName="st_name" />
+                <ScalarProperty Name="designator" ColumnName="designator" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="inspector_no" ColumnName="inspector_no" />
+                <ScalarProperty Name="city_owned_flag" ColumnName="city_owned_flag" />
+                <ScalarProperty Name="owner_resident_flag" ColumnName="owner_resident_flag" />
+                <ScalarProperty Name="service_req_flag" ColumnName="service_req_flag" />
+                <ScalarProperty Name="rep_by_city" ColumnName="rep_by_city" />
+                <ScalarProperty Name="rep_by_owner" ColumnName="rep_by_owner" />
+                <ScalarProperty Name="partial_repair" ColumnName="partial_repair" />
+                <ScalarProperty Name="vacant_lot_flag" ColumnName="vacant_lot_flag" />
+                <ScalarProperty Name="vacant_desc" ColumnName="vacant_desc" />
+                <ScalarProperty Name="repair_dt" ColumnName="repair_dt" />
+                <ScalarProperty Name="billed_dt" ColumnName="billed_dt" />
+                <ScalarProperty Name="bill_flag" ColumnName="bill_flag" />
+                <ScalarProperty Name="hold_until_dt" ColumnName="hold_until_dt" />
+                <ScalarProperty Name="permit_no" ColumnName="permit_no" />
+                <ScalarProperty Name="permit_issued" ColumnName="permit_issued" />
+                <ScalarProperty Name="permit_extended" ColumnName="permit_extended" />
+                <ScalarProperty Name="date_issued" ColumnName="date_issued" />
+                <ScalarProperty Name="date_expired" ColumnName="date_expired" />
+                <ScalarProperty Name="contractor" ColumnName="contractor" />
+                <ScalarProperty Name="builder_board_no" ColumnName="builder_board_no" />
+                <ScalarProperty Name="license_no" ColumnName="license_no" />
+                <ScalarProperty Name="date_cancelled" ColumnName="date_cancelled" />
+                <ScalarProperty Name="cancelled_by" ColumnName="cancelled_by" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="last_action" ColumnName="last_action" />
+                <ScalarProperty Name="date_added" ColumnName="date_added" />
+                <ScalarProperty Name="date_updated" ColumnName="date_updated" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="sent_dt" ColumnName="sent_dt" />
+                <ScalarProperty Name="NEW_AFF" ColumnName="NEW_AFF" />
+                <ScalarProperty Name="NEW_RepairDueDate" ColumnName="NEW_RepairDueDate" />
+                <ScalarProperty Name="NEW_ClearWalk" ColumnName="NEW_ClearWalk" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,143 @@
+﻿using SidewalkUI.Api;
+using SidewalkUI.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.UI.WebControls;
+
+namespace SidewalkUI.Controllers
+{
+    public class LettersController : Controller
+    {
+        SidewalkApiController api = new SidewalkApiController();
+        //
+        // GET: /Letters/
+        public ActionResult NoticeLetter()
+        {
+            //Models.SearchParemeters keyword = new SearchParemeters();
+            //List<NoticeLetterViewModel> result = api.GetAffidavitByParameters(keyword);
+            return View();
+        }
+
+        public JsonResult DataHandler(DTParameters param)
+        {
+            try
+            {
+                Models.SearchParemeters keyword = new SearchParemeters();
+                var dtsource = new List<NoticeLetterViewModel>();
+                List<String> columnSearch = new List<string>();
+                foreach (var col in param.Columns)
+                {
+                    //switch (col.Data)
+                    //{
+                    //    case "aff_no":
+                    //        keyword.AffidavitId = col.Search.Value;
+                    //        param.Search.Value = col.Search.Value;
+                    //        break;
+                    //    case "property_id":
+                    //        keyword.PropertyId = col.Search.Value;
+                    //        param.Search.Value = col.Search.Value;
+                    //        break;
+                    //    case "post_dt":
+                    //        keyword.InspectionDate = col.Search.Value;
+                    //        param.Search.Value = col.Search.Value;
+                    //        break;
+                    //    case "date_added":
+                    //        keyword.AffidavitId = col.Search.Value;
+                    //        param.Search.Value = col.Search.Value;
+                    //        break;
+                    //    case "notes":
+                    //        keyword.AffidavitId = col.Search.Value;
+                    //        param.Search.Value = col.Search.Value;
+                    //        break;
+                    //    case "designator":
+                    //        keyword.AffidavitId = col.Search.Value;
+                    //        param.Search.Value = col.Search.Value;
+                    //        break;
+                    //    case "property_desc":
+                    //        keyword.AffidavitId = col.Search.Value;
+                    //        param.Search.Value = col.Search.Value;
+                    //        break;
+                    //}
+                    columnSearch.Add(col.Search.Value);
+                }
+                dtsource = api.GetAffidavitByParameters(keyword);
+
+
+                List<NoticeLetterViewModel> data = new ResultSet().GetResult(param.Search.Value, param.SortOrder, param.Start, param.Length, dtsource, columnSearch);
+                int count = new ResultSet().Count(param.Search.Value, dtsource, columnSearch);
+                DTResult<NoticeLetterViewModel> result = new DTResult<NoticeLetterViewModel>
+                {
+                    draw = param.Draw,
+                    data = data,
+                    recordsFiltered = count,
+                    recordsTotal = count
+                };
+                return Json(result);
+            }
+            catch (Exception ex)
+            {
+                return Json(new { error = ex.Message });
+            }
+        }
+
+        public ActionResult SearchAffidavit(Models.SearchParemeters keyword)
+        {
+            List<NoticeLetterViewModel> result = api.GetAffidavitByParameters(keyword);
+
+            return View();
+        }
+        public ActionResult SecondNoticeLetter()
+        {
+            return View();
+        }
+    }
+    public class ResultSet
+    {
+        public List<NoticeLetterViewModel> GetResult(string search, string sortOrder, int start, int length, List<NoticeLetterViewModel> dtResult, List<string> columnFilters)
+        {
+            return FilterResult(search, dtResult, columnFilters).SortBy(sortOrder).Skip(start).Take(length).ToList();
+        }
+
+        public int Count(string search, List<NoticeLetterViewModel> dtResult, List<string> columnFilters)
+        {
+            return FilterResult(search, dtResult, columnFilters).Count();
+        }
+
+        private IQueryable<NoticeLetterViewModel> FilterResult(string search, List<NoticeLetterViewModel> dtResult, List<string> columnFilters)
+        {
+            IQueryable<NoticeLetterViewModel> results = dtResult.AsQueryable();
+            try
+            {
+
+
+                results = results.Where(p => (search == null
+                    || (p.aff_no.ToString() != null && p.aff_no.ToString().Contains(search)
+                    || p.property_desc != null && p.property_desc.ToLower().Contains(search.ToLower())
+                    || p.st_no != null && p.st_no.Contains(search)
+                    || p.st_name != null && p.st_name.ToLower().Contains(search.ToLower())
+                    || p.property_id != null && p.property_id.ToLower().Contains(search.ToLower())
+                    || p.post_dt != null && Convert.ToDateTime(p.post_dt).ToShortDateString().Contains(search)
+                    //|| p.post_dt != null && p.post_dt.Contains(search)
+                    || p.date_added != null && p.date_added.Contains(search)
+                    || p.notes != null && p.notes.ToLower().Contains(search.ToLower())
+                    || p.designator != null && p.designator.ToLower().Contains(search.ToLower())
+                    ))
+                    && (columnFilters[0] == null || (p.aff_no.ToString() != null && p.aff_no.ToString().Contains(columnFilters[0])))
+                    && (columnFilters[1] == null || (p.property_desc != null && p.property_desc.ToLower().Contains(columnFilters[1].ToLower())))
+                    && (columnFilters[2] == null || (p.property_id != null && p.property_id.ToLower().Contains(columnFilters[2].ToLower())))
+                    && (columnFilters[3] == null || (p.post_dt != null && p.post_dt.Contains(columnFilters[3])))
+                    && (columnFilters[4] == null || (p.date_added != null && p.date_added.Contains(columnFilters[4])))
+                    && (columnFilters[5] == null || (p.notes != null && p.notes.ToLower().Contains(columnFilters[5].ToLower())))
+                    && (columnFilters[6] == null || (p.designator != null && p.designator.ToLower().Contains(columnFilters[6].ToLower())))
+                    );
+            }
+            catch (Exception ex)
+            {
+            }
+            return results;
+        }
+    }
+}

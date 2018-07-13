@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Sidewalk.Logic.Database;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace Sidewalk.Logic
+{
+    public class AffidavitCostsLogic
+    {
+        SWPostEntities context = new SWPostEntities();
+        public AffidavitCostsLogic()
+        {
+            context.Configuration.LazyLoadingEnabled = false;
+            context.Configuration.ProxyCreationEnabled = false;
+        }
+        /// <summary>
+        /// this method will get details of affidavit cost towards one affidavit
+        /// </summary>
+        /// <param name="affidavitID"></param>
+        /// <param name="costTypeKey"></param>
+        /// <returns></returns>
+        public List<sw_action_detail> GetAffidavitCostDetails(string affidavitID, string costTypeKey)
+        {
+            List<sw_action_detail> result = new List<sw_action_detail>();
+            try
+            {
+       
+                if (!string.IsNullOrEmpty(affidavitID) && !string.IsNullOrEmpty(costTypeKey))
+                {
+			//When the using block is exited (either by successful completion or by error) Connection is closed.
+			//ConnectionHelper gets connection string from web config.
+                    using (SqlConnection con = new SqlConnection(ConnectionHelper.ConnectionString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand("getAffidavitCostDetails", con))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@affidavitId", SqlDbType.NVarChar).Value = affidavitID;
+                            cmd.Parameters.AddWithValue("@costTypeKey", SqlDbType.NVarChar).Value = costTypeKey;
+                            con.Open();
+                            SqlDataReader dataReader = cmd.ExecuteReader();
+                            if (dataReader.HasRows)
+                            {
+                                while (dataReader.Read())
+                                {
+                                    sw_action_detail actionDetail = new sw_action_detail();
+                                    actionDetail.aff_no = String.IsNullOrEmpty(dataReader["aff_no"].ToString()) ? 0 : int.Parse(dataReader["aff_no"].ToString());
+                                    actionDetail.action = dataReader["action"].ToString();
+                                    actionDetail.action_type = dataReader["action_type"].ToString();
+                                    actionDetail.unit = String.IsNullOrEmpty(dataReader["unit"].ToString()) ? 0 : float.Parse(dataReader["unit"].ToString());
+                                    actionDetail.cost = String.IsNullOrEmpty(dataReader["cost"].ToString()) ? 0 : decimal.Parse(dataReader["cost"].ToString());
+                                    result.Add(actionDetail);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+        public List<PermitCostsDetail> GetPermitCostsDetails(string affidavitID)
+        {
+            List<PermitCostsDetail> result = new List<PermitCostsDetail>();
+            try
+            {
+                long AffId = long.Parse(affidavitID);
+                if (!string.IsNullOrEmpty(affidavitID))
+                {
+                    //When the using block is exited (either by successful completion or by error) Connection is closed.
+                    //ConnectionHelper gets connection string from web config.
+                    result = context.PermitCostsDetail.Where(x => x.AffidavitID.Value.Equals(AffId)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+    }
+}

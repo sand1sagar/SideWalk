@@ -1,0 +1,143 @@
+﻿@model SidewalkUI.Models.AffidavitDetailsViewModel
+@{
+    ViewBag.Title = "DoNotPour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .reasonFont {
+        font-size: 20px;
+        margin-bottom: 20px !important;
+    }
+
+    .noticeInfo {
+        margin-top: 20px;
+        margin-bottom: 50px !important;
+        text-align: center;
+    }
+</style>
+<div class="row-fluid">
+    <!--/span-->
+    <div class="span12" id="content">
+        <div class="row-fluid">
+            <div class="block">
+                <div class="navbar navbar-inner block-header">
+                    <div class="muted pull-left">DO NOT POUR CONCRETE</div>
+                </div>
+                <div class="block-content collapse in">
+                    <div style="padding-left: 112px;">
+                        <div class="row">
+                            <div class="span12 reasonFont noticeInfo" style="margin-left:20px;">
+                                City of Portland, Bureau of Transportation, <br /> Sidewalk Maintenance
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span12">
+                                <div class="span4 reasonFont">
+                                    Affidavit #@Model.AffidavitInfo.AffidavitID
+                                </div>
+                                <div class="span4 reasonFont">
+                                    Permit #
+                                    @if (Model.PermitInfo != null)
+                                    {
+                                        @Model.PermitInfo.PermitNo
+                                    }
+                                </div>
+                                <div class="span4 reasonFont">
+                                    Address : @Model.AffidavitInfo.PropertyDescription
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend>Repair needed on</legend>
+
+                            <div class="row">
+                                <div class="span12">
+                                    <div class="span12" style="margin-left:35px">
+                                        
+                                            <input type="checkbox" />
+                                            Sidewalk          
+                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                     
+                                            <input type="checkbox" />
+                                            Driveway          
+                                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                            <input type="checkbox" />
+                                            Curb          
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Select the reasons for denying pour</legend>
+
+                            <div class="row">
+                                <div class="span12" style="margin-left: 20px;">
+                                    <div class="span6">
+                                        <div class="span12" style="margin-left:22px;">
+                                            <input type="checkbox" />
+                                            Not ready/ Not Started
+                                        </div>
+                                        <div class="span12 ">
+                                            <input type="checkbox" />
+                                            Place sufficient amount of barricades as required by city Right-of-Way permit for safety
+                                        </div>
+                                        <div class="span12">
+                                            <input type="checkbox" />
+                                            Remove construction debris from city right-of-way.
+                                        </div>
+                                        <div class="span12">
+                                            <input type="checkbox" />
+                                            Excavated areas are not deep enough throughout per city code (sidewalk 4" deep,<br/> Driveway 6" deep & 10" deep in d/w curb line)
+                                        </div>
+
+                                    </div>
+                                    <div class="span6">
+                                        <div class="span12" style="margin-left:22px;">
+                                            <input type="checkbox" />
+                                            Curb to be 16" from top of curb (Example: 6" exposed, 10" below street)
+                                        </div>
+                                        <div class="span12">
+                                            <input type="checkbox" />
+                                            Saw cut spalled/Chipped edges vertically to full depth as marked.
+                                        </div>
+                                        <div class="span12">
+                                            <input type="checkbox" />
+                                            No permit/ permit expired.
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="row">
+                            <div class="span12" style="margin-left:20px;align-content:center">
+                                <br />
+                                Other : <br/> <textarea style="width:87%"></textarea>
+                            </div>
+                        </div>
+                        <div class="row reasonFont noticeInfo">
+                            Call the Sidewalk Maintenance Office at 503-823-1711 to request another form inspection after corrections have been made.
+                        </div>
+                        <div class="row reasonFont">
+                            <div class="span3">
+                                Contractor/Property Owner:
+                            </div>
+                            <div class="span9">
+                            </div>
+                        </div>
+                        <div class="row reasonFont">
+                            <div class="span9">
+                                Inspector : @Model.AffidavitInfo.Inspector.FullName
+                            </div>
+
+                            <div class="span3">
+                                Date : @DateTime.Now.ToShortDateString()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

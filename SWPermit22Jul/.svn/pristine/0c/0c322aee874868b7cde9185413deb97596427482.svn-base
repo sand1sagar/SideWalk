@@ -1,0 +1,822 @@
+﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using PDX.PBOT.SWPermit.Reporting;
+using SidewalkPermitWPF.Helper;
+using SidewalkPermitWPF.MessageInfrastructure;
+using SidewalkPermitWPF.Model;
+using SidewalkPermitWPF.Views;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Configuration;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Input;
+using WPF.MDI;
+
+namespace SidewalkPermitWPF.ViewModel
+{
+    public class ContractorPermitProcessViewModel : ViewModelBase
+    {
+        private readonly IDataService _dataService;
+        ObservableCollection<CCBContractor> _contractors;
+        ObservableCollection<PermitApplicant> _permitApplicants;
+        ObservableCollection<sw_posting> _affidavits;
+        ObservableCollection<sw_action_detail> _affidavitCostDetail;
+        ObservableCollection<PermitModel> _permitList;
+        /// <summary>
+        /// Declaring EmployeeInfo object for Save and Messanger purpose
+        /// Passing Parameters from View to ViewModel
+        /// </summary>
+        CCBContractor _contractorInfo;
+        PermitApplicant _applicantInfo;
+        sw_posting _affidavitInfo;
+        sw_action_detail _affidavitCostDetailInfo;
+        PermitModel _permitInfo;
+        ApplicantPermitHistory _permitHistory;
+        PermitPayment _permitPaymentInfo;
+        MdiContainer _container;
+        static string _permitPath;
+        private List<string> _printOptionData = new List<string>();
+        /// <summary>
+        /// The declaration used in case of search affidavit
+        /// </summary>
+
+        string _totalFee;
+        string _selectedPrintOption;
+        string _appliedPermits;
+        string _expiredPermits;
+        string _expiringSoon;
+        string _selectedPermits;
+        string _expirationDate;
+        bool _contractorRadio;
+        bool _ownerRadio;
+        bool _otherRadio;
+        bool _cardRadio;
+        bool _checkRadio;
+        bool _cashRadio;
+        string _permitNumber;
+        bool _acceptButtonModel;
+
+        public List<string> PrintOptionData
+        {
+            get
+            {
+                return this._printOptionData;
+            }
+            set
+            {
+                this._printOptionData = value;
+                RaisePropertyChanged("PrintOptionData ");
+            }
+        }
+        //string environment;
+        public DateTime IssuedDate { get; set; }
+
+        public DateTime _newExpireDate { get; set; }
+        public string IssuedBy { get; set; }
+
+        public DateTime NewExpireDate
+        {
+            get { return _newExpireDate; }
+            set
+            {
+                _newExpireDate = value;
+                RaisePropertyChanged("NewExpireDate");
+            }
+        }
+
+        #region Contractor Permits
+        ObservableCollection<ContractorPermit> _permits;
+        public ObservableCollection<ContractorPermit> Permits
+        {
+            get { return _permits; }
+            //Property's Setter calls RaisedPropertyChanged method which will internally raise 
+            //PropertyChanged event when the data from the collection changes.
+            set
+            {
+                _permits = value;
+                RaisePropertyChanged("Permits");
+            }
+        }
+        #endregion
+        public string TotalFee
+        {
+            get { return _totalFee; }
+            set
+            {
+                _totalFee = value;
+                RaisePropertyChanged("TotalFee");
+            }
+        }
+
+        public string AppliedPermits
+        {
+            get { return _appliedPermits; }
+            set
+            {
+                _appliedPermits = value;
+                RaisePropertyChanged("AppliedPermits");
+            }
+        }
+
+        public string SelectedPrintOption
+        {
+            get { return _selectedPrintOption; }
+            set
+            {
+                _selectedPrintOption = value;
+                RaisePropertyChanged("SelectedPrintOption");
+            }
+        }
+        public string ExpiredPermits
+        {
+            get { return _expiredPermits; }
+            set
+            {
+                _expiredPermits = value;
+                RaisePropertyChanged("ExpiredPermits");
+            }
+        }
+        public string ExpiringSoon
+        {
+            get { return _expiringSoon; }
+            set
+            {
+                _expiringSoon = value;
+                RaisePropertyChanged("ExpiringSoon");
+            }
+        }
+
+        public string SelectedPermits
+        {
+            get { return _selectedPermits; }
+            set
+            {
+                _selectedPermits = value;
+                RaisePropertyChanged("SelectedPermits");
+            }
+        }
+
+        public string ExpirationDate
+        {
+            get { return _expirationDate; }
+            set
+            {
+                _expirationDate = value;
+                RaisePropertyChanged("ExpirationDate");
+            }
+        }
+        public bool ContractorRadio
+        {
+            get { return _contractorRadio; }
+            set
+            {
+                _contractorRadio = value;
+                RaisePropertyChanged("ContractorRadio");
+            }
+        }
+        public bool OwnerRadio
+        {
+            get { return _ownerRadio; }
+            set
+            {
+                _ownerRadio = value;
+                RaisePropertyChanged("OwnerRadio");
+            }
+        }
+        public bool OtherRadio
+        {
+            get { return _otherRadio; }
+            set
+            {
+                _otherRadio = value;
+                RaisePropertyChanged("OtherRadio");
+            }
+        }
+        public bool CardRadio
+        {
+            get { return _cardRadio; }
+            set
+            {
+                _cardRadio = value;
+                RaisePropertyChanged("CardRadio");
+            }
+        }
+        public bool CheckRadio
+        {
+            get { return _checkRadio; }
+            set
+            {
+                _checkRadio = value;
+                RaisePropertyChanged("CheckRadio");
+            }
+        }
+        public bool AcceptButtonModel
+        {
+            get { return _acceptButtonModel; }
+            set
+            {
+                _acceptButtonModel = value;
+                RaisePropertyChanged("AcceptButtonModel");
+            }
+        }
+
+        public bool CashRadio
+        {
+            get { return _cashRadio; }
+            set
+            {
+                _cashRadio = value;
+                RaisePropertyChanged("CashRadio");
+            }
+        }
+        public string PermitNumber
+        {
+            get { return _permitNumber; }
+            set
+            {
+                _permitNumber = value;
+                RaisePropertyChanged("PermitNumber");
+            }
+        }
+        public ObservableCollection<CCBContractor> Contractors
+        {
+            get { return _contractors; }
+            //Property's Setter calls RaisedPropertyChanged method which will internally raise 
+            //PropertyChanged event when the data from the collection changes.
+            set
+            {
+                _contractors = value;
+                RaisePropertyChanged("Contractors");
+            }
+        }
+        public ObservableCollection<PermitApplicant> PermitApplicants
+        {
+            get { return _permitApplicants; }
+            //Property's Setter calls RaisedPropertyChanged method which will internally raise 
+            //PropertyChanged event when the data from the collection changes.
+            set
+            {
+                _permitApplicants = value;
+                RaisePropertyChanged("PermitApplicants");
+            }
+        }
+        public ObservableCollection<sw_posting> Affidavits
+        {
+
+            get { return _affidavits; }
+
+            set
+            {
+                _affidavits = value;
+                RaisePropertyChanged("Affidavits");
+            }
+        }
+
+        public ObservableCollection<PermitModel> PermitList
+        {
+
+            get { return _permitList; }
+
+            set
+            {
+                _permitList = value;
+                RaisePropertyChanged("PermitList");
+            }
+        }
+
+        public ObservableCollection<sw_action_detail> AffidavitCostsDetails
+        {
+
+            get { return _affidavitCostDetail; }
+
+            set
+            {
+                _affidavitCostDetail = value;
+                RaisePropertyChanged("AffidavitCostsDetails");
+            }
+        }
+
+        public CCBContractor ContractorInfo
+        {
+            get { return _contractorInfo; }
+            set
+            {
+                _contractorInfo = value;
+                RaisePropertyChanged("ContractorInfo");
+            }
+        }
+
+        public PermitApplicant ApplicantInfo
+        {
+            get { return _applicantInfo; }
+            set
+            {
+                _applicantInfo = value;
+                RaisePropertyChanged("ApplicantInfo");
+            }
+        }
+
+        public PermitModel PermitInfo
+        {
+            get { return _permitInfo; }
+            set
+            {
+                _permitInfo = value;
+                RaisePropertyChanged("PermitInfo");
+            }
+        }
+        public ApplicantPermitHistory PermitHistoryInfo
+        {
+            get { return _permitHistory; }
+            set
+            {
+                _permitHistory = value;
+                RaisePropertyChanged("ApplicantPermitHistory");
+            }
+        }
+
+        public PermitPayment PermitPaymentInfo
+        {
+            get { return _permitPaymentInfo; }
+            set
+            {
+                _permitPaymentInfo = value;
+                RaisePropertyChanged("PermitPaymentInfo");
+            }
+        }
+
+        public sw_posting AffidavitInfo
+        {
+            get { return _affidavitInfo; }
+            set
+            {
+                _affidavitInfo = value;
+                RaisePropertyChanged("AffidavitInfo");
+            }
+        }
+        public sw_action_detail AffidavitCostsDetailInfo
+        {
+            get { return _affidavitCostDetailInfo; }
+            set
+            {
+                _affidavitCostDetailInfo = value;
+                RaisePropertyChanged("AffidavitCostsDetailInfo");
+            }
+        }
+        /// <summary>
+        /// Commands
+        /// </summary>
+        public RelayCommand CalculateAmountCommand { get; set; }
+        public RelayCommand AcceptPermitFeeCommand { get; set; }
+        public RelayCommand RejectAllPermitsCommand { get; set; }
+        public RelayCommand HoldPermitCommand { get; set; }
+        private RelayCommand _selectCountriesCommand { get; set; }
+        private RelayCommand _deSelectCountriesCommand { get; set; }
+        public RelayCommand UpdateCommand { get; set; }
+        public RelayCommand<long> showPermitDetailsCommand { get; set; }
+
+
+        public static string PermitPath
+        {
+            get
+            {
+                return _permitPath;
+            }
+
+            set
+            {
+                _permitPath = value;
+            }
+        }
+    
+
+        async void ShowPermitDetails(long affidavitId)
+        {
+            PermitDetails permitDetails = new PermitDetails();
+            permitDetails.DataContext = new PermitDetailsViewModel(_dataService, affidavitId);
+            permitDetails.ShowDialog();
+        }
+        
+        //public RelayCommand SelectCountriesCommand
+        //{
+        //    get { return _selectCountriesCommand; }
+        //}
+
+        //public RelayCommand DeSelectCountriesCommand
+        //{
+        //    get { return _deSelectCountriesCommand; }
+        //}
+
+        public ContractorPermitProcessViewModel(IDataService dataService, PermitModel permit, MdiContainer container)
+        {
+            _container = container;
+            _dataService = dataService;
+            AffidavitInfo = new sw_posting();
+            ContractorInfo = new CCBContractor();
+            GetAffidavitByNumber(permit.Permit.AffidavitID.ToString());
+            GetContractorByCCB(permit.Permit.BuilderBoardNo);
+            ApplicantInfo = permit.Applicant;
+            PermitHistoryInfo = new ApplicantPermitHistory();
+            GetPermitHistory(ApplicantInfo.Name);
+            TotalFee = "0.00";
+            Permits = new ObservableCollection<ContractorPermit>();
+            PermitPaymentInfo = new PermitPayment();
+            NewExpireDate = DateTime.Now;
+            //GetPermitByContractor(permit.Permit.ContractorID);
+            GetPermitByContractor(permit.Permit.PermitApplicant.Name);
+            PermitInfo = permit;
+            //PermitNumber = permit.Permit.PermitNo.ToString();
+            if (permit.Applicant.ApplicantType == "Contractor")
+                ContractorRadio = true;
+            if (permit.Applicant.ApplicantType == "Owner")
+                OwnerRadio = true;
+            if (permit.Applicant.ApplicantType == "Other")
+                OtherRadio = true;
+            //GetAffidavitCostsDetails();
+            AcceptButtonModel = true;
+            PermitPaymentInfo.IssueDate = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            PermitPaymentInfo.IssuedBy = new string(Environment.UserName.ToUpper().Take(3).ToArray());
+            this.CalculateAmountCommand = new RelayCommand(AcceptPermit);
+            AcceptPermitFeeCommand = new RelayCommand(AcceptPermitFee);
+            RejectAllPermitsCommand = new RelayCommand(RejectAllPermits);
+            HoldPermitCommand = new RelayCommand(HoldPermit);
+            string env = ConfigurationManager.AppSettings["AppEnvironment"];
+            PermitReportFactory.AppEnvironment = env;
+            showPermitDetailsCommand = new RelayCommand<long>((s) => ShowPermitDetails(s));
+            //Full Set=2 Copies +Instructions, CustomerSet = 1 Copy +Instructions, FileCopy = Our Copy, Instructions =Instructions only, Permit = 1 Copy, None = No print            
+            PrintOptionData.Add("None");
+            //PrintOptionData.Add("Permit");
+            //PrintOptionData.Add("Instructions");
+            PrintOptionData.Add("File Copy");
+            PrintOptionData.Add("Customer Copy");
+            PrintOptionData.Add("Customer and File Copy");
+            SelectedPrintOption = "Customer and File Copy";
+        }
+        async void GetAffidavitByNumber(string affidavitId)
+        {
+            AffidavitInfo = await _dataService.GetAffidavitByNumber(affidavitId);
+        }
+
+        async void GetContractorByCCB(string ccbNumber)
+        {
+            ContractorInfo = await _dataService.GetContractor(ccbNumber);
+        }
+        public void UpdateFee(string affidavitNo, bool isChecked)
+        {
+            var permit = Permits.Where(x => x.Affidavit.Equals(long.Parse(affidavitNo))).FirstOrDefault();
+            if (isChecked)
+            {
+                TotalFee = (decimal.Parse(TotalFee.ToString()) + decimal.Parse(permit.Fee)).ToString();
+                permit.IsSelected = true;
+            }
+            else
+            {
+                TotalFee = (decimal.Parse(TotalFee.ToString()) - decimal.Parse(permit.Fee)).ToString();
+                permit.IsSelected = false;
+            }
+        }
+
+        /// <summary>
+        /// this method will get permits by contractor
+        /// </summary>
+        /// <param name="contractorName"></param>
+        async void GetPermitByContractor(string contractorName)
+        {
+            PermitList = await _dataService.GetPermitsByApplicant(contractorName);
+            foreach (var item in PermitList)
+            {
+                ContractorPermit permit = new ContractorPermit();
+                permit.Affidavit = (long)item.Permit.AffidavitID;
+                permit.NEW_AFF = AffidavitInfo.NEW_AFF;
+                permit.Fee = item.Permit.TotalFee.Value.ToString();
+                permit.IsSelected = true;
+                permit.PetmitID = item.Permit.PermitID;
+                permit.PropertyAddress = string.Format("{0} {1} {2} {3}", item.Affidavit.st_no.Trim(), item.Affidavit.district.Trim(), item.Affidavit.st_name.Trim(), item.Affidavit.designator.Trim());
+                //TotalFee = (decimal.Parse(TotalFee) + item.Permit.TotalFee.Value).ToString();
+                if (item.Permit.DateExpired > NewExpireDate)
+                    NewExpireDate = (DateTime)item.Permit.DateExpired;
+                permit.ExpirationDate= item.Permit.DateExpired.Value.ToShortDateString();
+                Permits.Add(permit);
+            }
+
+        }
+        /// <summary>
+        /// this method will show applicant permit history
+        /// </summary>
+        /// <param name="applicantName"></param>
+        async void GetPermitHistory(string applicantName)
+        {
+            PermitHistoryInfo = await _dataService.GetApplicantHistory(applicantName);
+            AppliedPermits = PermitHistoryInfo.AppliedPermits.ToString();
+            ExpiredPermits = PermitHistoryInfo.ExpiredPermits.ToString();
+            ExpiringSoon = PermitHistoryInfo.ExpiringSoon.ToString();
+        }
+
+        async void AcceptPermit()
+        {
+            var list = PermitList;
+        }
+        /// <summary>
+        /// this method will reject all permits and asked for confirmation
+        /// </summary>
+        async void RejectAllPermits()
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to reject the permit?", "Reject Permit", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                foreach (var item in Permits)
+                {
+                    PermitPaymentInfo.PermitID = item.PetmitID;
+                    //await _dataService.InsertPermitHistory(item.PetmitID, "Rejected", "Permit rejected.");
+                    await _dataService.RemovePermit(item.PetmitID);
+                }
+                //MessageBox.Show("Permits rejected successfully.", "Success");
+            }
+            MainWindow window = new MainWindow();
+            window.allPermitsOpen(_container);
+        }
+
+        /// <summary>
+        /// this method will hold permit and ask for confirmation
+        /// </summary>
+        async void HoldPermit()
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to hold the permit?", "Hold Permit", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //result = await _dataService.RemovePermit(PermitInfo.Permit.PermitID);
+                //if (result)
+                //{
+                //MessageBox.Show("Permit/s was/were not processed");
+                MainWindow window = new MainWindow(); 
+                 window.allPermitsOpen(_container);
+
+            }
+        }
+
+        
+        /// <summary>
+        /// this method will accept permit payment in different modes of payment
+        /// </summary>
+        async void AcceptPermitFee()
+        {
+            AcceptButtonModel = true;
+            if (!CardRadio && !CheckRadio && !CashRadio)
+            {
+                MessageBox.Show("Please choose the payment method.");
+            }
+            
+            //if (NewExpireDate >= DateTime.Today.AddDays(30))
+            //{
+            if ((CardRadio && !string.IsNullOrEmpty(PermitPaymentInfo.ApprovalCode)) || (CheckRadio && !string.IsNullOrEmpty(PermitPaymentInfo.CheckNumber)) || CashRadio)
+            {
+                AcceptButtonModel = false;
+                //if (!string.IsNullOrEmpty(PermitPaymentInfo.Notes))
+                //{
+                if (CardRadio)
+                {
+                    PermitPaymentInfo.CheckNumber = null;
+                    PermitPaymentInfo.PaymentMethod = Constants.PermitPaymentMethod_Card;
+                }
+                else if (CheckRadio)
+                {
+                    PermitPaymentInfo.ApprovalCode = null;
+                    PermitPaymentInfo.PaymentMethod = Constants.PermitPaymentMethod_Check;
+                }
+                else if (CashRadio)
+                {
+                    PermitPaymentInfo.PaymentMethod = Constants.PermitPaymentMethod_Cash;
+                }
+                // Initialize dictionary
+                Dictionary<string, string> dictionaryPermitBatch = new Dictionary<string, string>();
+
+                foreach (var item in Permits)
+                {
+                    if (item.IsSelected)
+                    {
+                        PermitPaymentInfo.PermitID = item.PetmitID;
+
+                        PermitPaymentInfo = await _dataService.InsertPermitPayment(PermitPaymentInfo);
+
+                        if (PermitPaymentInfo.PermitPaymentID > 0)
+                        {
+                            var permit = await _dataService.GetPermitByAffidavit(item.Affidavit);
+
+                            permit.DateIssued = DateTime.Now;
+                            DateTime affidavitDueDate = DateTime.MinValue;
+                            DateTime calculatedDate = DateTime.Now.AddDays(30.00);
+                            if (AffidavitInfo.NEW_RepairDueDate != null)
+                            {
+                                affidavitDueDate = (DateTime)AffidavitInfo.NEW_RepairDueDate;
+                            }
+                            else {
+                                affidavitDueDate = AffidavitInfo.post_dt.Value.AddDays(67.00);
+                            }
+
+                            if (calculatedDate > affidavitDueDate)
+                            {
+                                ExpirationDate = calculatedDate.ToShortDateString();
+
+                            }
+                            else
+                            {
+                                ExpirationDate = affidavitDueDate.ToShortDateString();
+                            }
+                            string OldIssuedBy = new string(Environment.UserName.ToUpper().Take(3).ToArray());
+                            string NewIssuedBy = new string(PermitPaymentInfo.IssuedBy.ToUpper().Take(3).ToArray());
+                            if (NewIssuedBy != OldIssuedBy)
+                            {
+                                PermitPaymentInfo.IssuedBy = NewIssuedBy;
+                            }
+                            else
+                            {
+                                PermitPaymentInfo.IssuedBy = OldIssuedBy;
+                            }
+                            permit.PermitIssued = "Yes";
+                            permit.IssuedBy = PermitPaymentInfo.IssuedBy;
+                            permit.LastAction = Constants.PermitLastAction_Approved;
+                            permit.PermitStatus = Constants.PermitStatus_Accepted;
+
+                            var permitUpdateObj = await _dataService.GetCanceledPermitByAffidavit(permit.AffidavitID.Value);
+                            int count = (permitUpdateObj != null && !string.IsNullOrEmpty(permitUpdateObj.PermitNo)) ? int.Parse(permitUpdateObj.PermitNo.Split('P')[1]) : 0;
+                            //permit.PermitNo = (permitUpdateObj != null) ? PermitInfo.Permit.AffidavitID + "-P" + (++count).ToString() : null;
+                            permit.PermitNo = item.Affidavit + "-P" + (++count).ToString() ;
+                            permit.DateExpired = NewExpireDate;
+                            permit = await _dataService.UpdatePermit(permit);
+                            await _dataService.InsertPermitHistory(item.PetmitID, "Approved", "Permit approved and fees paid.");
+
+                            // Adding new permits to the dictionary
+                            dictionaryPermitBatch.Add(item.PetmitID.ToString(), permit.PermitNo);
+
+                            //Comment 1 line below for Aspire
+                            //GeneratePDF(item.PetmitID.ToString(), permit.PermitNo);
+                            
+                            //PrintPermit(item.PetmitID.ToString(), item.Affidavit.ToString());
+                            //DirectoryInfo dirInfo = new DirectoryInfo(@"\\pdotfile1\apps\SidewalkPosting\Documents\PDF\Test");
+                            //FileInfo[] pdfFiles = dirInfo.GetFiles(permit.PermitNo.ToString() + ".pdf");
+
+
+                            PermitPath = PermitReportFactory.Instance.LastRepairPermitPath;
+                            ////_permitPath = PermitPath;
+
+                            //Comment 3 lines below for Aspire
+                            //if (!string.IsNullOrEmpty(PermitPath))
+                            //{
+                            //    Process.Start(PermitPath);
+                            //}
+                        }
+                    }
+                    else
+                    {
+                        await _dataService.RemovePermit(item.PetmitID);
+                    }
+                }
+
+                //Uncomment for Aspire
+
+                //NumberOfCopies copiesDialog = new NumberOfCopies(dictionaryPermitBatch);
+                //copiesDialog.Show();
+                try
+                {
+                    //Full Set=2 Copies +Instructions, CustomerSet = 1 Copy +Instructions, FileCopy = Our Copy, Instructions =Instructions only, Permit = 1 Copy, None = No print
+                    if (SelectedPrintOption == "None")
+                    {
+                        PermitReportFactory.Instance.ProcessRepairPermits(dictionaryPermitBatch, PermitPrint.Option.None);
+                    }
+                    else if (SelectedPrintOption == "Customer Copy")
+                    {
+                        PermitReportFactory.Instance.ProcessRepairPermits(dictionaryPermitBatch, PermitPrint.Option.DuplexedCustomerSet);
+                    }
+                    else if (SelectedPrintOption == "File Copy")
+                    {
+                        PermitReportFactory.Instance.ProcessRepairPermits(dictionaryPermitBatch, PermitPrint.Option.FileCopy);
+                    }
+                    else
+                    {
+                        PermitReportFactory.Instance.ProcessRepairPermits(dictionaryPermitBatch, PermitPrint.Option.DuplexedFullSet);
+                    }
+
+                    //PermitReportFactory.Instance.ProcessRepairPermits(dictionaryPermitBatch);
+                    dictionaryPermitBatch.Clear();
+                }
+                catch (Exception processExc)
+                {
+                    throw processExc;
+                }
+                //MessageBox.Show("Permits have been approved.", "Success");
+                //MessageBox.Show("Payment is successfull!");
+                //if (!string.IsNullOrEmpty(ApplicantInfo.Email))
+                //    EmailHelper.SendEmail(ApplicantInfo.Email, "Test");
+                MainWindow window = new MainWindow();
+                window.allPermitsOpen(_container);
+                //}
+                //else
+                //    MessageBox.Show("Please enter notes.");
+            }
+            else if (CardRadio && string.IsNullOrEmpty(PermitPaymentInfo.ApprovalCode))
+            {
+                MessageBox.Show("Please enter the approval code.");
+                AcceptButtonModel = true;
+            }
+            else if (CheckRadio && string.IsNullOrEmpty(PermitPaymentInfo.CheckNumber))
+            {
+                MessageBox.Show("Please enter the check number.");
+                AcceptButtonModel = true;
+            }
+            //}
+            //else {
+            //    MessageBox.Show("Expiration date should be atleast 30 days from today.");
+            //}
+        }
+
+        public void PrintPermit(string permitID, string affidavitID)
+        {
+
+            MainWindow window = new MainWindow();
+            //window.printingPermit(permit ,_container);
+            ApprovedPermitReport rpt = new ApprovedPermitReport(permitID, affidavitID);
+            rpt.Show();
+        }
+
+        public void GeneratePDF(string permitID, string permitNo)
+        {
+            //string environment = ConfigurationManager.AppSettings["AppEnvironment"];
+            //PermitReportFactory.AppEnvironment = environment; // Remove or commment out this line for production release.
+            //PermitReportFactory.Instance.GenerateRepairPermitPDF(permitID, permitNo);
+            // Generate PDF report
+            try
+            {
+                PermitReportFactory.Instance.GenerateRepairPermitPDF(permitID, permitNo);
+                //MessageBox.Show("Permit approved successfully.", "Success");
+            }
+            catch (Exception genExc)
+            {
+                //MessageBox.Show(genExc.Message, "'Throws Away' The exception generated by reporting dll's");
+                MessageBox.Show(genExc.Message, "There was an error generated while printing the report.");
+            }
+
+            // Get the full path to the report to display or print
+            // string permitPath = PermitReportFactory.Instance.LastRepairPermitPath;
+
+            // Display the report
+            //if (!string.IsNullOrEmpty(permitPath))
+            //    PermitBrowser.Navigate(PermitReportFactory.Instance.LastRepairPermitPath);
+        }
+        /// <summary>
+        /// this method will get affidavit cost details
+        /// </summary>
+        async void GetAffidavitCostsDetails()
+        {
+            AffidavitCostsDetails = await _dataService.GetAffidavitCostDetails(AffidavitInfo.aff_no.ToString(), "R");
+            TotalFee = "0.00";
+            foreach (var item in AffidavitCostsDetails)
+            {
+                TotalFee = (decimal.Parse(TotalFee) + item.cost).ToString();
+                TotalFee = decimal.Parse(TotalFee).ToString("0.00");
+            }
+            if (double.Parse(TotalFee) >= 500.00)
+                TotalFee = "500";
+            else if (double.Parse(TotalFee) <= 60.00)
+                TotalFee = "60";
+        }
+
+        void SendAffidavitInfo(sw_posting affidavit)
+        {
+            if (affidavit != null)
+            {
+                Messenger.Default.Send<MessageCommunicator>(new MessageCommunicator()
+                {
+                    AffidavitInfo = affidavit
+                });
+            }
+        }
+        void SendApplicantInfo(PermitApplicant applicant)
+        {
+            if (applicant != null)
+            {
+                Messenger.Default.Send<MessageCommunicator>(new MessageCommunicator()
+                {
+                    ApplicantInfo = applicant
+                });
+            }
+        }
+        void SendContractor(CCBContractor contractor)
+        {
+            if (contractor != null)
+            {
+                Messenger.Default.Send<MessageCommunicator>(new MessageCommunicator()
+                {
+                    ContractorInfo = contractor
+                });
+            }
+        }
+    }
+}

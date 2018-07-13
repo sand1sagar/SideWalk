@@ -1,0 +1,2921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Permit No.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.90139in</Top>
+        <Left>2.89875in</Left>
+        <Height>0.25in</Height>
+        <Width>1.1534in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date Issued</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.15139in</Top>
+        <Left>2.89875in</Left>
+        <Height>0.24875in</Height>
+        <Width>1.1534in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>APPLICATION AND REVOCABLE PERMIT TO PERFORM </Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>CONSTRUCTION IN STREET RIGHT OF WAY</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>0.62689in</Top>
+        <Left>0.03888in</Left>
+        <Height>0.21895in</Height>
+        <Width>6.01266in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Name</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.90014in</Top>
+        <Left>0.03888in</Left>
+        <Height>0.25in</Height>
+        <Width>0.5139in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Company Name</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.40014in</Top>
+        <Left>2.89416in</Left>
+        <Height>0.25in</Height>
+        <Width>1.15799in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Address</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.40014in</Top>
+        <Left>0.03889in</Left>
+        <Height>0.25in</Height>
+        <Width>0.51389in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Telephone No.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.66403in</Top>
+        <Left>2.89416in</Left>
+        <Height>0.25in</Height>
+        <Width>1.15799in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>City</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.66826in</Top>
+        <Left>0.03888in</Left>
+        <Height>0.23188in</Height>
+        <Width>0.5139in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Business Licence No.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.91403in</Top>
+        <Left>2.89416in</Left>
+        <Height>0.25in</Height>
+        <Width>1.15799in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Applies for a revocable permit at</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Left>0.00001in</Left>
+            <Height>0.25in</Height>
+            <Width>2.08333in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>to construct repairs for affidavit #</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.2625in</Top>
+            <Left>0.00001in</Left>
+            <Height>0.25in</Height>
+            <Width>2.08332in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox16">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Fee computation :</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.525in</Top>
+            <Left>0.00001in</Left>
+            <Height>0.25in</Height>
+            <Width>1.19791in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox17">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Paid On :</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.3102in</Top>
+            <Height>0.25in</Height>
+            <Width>0.67708in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox19">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Total Fee</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.29631in</Top>
+            <Left>3.35007in</Left>
+            <Height>0.25in</Height>
+            <Width>0.67708in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="IssueDate">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!IssueDate.Value, "SWDataSet")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>IssueDate</rd:DefaultName>
+            <Top>1.3102in</Top>
+            <Left>0.67708in</Left>
+            <Height>0.25in</Height>
+            <Width>1.82799in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PropertyAddress">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!PropertyAddress.Value, "SWDataSet")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PropertyAddress</rd:DefaultName>
+            <Left>2.20833in</Left>
+            <Height>0.25in</Height>
+            <Width>3.25918in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.40154in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.01736in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.01736in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.01736in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox20">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Repair Item</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox20</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox22">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Unit</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox22</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox24">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Rate</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox24</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox26">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Cost</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox26</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="CostType">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!CostType.Value</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>CostType</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Unit">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Unit.Value</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Unit</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Rate">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Rate.Value</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Rate</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Cost">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Cost.Value</Value>
+                                  <Style>
+                                    <FontStyle>Normal</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Cost</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>SWDataSet</DataSetName>
+            <Top>0.79444in</Top>
+            <Left>0.01388in</Left>
+            <Height>0.5in</Height>
+            <Width>5.45362in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <FontStyle>Normal</FontStyle>
+              <FontSize>8pt</FontSize>
+              <FontWeight>Normal</FontWeight>
+            </Style>
+          </Tablix>
+          <Textbox Name="AffidavitID1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!AffidavitID1.Value, "SWDataSet")</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>AffidavitID1</rd:DefaultName>
+            <Top>0.2625in</Top>
+            <Left>2.20833in</Left>
+            <Height>0.25in</Height>
+            <Width>3.25918in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox23">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>CC/DC Approval</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.55464in</Top>
+            <Left>0.00001in</Left>
+            <Height>0.25in</Height>
+            <Width>1.28123in</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CheckNumber2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!ApprovalCode.Value, "SWDataSet")</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CheckNumber</rd:DefaultName>
+            <Top>1.55464in</Top>
+            <Left>1.38541in</Left>
+            <Height>0.25in</Height>
+            <Width>1.11966in</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox25">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Check #</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.55464in</Top>
+            <Left>3.05605in</Left>
+            <Height>0.25in</Height>
+            <Width>1.12612in</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CheckNumber3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!CheckNumber.Value, "SWDataSet")</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>CheckNumber</rd:DefaultName>
+            <Top>1.55464in</Top>
+            <Left>4.25161in</Left>
+            <Height>0.25in</Height>
+            <Width>1.2159in</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="TotalFee">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!TotalFee.Value, "SWDataSet")</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>TotalFee</rd:DefaultName>
+            <Top>1.3102in</Top>
+            <Left>4.02715in</Left>
+            <Height>0.23611in</Height>
+            <Width>1.44036in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox21">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>     The applicant agrees to do the above work in accordance with the Charter, Codes, Resolutions and "SPECIFICATIONS applying to STREETS, SEWERS, BRIDGES and STRUCTURES" of the City of </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Portland.
+     Applicant and/or Permittee agrees to protect and hold harmless the City of Portland, Its officers, </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>agents, and employees from any and all injury to persons or damage to property that may result from or any manner arise out of the action of said applicant making changes, improvements, or alterations </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>pursuant to this permit on or within any public street or other right-of way.
+     The applicant agrees that the work provided for under this permit shall be performed in such good, </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>skillful and substantial manner that no repairs shall be required to any concrete sidewalk, curb, or </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>driveway for a period of 3 years after its completion and acceptance by the City, and if during said period, any defects shall appear in said improvement which are attributable in any manner to defective materials or workmanship, the applicant hereby undertakes and guarantees to repair such defects at his own </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>expense, and when so ordered by the City Engineer. Any defect which apears in said improvement within said period shall be prima facie evidence of defective material or workmanship.
+     "PERMITTEE Assumes responsibility for proper repair or replacement of any street surface damaged, or in any manner adversely altered from its original condition."  </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">
+                                                                                           </Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>The Applicant and/or Property Owner are </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>                                                                     responsible for confirming that the repairs pass </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>                                                                     final inspection. </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">  </Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Issued by ______________________________
+</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>NOTICE:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>                                                                                                           
+1. This permit is for public right-of-way area only and does not include any work on private property.
+2. Do not pour concrete until forms are inspected.
+3. To be constructed in conformance to Standard Plans.
+4. Do not pave around water meter box. Contact Bureau of Water Permit Desk.
+5. In the event work covered by this permit conflicts with construction under City contract, this permit </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>    shall be waived until such construction has been completed.
+6. This permit is void after :       </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>= IIF ((First(Fields!DateExpiredNew.Value, "SWDataSet") Is Nothing), First(Fields!DateExpired.Value, "SWDataSet"), First(Fields!DateExpiredNew.Value, "SWDataSet"))</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                      <Format>MM/dd/yyyy</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve">         </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>7. For inspections, see reverse                                      </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value xml:space="preserve">                                  </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value xml:space="preserve">                    </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>INSPECTION REQUIREMENTS FOR SIDEWALK REPAIR  </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value xml:space="preserve">
+</Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>Two inspections are required</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> when repairing sidewalk, driveway, and curb in the City right-of-way:</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>
+1. </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>A</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>form inspection is required before concrete is scheduled to be poured.</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>  The inspection </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>ensures that necessary forms and grades are correct, and that repair work is prepared and formed to </Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>meet city specifications and plans.</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>2. </Value>
+                    <Style />
+                  </TextRun>
+                  <TextRun>
+                    <Value>A final inspection is required when the repair work has been completed </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>and the job site has </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>been cleaned up. The inspection ensures that repair work is acceptable according to city specifications. </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>The job will be complete when repairs are satisfactory according to the Sidewalk Inspector.</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>The inspector may suspend any work that is being performed incorrectly or in an unsafe manner. The </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>inspector has the authority to reject defective materials and repair work that does not meet City </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>specifications.</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>__________________________________________________________________________________</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Note: INSPECTIONS WILL BE MADE THE DAY </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>AFTER</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> THE REQUEST IS MADE.</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>(Inspections not available on weekends and legal holidays.)</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>CALL 503 823-TREE (8733)</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>if tree roots are involved. A </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>root inspection is required,</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>  roots can only </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>be removed as approved by the Urban Forester </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>prior to requesting a form inspection.</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>CALL 503 823-1711 FOR A FORM INSPECTION*</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> when repair areas are excavated; forms are in place; concrete debris and rubble are removed from the right-of-way.</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>If a '</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Do not Pour Concrete</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>' card is given, the problem(s) need to be corrected and you will need to </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>request another form inspection. </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>The same time requirements apply as with the first request.</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>CALL 503 823-1711 FOR A FINAL INSPECTION</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>when all repair work is completed; all forms are </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>removed; voids are backfilled with soil compacted to the top grade of sidewalk, driveway, and/or curb; </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>job site is cleaned up.</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>A minimum of 2 days must elapse between the time concrete is poured and the final </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>inspection is requested. </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> This prevents possible spalling of green/uncured concrete when forms are </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>removed. The job will be complete when repairs are satisfactory according to the Sidewalk Inspector.</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>WORK ZONE CONTROL</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>requires the permittee to erect 36" tall stand up barricades </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>and traffic </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>controls on work in the street or sidewalk that could be dangerous to vehicular or pedestrian traffic </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>(Section 16.70.810 of City Code). For large repair projects requiring lane or street closures, contact the </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>District Traffic Engineer at 503-823-5185 for approval of work zone traffic control.</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>*STRUCTURAL VAULT REPAIR</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> requires an additional permit from the City of Portland Permit Center </Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>(503 823-7002), and an engineer-certified copy of vault construction plans for approval. A form inspection will be required from the Street System Management Office and/or the Office of Planning and Development Review for the vault portion of repair. Other "posted" repairs including chip and patchwork will be inspected by a Sidewalk Maintenance Office Inspector when requested.</Value>
+                    <Style>
+                      <FontWeight>Normal</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox21</rd:DefaultName>
+            <Top>1.87408in</Top>
+            <Height>12.19738in</Height>
+            <Width>6.43278in</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>2.19604in</Top>
+        <Left>0.025in</Left>
+        <Height>14.08188in</Height>
+        <Width>6.43278in</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Textbox Name="Name">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Name.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Name</rd:DefaultName>
+        <Top>0.90014in</Top>
+        <Left>0.58055in</Left>
+        <Height>0.25in</Height>
+        <Width>2.25805in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Address">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Address.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Address</rd:DefaultName>
+        <Top>1.40014in</Top>
+        <Left>0.58055in</Left>
+        <Height>0.23611in</Height>
+        <Width>2.25805in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PermitNo">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!PermitNo.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PermitNo</rd:DefaultName>
+        <Top>0.90264in</Top>
+        <Left>4.07931in</Left>
+        <Height>0.25in</Height>
+        <Width>1.97223in</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="DateIssued">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!DateIssued.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <Format>MM/dd/yyyy</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>DateIssued</rd:DefaultName>
+        <Top>1.15139in</Top>
+        <Left>4.07931in</Left>
+        <Height>0.25in</Height>
+        <Width>1.97223in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Contact">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!contractor.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Contact</rd:DefaultName>
+        <Top>1.40014in</Top>
+        <Left>4.07931in</Left>
+        <Height>0.25in</Height>
+        <Width>1.97223in</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PhoneNumber">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!PhoneNumber.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PhoneNumber</rd:DefaultName>
+        <Top>1.66826in</Top>
+        <Left>4.07931in</Left>
+        <Height>0.25in</Height>
+        <Width>1.97223in</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="BuilderBoardNo">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!BuilderBoardNo.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>BuilderBoardNo</rd:DefaultName>
+        <Top>1.91826in</Top>
+        <Left>4.07931in</Left>
+        <Height>0.25in</Height>
+        <Width>1.97223in</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Image Name="Image1">
+        <Source>Embedded</Source>
+        <Value>ID528873</Value>
+        <Sizing>FitProportional</Sizing>
+        <Left>2.49251in</Left>
+        <Height>0.58522in</Height>
+        <Width>1.53625in</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>State</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.92792in</Top>
+        <Left>0.03889in</Left>
+        <Height>0.24034in</Height>
+        <Width>0.51389in</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Zip</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>1.92792in</Top>
+        <Left>1.43584in</Left>
+        <Height>0.23611in</Height>
+        <Width>0.5139in</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Address2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!State.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Address</rd:DefaultName>
+        <Top>1.92792in</Top>
+        <Left>0.58055in</Left>
+        <Height>0.24034in</Height>
+        <Width>0.82751in</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="ApplicantZip2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!ApplicantZip.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ApplicantZip</rd:DefaultName>
+        <Top>1.92792in</Top>
+        <Left>1.96363in</Left>
+        <Height>0.25in</Height>
+        <Width>0.87498in</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!City1.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>1.65014in</Top>
+        <Left>0.56667in</Left>
+        <Height>0.25in</Height>
+        <Width>2.27193in</Width>
+        <ZIndex>22</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Contact</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox12</rd:DefaultName>
+        <Top>1.16403in</Top>
+        <Left>0.03889in</Left>
+        <Height>0.23736in</Height>
+        <Width>0.51389in</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Contact.Value, "SWDataSet")</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>1.17792in</Top>
+        <Left>0.58056in</Left>
+        <Height>0.20833in</Height>
+        <Width>2.25805in</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>16.30084in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>6.4682in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="SWPostDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>cc256427-9461-4401-a7ef-fb96bba5ce92</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="SWDataSet">
+      <Query>
+        <DataSourceName>SWPostDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Unit">
+          <DataField>Unit</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PermitID">
+          <DataField>PermitID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="PermitNo">
+          <DataField>PermitNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PermitIssued">
+          <DataField>PermitIssued</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PermitExtended">
+          <DataField>PermitExtended</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateIssued">
+          <DataField>DateIssued</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="DateExpired">
+          <DataField>DateExpired</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BuilderBoardNo">
+          <DataField>BuilderBoardNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateCancelled">
+          <DataField>DateCancelled</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CancelledBy">
+          <DataField>CancelledBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastAction">
+          <DataField>LastAction</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ApplicantType">
+          <DataField>ApplicantType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ContractorID">
+          <DataField>ContractorID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AffidavitID">
+          <DataField>AffidavitID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="TotalFee">
+          <DataField>TotalFee</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PermitStatus">
+          <DataField>PermitStatus</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="ApplicantID">
+          <DataField>ApplicantID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="SubmissionDate">
+          <DataField>SubmissionDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PropertyAddress">
+          <DataField>PropertyAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateExpiredNew">
+          <DataField>DateExpiredNew</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="IssuedBy">
+          <DataField>IssuedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DatePermitExtended">
+          <DataField>DatePermitExtended</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="qtr_sec">
+          <DataField>qtr_sec</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="map_id">
+          <DataField>map_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="post_dt">
+          <DataField>post_dt</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="acct_period">
+          <DataField>acct_period</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="property_id">
+          <DataField>property_id</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="property_id2">
+          <DataField>property_id2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="property_desc">
+          <DataField>property_desc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="aff_status">
+          <DataField>aff_status</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="owner_name">
+          <DataField>owner_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="attn1">
+          <DataField>attn1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="attn2">
+          <DataField>attn2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="st_no">
+          <DataField>st_no</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="district">
+          <DataField>district</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="st_name">
+          <DataField>st_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="designator">
+          <DataField>designator</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="city">
+          <DataField>city</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="zip">
+          <DataField>zip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="inspector_no">
+          <DataField>inspector_no</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="city_owned_flag">
+          <DataField>city_owned_flag</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="owner_resident_flag">
+          <DataField>owner_resident_flag</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="service_req_flag">
+          <DataField>service_req_flag</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rep_by_city">
+          <DataField>rep_by_city</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="rep_by_owner">
+          <DataField>rep_by_owner</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="partial_repair">
+          <DataField>partial_repair</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="vacant_lot_flag">
+          <DataField>vacant_lot_flag</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="vacant_desc">
+          <DataField>vacant_desc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="repair_dt">
+          <DataField>repair_dt</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="billed_dt">
+          <DataField>billed_dt</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="bill_flag">
+          <DataField>bill_flag</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="hold_until_dt">
+          <DataField>hold_until_dt</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="permit_no">
+          <DataField>permit_no</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="permit_issued">
+          <DataField>permit_issued</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="permit_extended">
+          <DataField>permit_extended</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date_issued">
+          <DataField>date_issued</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="date_expired">
+          <DataField>date_expired</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="contractor">
+          <DataField>contractor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="builder_board_no">
+          <DataField>builder_board_no</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="license_no">
+          <DataField>license_no</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date_cancelled">
+          <DataField>date_cancelled</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="cancelled_by">
+          <DataField>cancelled_by</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="status">
+          <DataField>status</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="last_action">
+          <DataField>last_action</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date_added">
+          <DataField>date_added</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="date_updated">
+          <DataField>date_updated</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="notes">
+          <DataField>notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="sent_dt">
+          <DataField>sent_dt</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PermitStatusID">
+          <DataField>PermitStatusID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="PermitStatusValue">
+          <DataField>PermitStatusValue</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ApplicantZip">
+          <DataField>ApplicantZip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contact">
+          <DataField>Contact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City1">
+          <DataField>City1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhoneNumber">
+          <DataField>PhoneNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CreatedDate">
+          <DataField>CreatedDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PermitPaymentID">
+          <DataField>PermitPaymentID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="IssueDate">
+          <DataField>IssueDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PaymentMethod">
+          <DataField>PaymentMethod</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ApprovalCode">
+          <DataField>ApprovalCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CheckNumber">
+          <DataField>CheckNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AffidavitID1">
+          <DataField>AffidavitID1</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="CostType">
+          <DataField>CostType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RepairItem">
+          <DataField>RepairItem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rate">
+          <DataField>Rate</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Cost">
+          <DataField>Cost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SWPostDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ssagar\Documents\Sidewalk Permit\SWPermitSVN\sidewalkpermitwpf\SWPostDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>SP_PermitReciept</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>SP_PermitRecieptTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="download">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQTEhUTExMWFhUXGR8bGRgYGB0bGhogIiAfICAgICAgICghHSIlISAeIzIiJSkrLi4uHyAzODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAADAQADAQEAAAAAAAAAAAAABgcFAwQIAgH/xABJEAACAQIEAwUFBAcECAYDAAABAgMEEQAFEiEGMUEHEyJRYRQycYGRI0JSoRUkM2KCscFDcpKiCBYlNLLC0fAXU3OD0uFEY7P/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AuODBgwBgwYMAYMGDAGDHy7gAkkADmTsBiYcYds9NTnuqNfapb2up+yB/vDd/gux88BUGYAXJsB1wmcQdqWW0hKtUCSQfciBc/Nh4R8Cb4mi5DnecXlrJjSUx30veNbeYiuCfi/yNscIg4ey0eN2zKYfhsY7/ACOi3zb54DVre26pnYpl9AWPm4aQ/wCFLW+JY44+84qq7WUwKev2UX5El/yxiVXbPOAIqCjgpU5KqrqPpYAKo+mOyMg4mrTeSWaJT+KYQr/gQ3+q4DQl7N84k/3rNgl+hnkI+nhGOjN2Rqf2ucwH47/zfCZx7wxPQNEs9SkzSAkhHLFLW96/nf8Anj67N+Cv0pNJF3/c6E137vXfcC1tS254Bvi7I4/7POIAfS39Hx3ouzLNE/3XN1byAmkUH6E4jdfT93LJHe+h2W9rXsSL26Y+IZ2X3WZfgSP5YC1mm4ppOTGdR+9HIPobOfpj9g7ZMwpW05jQbXtqCvE3+a6t8rYT+F48+eA1VHLUtEpI/a3Hh3JCObMBy2B3uMd7LO2usUaKqKGqS1iH
+XST8SAV/y4Cr5B2vZbU2VpTA5+7Mukf4xdB8yMPcMyuoZWDKeRBuD8xjz6tbw9mQtJE2XTH7yWEYPyGi3TdV+WOUcGZrlqipyqs9qg960RuGHP8AZ3ZX/hJPlgPQGDEh4U7a0Zu4zKE08o2LgHRf95SNSfmPhisUlUkqLJG6ujC6spDKR5gjY4DmwYMGAMGDBgDBgwYAwYMGAMGDBgDBgwYAxgcYcX02XRd5UPufcjXd3PoP6nYYwu0ztIiyxO7TTJVMLrH0XyZ7b28hzPpzxN8p4SM2rN8/mKRHdY22eT8IsN1XyQC59BzAkq814jkKx/q9CDY7kRi3PUbXlb93kNuXPHNJnOUZHdKSP22tAs0zEFEI8jyG/RBfzOOhm3FNdnTGgyyAxUqi3dpZfD5yN7qr+6OfrjB4n7KswooTPIiSRqLu0TatA82BANvUAgdcB3KCozPiKoaE1KKFGsoWKRqtwNlUEtYkc78xc4Zsm7L8qnaWjSveWsjUlio0qpBsdrG4DbEaiRfE24B4iNBXQ1H3A2mT1Rtm+g3+IGL7xNn1FlVWJJKWyVqkyVUZub7C1hva1j4T1uBscB5oqoTFIyE+JGK3HmDbb6Yr/YXxVUz5jJHUzySh4DpDsSAVZbWHIeHVhP7RMky2FhJQVwmEni7o3ZlB39+1tvwt4vO+MDhTiCWhqUqYQpdbgBgSpuLWIBB6+eA4uJMu9nq54OkcrqPgCbflbFK/0cB+u1H/AKH/ADDCbmWV5jmVRJU+xyF5TqOiJlXkBtf4eeNfh/g7PqVmelp5omYWJDIpI528TYDJ4k4OrkkqJ3pJViDu5crsF1E3+GM3g/h6Svq4qaPm58TdEUbsx+A+pIHXD5mWV8TSRvFKtQ8bjSy6oiCD02OMfIY84ylneKkkQuLMWh17D1ANsBf8tppIJ4qKGArQx05XvPCQz3UAc9Ww1Em25Y48nZvS91PLF+CRl+jEYaOCuOqigq+9laaRLt3kRcgE
+tzOk7XvvyxhcV5klTWTzxqypK5cK1ri+9jbbngG/so7OlzRZ5JXdIkARWW19ZsevMAcx+8MdGkTMstrqimoZJXaAksI1JVlFvEUNxuCNt8UqfNI8phyrLoXUvLLHJMym9wWFzcHcM+w9Exu8XBMpTMsyBHf1WhIvQhAo/O7H0UYBDg40y3NgIc2gEE42Wpj8IB5bnmvwbUvw2xxzZZmfD7e0UsoqaEnUbeKMqfxr9w/vqbct+mJHI5Ykkkkm5J3JPmcUThziHMskEXfwsaScahFJurBuek76GtvpPzG+At/AXaBTZmn2Z7uZR44WI1D1X8S+v1Aw3Y8/5nwnBXJ+k8icpMh1yU4Ol0bn4B9089uTdPIuPZf2oisIpKwCKrGwNtKykdLH3X81672tyAU/BgwYAwYMGAMGDBgDBgwYAwh9qnaCmWQ6I7NVSD7NDyUctbDyuDYdSPQ43eN+KYsupWqJdz7saX3djyA/mT0AOI1wXlnfGXP83a8SHVGrf2jDYWX8INgq9SPIbhycNZBHRxHOs6JeRzrhhfd3c7gkHmT0HJRufSfca8Y1GZTGSZrID9nED4Ix6eZ82O5+FgGqKGq4jrnlkfuqWG5LH3IY+dh0LkC5J8ieQAxzccdm9NFQ+35fU9/EhAkuQwO+m6kDmGtcHob/ABDZ4ApZJOG6xaEkVRkOvTs5A0HSCN947gW6k+Zxx9geeVL1E9FNrkgMZZhJdhGQbEb8g1yCD5fHE64L4yqctm7yBgVbZ423Rx69QR0I3+IuC4Zp2pV2YfqlFTLC8/hbuRqke/71hpHO56DqN8BPeIYo0qp1i/ZrK4S3KwY2thsoqHNs3iijYt7LAoAkl8EKAC1yx94226n4Y06Lhyjy51SpT9IZix8NHESY4zzHeEe8fNbW9CBfD/RcAVtfZ83qNEX3aOn8KKOga23P4n97oAnFJkWU0zaXlmzSo6RUqkRX8i4uW36r9MO+SZZmbAGiyujy1SPflUNN
+b1JGr5MBipZHw/TUaCOmgSJf3Rufix8TH1JONPATA9nuaTWNTnkw81gQoD81dR/lxyDseiP7TMK9z1+1H9VP88UvBgJp/wCDsI9yvr1+Ew/+OOP/AMN8wiN6bPKkeSyguv5uR/lxT8GAkOb5PnCj9ZpKHNEXzRVl9SNhY/DfCLmOV5VO2iWKpyioP3ZUaSH8wGHx2Hxx6Yx08zyuGoQxzxJKh6OoI/PlgPLWc8E1tHoqY9NTApDJPAe8jFjcXtuov57b88HaB2hTZosCyIIxEDcKxKuxt4rdNhYDe1zvvixZh2ZzUhM2S1LQNzNPIxeF/MeK/TbxX6bjnhBzjKqWtlaCphGV5n67U07E7Hro1HqL8/vHbAcXY/wOkxOY1ulaSC5Gv3XZeZN9ii9fM7eeGrJePlznMJMvlp1koplYJceJNClu8J6Xtt5Er807J+JarJ2fLsxpzNSkEGFrWsTfVG3Ig87XtfyN8b2W8fZLlsckmW0sxqJBb7S/h8gWZjYA9FvfzwE/krJ8nzKZaaUhoZWT0kUHYOORBHMdOm++KDm2V0+f05rqACHMYrGaEGxcjkQdt9vC/Xkd+Uer6x5pZJpDd5GZ2PmWJJP1OO3w7ns1FOlRTvpdfow6qw6qfL+uAv3ZF2jmr/Uqw6atLhS2xlC8wR0dbG462J6HFSxAeMMvTMqdc8yy6VERBqI1PjDLY6hb7w2N/vLvzxSuy3jdcypbsQKiIBZl5XPRwPJrH4G4wDpgwYMAYMGDAGPl3ABJNgBck9MfWJd28cUmnpVo4ie9qrqbcxHyPr4idPqNWATK2R+I847tSRQ099xtZARdr/ikPLyH904wO1rjJauZaWmIFHTeGML7rEbavh0Hpv1wy58/6DyZKRCBW1t2mYbFFI3HnsLIPUsfTEawFU7LePKeOFssr409lluBJa1i3PvLcxys3Nbb7ct3tWypsvyqOkoYmNG765p9QZiSdSg2HI7eK1vCo67w7DFRZ1XV
+MEWVxyPJG0g0RDmT0W/4B71jsOfTAdHhzIZq2dYIE1M3M8lUdWY9AP8A654qWQURBbLck8Unu1uYkW09CsZ6LcG1rk9D97BQZIQ36Ey1vtGscwrV+7bnGpG+kcrX3JI/Fi0cM8PQUMCwQIFVRufvOerMepOAzuCeCKbLYyIgXlb9pM+7uefPoPQfO53wzYMGAMZ+d51DSoJJm0qSVFgSSQrPYW/dVj8saGFLtHppfZ2niVX7qKYMjNo2eMqXBsfEovYEbhmFxgGHK8zjqIxJE2pL2vYjcc+eF7Oc6q3mkpKWALKgWTvZGXQybkAC+rxMpjJt4b3PS/Y4Sp3p6eWapZE71+9KhrpEO7jS2ogX9zUdhux+Jw8zSOYyVVHLWxzOVDSCKoaNk3XwoFsdKszLYbNv1NwaOGs7aqV3MDRBHKbuj6mXZ7FCRZWut78wcbOMXhfLoIo2NPLJIsjamLytIdQ2bdiSG28Q53G++NrAGDBgwBjF4q4XpswhMNSmob6XGzofNT0P1B6g42sGAhHEGXtRKKDNg1RlzG1PWKLy056A8zt+GxuOVxsELMuzurSsSljCy96NUMqsojkTnqDE2FhuRe/xuL+qszy6KoiaGZFeNxZlYXB/+/XEUzTKBlz/AKMrmZsuqGJpaonxUsnQX+76jYEEnqwwCTxjwHHQ06Oa+CSpv9pArXIBt7vU2N73Av05Wwj41eKMiloqmSnmHiU7N0dT7rr5gj+o5jGVgGzs34wbLatZOcL+GZOd18/ivMfMdcOPEsJyTMYMyovHRVPisu6lWszx36XB1J/XScSLFe7L65cyoajJahhq0l6Z230kb2/hNjbyLDbAXzLK9J4o5om1RyKGU+YOOziL9hGfPDJNlFRdXiLNGD0IPjQfPxj+I4tGAMGDBgPxmAFzsBiA8OL+mM+mrJTempTrW/LShPdA/EguR8RyxS+1/PDSZXOym0kgESfxGzH5LqPxtiXUwGW8NM/KbMW0+ugg
+j6aNR3/H64BezeKoz7MqqSDTpRCy620qsSEAC9rAm97HzbCIyEWuCLi4v1HK4+YOLX2R5ZDNlVVTw1ccdZVXVgffRB4QLXBNxqNxe2r5Y4e2jh+qjhpKanp3ajpYh41Gq7nYkgXIsADcj7xwEYxT+FqNsuokqUQtmNf9lSKOccZ5yWO122sfIjoThT7P+Hvba2OJtoV+0mbosa7t8L8vnfpi19m1H7fXT5u4+yT7CjS2you2oDmNvzZvSwN/Z/wimW0oiB1Sudc0nMu558+g5AfPmThmwYMAYMGDAGMHju5y+qVRd3hdUXqzFSABjewodoOZU8UErVUmmMLpUW1Fnbpaxv4duXJjgNLiGmjloGRidDIuk6ihvddBuLFTq04T8zSbKoIqhJnRZXVJ0ndqgKPxxnowAPmpuL8r4bIaq2Xx+2OImeIK+rnqIta3MsfIb4TOIc3nqYJjCO+SJ4XhBgeJJApOtLOdbMTZb7CzC19zgHXIq5JZ3eI/ZywQzfN9YB+JVVHyxv4i3AmbxUq07QxTh3ZYahdftCd2qk94mgkgKzAXA0jUR5WssE6uoZGDKeRBuDgOTBgwYAwYMGAMZPFGQRV1NJTTC6uNiOasNww9QfruDsca2M7P84jpIGnmuI1KhiOmplS59BquT5A4CE5hkstXTzZbUC+Y5cC1O/8A58H4R+LYArffkNvFiR49Ndr2Uuggzam/b0bBmt9+IncH0G/yZvS0g7RMtiirIa6JQ1JV6Z1X1uO8Q+t7+XO3TAanC3YvU1MInqJkpY2AKhlLPY9SLqFB9Tf0xmcQ8K1WRVVPUh1kTWGilS4DW3KsPulhfa5BF9+eHPtlyfMa+oialSSejaJWj7s+C5vcsL8+W56W9ccXEeTPl/DQpq1h37yho47glNwSoI2Nhcm2253OA6/af9hU0WfUfuz6WPlrC8j5akBU/A9b4vGWVyTxRzRm6SKHU+hF8QPgG2Y5HWZcd5Kf7WEdd7tt/FqG
+34/XDn/o+Z2ZsvanY3ankIXz0N4h9G1D4WwFSwYMGAh/+kBVtPVUWXod2s567u2hfpZj88L/AG91arPS0Me0dLAAAOQJAFvkqrjcl/W+LlFrrAd//bjJH+cjGDS5Qub8RVImJ7lJJGextqSI6FUEctVhy6X64CYRuVIIJBHIg2Iw45f2n5jFTyU5nMiOhUGS7Olxa6v731vh8HaTkmr2c5YPZwdIfu4zt+LTzt1vcn54Re1jheKhrVSmuYJo1ljFy1gSRYE7kbXF+hGA0uHaZqbJ5HX/AHjM5Vpoh17sHxkdfETpP8OPRPDOTpR0sNNGPDEgHxPNj8SxJ+eJblOUBs2y2iIBXLqRZHHTvWAJPx1aW+QxZcAY/CcLPGHEj0j06BLRysdcxK2jCqSdifO252AvfGdS5rHV3WNibWv376JDqtay2sqHYBlUk72tzIMZ4kpRL3PtEeu9rahbVt4b8tRBB087Y1AcRoSlM8jiMcMmmI6BAHC6WIsZCLkHmCZLi7LyvcNmZ55FRy09mdInk0MpBXR4XshJ8BuxU2Nja5DNywD1ic9pSBsvMjg/aPJYDxX1KypYeZQAADqfXFBSYOgdTcMtx8xicdotbHJSUsUbLI6z057tDdtWtQASLhAQWF362wGtnFSqzwRzEirqnHc+HUkSxujNGDyBK31N9433sFA7U2tH9ijFi51JKwuI4+ZtcWLqbhR02J9c3PeGJVBzO4mzCAmRFue6CWIaFF8tJazkai1jsNgrZhxnmojhrdEW4LCFNZBUWWRXJA0uCVYWNtN99twbc0lo8kJqfZyscwVHeNQTrGo3ffqCTfqR5kY3aLMYmSOrga8E9tRAsLtsrkdDfwn4i/u4lMua5xXiKmq4oo4aiqEbR6CsoVbSNsfuBR73M3G9jipfo8U8sm36rUe8t9opDe7D8KPte2wYXt4iQDDgwm8T8TVFFBZaaSZgdPfW+zAFvE9jcH5Bbgkso3xkVrTyfZStVTTy
+glISVp6YgBS12jNyq6gSNbk3tvvYGGozx6u8dCQI76XrD+zXffur7TN0BHhB5k20nEyqOF4pZ6WWpieGaWJjHK04mMbHxSKyuCXsDqC3GrY47mVVeuU5fXKqSRqsipAGWnaMrYC/MgOGFjYEgbdMcnAneLPXIKYQ0veBoLBFvtpY6VN7NpDgsAbN8MByZXxS0aI1W8Zge+irS4jBBIKTA7RMCCuonSSCPCdik/6ROeAQQUqSWZz3jAORdN1FwNiCb8z93a+9neor6bLjHSzyamrKiSwIFhrJbdSdluQuw3J9TiOdrmX0hZZaQ0fdKwj+zqHaQfumI+BFBv7g/ngLPwJKKrKoFlvIGh7uTW2vX4dLEne4bf5HEer8nLUOYZWxJly2U1EF+Zib3gOtrMG+JXDPkGYGKbL6eDMDFHJE4CFlnj+4sYVtCi5a40k3BsLb78mbZfLSZ3Sy1MqSrWxvTSMsfdgiwChhqN2Ph3FhsNhgJRw12jZhQx9zDPePorgOF/u33UenL03OMbPs/qKyTvamZpW6ajso8lHJR6AY2eGsjpRmMlLmMpiijMilwQviQ7bkHY2P1GKmuUcPU1G1elO9VEj92Wu73bb7rsqEct7YCe9iObez5rECbLMGiPzsR/mUYbuzz/Z/EdTRco5taoOQFvtE+i3X4nGF2rxRU9XQVtHEsUckSSxoqhQCragbDa9iv0xv9pbinz/L6xfclETX8/EVP+UrgLtgx+ah54MBCuyqTvM6zOq56RKR8DJt+S4QuAuMBQ5iap1LRyFlkA56WN7j1BsbfHDf2KS3XNpfOG/11nEgwFtqMj4YmY1XtjRqTqaEOVHmRoKGXfyU/DCznOeJm2eUvdJphV4oYwRYlFYtcjpe528rYnGHDsij1ZxRj98n6Ix/pgKDw5xvSUucZpNVsyd5KIYyqMwtGWUk2BPJU5XO+KM2a+1mGqy2ojl0ag8LOVWRTa9xa6OpUEEr5jk18SThDgNcxFZU
+STSooqn8McaszWN7qx3Bu3Qb+vRvg7EoY3Dw1tTE1r6l0qwPoVsR8PjgM3j/AD2pTNcueaExRrcrDKYWVmN1Y6lcgXVgLtaxG1+lCpc5o54y50oIwT3i2tHsQfEv7MgDcNpwiZlSTjOqbVP3ywmOnLuq3JZHbcDbV9oLm3l5Y2hRNBncMEUmlJKeWR1CjRcsLkL93URcgbX35nALOUZaJc7lNLVMzQwKY+9DqWVjqIVx5AggsDfWfCQuO52pPN+kKKOQxsraiq6QoJAYBmYk2AJBswsDcgnphZVkKy5k5j7xBM0+gQMYRqR2UG6nYeBybeZ26Y7XFGSO+bgtUXcdyju0d49TMLgIW90B18Ib5nfAVvh2sJvG4AcXJA5ar+O3pfxdfet0xndogtDTgD3q2m//AKqf6YX2aaFmImu9NqKL3QDyLF+1jA1EklCrJzNivO5OO9xRK08dEyVEciPVwFCqj99r3BI90Cw874B5qp1RGdtlUEn4DEly/hmtWeGKWOlWKd5nC6WdohbZTZ1U6lbQbX2uL74Z+0FnK01J3pJqqiNCAAvgB1tuN7WW3zIw0ZlWxxtAr3vJJoSwvvpY7+QsDgJVHlVZF7DXwU1NeMuJIYI2jJ99SoYu5IIUW22P0w9plVRWqDVToKd1B7mmDKHBH35G8ZUg8lCevUHaynYSRf8AlyED4EBx06arfLHzksn7WK/7KQr8FIDrt5ANYfDAfkdJNELRMJEA2SQnUvoHFyR/eBPrjGqqGMybxdzIQQqyJ3sLAXNk0kaW5nSCpO/hNrjvcS5jUQKzwIJm0jRD3b+Ii+r7RbgEi1gQLWPPpmZdxQZwYaqimjk5Fe7leIHfcymJUUbX1XI9cAvVNJQVUxgqpXiaaxKhljEhXfcupkHI2GsgabbbX+ePsypsty2pSlZDJVXSyyF7Brqz3uWuFPMm2rG3VcNZRLTtVSCKWIEv37uXHPfxX3BPO5NzzxGu0DOYqqVloo2aKBHR
+pQX06S219RsE1WtyHK3lgMXifiSaSphcyM/cRRpGzIUY2AY38Ra+okagQ2wOxxvdoNTU1rSO0AupiVjEyGMOwBA3jWQklx94gE8zhRrJFWdStn0KpYbab6QTYhzcg+oNxbpjnzDPJKgBbq7bLraNVKJcWS+4CBjs179Ou4djMM2liqo5NUsTRk2LqoYNsCdKAADYC43IGLB2x1RbLaGuTdoZ4pRfY2Kk+vNguIaMxInhYJGDHZSSWCSENfU1jtfa9iBYYvnaQ/fcOGQ91cpC32RvH76+7sNrXwEy7Q8qibiAxyMVinkiYstr2cLuL4b857VKOkmFBDSpNQRKY3295gfu6tmAINyfeJuD5pfbBEXraTSLtJRwEepOoD+WM1uy7NR/+E/yZD/JsBydpvHAzOWMxxd1DCulFNtW9rk22HIAAeXrs09rTmTLMnqvvd3pv/Cp/wCXE+zrhCtpE7yoppIkuF1MBa5vYbH0OH7jbxcNZY34Xt+TjAUj/XeLy/PBjz1+nm88GAoHYpH9lm0fUQ2/4xiRYtfZLHozbNaX8SygDz0yEf8ANhG4E4QhrpqinlqRBIg+yLWsxBIIINienI+eATcOPZA9s4oz++w+qMP6472c9j+ZwyaUhE6nk8bLb5hiCvz29cdLJcrnyzNqNaqPu5BJG2nUrbMbc1JHn1wFa7Gq0Rw1kbBh+uuqkEXudI079dr42e2SiV8ueXvpIZIbtGyuyaj1U7+LVbbre1ue+R2bS+z5hnNO+wFQJV2vs7Of5FPrhp4xydayMd5cRj0JGoN4Wez2MfW1r8twL4DyvFmtQrCUTShg2oPqa+rbe/nYD6DHPJxNVtUCqNTKZ1taQsdQt0+HpyxTcygpmzSjg9nRKYyA3a/2lgzFglyVjkJS2wuQbY++IuAIXrqxIYDYUhljjU6EEviXbYHSCtwDsTzNuQS3/WGquhE8gMd9BBsVvcmxG+5ZvqcfUfEdWGJE8hYsGJJuSwKEHfmb
+on+EYaaTgeKZZmiqCkYRHRpIywa+sWLKBp3Qm5A95fI4Ml7O5pDDLC8bBk74B/wqqswIGolhqAAt0wFU4W4IfuY561pKiqmfvSruVSNioUkqHTWdACm+rYbDz1+IaRYny2JQFArkOgdPsZzz6/PHHw5nk8vdRVEcqyRjxMrRNGSADeQg3R15FWAJsTby7nF5Jq8q8jVN87Qy2OxtuD5XwHzxA18zoNesd13r7WKkOFhW56eKQbW6HHT7Ss5jp6nLllUsHqEMdmtoZXVWY2IJGiQ+Yuq8r44eKs17iorZI0VmhpIWA3sXaeSwP0U7euE7tEymsqIFzByJPZWuLFQNAJLGwHiJ8F+XI2GAtVLFaWY/iKn/AC2/p+WMvLKofpGsi693DJ8jrX/l5Y6HA/E6V7NKoZH0KskTc0ZSfqGDgg+WOlkQZM3qJCykTFobbgoYgjqvkbrIz3wDpVzqukEMS1wLIW3t1sCB88JeZ5xJRzUCSyqEqHKyakiRgqxk+Mg6feI923u2+LnmNGs0ZjdVZW5q66lPxGPPHblTr7VTwxtHeKFUMamwS9yAASAAbdBsNNzuMB+ScW1Fe88ELKpdpnAO8QQFWDSaroCFQKrAWB8r3CJQrYXZRd9XjbUdxsdlvvcghtOxtjUpaiWa0jTrGtRJ3UhuEVSed1FrLo0gkAAjYnYjHZTLkFI84nVjE3dlTC2l7PZQsgFjqG9jY2+8LYDBrnhkZCAVNrSaQFU+ou7G563+O3LH7WQrT1OhTsri+pg62upF+7Nm9QMdjKMgnmmiVIgO8bwarKrDUENrsLi7W5/PDzxjwx3FAZZmaOVNP6q3cgkX7vWpVnfSGINr2PlvgJ/T0q1FWkd7LJMFJTlYsASi2uBbcC3Kw6Y9AdpWWrRcPS06uzhAihntqN5F8gB1+mFkUUUL8OSR3uY08r3d4L3sL/2zczt9bsvb7KxoIoE3eepRAPPZj/xBfrgJv2ii+aZanlT0q/5j/wBc
+VBOJZxxBJRma1MtPrCEIBqsN9VtXXlfEZ7aKgNmsyryiVIx/Co/64RsBZO0DOZqrh+Gad9btXsurSq+FRMALKANrY6vGXh4ay0fie/5OcSkztpCajpBuFubX87csVjtVHd5PlFOfe0arfBF/+X54CbfohvI4/cXz/UAeY/7+WPzAL9IfZOLmHJZ7/wCeO4/zgYS34XWXP5aKWTuUaokOoDcJ4pBa9gCVtv0v1w69ukLUuY0OYre2wNvONtX5q1v4cL3b3QBa6KqT3KqEMCOpAsd/7pXAa/GnamtKi0OUNZItjUE95fzC6r335sb36eeJVm2e1FTKJp5nklAADMdwASQB5AEk/PHTlpnVVZkZVcEqSpAYDY2PX5Y/aakeQkRozkAsQqk2A5k25AeeAv2SZkq53S1NgEzOjU/+4FFxfzGm3xtihMCs8qyyhw6qyJZl06Tu1y2na68rcsQTKK5p8ojmTeoymoWRf/SdgfyZfovri/5RUrPDDPEA6yjWHLX0XHS+/pbpywCzX5eDmUUqIsTlH1MoAYryYarhQ5IXddTADewIvu5tSIFmfS5LKI9UYUyBQOSki9tzcDyJG+PiSkLVSOVNwlrqXMQBLAjYaWJsCdQuNrHHPVQt3czM7kBGI+0Ci4vyKrddh5H+dwRuzKh/UWljJWaVnVnZJHi8LkaRFqUttzYk233544+z3L2H7YuZAqxmAJEijQNPMEm63vcFQQi88MvCmSLT5akEgdtSsziO7hi5JIGpdrHpZR8d8amS5QINapZUdi1lW2nxHSBZQLdSDvuelsBpNTpdQDqK7bv1O/i6k8vXC9xBc12Wqb7TTMLkchEQP59d8baHVd0ZSTshKqRcXufCQTcDYXuP5YGYSM+Z5fqRlOmoIJ0/gUbAE233sfPngFbieYSyZzq2vFHEN9gYwrDlv78g8jigUuUo+XCntYPBpP3j4l5+K9z8cTjKsuatFStxqqJpSWJI1oKiFL7Cy3WBxYf1
+xY40CgKBYAWAwE94NMUNHBUpCqavZ4HKgAu4KxsSeuliU3/CcdjiKpjgrFdyRonglXyHfK9O1yell6dbeeMbjTN3y4S06wE0bMrRuly0MruZNwfeVpAxte4NwNrDH1xrVmcTswUd1E7G25AgnjZWtyN11nn8OeAX804kesk1S1sippkf2WBXCtaxRGIFybEli112BAsDjNfL45ljeOKoIYGWURUkrR6gNKKRdgxN1DEXIIa3vbMOZdlzv3dbllQFLoHWKYkqNY1HQw5XvbcHpuLA4VqjjuthkehrYm1qyhxCVRwoU20kC9wpQqb72F+eA0pcul7z2l4o3hdNMojptSkA6QXuHKn3SGCFTpN+WOhnFJlv6NllhqAJizXC3Qk2A0FEUJpBAO623PItj8nz/MqSSnRaSaNO8AMcpH20rXJN1UX1AgnVq3F8alf2Y5rUHvJ3gtq1rGjXs+wBa6gFbCx8V7W54Dp5HXxhMnde7jI1a3AVd/aVQ6tgNNiLfH5hq7VmUZdLBBCEtPHEukI2o31kWUseZDWYA733vhZzTsZrmAbvIWK3Nlkba5vZFMQtuSQC1trXF8NcHZPOADJmcsrB9ZUgrGzDkTpfVf8AeBvgExM1imjyqNKhmqIhGhiux06XhtYadmupFhf3fTDzxzIKnO8upL+GnDVMvkLbqT/h/PHLkvZPT08zVRlaNwCR3DMoS99R1SM7H43GJ+MyEdPmmahnJqG9jpWdizFT7xuSb+FQflbrgM/gWihzHM6uuqxemh11EituCCTpU+YAuf4QOuHhe0aF+4jq8oEVDUnTDIdDqRewJTQAOhIBuOl8S7s445/RbykwCZJlVWBa1gL8tiDz64Zs54zoMzraIz66WlpgSU0atTFlOkaOSnSLm3Q/HALnaXwotJmjUtOPBJoaJedte2n/ABXA9LYd+1WITZzltCm6xrGLf3n3H+FVxm5FVjOOJROoJhRtagjkkQAU+l2s3xONPhT/AGhx
+RNUc46cuRfl4R3S2t6nUPhgLn3K+WDHJgwCD23ZL7TlcrKt3gIlX4DZ/8hY/LE4r1/SXDUUg3my9tLeYQAD6aNB2/D6Y9BTxB1KsLqwII8weeIFwGBlub1eVVA+wqrxDV7rA37vnz1KxX4m2A1OD2ocxyiKXMgz/AKOLK1tVytvDcKNRGmw2/Dv1xlZz2wwwxtT5XRRxxkWLOoAI5e4vPbqx+WFGpranJKqupE0lZFMbB1urId1a3npJH8Rwl4Bt7Ns+SmrNMwBp6lTBOvTQ+1/gpN/hfFe7L616OepyeZgBTlpIT4tTxsb7W2Ozatt9ztsbSPKOBJajLZ6+NiTC28XdndALswbkbc7AHkeWGbKczkrqOKpgIOZ5au4I1NUU48xzfTfSR6nqwwHoSIgm4a9xYWv0F9idup3tvt5Y4RTlWLXClyAQTcN+QN7ct+vpjP4JzqmrKVammCqrAB0Fvs2UboQNgQCOguNJ5Wx3JKlTKEaWOzWKrurnTY3B1eMA2vYC19z5h9AaixawcElfe5dLj0uOR3/LHBILsFdnBZLMiiy/G4BZQfRttsd5lDHbVsCCNuexF7736jC7xDxbDAdAvNUOLRU6FhK5ub8rlV5+JgALdbbBqZZJrLh0QRp4Vs7NqUEi7akW1rcwSDc3JxP+MuMooswgenY1LU9NUaljswViEsWI2AFje3L54aMqyKerTXmI7tD7tCjfZqN/2rD9sTzIPh9CcL3aBk7CZkpadQq5dNZEXSm8sVwLAC+m5A62wGv2ZZN3K3cAyxwxQswJIv4pWsT5mW5w94lfZ1x/D3EhqFeN2mASNUkkZh3aANspJvpYnyA9MNlB2gUMr92srBr2s0bj0/Dt88Bpz0cMs7rINd4lDI1ihGokHSeZv1xP6rhmWgd2AL0JFS0iRlT3ayaQqhT4nC3dtK2H5A6nE3HEFLXGPvlu8PvCMyGNvuDSpu+q5YgWsF9RjamzYyGmfQ+kh1mQI90JTa6F
+Q58QAHh64Dq9k2YLLlsSBw/c/ZXAI2W2kEHcEKQCOmI/x7JJWZ5O9HpjMOmMzW21AadTbHe/gBAOyj1OKh2SQziGsEsDwa6mR01oUBDAbgHe1wT8xhMj4MraNNBo/a71K1EksbIe8A/s7ONQ+8etyQOpsGo/CFbSxxV9ROkk1K4mdPERIojVCPLWFBVSAAbLf0rGX1iTRJNG2pJFDKfMEXGETPOKayRO5p8slClfHLWMIo0AtuTq3I87/XH7wfmsdDQsjzNVOhZ9FPE7qCxNokIGlvEGsdhzsABgODMu0GeIySyJHT0ySFFd0EpazFeSTq4YkNto2tzxo5dx/qkWKWBxdEkMigqAjsFRyr2JVmNhoLnne1sIXCXDn6ZzCSuzBY41UjTSbK7DYqXGzFdwdTC7XHTbFIreGsrolNY9PFGIFvrNyFA5BQTbnbSAOdrb4DL7Ys9aOmShg8VTXHuUUfhNg5Ple+nfzPkcSXjinM1RS5JQjWtKNGx2eVvFIxPkDe5/vemN2o4hZVmz2pAE02qLLYW5ou4MlvJQefUk/iGMLsKzGNc21Tt4pI3VWY85GKnmepAYet8Bvp2GKylFzCM1I5oFBUenvavnbEr4jyGeinanqE0yL63DDoynqD/3Y4eMy7Mc2pq0NTh5SXulSj2O5vdyTdT1N9j647vbc/tWY0tLGVkqFjSOQr1kc8vTne3S+A5uytBQZXXZq2zle6hJ8/T4uV/w4af9HTJe7o5qplsZpNKnzRNr/wCMsP4cLPakoRKDIaTxNHpLgdZG5XtyvqZz/eBxc8hypKWnip4/diQKPWw3PzO+A7+DBgwBiQ9vvDTNHFmUG0lOQHI56bgq38Df8XpivY4aumWVHjkUMjqVZTyIIsQfiMBBOPoFzfKoc2hUd/CO7qVHOw5n5HxD91j5Wx99mvD+UVdEKmaF+9o9RqEDM3e7Aq+kblbA+EW3DA3HPgymVuH82kpai7UFRtdhdSh91/ityjDy
+vt7uF3tB4emyiqcU0ki01Qp7t1Y+JCQShYc7bfEW8zgGLN+2+QSotFTpHSx3HduBeQWIANrhAOdl8udsTjJuIZaWrFXBaNwxbSoslid0t+Eja3/THTostllWRo42ZYl1yEckXlcnDz2Z8Q0xKZbV0UMkM76e9CnvQ7Gykm52FwBp025774Bny7OUomGbUILZbOwFXTD3qeW/MDpuRbob25FbV+HN0niSWKMzxuLq66NNjYi+pgRvz9RjzrWyS5BmcsCnvoGADxvymiYbBhy1AE7+fobYZsmqhQq1flq+1ZbIb1VMwBkpz1BHkOh3BC7n72AeOPeNnooUUQj22V27tdS2AAYCQnfYCwsbb36DfE4KyRI2GbF5KkDUZJ6g6OlnliQAtZd1+00m17DrjO4x4ZTOl/SGWyrK4TQ0LsRbmQBqtofc7Hwnp6qmU11XQGKLMNXs0Ui6qOQEBwb2ZSfA2l7NYtzANrYD0bk+cwVSd5TyCRL21Le1/Q9cd/E5h7WYS8SGG7TEiNYp4ZWuCANel9Meq+xLdGva2HarziKPuQ7WM7hEA3uxVm5ja1lO/L64DteypqDaF1LyOkXF+dj0xyKgG4ABPpjGqeKKdKn2YyKGEfeuSwCot7LudiWPQdBc22vkf+IUDxyyRRyMArmnYowWpZFJZUNvoDubMQCBgGxqVCwcopccmKjUPnzx1c1ziKDQrkl5DaONRd5CBchR6AXJNgBuSMZOT8YJJl/t80b06BNbBxfa1wVI94EWtbfpbCHljV2qfOqyRabQTDoaHvzFCGW5TQwIIcsGJ6BiRywFIOWyzkNUOUTpBExA/wDccWZyPwiy876ueNCeWOnhZiAkUSEmw2VVF9gPTGPDnF1RI51kVYlllqX06VRhdTYWW7i5HRQLnmLrfaTnxloQIY708skaPK+pDoLi5SMgSODYAFPO4vzwHUq69qmSN5gjyyjXTU0jDuo16Hqks7p41ViALHcWuVLKcwzKprl1
+1M1ND7UsKws4V2sdUi2WwWyKTsAt2UDnij1jxTQVNKYZJpnkkOlFPhZTpjYynSiEKqEXYHYWxNM9rtMNPVSTxtVJH+sCViDKUk0d0gQDVYq2o6gd16HAUTMMpPcmpkJniRnksSFniQNcNDMAGJCqPC5Nx94cig1GaPmi/rVR/sihP2s1mRqph7osd9RuBa/W/Mi3QheXMYTJUStR5TCW1OGcd5driNEJIYj3RYEbdTthV4u4rFY0VNEBTUMRCxx2J0i+8j2uWbcna/1uSHf+1z/MliV0giClYUb3Yo15Kqj3mO17fyGFniXh6ooJzDUKUcbqw91h0ZT1GLGvY5l4gSqjzGVFCh+/1JoHXWCANIvvu23nhuqslp62gMFfVw1IQEpUIVSRQB7xNyNQ6kbEcxgINT9p+apH3S1r6bW3VGb/ABlS354a+yPL1hSpzysuyQhu7LG7SSG+oi/MknSD5sfLCVwxwoa6v9lp2LxajebTptGD75B5XHIHqRh747qfbammyLLf2EBCMRcgsNmZj1WMXJPVieZtgNLsXymSurqjOKkX8TCO4++eZHoieEfH0xccZ3DuTR0dNFTRCyRrYeZPMk+pJJPxxo4AwYMGAMGDBgFHtL4LTM6Ux7LMniifyP4T+63X5HpiW8F5gldA+RZmCkyEinkf30Yck36jp+IG3lf0BiYdr/Z2awe2Ug01cYFwuxlA3Fv3x0PXl0Fgm3C1Z+hquqy/MoyaaoXu5CAbafEFkXzUhjy3HxW2Grh/KshyxzW+3rUMu8SalZl/gXct6ta2Onk+ZwZ/Tigrj3WYwgiGYixcjmCPPbxL15jflKeIshnop2p6hNLr/hYdGU9QfP8ArgO1xtxI2YVklUy6Q1gq3vpUbAX646/DnEVRQyiankKt95eaOPwsvJh/2LYysGAreRVkFXKKjLZhluYH36Ytann9FOw356CPPb72HDLO0hklFPmsBpJuTF1Bik9Q1hovf3rsu3rjzph1
+ybtFnSP2esRK2m5d3Nuy/wB1/eB+N+W1sBeavhDLqqMTtBSlHW7SIqoSCN2EkbWN+fM/HHRzHsvpJpB9rUrIqDSTM0hQbra8msAAcgPXE1yWpomOrLMxmy2a9xBUnVCT6NuLdPFc+mHml4kzunUGejirkH9tSuLsB6Ab39FHwwGQewxwyuld4lFrPDqB8xfvBddz05Y7k3C+bU9IaMPS1MIUBNQaMwEA6Wjew8QbxA3JBt547cPa/RxHRU0tbA5Jb7VL7/NtXyC2GO5S9rOWuhvU6W+6JIpG09NzpF7253J33wEzq6fPKbRDNHJUxJJ3qoPtUZlBsfD4iAx1FTsSLkdcfOS8YZjEncVNNLUwWIenkjZS+pi2osE1c+jXvc/Kl/8AiflKRspmXl/Zo+o35i4jFvL6b46a9sdFZI4YaueS+rTGvXqPeBIueWkjATE8XPAoieKZolUERzAqhnso+0HOWOO1kRjyVbjH1wtXw1FPNBUwd/My3hkVgsyPqAAu7BVTl7o2AO2KVWcRZtWb0+WCGOx8VYRpHqVIB2HLy9cJuexUos2b5mKl1O1NQotgfLVZVG3oD6nAaydodwqQ07VdTKAslMrvoSRCVLgINLq4VSVFgLczq2xcxyqlpHNTmxjMxOuPLKayorED9ppuqA2F7c9/e5Yxq/tFMcZgyynShhPNl8Uz/wB6Q7j5b+uEeWQsSzEsxNySbknzJ64Dc4s4tnrnHeWSJNooE8MUY5AKvK9uv9NsYGDBgHTs97QpstfQby0znxwk7epS+wP5Hr5j44xjpauvCZRC9pQBoAsC5FyFX7oHW5sLHkBhXy6hknlSGFC8jmyqo3J/769BixxpT8NU2ptE+aTLsBusQP8AJfzY+nIPjOqiPh+h9hpmD5jUgGWReaA7ADr5hR6lvLDp2O8CewQe0Tj9anALX5xrz0fE829bDphf7JuAZZJf0rmOppXOuJH53P8AaMP+FenPytZsAYMGDAGDBgwB
+gwYMAYMGDAS3tT7MPaiayi+zq18RUHSJSNwQdtMnk3Xr54U8s4pp8xj/AEZnimKoQ6Y6gjSwblZtvC3x8Ldd8X7CX2gdnNNmSljaKoA8MyrufIOPvD8x0wHnzjjgGqy1/tF1wn3JkHgPx/CfQ/K+FPFdg4gr8kPsWZwe1UT7DV4lK/8A63YWNv8Ay2/K98fuY9nVFmStUZLUJqtd6VzYrfyvuvUWNx5HbASHBjv5xk09LIY6iF4nHRha/wADyI9RcY+MnoO/njh1pH3jBdbnSq36k9BgKPwJ2Z0ddTNUNXnwR3lRFsYm3PiLcxYHlz88TqkzOWnkZqaaSPfZkYoSL7Xsfyxcxw3NlnD1TDGhmnnLBzAC/hbw32F9IjG/xOPP2ApvC/GOf1Ab2fvKlV2bVErqPQkgfS98Ga9oGY0z6KrL6NX8paWxP+YA/LDnwUmjIEhqqg5b3rnuahZAjPqbWCdwQOYO4uoG4xi9vErx0tBSurTaFv7Y1vtSFCsBYki9wxud/DubE4DCy/tGrp20U+X0TPa9o6S5A2F/eO1yPrjSzPiHiNYXkMT08KDUxSFIwo8998Y3YfnUNJmLSTyrFGYHUs5sOaMB8fDyw8ZvkzZnBUtRZ5NPoBLQG6oVNyEIBG1trkEG30CNVubVVbIqyzyTMzAKHckXOwtc6V/LD5xR2U+x5SKtnZqpGHfIGVo0UkiwsL6hdLm5HvYl4NsXPsUppqnL62mnR+4mBMcr30sSCrWJ52IB2638sBC8GNvi3h00MywmeGZigZjC2oISSCh8mFr/AAIxmUNDJM4jhjeRzyVFLE/IYDr43uEuEarMJe7p4yQD45DsiDzJ/oNzh5ybsripoxU5zUJTxdIQw1ufK46+i3PqMdiq4yqK3/ZuRUpp4ORZBpYjqzMNowfMm587m2A7VTm1Hw/G1NQ2qcxcaZJSLhD5AD15IL9NXljU7N+zKWSX9I5rd5WOtYn3N+jSf0TptfyDB2ddlcND
+aeotPVc9RF1jP7l+Z/eO/lbFGwBgwYMAYMGDAGDBgwBgwYMAYMGDAGDBgwHWzHL4p42imjWSNuasAQfriQcSdjMkMntGUTtE6m4jZyCPRH5/Jvri0YMB59PaJUQfqefUPfr5sih7eY+49vxKRy533x8f6lZNmIvl1b7NIeUM2+/l4jq9Lhm+eL5mGXxToY5o0kQ81dQw/PE24g7D6GYlqd5Kdj90HXHf4N4h8mt6YCf1HAmfZerLAzvGQQRBIWUgjfwtY/QXxNq2hlhbTLG8bfhdSp+hAOLH/qLn+X/7lVGaMckWQCwH7knhHwU3x9SdoGeU401mXLKnXVC+/wA1JX8sAu5Z2jUstFFRZnRmoSG3dvG5RhYWF9wb22uDvjM7RuO1r0p4IIO4pqdbIhN2OwUX8gqiwF+pvhlftNy2Q/rWSx6uunQf5quPg8XcPN72VOvwt/R8AhcHZlTQVGusp/aISjKU2vc2sQdrEeYIOHaftLo6WmlgymhNO0ws0kjamHTa7MSQL2ubC97Y5/8AWvh1eWVyN8bf1fH0O0nKo96fJY9XTVoH9GwEopqd5GCxozseSqCxPyG+H/IuB87qIVgVZYafchZXMab87r73ythng7SM3m8FDlaRKeWmF2+h8K/lg/1a4kzD/eJzTxnoZAnpbTFc/JrYDop2b5bQDVmuYKzjnDCd/h+M/RccidoyIPZMhy/u2bYOU1yHpe3iv8XJ9cM2Q9hFJHZqqaScjmq/Zofja7fRhim5PktPSp3dPCkS+SKBf4nmfngI7k3ZNWV0gqc4qG3se7DapPgT7kY9Fv8ALFgyLIqejiEVNEsaDoOZPmSd2PqTjRwYAwYMGAMGDBgDBgwYAwYMGAMGDBgDBgwYAwYMGAMGDBgDBgwYAx+PyODBgJ92g/sh88ee+I/eODBgOrknvDF87NeR+H/TBgwFQg90Y5MGDAGDBgwBgwYMAYMGDAGDBgwBgwYMAYMGDAf/2Q==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="ID528873">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>f0c9aab6-294d-430c-bada-c90e70f32d07</rd:ReportID>
+</Report>

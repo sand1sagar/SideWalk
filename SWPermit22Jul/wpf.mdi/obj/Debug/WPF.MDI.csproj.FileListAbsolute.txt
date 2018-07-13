@@ -1,0 +1,10 @@
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\bin\Debug\WPF.MDI.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\bin\Debug\WPF.MDI.pdb
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\obj\Debug\WPF.MDI.csprojResolveAssemblyReference.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\obj\Debug\WPF.MDI_MarkupCompile.cache
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\obj\Debug\WPF.MDI_MarkupCompile.lref
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\obj\Debug\Themes\Generic.baml
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\obj\Debug\WPF.MDI.g.resources
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\obj\Debug\WPF.MDI.dll
+C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\WPF.MDI\obj\Debug\WPF.MDI.pdb

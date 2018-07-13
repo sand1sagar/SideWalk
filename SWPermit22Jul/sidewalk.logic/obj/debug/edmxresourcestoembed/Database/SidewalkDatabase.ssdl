@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SidewalkUIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Affidavit">
+    <Key>
+      <PropertyRef Name="AffidavitID" />
+    </Key>
+    <Property Name="AffidavitID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Inspector_Key" Type="int" />
+    <Property Name="InspectionDate" Type="datetime" />
+    <Property Name="AffidavitStatus" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="VisioDiagram" Type="nvarchar" MaxLength="50" />
+    <Property Name="TrackIT" Type="nvarchar" MaxLength="50" />
+    <Property Name="RNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="QtrSection" Type="nvarchar" MaxLength="50" />
+    <Property Name="PropertyID" Type="nvarchar" MaxLength="50" />
+    <Property Name="LegalDesc" Type="nvarchar(max)" />
+    <Property Name="Owner1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Owner2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Owner3" Type="nvarchar" MaxLength="100" />
+    <Property Name="OwnerAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="OwnerCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="OwnerState" Type="nvarchar" MaxLength="50" />
+    <Property Name="OwnerZip" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteAddress" Type="nvarchar(max)" />
+    <Property Name="SiteStreetNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteDistrict" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteStreetName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteStreetDesignator" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteZip" Type="nvarchar" MaxLength="50" />
+    <Property Name="CityRepair" Type="nvarchar" MaxLength="50" />
+    <Property Name="OwnerRepair" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContractorRepair" Type="nvarchar" MaxLength="50" />
+    <Property Name="RepairDueDate" Type="datetime" />
+    <Property Name="RepairNoticeSentDate" Type="datetime" />
+    <Property Name="RepairNoticeSentBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CityRepairStart" Type="nvarchar" MaxLength="50" />
+    <Property Name="CityRepairBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="HoldUntilDate" Type="datetime" />
+    <Property Name="HoldUntilBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="permit_no" Type="int" />
+    <Property Name="permit_issued" Type="nvarchar" MaxLength="50" />
+    <Property Name="permit_extended" Type="nvarchar" MaxLength="50" />
+    <Property Name="date_issued" Type="datetime" />
+    <Property Name="date_expired" Type="datetime" />
+    <Property Name="contractor" Type="nvarchar" MaxLength="50" />
+    <Property Name="builder_board_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="date_cancelled" Type="datetime" />
+    <Property Name="cancelled_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="last_action" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="notes" Type="nvarchar(max)" />
+    <Property Name="VisioRevision" Type="int" />
+  </EntityType>
+  <EntityType Name="AffidavitCosts">
+    <Key>
+      <PropertyRef Name="Affidavit_Key" />
+    </Key>
+    <Property Name="Affidavit_Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CostType_Key" Type="char" MaxLength="1" />
+    <Property Name="ActionDt" Type="datetime" />
+    <Property Name="Contract_Key" Type="int" />
+    <Property Name="Parking" Type="money" />
+    <Property Name="MoveIn" Type="money" />
+    <Property Name="Adjustment" Type="money" />
+    <Property Name="TotalCost" Type="money" />
+    <Property Name="Comments" Type="varchar" MaxLength="254" />
+    <Property Name="VisioDiagram" Type="varchar" MaxLength="12" />
+    <Property Name="Batch_Key" Type="varchar" MaxLength="28" />
+  </EntityType>
+  <EntityType Name="AffidavitCostsDetail">
+    <Key>
+      <PropertyRef Name="Affidavit_Key" />
+    </Key>
+    <Property Name="Affidavit_Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CostType_Key" Type="char" MaxLength="1" />
+    <Property Name="RepairItem_Key" Type="int" />
+    <Property Name="Unit" Type="float" />
+    <Property Name="Rate" Type="money" />
+    <Property Name="Cost" Type="money" />
+  </EntityType>
+  <EntityType Name="AffidavitCostsDetailObject">
+    <Key>
+      <PropertyRef Name="Affidavit_Key" />
+    </Key>
+    <Property Name="Affidavit_Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CostType_Key" Type="char" MaxLength="1" />
+    <Property Name="Revision" Type="smallint" />
+    <Property Name="RepairItem_Key" Type="int" />
+    <Property Name="ObjectID" Type="varchar" MaxLength="50" />
+    <Property Name="Unit" Type="float" />
+    <Property Name="Rate" Type="nchar" MaxLength="10" />
+    <Property Name="Cost" Type="money" />
+  </EntityType>
+  <EntityType Name="AffidavitDocumentHistory">
+    <Key>
+      <PropertyRef Name="Affidavit_Key" />
+    </Key>
+    <Property Name="Affidavit_Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DocType" Type="varchar" MaxLength="10" />
+    <Property Name="DocDate" Type="datetime" />
+    <Property Name="DocStatus" Type="varchar" MaxLength="20" />
+    <Property Name="DocBy" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AffidavitNote">
+    <Key>
+      <PropertyRef Name="Affadavit_Key" />
+    </Key>
+    <Property Name="Affadavit_Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="smalldatetime" />
+    <Property Name="Note" Type="varchar(max)" />
+    <Property Name="UserID" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="CityContract">
+    <Key>
+      <PropertyRef Name="ContractID" />
+    </Key>
+    <Property Name="ContractID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Contractor_Key" Type="int" />
+    <Property Name="RevisedDate" Type="datetime" />
+    <Property Name="RevisedBy" Type="varchar" MaxLength="15" />
+    <Property Name="Active" Type="tinyint" />
+    <Property Name="ContractorName_XXX" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Temp.dbo.CityContractRepairItem' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="CityContractRepairItem">
+          <Property Name="Contract_Key" Type="int" />
+          <Property Name="RepairItem_Key" Type="int" />
+          <Property Name="RepairItemType_Key" Type="varchar" MaxLength="20" />
+          <Property Name="Rate" Type="money" />
+        </EntityType>-->
+  <EntityType Name="Contractor">
+    <Key>
+      <PropertyRef Name="ContractorID" />
+    </Key>
+    <Property Name="ContractorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractorName" Type="varchar" MaxLength="20" />
+    <Property Name="CCB" Type="varchar" MaxLength="10" />
+    <Property Name="Name" Type="varchar" MaxLength="40" />
+    <Property Name="Contact" Type="varchar" MaxLength="40" />
+    <Property Name="Address" Type="varchar" MaxLength="40" />
+    <Property Name="City" Type="varchar" MaxLength="24" />
+    <Property Name="State" Type="char" MaxLength="2" />
+    <Property Name="Zip" Type="varchar" MaxLength="10" />
+    <Property Name="Phone" Type="varchar" MaxLength="16" />
+    <Property Name="MBE" Type="tinyint" />
+    <Property Name="WBE" Type="tinyint" />
+    <Property Name="ESB" Type="tinyint" />
+    <Property Name="Active" Type="tinyint" />
+    <Property Name="CityContractor" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="CostType">
+    <Key>
+      <PropertyRef Name="CostTypeID" />
+    </Key>
+    <Property Name="CostTypeID" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Inspector">
+    <Key>
+      <PropertyRef Name="InspectorID" />
+    </Key>
+    <Property Name="InspectorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Staff_Key" Type="int" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="PermitFee">
+    <Key>
+      <PropertyRef Name="PermitFeeID" />
+    </Key>
+    <Property Name="PermitFeeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MinimumFee" Type="smallmoney" />
+    <Property Name="MaximumFee" Type="smallmoney" />
+    <Property Name="NewEffectiveDate" Type="smalldatetime" />
+    <Property Name="NewMinimumFee" Type="smallmoney" />
+    <Property Name="NewMaximumFee" Type="smallmoney" />
+  </EntityType>
+  <EntityType Name="PermitFeeRate">
+    <Key>
+      <PropertyRef Name="RepairItem_Key" />
+    </Key>
+    <Property Name="RepairItem_Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CurrentRate" Type="smallmoney" />
+    <Property Name="NewEffectiveRate" Type="smallmoney" />
+  </EntityType>
+  <EntityType Name="PrintCode">
+    <Key>
+      <PropertyRef Name="PrintCodeID" />
+    </Key>
+    <Property Name="PrintCodeID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PrintDescription" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RepairItem">
+    <Key>
+      <PropertyRef Name="RepairItemID" />
+    </Key>
+    <Property Name="RepairItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RepairItemType" Type="varchar" MaxLength="20" />
+    <Property Name="UoM_Key" Type="uniqueidentifier" />
+    <Property Name="PrintCode_Key" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="ShortDescription" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="PERNR" />
+    </Key>
+    <Property Name="PERNR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="10" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Supervisor" Type="bit" />
+    <Property Name="Inspector" Type="bit" />
+    <Property Name="Forms" Type="bit" />
+    <Property Name="Final" Type="bit" />
+    <Property Name="Permit" Type="bit" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="sw_action">
+    <Key>
+      <PropertyRef Name="aff_no" />
+    </Key>
+    <Property Name="aff_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="action" Type="char" MaxLength="1" />
+    <Property Name="action_dt" Type="datetime" />
+    <Property Name="cost_dt" Type="datetime" />
+    <Property Name="contract_id" Type="int" />
+    <Property Name="special_cost" Type="money" />
+    <Property Name="move_in" Type="money" />
+    <Property Name="adjustment" Type="money" />
+    <Property Name="total_cost" Type="money" />
+    <Property Name="comments" Type="nvarchar(max)" />
+    <Property Name="override" Type="char" MaxLength="1" />
+    <Property Name="fis_name" Type="varchar" MaxLength="12" />
+    <Property Name="batch_id" Type="varchar" MaxLength="28" />
+  </EntityType>
+  <EntityType Name="sw_action_detail">
+    <Key>
+      <PropertyRef Name="aff_no" />
+    </Key>
+    <Property Name="aff_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="action" Type="char" MaxLength="1" />
+    <Property Name="action_type" Type="varchar" MaxLength="20" />
+    <Property Name="unit" Type="float" />
+    <Property Name="cost" Type="money" />
+  </EntityType>
+  <EntityType Name="sw_posting">
+    <Key>
+      <PropertyRef Name="aff_no" />
+    </Key>
+    <Property Name="aff_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qtr_sec" Type="varchar" MaxLength="12" />
+    <Property Name="map_id" Type="varchar" MaxLength="24" />
+    <Property Name="post_dt" Type="datetime" />
+    <Property Name="acct_period" Type="int" />
+    <Property Name="property_id" Type="varchar" MaxLength="24" />
+    <Property Name="property_id2" Type="varchar" MaxLength="24" />
+    <Property Name="property_desc" Type="nvarchar(max)" />
+    <Property Name="aff_status" Type="int" />
+    <Property Name="owner_name" Type="varchar" MaxLength="40" />
+    <Property Name="attn1" Type="varchar" MaxLength="40" />
+    <Property Name="attn2" Type="varchar" MaxLength="40" />
+    <Property Name="st_no" Type="varchar" MaxLength="24" />
+    <Property Name="district" Type="varchar" MaxLength="2" />
+    <Property Name="st_name" Type="varchar" MaxLength="40" />
+    <Property Name="designator" Type="varchar" MaxLength="4" />
+    <Property Name="city" Type="varchar" MaxLength="24" />
+    <Property Name="zip" Type="varchar" MaxLength="10" />
+    <Property Name="inspector_no" Type="int" />
+    <Property Name="city_owned_flag" Type="char" MaxLength="1" />
+    <Property Name="owner_resident_flag" Type="char" MaxLength="1" />
+    <Property Name="service_req_flag" Type="char" MaxLength="1" />
+    <Property Name="rep_by_city" Type="char" MaxLength="1" />
+    <Property Name="rep_by_owner" Type="char" MaxLength="1" />
+    <Property Name="partial_repair" Type="char" MaxLength="1" />
+    <Property Name="vacant_lot_flag" Type="char" MaxLength="1" />
+    <Property Name="vacant_desc" Type="nvarchar(max)" />
+    <Property Name="repair_dt" Type="datetime" />
+    <Property Name="billed_dt" Type="datetime" />
+    <Property Name="bill_flag" Type="char" MaxLength="1" />
+    <Property Name="hold_until_dt" Type="datetime" />
+    <Property Name="permit_no" Type="int" />
+    <Property Name="permit_issued" Type="varchar" MaxLength="3" />
+    <Property Name="permit_extended" Type="char" MaxLength="1" />
+    <Property Name="date_issued" Type="datetime" />
+    <Property Name="date_expired" Type="datetime" />
+    <Property Name="contractor" Type="varchar" MaxLength="40" />
+    <Property Name="builder_board_no" Type="varchar" MaxLength="6" />
+    <Property Name="license_no" Type="varchar" MaxLength="10" />
+    <Property Name="date_cancelled" Type="datetime" />
+    <Property Name="cancelled_by" Type="varchar" MaxLength="10" />
+    <Property Name="status" Type="char" MaxLength="1" />
+    <Property Name="last_action" Type="char" MaxLength="1" />
+    <Property Name="date_added" Type="datetime" />
+    <Property Name="date_updated" Type="datetime" />
+    <Property Name="notes" Type="nvarchar(max)" />
+    <Property Name="sent_dt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UnitOfMeasure">
+    <Key>
+      <PropertyRef Name="UomID" />
+    </Key>
+    <Property Name="UomID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AffidavitCosts_CostType">
+    <End Role="CostType" Type="Self.CostType" Multiplicity="0..1" />
+    <End Role="AffidavitCosts" Type="Self.AffidavitCosts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CostType">
+        <PropertyRef Name="CostTypeID" />
+      </Principal>
+      <Dependent Role="AffidavitCosts">
+        <PropertyRef Name="CostType_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitCostsDetail_CostType">
+    <End Role="CostType" Type="Self.CostType" Multiplicity="0..1" />
+    <End Role="AffidavitCostsDetail" Type="Self.AffidavitCostsDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CostType">
+        <PropertyRef Name="CostTypeID" />
+      </Principal>
+      <Dependent Role="AffidavitCostsDetail">
+        <PropertyRef Name="CostType_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitCostsDetail_RepairItem">
+    <End Role="RepairItem" Type="Self.RepairItem" Multiplicity="0..1" />
+    <End Role="AffidavitCostsDetail" Type="Self.AffidavitCostsDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RepairItem">
+        <PropertyRef Name="RepairItemID" />
+      </Principal>
+      <Dependent Role="AffidavitCostsDetail">
+        <PropertyRef Name="RepairItem_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitCostsDetailObject_CostType">
+    <End Role="CostType" Type="Self.CostType" Multiplicity="0..1" />
+    <End Role="AffidavitCostsDetailObject" Type="Self.AffidavitCostsDetailObject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CostType">
+        <PropertyRef Name="CostTypeID" />
+      </Principal>
+      <Dependent Role="AffidavitCostsDetailObject">
+        <PropertyRef Name="CostType_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitCostsDetailObject_RepairItem">
+    <End Role="RepairItem" Type="Self.RepairItem" Multiplicity="0..1" />
+    <End Role="AffidavitCostsDetailObject" Type="Self.AffidavitCostsDetailObject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RepairItem">
+        <PropertyRef Name="RepairItemID" />
+      </Principal>
+      <Dependent Role="AffidavitCostsDetailObject">
+        <PropertyRef Name="RepairItem_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitDocumentHistory_Affidavit">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitDocumentHistory" Type="Self.AffidavitDocumentHistory" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitDocumentHistory">
+        <PropertyRef Name="Affidavit_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AffidavitNote_Affidavit">
+    <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
+    <End Role="AffidavitNote" Type="Self.AffidavitNote" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Affidavit">
+        <PropertyRef Name="AffidavitID" />
+      </Principal>
+      <Dependent Role="AffidavitNote">
+        <PropertyRef Name="Affadavit_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CityContract_Contractor">
+    <End Role="Contractor" Type="Self.Contractor" Multiplicity="0..1" />
+    <End Role="CityContract" Type="Self.CityContract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contractor">
+        <PropertyRef Name="ContractorID" />
+      </Principal>
+      <Dependent Role="CityContract">
+        <PropertyRef Name="Contractor_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+error 6004: The table 'Temp.dbo.CityContractRepairItem' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_CityContractRepairItem_CityContract" />-->
+  <!--Errors Found During Generation:
+error 6004: The table 'Temp.dbo.CityContractRepairItem' is referenced by a relationship, but cannot be found.
+        <Association Name="FK_CityContractRepairItem_RepairItem" />-->
+  <Association Name="FK_Inspector_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="Inspector" Type="Self.Inspector" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="PERNR" />
+      </Principal>
+      <Dependent Role="Inspector">
+        <PropertyRef Name="Staff_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RepairItem_PrintCode">
+    <End Role="PrintCode" Type="Self.PrintCode" Multiplicity="0..1" />
+    <End Role="RepairItem" Type="Self.RepairItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrintCode">
+        <PropertyRef Name="PrintCodeID" />
+      </Principal>
+      <Dependent Role="RepairItem">
+        <PropertyRef Name="PrintCode_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RepairItem_RepairItem">
+    <End Role="UnitOfMeasure" Type="Self.UnitOfMeasure" Multiplicity="0..1" />
+    <End Role="RepairItem" Type="Self.RepairItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnitOfMeasure">
+        <PropertyRef Name="UomID" />
+      </Principal>
+      <Dependent Role="RepairItem">
+        <PropertyRef Name="UoM_Key" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SidewalkUIModelStoreContainer">
+    <EntitySet Name="Affidavit" EntityType="Self.Affidavit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitCosts" EntityType="Self.AffidavitCosts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitCostsDetail" EntityType="Self.AffidavitCostsDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitCostsDetailObject" EntityType="Self.AffidavitCostsDetailObject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitDocumentHistory" EntityType="Self.AffidavitDocumentHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AffidavitNote" EntityType="Self.AffidavitNote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CityContract" EntityType="Self.CityContract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contractor" EntityType="Self.Contractor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CostType" EntityType="Self.CostType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inspector" EntityType="Self.Inspector" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitFee" EntityType="Self.PermitFee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PermitFeeRate" EntityType="Self.PermitFeeRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrintCode" EntityType="Self.PrintCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RepairItem" EntityType="Self.RepairItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sw_action" EntityType="Self.sw_action" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sw_action_detail" EntityType="Self.sw_action_detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sw_posting" EntityType="Self.sw_posting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UnitOfMeasure" EntityType="Self.UnitOfMeasure" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AffidavitCosts_CostType" Association="Self.FK_AffidavitCosts_CostType">
+      <End Role="CostType" EntitySet="CostType" />
+      <End Role="AffidavitCosts" EntitySet="AffidavitCosts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitCostsDetail_CostType" Association="Self.FK_AffidavitCostsDetail_CostType">
+      <End Role="CostType" EntitySet="CostType" />
+      <End Role="AffidavitCostsDetail" EntitySet="AffidavitCostsDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitCostsDetail_RepairItem" Association="Self.FK_AffidavitCostsDetail_RepairItem">
+      <End Role="RepairItem" EntitySet="RepairItem" />
+      <End Role="AffidavitCostsDetail" EntitySet="AffidavitCostsDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitCostsDetailObject_CostType" Association="Self.FK_AffidavitCostsDetailObject_CostType">
+      <End Role="CostType" EntitySet="CostType" />
+      <End Role="AffidavitCostsDetailObject" EntitySet="AffidavitCostsDetailObject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitCostsDetailObject_RepairItem" Association="Self.FK_AffidavitCostsDetailObject_RepairItem">
+      <End Role="RepairItem" EntitySet="RepairItem" />
+      <End Role="AffidavitCostsDetailObject" EntitySet="AffidavitCostsDetailObject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitDocumentHistory_Affidavit" Association="Self.FK_AffidavitDocumentHistory_Affidavit">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitDocumentHistory" EntitySet="AffidavitDocumentHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AffidavitNote_Affidavit" Association="Self.FK_AffidavitNote_Affidavit">
+      <End Role="Affidavit" EntitySet="Affidavit" />
+      <End Role="AffidavitNote" EntitySet="AffidavitNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CityContract_Contractor" Association="Self.FK_CityContract_Contractor">
+      <End Role="Contractor" EntitySet="Contractor" />
+      <End Role="CityContract" EntitySet="CityContract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inspector_Staff" Association="Self.FK_Inspector_Staff">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="Inspector" EntitySet="Inspector" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RepairItem_PrintCode" Association="Self.FK_RepairItem_PrintCode">
+      <End Role="PrintCode" EntitySet="PrintCode" />
+      <End Role="RepairItem" EntitySet="RepairItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RepairItem_RepairItem" Association="Self.FK_RepairItem_RepairItem">
+      <End Role="UnitOfMeasure" EntitySet="UnitOfMeasure" />
+      <End Role="RepairItem" EntitySet="RepairItem" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

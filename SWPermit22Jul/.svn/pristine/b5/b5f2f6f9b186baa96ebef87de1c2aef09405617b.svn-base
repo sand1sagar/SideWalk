@@ -1,0 +1,266 @@
+﻿<UserControl x:Class="SidewalkPermitWPF.Views.PermitView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:actb="clr-namespace:Aviad.WPF.Controls;assembly=Aviad.WPF.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:mvvm="http://www.galasoft.ch/mvvmlight"
+             x:Name="mdiChild" xmlns:local="clr-namespace:SidewalkPermitWPF.Views" 
+             DataContext="{Binding Main, Source={StaticResource Locator}}" Background="White" Height="Auto" Width="1024">
+    <UserControl.Resources>
+        <Storyboard x:Key="sbShowTopMenu" >
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,-200,0,0" To="0,0,0,0" DecelerationRatio=".9" Duration="0:0:1" />
+        </Storyboard>
+        <Storyboard x:Key="sbHideTopMenu">
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="0,-220,0,0" AccelerationRatio=".9" Duration="0:0:1" />
+        </Storyboard>
+        <Style TargetType="DataGridCell">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+    </UserControl.Resources>
+    <Grid Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="402.304"/>
+            <RowDefinition Height="Auto" MinHeight="156.782" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="221"/>
+            <RowDefinition Height="Auto" MinHeight="1.241" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600" />
+            <ColumnDefinition Width="424" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Panel.ZIndex="5" Grid.ColumnSpan="2" Margin="0,0,0,0.609" Grid.RowSpan="2">
+            <StackPanel Panel.ZIndex="5" Name="pnlTopMenu" Orientation="Vertical" Width="400" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-222,0,0">
+                <Border BorderBrush="#AF1719" BorderThickness="1" Height="222" Background="LightGray" Margin="-83,0,53,0" >
+                    <StackPanel Margin="0,0,0,0" >
+                        <DataGrid Margin="0,0,0,0" LoadingRow="affidavitGrid_LoadingRow" MaxHeight="200" Name="affidavitGrid" IsEnabled="True" IsReadOnly="True" AutoGenerateColumns="False">
+                            <DataGrid.Columns>
+                                <!--<DataGridTextColumn Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow}}" />-->
+                                <DataGridTextColumn Width="75" Header="Affidavit" Binding="{Binding AffidavitID}" />
+                                <DataGridTextColumn Width="240" Header="Address" Binding="{Binding PropertyAddress}" />
+                                <DataGridHyperlinkColumn
+                     Binding="{Binding Remove}"
+                     ContentBinding="{Binding AffidavitID}"
+                     Header="Remove"
+                     IsReadOnly="True"
+                     Width="65">
+                                    <DataGridHyperlinkColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <EventSetter Event="Hyperlink.Click" Handler="OnHyperlinkClickRemoveAffidavit" />
+                                        </Style>
+                                    </DataGridHyperlinkColumn.ElementStyle>
+                                </DataGridHyperlinkColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Border>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="6*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="351*"/>
+                        <ColumnDefinition Width="49*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="btnTopMenuHide" Margin="-83,0,4,-16.72" Click="btnTopMenuHide_Click" Content="Hide Submitted Permits" Visibility="Hidden" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                    <Button Name="btnTopMenuShow" Click="btnTopMenuShow_Click" Content="View Submitted Permits" Margin="-83,0,4,-16.76" Grid.RowSpan="2" Grid.ColumnSpan="3" />
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="49">
+                <Label x:Name="lblAffidavitCount" Background="LightGray" Height="23" Width="47" RenderTransformOrigin="1.7,0.333" Content="0"/>
+                <!--<Label Width="144">Total Permits Applied :</Label>-->
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Panel.ZIndex="1" Grid.ColumnSpan="2" Margin="0,30,0,10.609" Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,0,0">
+                    <GroupBox Header="Applicant" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="12" Height="290">
+                        <StackPanel Margin="0,10,0,3.35">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <RadioButton Margin="0,0,50,0" GroupName="applicantType" x:Name="rdoContractor" Content="Contractor" Checked="rdoContractor_Checked" />
+                                <RadioButton Margin="0,0,50,0" GroupName="applicantType" x:Name="rdoOwner" Content="Property Owner" Checked="rdoOwner_Checked" />
+                                <RadioButton Margin="0,0,50,0" GroupName="applicantType" x:Name="rdoOther" Content="Other" Checked="rdoOther_Checked" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Panel.ZIndex="20" Margin="0,0,0,-240">
+                                <TextBlock TextWrapping="Wrap" Width="125" Text="Contractor/CCB# : "/>
+                                <!--<TextBox Width="130" TextWrapping="Wrap" IsEnabled="{Binding IsChecked, ElementName=rdoContractor}" Text="{Binding ContractorInfo.license_no,Mode=TwoWay}"/>-->
+                                <StackPanel>
+                                    <TextBox Width="390" FontFamily="Calibri" FontSize="12" HorizontalAlignment="Left" IsEnabled="{Binding IsChecked, ElementName=rdoContractor}" KeyUp="txtContractorSearch_KeyUp" Margin="0,0,0,0" Grid.Row="1" TextWrapping="Wrap" x:Name="txtContractorSearch" TextChanged="txtContractorSearch_TextChanged" MaxLength="60" CharacterCasing="Upper" />
+                                    <ListBox Width="390"  Height="150" Panel.ZIndex="20" ScrollViewer.CanContentScroll="True" x:Name="suggestionList" FontFamily="Calibri" FontSize="12" SelectionChanged="suggestionList_SelectionChanged" HorizontalAlignment="Left" Background="LightYellow" Visibility="Collapsed" ItemsSource="{Binding Contractors}" />
+                                </StackPanel>
+                                <!--<Button Command="{Binding SearchContractorCommand}" CommandParameter="{Binding ContractorInfo.name}" Content="Find" Margin="10,0,0,0"/>-->
+                            </StackPanel>
+                            <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="175" Text="CCB# : "/>
+                        <TextBox Width="100" TextWrapping="Wrap" x:Name="txtContractorID" IsEnabled="{Binding IsChecked, ElementName=rdoOwner}" Text="{Binding ContractorInfo.contractor_id,Mode=TwoWay}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="TextChanged">
+                                    <mvvm:EventToCommand Command="{Binding SearchContractorCommand, Mode=TwoWay}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </TextBox>
+                        <CheckBox Content="Modify Contractor Information" Margin="10,0,0,0"/>
+                    </StackPanel>-->
+                            <StackPanel Panel.ZIndex="0" Orientation="Horizontal" Margin="0,40,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="125" Text="CCB : "/>
+                                <TextBox Width="390" TextWrapping="Wrap" x:Name="txtCCBNumber" Text="{Binding ContractorInfo.ccb,Mode=TwoWay}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="125" Text="* Name : "  />
+                                <TextBox Width="390" TextWrapping="Wrap" x:Name="txtContractorName" PreviewTextInput="LettersAndNumberValidationTextBox" Text="{Binding ContractorInfo.name,Mode=TwoWay}" MaxLength="60" CharacterCasing="Upper" />
+
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="125" Text="Contact Name: "  />
+                                <TextBox Width="390" TextWrapping="Wrap" x:Name="txtContractorContact"  Text="{Binding ContractorInfo.contact,Mode=TwoWay}" CharacterCasing="Upper" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="125" Text="Address : "/>
+                                <TextBox Width="390" TextWrapping="Wrap" x:Name="txtContractorAddress"  Text="{Binding ContractorInfo.address,Mode=TwoWay}" CharacterCasing="Upper" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap"  Width="125" Text="City : "/>
+                                <TextBox Width="123" Margin="0,0,15,0" PreviewTextInput="LetterValidationTextBox" x:Name="txtContractorCity"  TextWrapping="Wrap" Text="{Binding ContractorInfo.city,Mode=TwoWay}" CharacterCasing="Upper"/>
+                                <TextBlock TextWrapping="Wrap" Text=" ST : "/>
+                                <TextBox Width="45" Margin="0,0,15,0" MaxLength="2" PreviewTextInput="LetterValidationTextBox" x:Name="txtContractorState" TextWrapping="Wrap" Text="{Binding ContractorInfo.state,Mode=TwoWay}" CharacterCasing="Upper" />
+                                <TextBlock TextWrapping="Wrap" Text="ZIP : "/>
+                                <TextBox Width="147" TextWrapping="Wrap" MaxLength="5" PreviewTextInput="NumberValidationTextBox" x:Name="txtContractorZip"  Text="{Binding ContractorInfo.zip,Mode=TwoWay}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="125" Text="* Phone Number : " />
+                                <TextBox Width="390" TextWrapping="Wrap" MaxLength="12" TextChanged="txtContractorPhone_TextChanged" PreviewTextInput="PhoneNumberValidationTextBox" x:Name="txtContractorPhone"  Text="{Binding ContractorInfo.phone, Mode=TwoWay}"/>
+                            </StackPanel>
+                            <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="125" Text="Contact Phone:" FontWeight="Bold"/>
+                                <TextBox Width="390" TextWrapping="Wrap" MaxLength="12" TextChanged="txtContractorPhone_TextChanged" PreviewTextInput="PhoneNumberValidationTextBox" x:Name="txtContractorContactPhone"  Text="{Binding ContractorInfo.Contactphone, Mode=TwoWay}" />
+                                -->
+                            <!--KeyUp="txtContractorPhone_KeyUp"-->
+                            <!--
+                            </StackPanel>-->
+                            <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="125" Text="Email : "/>
+                                <TextBox Width="390" TextWrapping="Wrap" PreviewTextInput="EmailValidationTextBox" x:Name="txtContractorEmail" Text="{Binding ContractorInfo.Email, Mode=TwoWay}"/>
+                            </StackPanel>-->
+                        </StackPanel>
+
+                    </GroupBox>
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="0" Margin="10,0,0,0">
+                    <GroupBox Header="Affidavit" HorizontalAlignment="Center" Panel.ZIndex="0"  Margin="0,0,-20,-23" VerticalAlignment="Top" FontFamily="Calibri" FontSize="12" Height="290" Width="487">
+                        <StackPanel Margin="0,10,0,0">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="175" Text="Search by: "/>
+                                <RadioButton Margin="0,0,50,0"  x:Name="rdoAffidavit" Content="Affidavit" Checked="rdoAffidavit_Checked"  />
+                                <RadioButton Margin="0,0,50,0"  x:Name="rdoAddress" Content="Property Address"  Checked="rdoAddress_Checked" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Panel.ZIndex="20" Margin="0,0,0,-240">
+                                <TextBlock TextWrapping="Wrap" Width="175" Text="Affidavit#: "/>
+                                <StackPanel Panel.ZIndex="1000">
+                                    <TextBox Width="280" Margin="0,0,0,0" Grid.Row="1" TextWrapping="Wrap" x:Name="txtAffidavitSearch" TextChanged="txtAffidavitSearch_TextChanged" KeyUp="txtAffidavitSearch_KeyUp" />
+                                    <ListBox Width="280" Panel.ZIndex="20" Height="150" ScrollViewer.CanContentScroll="True" x:Name="affidavitSuggestionList" SelectionChanged="affidavitSuggestionList_SelectionChanged" HorizontalAlignment="Left" Background="LightYellow" Visibility="Collapsed" ItemsSource="{Binding Contractors}" />
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Panel.ZIndex="10" Margin="0,30,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="175" Text="Property Address : "/>
+                                <StackPanel Panel.ZIndex="1000">
+                                    <TextBox Width="280" Margin="0,0,0,0" Grid.Row="1" TextWrapping="Wrap" x:Name="txtPropertySearch" TextChanged="txtPropertySearch_TextChanged" KeyUp="txtPropertySearch_KeyUp" RenderTransformOrigin="0.5,0.5" CharacterCasing="Upper" />
+                                    <ListBox Width="280" Panel.ZIndex="10" Height="150" ScrollViewer.CanContentScroll="True" x:Name="PropertySuggestionList" SelectionChanged="PropertySuggestionList_SelectionChanged" HorizontalAlignment="Left" Background="LightYellow" Visibility="Collapsed" ItemsSource="{Binding Contractors}" />
+                                </StackPanel>
+                            </StackPanel>
+                            <!--<StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                        <TextBlock TextWrapping="Wrap" Width="175" Text="Property Address : "/>
+                        <TextBox Width="286" TextWrapping="Wrap" Text="{Binding AffidavitInfo.attn1, Mode=TwoWay}"/>
+                        <Button Content="Find" Command="{Binding SearchAffidavitCommand}" Margin="10,0,0,0"/>
+                    </StackPanel>-->
+
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="175" Text="Inspector : "/>
+                                <TextBox Width="280" TextWrapping="Wrap" IsEnabled="False" x:Name="txtInspector" RenderTransformOrigin="0.5,0.5"/>
+                                <!--Text="{Binding EmpInfo.EmpNo, Mode=TwoWay}"-->
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="175" Text="Inspection Date : "/>
+                                <TextBox Width="100" Margin="0,0,10,0" TextWrapping="Wrap" IsEnabled="False" x:Name="txtInspectionDate" Text="{Binding AffidavitInfo.post_dt, StringFormat=d, Mode=TwoWay}"/>
+                                <TextBlock TextWrapping="Wrap" Width="90" Text="Notice Sent : "/>
+                                <TextBox Width="80" TextWrapping="Wrap" IsEnabled="False" x:Name="txtNoticeSent" Text="{Binding AffidavitInfo.sent_dt, StringFormat=d, Mode=TwoWay}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10" >
+                                <TextBlock TextWrapping="Wrap" Width="175" Text="Property Owner : "/>
+                                <TextBox Width="280" TextWrapping="Wrap" IsEnabled="False" x:Name="txtPropertyOwner" Text="{Binding AffidavitInfo.owner_name,Mode=TwoWay}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap" Width="175" Text="Property Description : "/>
+                                <TextBox Width="279" MinHeight="35" TextWrapping="Wrap" x:Name="txtPropertyDescription" IsEnabled="False" Text="{Binding AffidavitInfo.property_desc, Mode=TwoWay}" Height="30"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+        <GroupBox Header="Fee Computation" HorizontalAlignment="Center" Grid.Row="1"   MinHeight="150" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Calibri" FontSize="12" Width="1024" Grid.RowSpan="3" Margin="0,320,0,0">
+            <StackPanel Margin="0,0,33,7" Height="407" >
+                <DataGrid Margin="0,0,-12,0" HorizontalContentAlignment="Right" Name="affidavitFee" IsEnabled="True" IsReadOnly="True" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <!--<DataGridTextColumn Width="*" Header="Action" Binding="{Binding action}" />-->
+                        <DataGridTextColumn Width="*" Header="Action Type" Binding="{Binding action_type}"  />
+                        <DataGridTextColumn Width="*" Header="Unit" Binding="{Binding unit}"  />
+                        <DataGridTextColumn Width="*" Header="Rate" Binding="{Binding rate}"  />
+                        <DataGridTextColumn Width="250" Header="Cost" Binding="{Binding cost}"  />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20,10,10,10" Width="750" Height="22">
+                    <TextBlock Width="90" Margin="0,0,20,0" TextWrapping="Wrap" Text="Expiration Date : "/>
+                    <TextBox Width="101" Margin="0,0,20,0" TextWrapping="Wrap" x:Name="txtExpirationDate" IsEnabled="False" Text="{Binding ExpirationDate,Mode=TwoWay}"/>
+                    <!--<Label Width="329" Margin="0,-4,0,0" Content="                            Min Fee: $60 and Max Fee: $500              "  VerticalAlignment="Top"  />-->
+                    <!--<TextBlock Width="60" Margin="0,0,0,0" TextWrapping="Wrap" Text="Fee Range : "/>
+                    <TextBox x:Name="txtMinFee" Width="50" Margin="0,0,10,0" TextWrapping="Wrap"  IsEnabled="False" />
+                    <TextBlock Width="20" Margin="0,0,0,0" TextWrapping="Wrap" Text="to"/>
+                    <TextBox x:Name="txtMaxFee" Width="50" Margin="0,0,20,0" TextWrapping="Wrap"  IsEnabled="False" />-->
+
+                    <TextBlock TextWrapping="Wrap" Width="75" Margin="338,0,0,0" Text="Total Fee : "/>
+                    <TextBox Width="100" Margin="0,0,20,0" TextWrapping="Wrap" x:Name="txtFee" IsEnabled="False" Text="{Binding TotalFee,Mode=TwoWay}"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Margin="0,0,0,10">
+                    <!--<ScrollViewer VerticalScrollBarVisibility="Visible" Margin="50,0,0,0" BorderThickness="1" Width="911" >
+                        <WrapPanel Orientation="Vertical" HorizontalAlignment="Center">
+                            <CheckBox x:Name="chkLegal" Margin="0,5,0,0" HorizontalAlignment="Center"  Checked="chkLegal_Checked" Unchecked="chkLegal_Unchecked" Content="I Agree"  />
+                            <TextBlock FontFamily="Calibri" FontSize="12" TextWrapping="Wrap" Width="887" Text="The applicant agrees to do the above work in accordance with the Charter, Codes, Resolutions and SPECIFICATIONS applying to STREETS, SEWERS, BRIDGES and STRUCTURES of the City of Portland. Applicant and/or Permittee agrees to protect and hold harmless the City of Portland, Its officers, agents, and employees from any and all injury to persons or damage to property that may result from or any manner arise out of the action of said applicant or permittee making changes, improvements, or alterations pursuant to this permit on or within any public street or other right-of way. The applicant agrees that the work provided for under this permit shall be performed in such good, skillful and substantial manner that no repairs shall be required to any concrete sidewalk, curb, or driveway for a period of 3 years after its completion and acceptance by the City, and if during said period, any defects shall appear in said improvement which are attributable in any manner to defective materials workmanship, the applicant hereby undertakes and guarantees to repair such defects at his own expense, and when so ordered by the City Engineer. Any defect which appears in said improvement within said period shall be prima facie evidence of defective material or workmanship. PERMITTEE assumes responsibility for proper repair or replacement of any street surface damaged, or in any manner adversely altered from its original condition."/>
+                        </WrapPanel>
+                    </ScrollViewer>-->
+                    <WrapPanel Orientation="Vertical">
+
+                        <!--<TextBlock FontFamily="Calibri" HorizontalAlignment="Center" FontSize="12" TextWrapping="Wrap" Width="887" Text="The applicant agrees to do the above work in accordance with the provisions of the City Charter, Ordinances, Resolutions, and Title 17 of the City Code and the City of Portland Standard Construction Specifications.
+Applicant and/or permittee agrees to protect and hold harmless the City of Portland, its officers, agents, and employees from any and all injury to persons or damage to property that may result from or any manner arise out of the action of said applicant making changes, improvements, or alterations pursuant to this permit on or within any public street or other right-of way.
+The applicant agrees that the work provided for under this permit shall be performed in such good, skillful and substantial manner that no repairs shall be required to any concrete sidewalk, curb, or driveway for a period of three years after its completion and acceptance by the City, and if during said period, any defects shall appear in said improvement which are attributable in any manner to defective materials or work, the applicant hereby undertakes and guarantees to repair such defects at their own expense, and when so ordered by the City Engineer. Any defect which appears in said improvement within said period shall be presumed as evidence of defective materials or work. Note: subsequent damage caused by tree roots shall not be evidence of defective materials or work.
+Permitee assumes responsibility for proper repair or replacement of any street surface damaged, or in any manner adversely altered from its original condition, and confirming the repairs pass final inspection.
+"/>-->
+                        <!--<WebBrowser Name="wbSample" Navigating="wbSample_Navigating"></WebBrowser> -->
+                        <WebBrowser Name="browser" Height="200"  HorizontalAlignment="Center" Width="750" Source="\\pdotfile1\apps\SidewalkPosting\PermitApp\Graphics\PermitAcceptanceText.svg"/>
+                        <CheckBox x:Name="chkLegal" Margin="0,5,0,0" HorizontalAlignment="Center"  Content="I Agree"   Checked="chkLegal_Checked" Unchecked="chkLegal_Unchecked" />
+                    </WrapPanel>
+
+                    <!--<Button Content="Submit and Pay " Width="156" Margin="0,0,50,0" Command="{Binding SubmitApplicationCommand1}" CommandParameter="{Binding EmpInfo}" />-->
+                    <!--<Button Content="Clear" Width="155" Margin="0,0,50,0" Command="{Binding ResetCommand1}" CommandParameter="{Binding EmpInfo}" />-->
+                </StackPanel>
+                <Button Content="Submit" FontSize="24" HorizontalAlignment="Center" Width="150" Height="50" Command="{Binding SubmitApplicationCommand1}" x:Name="btnSubmit" Click="btnSubmit_Click" RenderTransformOrigin="0.5,-0.27"/>
+                <!--CommandParameter="{Binding EmpInfo}"-->
+
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>
+

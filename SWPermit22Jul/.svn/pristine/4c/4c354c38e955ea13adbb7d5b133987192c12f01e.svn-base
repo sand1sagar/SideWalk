@@ -1,0 +1,15 @@
+﻿<Window x:Class="SidewalkPermitWPF.Views.PermitHistoryView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
+        Title="Permit History" Height="300" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid Margin="0,0,0,0" Name="permitHistory" IsReadOnly="True" ItemsSource="{Binding PermitHistoryList}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="150" Header="Activity Name" Binding="{Binding Status}"></DataGridTextColumn>
+                <DataGridTextColumn Width="150" Header="Activity Time" Binding="{Binding ActivityTime}" />
+                <DataGridTextColumn Width="*" Header="Comments" Binding="{Binding Comments}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
