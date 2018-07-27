@@ -1620,6 +1620,9 @@
     <Content Include="Views\FormInspection\DoNotPour.cshtml" />
     <Content Include="Views\FinalInspection\RepairsNotAcceptable.cshtml" />
     <Content Include="Views\FinalInspection\RepairsAreCompleteAndSatisfactory.cshtml" />
+    <Content Include="Views\Home\GetAllAffidavit.cshtml" />
+    <Content Include="Views\Home\GetAllTrackIT.cshtml" />
+    <Content Include="Views\Shared\_FormFinalDescription.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

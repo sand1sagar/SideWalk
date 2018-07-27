@@ -3,6 +3,7 @@ using Sidewalk.Logic;
 using Sidewalk.Logic.Database;
 //using SidewalkUI.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -749,5 +750,55 @@ namespace SidewalkUI.Api
             return result;
         }
 
+        [HttpGet]
+        public List<AffidavitModel> GetAllAffidavit(string fromDate, string toDate)
+        {
+            try
+            {
+                return affidavitLogic.GetAllAffidavit(fromDate, toDate);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+
+        //public List<AffidavitModel> GetAllTrackIT()
+        //{
+        //    try
+        //    {
+        //        return affidavitLogic.GetAllTrackIT();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Log.Error(ex.Message);
+        //        return null;
+        //    }
+        //}
+        public List<IEnumerable> GetAllTrackIT()
+        {
+            try
+            {
+                return affidavitLogic.GetAllTrackIT();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return null;
+            }
+        }
+        public bool SaveTrackItDetails(AffidavitModel aff)
+        {
+            try
+            {
+                return affidavitLogic.SaveTrackItDetails(aff);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+                return false;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using SidewalkUI.Api;
+﻿using Sidewalk.Logic.Database;
+using SidewalkUI.Api;
 using SidewalkUI.Common;
 using SidewalkUI.Filters;
 using SidewalkUI.Models;
@@ -111,5 +112,95 @@ namespace SidewalkUI.Controllers
             token = Helper.Base64Encode(token);
             return Json(token, JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet]
+        public ActionResult GetAllAffidavit()
+        {
+            var fromDate = DateTime.Now.AddYears(-1).ToShortDateString();
+            var toDate = DateTime.Now.ToShortDateString();
+
+            ViewBag.FromDate = fromDate;
+            ViewBag.ToDate = toDate;
+
+            var result = api.GetAllAffidavit(fromDate, toDate);
+            return View(result);
+        }
+
+        [HttpPost]
+        public ActionResult GetAllAffidavit(string FromDate, string ToDate)
+        {
+            ViewBag.FromDate = FromDate;
+            ViewBag.ToDate = ToDate;
+
+            var result = api.GetAllAffidavit(FromDate, ToDate);
+            return View(result);
+        }
+
+        public ActionResult SendPrint(string lstaffidavitid)
+        {
+            return null;
+        }
+
+        [HttpGet]
+        public ActionResult GetAllTrackIT()
+        {
+            var result = api.GetAllTrackIT();
+            var lstTrackIt = (List<AffidavitModel>)result[0];
+            var lstAffidavitStatus = (List<AffidavitModel>)result[1];
+            TempData["lstAffidavitData"] = lstAffidavitStatus;
+            var lstSiteAddress = (from company in lstAffidavitStatus
+                                  select company).ToList().Select(c => new SelectListItem
+                                  {
+                                      Value = c.AffidavitId.ToString(),
+                                      Text = c.SiteAddress
+                                  });
+            ViewData["GetSiteAddress"] = new SelectList(lstSiteAddress, "Value", "Text");
+            ViewData["GetAffidavit"] = new SelectList(lstSiteAddress, "Value", "Value");
+            ViewBag.AffidavitData = lstAffidavitStatus;
+
+            var lstTypeOfInspection = new List<SelectListItem>
+            {
+                new SelectListItem {Text="Form Inspection",Value="Form Inspection" },
+                new SelectListItem {Text="Partial Form Inspection",Value="Partial Form Inspection" },
+                new SelectListItem {Text="Final Inspection",Value="Final Inspection" }
+            };
+
+            ViewData["TypeOfInspection"] = new SelectList(lstTypeOfInspection, "Value", "Text");
+            return View(lstTrackIt);
+        }
+
+        public JsonResult SaveTrackItDetails(string affidavitId, string comments, string typeofinspection)
+        {
+            AffidavitModel aff = new AffidavitModel();
+            aff.AffidavitId = Convert.ToInt64(affidavitId);
+            aff.Comments = comments;
+            aff.TypeOfInspectionNeeded = typeofinspection;
+
+            var result = api.SaveTrackItDetails(aff);
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult GetTrackItData(long affidavitid)
+        {
+            AffidavitModel aff = new AffidavitModel();
+            if (TempData["lstAffidavitData"] != null)
+            {
+                TempData.Keep("lstAffidavitData");
+                var lstaffidavit = (List<AffidavitModel>)TempData["lstAffidavitData"];
+                aff = lstaffidavit.Where(x => x.AffidavitId == affidavitid).SingleOrDefault();
+            }
+            else
+            {
+                var result = api.GetAllTrackIT();
+                var lstTrackIt = (List<AffidavitModel>)result[0];
+                var lstAffidavitStatus = (List<AffidavitModel>)result[1];
+                TempData["lstAffidavitData"] = lstAffidavitStatus;
+                var lstaffidavit = (List<AffidavitModel>)TempData["lstAffidavitData"];
+                aff = lstaffidavit.Where(x => x.AffidavitId == affidavitid).SingleOrDefault();
+            }
+
+            return Json(aff, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

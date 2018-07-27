@@ -15,7 +15,7 @@ namespace SidewalkUI.Controllers
 
 
         SidewalkApiController api = new SidewalkApiController();
-        public ActionResult RepairsAreCompleteAndSatisfactory(long affidavitNo)
+        public ActionResult RepairsAreCompleteAndSatisfactory(long affidavitNo, string redirectURL = null)
         {
             FormFinalInspectionViewModel model = new FormFinalInspectionViewModel();
             model.AffidavitDetails = api.GetAffidavitByNo(affidavitNo.ToString());
@@ -30,9 +30,11 @@ namespace SidewalkUI.Controllers
             {
                 model.FinalInspection.FinalPassInspectorId = model.AffidavitDetails.AffidavitInfo.Inspector.InspectorId;
             }
+            model.redirecURL = redirectURL;
+
             return View(model);
         }
-        public ActionResult RepairsNotAcceptable(long affidavitNo)
+        public ActionResult RepairsNotAcceptable(long affidavitNo, string redirectURL = null)
         {
             FormFinalInspectionViewModel model = new FormFinalInspectionViewModel();
             model.AffidavitDetails = api.GetAffidavitByNo(affidavitNo.ToString());
@@ -47,21 +49,36 @@ namespace SidewalkUI.Controllers
             {
                 model.FinalInspection.FinalFailInspectorId = model.AffidavitDetails.AffidavitInfo.Inspector.InspectorId;
             }
+            model.redirecURL = redirectURL;
             return View(model);
         }
-
+        
         [HttpPost]
         public ActionResult RepairsNotAcceptable(FormFinalInspectionViewModel model)
         {
             api.AddAffidavitFinalInspection(model.FinalInspection, 8);
-            return RedirectToAction("GetAffidavitByNo", "Affidavit", new { affidavitNo = model.FinalInspection.AffidavitID });
+            if (model.redirecURL == "TrackIt")
+            {
+                return RedirectToAction("GetAllTrackIT", "Home", new { affidavitNo = model.FinalInspection.AffidavitID });
+            }
+            else
+            {
+                return RedirectToAction("GetAffidavitByNo", "Affidavit", new { affidavitNo = model.FinalInspection.AffidavitID });
+            }
         }
 
         [HttpPost]
         public ActionResult RepairsAreCompleteAndSatisfactory(FormFinalInspectionViewModel model)
         {
             api.AddAffidavitFinalInspection(model.FinalInspection, 12);
-            return RedirectToAction("GetAffidavitByNo", "Affidavit", new { affidavitNo = model.FinalInspection.AffidavitID });
+            if (model.redirecURL == "TrackIt")
+            {
+                return RedirectToAction("GetAllTrackIT", "Home", new { affidavitNo = model.FinalInspection.AffidavitID });
+            }
+            else
+            {
+                return RedirectToAction("GetAffidavitByNo", "Affidavit", new { affidavitNo = model.FinalInspection.AffidavitID });
+            }
         }
     }
 }

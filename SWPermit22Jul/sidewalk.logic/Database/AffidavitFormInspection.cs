@@ -41,6 +41,7 @@ namespace Sidewalk.Logic.Database
         public string Notes { get; set; }
         public Nullable<int> FormFailInspectorId { get; set; }
         public Nullable<int> FormPassInspectorId { get; set; }
+        public bool IsFormPartial { get; set; }
     
         public virtual Affidavit Affidavit { get; set; }
         public virtual Inspector Inspector { get; set; }

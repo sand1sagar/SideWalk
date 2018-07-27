@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -597,6 +598,99 @@ namespace Sidewalk.Logic
                 model = null;
             }
             return model;
+        }
+
+        public List<AffidavitModel> GetAllAffidavit(string fromDate, string toDate)
+        {
+            List<AffidavitModel> lstAffidavit = new List<AffidavitModel>();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(ConnectionHelper.ConnectionString))
+                {
+                    //using (SqlCommand cmd = new SqlCommand("getAffidavitList", con))
+                    using (SqlCommand cmd = new SqlCommand("PROC_GETAFFIDAVIT_SWP", con))
+                    {
+                        cmd.Parameters.AddWithValue("@FROMDATE", SqlDbType.NVarChar).Value = fromDate;
+                        cmd.Parameters.AddWithValue("@TODATE", SqlDbType.NVarChar).Value = toDate;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        con.Open();
+                        SqlDataReader dataReader = cmd.ExecuteReader();
+                        if (dataReader.HasRows)
+                        {
+                            while (dataReader.Read())
+                            {
+                                AffidavitModel affidavit = new AffidavitModel();
+                                affidavit.AffidavitId = String.IsNullOrEmpty(dataReader["AffidavitID"].ToString()) ? 0 : int.Parse(dataReader["AffidavitID"].ToString());
+                                affidavit.PropertyAddress = Convert.ToString(dataReader["PropertyAddress"]);
+                                affidavit.OwnerName = Convert.ToString(dataReader["OwnerName"]);
+                                affidavit.InspectorName = Convert.ToString(dataReader["InspectorName"]);
+                                affidavit.NewOwner = Convert.ToString(dataReader["NewOwner"]);
+                                affidavit.PropertyId = Convert.ToString(dataReader["PropertyId"]);
+                                affidavit.Status = Convert.ToString(dataReader["Status"]);
+                                affidavit.StatusId = String.IsNullOrEmpty(dataReader["StatusId"].ToString()) ? 0 : int.Parse(dataReader["StatusId"].ToString());
+                                affidavit.InspectionDate = Convert.ToString(dataReader["InspectionDate"]);
+                                affidavit.IsHighlightOwner = String.IsNullOrEmpty(dataReader["IsHighlightOwner"].ToString()) ? false : Convert.ToBoolean(dataReader["IsHighlightOwner"]);
+                                lstAffidavit.Add(affidavit);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                lstAffidavit = null;
+            }
+            return lstAffidavit;
+        }
+
+        //public List<AffidavitModel> GetAllTrackIT()
+        //{
+        //    var result = (from track in context.TrackIT
+        //                  join affidavit in context.Affidavit on track.AffidavitId equals affidavit.AffidavitID
+        //                  join stat in context.AffidavitStatus on track.StatusId equals stat.AffidavitStatusId
+        //                  select new { track, affidavit, stat })
+        //                  .Select(x => new AffidavitModel
+        //                  {
+        //                      AffidavitId = x.track.AffidavitId,
+        //                      PropertyAddress = x.affidavit.SiteStreetNumber,
+        //                      StatusId = x.track.StatusId,
+        //                      Status = x.stat.Status,
+        //                      RequestedDate = x.track.RequestedDate,
+        //                      Comments = x.track.Comments
+
+        //                  }).ToList();
+        //    return result;
+        //}
+        public List<IEnumerable> GetAllTrackIT()
+        {
+            var results = new SWPostEntities()
+               .MultipleResults("PROC_GETTRACKIT_SWP")
+               .With<AffidavitModel>()
+               .With<AffidavitModel>()
+               .Execute();
+
+
+            return results;
+        }
+        public bool SaveTrackItDetails(AffidavitModel aff)
+        {
+            context = new SWPostEntities();
+            FormAndFinalInspectionRequests form = new FormAndFinalInspectionRequests();
+            try
+            {
+                form.AffidavitId = aff.AffidavitId;
+                form.Comments = aff.Comments;
+                form.RequestedDate = DateTime.Now;
+                form.TypeOfInspectionNeeded = aff.TypeOfInspectionNeeded;
+                context.FormAndFinalInspectionRequests.Add(form);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return true;
         }
     }
 }

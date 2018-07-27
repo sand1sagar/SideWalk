@@ -123,34 +123,6 @@ warning 6002: The table/view 'SWPostTest.ArcMap_Admin.PORT_TAXLOTS_PDX' does not
           <Property Name="New_RepairDueDate" Type="smalldatetime" />
           <Property Name="NEW_ClearWalk" Type="bit" />
         </EntityType>
-        <EntityType Name="Affidavit_Old">
-          <Key>
-            <PropertyRef Name="AffidavitId" />
-          </Key>
-          <Property Name="AffidavitId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AffidavitNumber" Type="bigint" Nullable="false" />
-          <Property Name="QTRSection" Type="varchar" MaxLength="12" />
-          <Property Name="MapId" Type="varchar" MaxLength="24" />
-          <Property Name="PostedDate" Type="datetime" />
-          <Property Name="AffidavitStatus" Type="bit" />
-          <Property Name="InspectorNo" Type="bigint" />
-          <Property Name="RepaireByCity" Type="bit" />
-          <Property Name="RepaireByOwner" Type="bit" />
-          <Property Name="PartialRepair" Type="bit" />
-          <Property Name="RepairDate" Type="datetime" />
-          <Property Name="HoldDate" Type="datetime" />
-          <Property Name="ContractorName" Type="varchar" MaxLength="40" />
-          <Property Name="BuilderBoardNumber" Type="varchar" MaxLength="6" />
-          <Property Name="DateCancelled" Type="datetime" />
-          <Property Name="CancelledBy" Type="varchar" MaxLength="10" />
-          <Property Name="CreatedDate" Type="datetime" />
-          <Property Name="UpdatedDate" Type="datetime" />
-          <Property Name="Notes" Type="varchar" MaxLength="255" />
-          <Property Name="SentDate" Type="datetime" />
-          <Property Name="NEW_AFF" Type="varchar" MaxLength="10" />
-          <Property Name="NEW_RepairDueDate" Type="smalldatetime" />
-          <Property Name="NEW_ClearWalk" Type="bit" />
-        </EntityType>
         <EntityType Name="AffidavitAttachment">
           <Key>
             <PropertyRef Name="AttachmentId" />
@@ -163,6 +135,35 @@ warning 6002: The table/view 'SWPostTest.ArcMap_Admin.PORT_TAXLOTS_PDX' does not
           <Property Name="IsDeleted" Type="bit" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="UpdatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="AffidavitCosts">
+          <Key>
+            <PropertyRef Name="Affidavit_Key" />
+            <PropertyRef Name="CostType_Key" />
+          </Key>
+          <Property Name="Affidavit_Key" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CostType_Key" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ActionDt" Type="datetime" />
+          <Property Name="Contract_Key" Type="int" />
+          <Property Name="Parking" Type="money" />
+          <Property Name="PermitFee" Type="money" />
+          <Property Name="TotalCost" Type="money" />
+          <Property Name="Comments" Type="varchar" MaxLength="254" />
+          <Property Name="VisioDiagram" Type="varchar" MaxLength="12" />
+          <Property Name="Batch_Key" Type="varchar" MaxLength="28" />
+        </EntityType>
+        <EntityType Name="AffidavitCostsDetail">
+          <Key>
+            <PropertyRef Name="Affidavit_Key" />
+            <PropertyRef Name="CostType_Key" />
+            <PropertyRef Name="RepairItem_Key" />
+          </Key>
+          <Property Name="Affidavit_Key" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CostType_Key" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="RepairItem_Key" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Unit" Type="float" />
+          <Property Name="Rate" Type="money" />
+          <Property Name="Cost" Type="money" />
         </EntityType>
         <EntityType Name="AffidavitFinalInspection">
           <Key>
@@ -179,6 +180,7 @@ warning 6002: The table/view 'SWPostTest.ArcMap_Admin.PORT_TAXLOTS_PDX' does not
           <Property Name="OwnerRepaired" Type="bit" Nullable="false" />
           <Property Name="OwnerRepairedNotCitySpec" Type="bit" Nullable="false" />
           <Property Name="OtherRepairsAreCompleteAndSatisfactory" Type="nvarchar(max)" />
+          <Property Name="FinalPassInspectorId" Type="int" />
           <Property Name="CompletionDate" Type="datetime" />
           <Property Name="RepairsComplete" Type="bit" Nullable="false" />
           <Property Name="RemoveFormsToGrade" Type="bit" Nullable="false" />
@@ -192,7 +194,6 @@ warning 6002: The table/view 'SWPostTest.ArcMap_Admin.PORT_TAXLOTS_PDX' does not
           <Property Name="OtherRepairsNotAcceptable" Type="nvarchar(max)" />
           <Property Name="FinalFailDate" Type="datetime" />
           <Property Name="FinalFailInspectorId" Type="int" />
-          <Property Name="FinalPassInspectorId" Type="int" />
         </EntityType>
         <EntityType Name="AffidavitFormInspection">
           <Key>
@@ -210,6 +211,7 @@ warning 6002: The table/view 'SWPostTest.ArcMap_Admin.PORT_TAXLOTS_PDX' does not
           <Property Name="PlaceJoints" Type="bit" Nullable="false" />
           <Property Name="ToolDeepJoints" Type="bit" Nullable="false" />
           <Property Name="OtherGrantedToPour" Type="nvarchar(max)" />
+          <Property Name="FormPassInspectorId" Type="int" />
           <Property Name="CompletionDate" Type="datetime" />
           <Property Name="PermissionGranted" Type="bit" Nullable="false" />
           <Property Name="NotReady" Type="bit" Nullable="false" />
@@ -224,7 +226,7 @@ warning 6002: The table/view 'SWPostTest.ArcMap_Admin.PORT_TAXLOTS_PDX' does not
           <Property Name="FormFailDate" Type="datetime" />
           <Property Name="Notes" Type="nvarchar" MaxLength="50" />
           <Property Name="FormFailInspectorId" Type="int" />
-          <Property Name="FormPassInspectorId" Type="int" />
+          <Property Name="IsFormPartial" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="AffidavitHistory">
           <Key>
@@ -381,6 +383,37 @@ warning 6002: The table/view 'SWPostTest.dbo.ASSESSOR' does not have a primary k
           <Property Name="S_29" Type="nvarchar" MaxLength="2000" />
           <Property Name="alias_name" Type="nvarchar" MaxLength="200" />
         </EntityType>
+        <EntityType Name="CityContract">
+          <Key>
+            <PropertyRef Name="ContractID" />
+          </Key>
+          <Property Name="ContractID" Type="int" Nullable="false" />
+          <Property Name="Contractor_Key" Type="int" />
+          <Property Name="RevisedDate" Type="datetime" />
+          <Property Name="RevisedBy" Type="varchar" MaxLength="15" />
+          <Property Name="Active" Type="tinyint" />
+          <Property Name="ContractorName_XXX" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Contractor">
+          <Key>
+            <PropertyRef Name="ContractorID" />
+          </Key>
+          <Property Name="ContractorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContractorName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CCB" Type="varchar" MaxLength="10" />
+          <Property Name="Name" Type="varchar" MaxLength="40" />
+          <Property Name="Contact" Type="varchar" MaxLength="40" />
+          <Property Name="Address" Type="varchar" MaxLength="40" />
+          <Property Name="City" Type="varchar" MaxLength="24" />
+          <Property Name="State" Type="char" MaxLength="2" />
+          <Property Name="Zip" Type="varchar" MaxLength="10" />
+          <Property Name="Phone" Type="varchar" MaxLength="16" />
+          <Property Name="MBE" Type="tinyint" />
+          <Property Name="WBE" Type="tinyint" />
+          <Property Name="ESB" Type="tinyint" />
+          <Property Name="Active" Type="tinyint" />
+          <Property Name="CityContractor" Type="tinyint" />
+        </EntityType>
         <EntityType Name="Contractor_Alias">
           <Key>
             <PropertyRef Name="Contractor_Alias_Id" />
@@ -390,6 +423,13 @@ warning 6002: The table/view 'SWPostTest.dbo.ASSESSOR' does not have a primary k
           <Property Name="Business_Name" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Alias" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Created_Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CostType">
+          <Key>
+            <PropertyRef Name="CostTypeID" />
+          </Key>
+          <Property Name="CostTypeID" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="dtproperties">
           <Key>
@@ -412,6 +452,20 @@ warning 6002: The table/view 'SWPostTest.dbo.ASSESSOR' does not have a primary k
           <Property Name="Message" Type="nvarchar" MaxLength="2000" Nullable="false" />
           <Property Name="StackTrace" Type="nvarchar" MaxLength="2000" Nullable="false" />
           <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormAndFinalInspectionRequests">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AffidavitId" Type="bigint" Nullable="false" />
+          <Property Name="TypeOfInspectionNeeded" Type="nvarchar" MaxLength="50" />
+          <Property Name="RequestedDate" Type="date" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ContactName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContactNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="DatePermitExpires" Type="date" />
+          <Property Name="SiteAddress" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Inspector">
           <Key>
@@ -535,6 +589,39 @@ warning 6002: The table/view 'SWPostTest.dbo.ASSESSOR' does not have a primary k
           <Property Name="PermitStatusID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="PermitStatusValue" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="PrintCode">
+          <Key>
+            <PropertyRef Name="PrintID" />
+          </Key>
+          <Property Name="PrintID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PrintCodeID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrintDescription" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="RepairItemRate">
+          <Key>
+            <PropertyRef Name="RateID" />
+          </Key>
+          <Property Name="RateID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ActionType" Type="nvarchar" MaxLength="100" />
+          <Property Name="CurrentRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="NewRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="PERNR" />
+          </Key>
+          <Property Name="PERNR" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="varchar" MaxLength="10" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Supervisor" Type="bit" />
+          <Property Name="Inspector" Type="bit" />
+          <Property Name="Forms" Type="bit" />
+          <Property Name="Final" Type="bit" />
+          <Property Name="Permit" Type="bit" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'SWPostTest.dbo.sw_user' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="sw_user">
@@ -609,6 +696,30 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_AffidavitCosts_CostType">
+          <End Role="CostType" Type="Self.CostType" Multiplicity="1" />
+          <End Role="AffidavitCosts" Type="Self.AffidavitCosts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CostType">
+              <PropertyRef Name="CostTypeID" />
+            </Principal>
+            <Dependent Role="AffidavitCosts">
+              <PropertyRef Name="CostType_Key" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AffidavitCostsDetail_CostType">
+          <End Role="CostType" Type="Self.CostType" Multiplicity="1" />
+          <End Role="AffidavitCostsDetail" Type="Self.AffidavitCostsDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CostType">
+              <PropertyRef Name="CostTypeID" />
+            </Principal>
+            <Dependent Role="AffidavitCostsDetail">
+              <PropertyRef Name="CostType_Key" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_AffidavitFinalInspection_Affidavit">
           <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
           <End Role="AffidavitFinalInspection" Type="Self.AffidavitFinalInspection" Multiplicity="*" />
@@ -645,42 +756,6 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_AffidavitFormInspection_Affidavit">
-          <End Role="Affidavit" Type="Self.Affidavit" Multiplicity="1" />
-          <End Role="AffidavitFormInspection" Type="Self.AffidavitFormInspection" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Affidavit">
-              <PropertyRef Name="AffidavitID" />
-            </Principal>
-            <Dependent Role="AffidavitFormInspection">
-              <PropertyRef Name="AffidavitId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_AffidavitFormInspection_Inspector_Fail">
-          <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
-          <End Role="AffidavitFormInspection" Type="Self.AffidavitFormInspection" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Inspector">
-              <PropertyRef Name="InspectorId" />
-            </Principal>
-            <Dependent Role="AffidavitFormInspection">
-              <PropertyRef Name="FormFailInspectorId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_AffidavitFormInspection_Inspector_Pass">
-          <End Role="Inspector" Type="Self.Inspector" Multiplicity="0..1" />
-          <End Role="AffidavitFormInspection" Type="Self.AffidavitFormInspection" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Inspector">
-              <PropertyRef Name="InspectorId" />
-            </Principal>
-            <Dependent Role="AffidavitFormInspection">
-              <PropertyRef Name="FormPassInspectorId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_AffidavitHistory_AffidavitHistory">
           <End Role="AffidavitStatus" Type="Self.AffidavitStatus" Multiplicity="1" />
           <End Role="AffidavitHistory" Type="Self.AffidavitHistory" Multiplicity="*" />
@@ -702,6 +777,18 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
             </Principal>
             <Dependent Role="AffidavitHistory">
               <PropertyRef Name="InspectorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CityContract_Contractor">
+          <End Role="Contractor" Type="Self.Contractor" Multiplicity="0..1" />
+          <End Role="CityContract" Type="Self.CityContract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contractor">
+              <PropertyRef Name="ContractorID" />
+            </Principal>
+            <Dependent Role="CityContract">
+              <PropertyRef Name="Contractor_Key" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -853,16 +940,21 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
         <EntityContainer Name="SWPostModelStoreContainer">
           <EntitySet Name="Activity" EntityType="Self.Activity" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Affidavit" EntityType="Self.Affidavit" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Affidavit_Old" EntityType="Self.Affidavit_Old" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AffidavitAttachment" EntityType="Self.AffidavitAttachment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AffidavitCosts" EntityType="Self.AffidavitCosts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AffidavitCostsDetail" EntityType="Self.AffidavitCostsDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AffidavitFinalInspection" EntityType="Self.AffidavitFinalInspection" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AffidavitFormInspection" EntityType="Self.AffidavitFormInspection" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AffidavitHistory" EntityType="Self.AffidavitHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AffidavitStatus" EntityType="Self.AffidavitStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CCB_DAILY_LICENSES" EntityType="Self.CCB_DAILY_LICENSES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CityContract" EntityType="Self.CityContract" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contractor" EntityType="Self.Contractor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contractor_Alias" EntityType="Self.Contractor_Alias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CostType" EntityType="Self.CostType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ErrorLog" EntityType="Self.ErrorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FormAndFinalInspectionRequests" EntityType="Self.FormAndFinalInspectionRequests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Inspector" EntityType="Self.Inspector" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Permit" EntityType="Self.Permit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PermitApplicant" EntityType="Self.PermitApplicant" Schema="dbo" store:Type="Tables" />
@@ -872,6 +964,9 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
           <EntitySet Name="PermitHistory" EntityType="Self.PermitHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PermitPayment" EntityType="Self.PermitPayment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PermitStatus" EntityType="Self.PermitStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrintCode" EntityType="Self.PrintCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RepairItemRate" EntityType="Self.RepairItemRate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UnitOfMeasure" EntityType="Self.UnitOfMeasure" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PORT_TAXLOTS_PDX" EntityType="Self.PORT_TAXLOTS_PDX" store:Type="Tables" store:Schema="ArcMap_Admin">
             <DefiningQuery>SELECT 
@@ -1049,6 +1144,14 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
             <End Role="Affidavit" EntitySet="Affidavit" />
             <End Role="AffidavitHistory" EntitySet="AffidavitHistory" />
           </AssociationSet>
+          <AssociationSet Name="FK_AffidavitCosts_CostType" Association="Self.FK_AffidavitCosts_CostType">
+            <End Role="CostType" EntitySet="CostType" />
+            <End Role="AffidavitCosts" EntitySet="AffidavitCosts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AffidavitCostsDetail_CostType" Association="Self.FK_AffidavitCostsDetail_CostType">
+            <End Role="CostType" EntitySet="CostType" />
+            <End Role="AffidavitCostsDetail" EntitySet="AffidavitCostsDetail" />
+          </AssociationSet>
           <AssociationSet Name="FK_AffidavitFinalInspection_Affidavit" Association="Self.FK_AffidavitFinalInspection_Affidavit">
             <End Role="Affidavit" EntitySet="Affidavit" />
             <End Role="AffidavitFinalInspection" EntitySet="AffidavitFinalInspection" />
@@ -1061,18 +1164,6 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
             <End Role="Inspector" EntitySet="Inspector" />
             <End Role="AffidavitFinalInspection" EntitySet="AffidavitFinalInspection" />
           </AssociationSet>
-          <AssociationSet Name="FK_AffidavitFormInspection_Affidavit" Association="Self.FK_AffidavitFormInspection_Affidavit">
-            <End Role="Affidavit" EntitySet="Affidavit" />
-            <End Role="AffidavitFormInspection" EntitySet="AffidavitFormInspection" />
-          </AssociationSet>
-          <AssociationSet Name="FK_AffidavitFormInspection_Inspector_Fail" Association="Self.FK_AffidavitFormInspection_Inspector_Fail">
-            <End Role="Inspector" EntitySet="Inspector" />
-            <End Role="AffidavitFormInspection" EntitySet="AffidavitFormInspection" />
-          </AssociationSet>
-          <AssociationSet Name="FK_AffidavitFormInspection_Inspector_Pass" Association="Self.FK_AffidavitFormInspection_Inspector_Pass">
-            <End Role="Inspector" EntitySet="Inspector" />
-            <End Role="AffidavitFormInspection" EntitySet="AffidavitFormInspection" />
-          </AssociationSet>
           <AssociationSet Name="FK_AffidavitHistory_AffidavitHistory" Association="Self.FK_AffidavitHistory_AffidavitHistory">
             <End Role="AffidavitStatus" EntitySet="AffidavitStatus" />
             <End Role="AffidavitHistory" EntitySet="AffidavitHistory" />
@@ -1080,6 +1171,10 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
           <AssociationSet Name="FK_AffidavitHistory_Inspector" Association="Self.FK_AffidavitHistory_Inspector">
             <End Role="Inspector" EntitySet="Inspector" />
             <End Role="AffidavitHistory" EntitySet="AffidavitHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CityContract_Contractor" Association="Self.FK_CityContract_Contractor">
+            <End Role="Contractor" EntitySet="Contractor" />
+            <End Role="CityContract" EntitySet="CityContract" />
           </AssociationSet>
           <AssociationSet Name="FK_Permit_PermitApplicant" Association="Self.FK_Permit_PermitApplicant">
             <End Role="PermitApplicant" EntitySet="PermitApplicant" />
@@ -1623,7 +1718,6 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
             <Parameter Name="todate" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="AffidavitAttachment" EntityType="SWPostModel.AffidavitAttachment" />
-          <EntitySet Name="Affidavit_Old" EntityType="SWPostModel.Affidavit_Old" />
           <EntitySet Name="qip" EntityType="SWPostModel.qip" />
           <FunctionImport Name="sp_getAffidavitByProperty_swp" ReturnType="Collection(SWPostModel.sp_getAffidavitByProperty_swp_Result)">
           <Parameter Name="keyword" Mode="In" Type="String" />
@@ -1697,6 +1791,27 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
             <End Role="Inspector" EntitySet="Inspector" />
             <End Role="AffidavitFormInspection" EntitySet="AffidavitFormInspection" />
           </AssociationSet>
+          <EntitySet Name="AffidavitCosts" EntityType="SWPostModel.AffidavitCosts" />
+          <EntitySet Name="AffidavitCostsDetail" EntityType="SWPostModel.AffidavitCostsDetail" />
+          <EntitySet Name="CityContract" EntityType="SWPostModel.CityContract" />
+          <EntitySet Name="Contractor" EntityType="SWPostModel.Contractor" />
+          <EntitySet Name="CostType" EntityType="SWPostModel.CostType" />
+          <EntitySet Name="PrintCode" EntityType="SWPostModel.PrintCode" />
+          <EntitySet Name="RepairItemRate" EntityType="SWPostModel.RepairItemRate" />
+          <EntitySet Name="Staff" EntityType="SWPostModel.Staff" />
+          <AssociationSet Name="FK_AffidavitCosts_CostType" Association="SWPostModel.FK_AffidavitCosts_CostType">
+            <End Role="CostType" EntitySet="CostType" />
+            <End Role="AffidavitCosts" EntitySet="AffidavitCosts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AffidavitCostsDetail_CostType" Association="SWPostModel.FK_AffidavitCostsDetail_CostType">
+            <End Role="CostType" EntitySet="CostType" />
+            <End Role="AffidavitCostsDetail" EntitySet="AffidavitCostsDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CityContract_Contractor" Association="SWPostModel.FK_CityContract_Contractor">
+            <End Role="Contractor" EntitySet="Contractor" />
+            <End Role="CityContract" EntitySet="CityContract" />
+          </AssociationSet>
+          <EntitySet Name="FormAndFinalInspectionRequests" EntityType="SWPostModel.FormAndFinalInspectionRequests" />
           </EntityContainer>
         <ComplexType Name="dt_getpropertiesbyid_Result">
           <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
@@ -2194,34 +2309,6 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
           <Property Name="DisplayName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Affidavit_Old">
-          <Key>
-            <PropertyRef Name="AffidavitId" />
-          </Key>
-          <Property Name="AffidavitId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AffidavitNumber" Type="Int64" Nullable="false" />
-          <Property Name="QTRSection" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
-          <Property Name="MapId" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
-          <Property Name="PostedDate" Type="DateTime" Precision="3" />
-          <Property Name="AffidavitStatus" Type="Boolean" />
-          <Property Name="InspectorNo" Type="Int64" />
-          <Property Name="RepaireByCity" Type="Boolean" />
-          <Property Name="RepaireByOwner" Type="Boolean" />
-          <Property Name="PartialRepair" Type="Boolean" />
-          <Property Name="RepairDate" Type="DateTime" Precision="3" />
-          <Property Name="HoldDate" Type="DateTime" Precision="3" />
-          <Property Name="ContractorName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <Property Name="BuilderBoardNumber" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
-          <Property Name="DateCancelled" Type="DateTime" Precision="3" />
-          <Property Name="CancelledBy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
-          <Property Name="Notes" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="SentDate" Type="DateTime" Precision="3" />
-          <Property Name="NEW_AFF" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="NEW_RepairDueDate" Type="DateTime" Precision="0" />
-          <Property Name="NEW_ClearWalk" Type="Boolean" />
         </EntityType>
         <EntityType Name="qip">
           <Key>
@@ -2815,6 +2902,7 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
           <NavigationProperty Name="Affidavit" Relationship="SWPostModel.FK_AffidavitFormInspection_Affidavit" FromRole="AffidavitFormInspection" ToRole="Affidavit" />
           <NavigationProperty Name="Inspector" Relationship="SWPostModel.FK_AffidavitFormInspection_Inspector_Fail" FromRole="AffidavitFormInspection" ToRole="Inspector" />
           <NavigationProperty Name="Inspector1" Relationship="SWPostModel.FK_AffidavitFormInspection_Inspector_Pass" FromRole="AffidavitFormInspection" ToRole="Inspector" />
+          <Property Name="IsFormPartial" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_AffidavitFormInspection_Affidavit">
           <End Type="SWPostModel.Affidavit" Role="Affidavit" Multiplicity="1" />
@@ -2852,6 +2940,162 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="AffidavitCosts">
+          <Key>
+            <PropertyRef Name="Affidavit_Key" />
+            <PropertyRef Name="CostType_Key" />
+          </Key>
+          <Property Name="Affidavit_Key" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CostType_Key" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ActionDt" Type="DateTime" Precision="3" />
+          <Property Name="Contract_Key" Type="Int32" />
+          <Property Name="Parking" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PermitFee" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Comments" Type="String" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Name="VisioDiagram" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Batch_Key" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CostType" Relationship="SWPostModel.FK_AffidavitCosts_CostType" FromRole="AffidavitCosts" ToRole="CostType" />
+        </EntityType>
+        <EntityType Name="AffidavitCostsDetail">
+          <Key>
+            <PropertyRef Name="Affidavit_Key" />
+            <PropertyRef Name="CostType_Key" />
+            <PropertyRef Name="RepairItem_Key" />
+          </Key>
+          <Property Name="Affidavit_Key" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CostType_Key" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="RepairItem_Key" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Unit" Type="Double" />
+          <Property Name="Rate" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="CostType" Relationship="SWPostModel.FK_AffidavitCostsDetail_CostType" FromRole="AffidavitCostsDetail" ToRole="CostType" />
+        </EntityType>
+        <EntityType Name="CityContract">
+          <Key>
+            <PropertyRef Name="ContractID" />
+          </Key>
+          <Property Name="ContractID" Type="Int32" Nullable="false" />
+          <Property Name="Contractor_Key" Type="Int32" />
+          <Property Name="RevisedDate" Type="DateTime" Precision="3" />
+          <Property Name="RevisedBy" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Byte" />
+          <Property Name="ContractorName_XXX" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Contractor" Relationship="SWPostModel.FK_CityContract_Contractor" FromRole="CityContract" ToRole="Contractor" />
+        </EntityType>
+        <EntityType Name="Contractor">
+          <Key>
+            <PropertyRef Name="ContractorID" />
+          </Key>
+          <Property Name="ContractorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContractorName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CCB" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Contact" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="MBE" Type="Byte" />
+          <Property Name="WBE" Type="Byte" />
+          <Property Name="ESB" Type="Byte" />
+          <Property Name="Active" Type="Byte" />
+          <Property Name="CityContractor" Type="Byte" />
+          <NavigationProperty Name="CityContract" Relationship="SWPostModel.FK_CityContract_Contractor" FromRole="Contractor" ToRole="CityContract" />
+        </EntityType>
+        <EntityType Name="CostType">
+          <Key>
+            <PropertyRef Name="CostTypeID" />
+          </Key>
+          <Property Name="CostTypeID" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AffidavitCosts" Relationship="SWPostModel.FK_AffidavitCosts_CostType" FromRole="CostType" ToRole="AffidavitCosts" />
+          <NavigationProperty Name="AffidavitCostsDetail" Relationship="SWPostModel.FK_AffidavitCostsDetail_CostType" FromRole="CostType" ToRole="AffidavitCostsDetail" />
+        </EntityType>
+        <EntityType Name="PrintCode">
+          <Key>
+            <PropertyRef Name="PrintID" />
+          </Key>
+          <Property Name="PrintID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PrintCodeID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrintDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RepairItemRate">
+          <Key>
+            <PropertyRef Name="RateID" />
+          </Key>
+          <Property Name="RateID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ActionType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NewRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="PERNR" />
+          </Key>
+          <Property Name="PERNR" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Supervisor" Type="Boolean" />
+          <Property Name="Inspector" Type="Boolean" />
+          <Property Name="Forms" Type="Boolean" />
+          <Property Name="Final" Type="Boolean" />
+          <Property Name="Permit" Type="Boolean" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_AffidavitCosts_CostType">
+          <End Type="SWPostModel.CostType" Role="CostType" Multiplicity="1" />
+          <End Type="SWPostModel.AffidavitCosts" Role="AffidavitCosts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CostType">
+              <PropertyRef Name="CostTypeID" />
+            </Principal>
+            <Dependent Role="AffidavitCosts">
+              <PropertyRef Name="CostType_Key" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AffidavitCostsDetail_CostType">
+          <End Type="SWPostModel.CostType" Role="CostType" Multiplicity="1" />
+          <End Type="SWPostModel.AffidavitCostsDetail" Role="AffidavitCostsDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CostType">
+              <PropertyRef Name="CostTypeID" />
+            </Principal>
+            <Dependent Role="AffidavitCostsDetail">
+              <PropertyRef Name="CostType_Key" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CityContract_Contractor">
+          <End Type="SWPostModel.Contractor" Role="Contractor" Multiplicity="0..1" />
+          <End Type="SWPostModel.CityContract" Role="CityContract" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contractor">
+              <PropertyRef Name="ContractorID" />
+            </Principal>
+            <Dependent Role="CityContract">
+              <PropertyRef Name="Contractor_Key" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="FormAndFinalInspectionRequests">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AffidavitId" Type="Int64" Nullable="false" />
+          <Property Name="TypeOfInspectionNeeded" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RequestedDate" Type="DateTime" Precision="0" />
+          <Property Name="Comments" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DatePermitExpires" Type="DateTime" Precision="0" />
+          <Property Name="SiteAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3212,35 +3456,6 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
                 <ScalarProperty Name="FileName" ColumnName="FileName" />
                 <ScalarProperty Name="AffidavitId" ColumnName="AffidavitId" />
                 <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Affidavit_Old">
-            <EntityTypeMapping TypeName="SWPostModel.Affidavit_Old">
-              <MappingFragment StoreEntitySet="Affidavit_Old">
-                <ScalarProperty Name="NEW_ClearWalk" ColumnName="NEW_ClearWalk" />
-                <ScalarProperty Name="NEW_RepairDueDate" ColumnName="NEW_RepairDueDate" />
-                <ScalarProperty Name="NEW_AFF" ColumnName="NEW_AFF" />
-                <ScalarProperty Name="SentDate" ColumnName="SentDate" />
-                <ScalarProperty Name="Notes" ColumnName="Notes" />
-                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="CancelledBy" ColumnName="CancelledBy" />
-                <ScalarProperty Name="DateCancelled" ColumnName="DateCancelled" />
-                <ScalarProperty Name="BuilderBoardNumber" ColumnName="BuilderBoardNumber" />
-                <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
-                <ScalarProperty Name="HoldDate" ColumnName="HoldDate" />
-                <ScalarProperty Name="RepairDate" ColumnName="RepairDate" />
-                <ScalarProperty Name="PartialRepair" ColumnName="PartialRepair" />
-                <ScalarProperty Name="RepaireByOwner" ColumnName="RepaireByOwner" />
-                <ScalarProperty Name="RepaireByCity" ColumnName="RepaireByCity" />
-                <ScalarProperty Name="InspectorNo" ColumnName="InspectorNo" />
-                <ScalarProperty Name="AffidavitStatus" ColumnName="AffidavitStatus" />
-                <ScalarProperty Name="PostedDate" ColumnName="PostedDate" />
-                <ScalarProperty Name="MapId" ColumnName="MapId" />
-                <ScalarProperty Name="QTRSection" ColumnName="QTRSection" />
-                <ScalarProperty Name="AffidavitNumber" ColumnName="AffidavitNumber" />
-                <ScalarProperty Name="AffidavitId" ColumnName="AffidavitId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3715,6 +3930,7 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
           <EntitySetMapping Name="AffidavitFormInspection">
             <EntityTypeMapping TypeName="SWPostModel.AffidavitFormInspection">
               <MappingFragment StoreEntitySet="AffidavitFormInspection">
+                <ScalarProperty Name="IsFormPartial" ColumnName="IsFormPartial" />
                 <ScalarProperty Name="FormPassInspectorId" ColumnName="FormPassInspectorId" />
                 <ScalarProperty Name="FormFailInspectorId" ColumnName="FormFailInspectorId" />
                 <ScalarProperty Name="Notes" ColumnName="Notes" />
@@ -3742,6 +3958,126 @@ warning 6002: The table/view 'SWPostTest.rose\RANGER.qip' does not have a primar
                 <ScalarProperty Name="InspectionDate" ColumnName="InspectionDate" />
                 <ScalarProperty Name="AffidavitId" ColumnName="AffidavitId" />
                 <ScalarProperty Name="FormInspectionId" ColumnName="FormInspectionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AffidavitCosts">
+            <EntityTypeMapping TypeName="SWPostModel.AffidavitCosts">
+              <MappingFragment StoreEntitySet="AffidavitCosts">
+                <ScalarProperty Name="Batch_Key" ColumnName="Batch_Key" />
+                <ScalarProperty Name="VisioDiagram" ColumnName="VisioDiagram" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="PermitFee" ColumnName="PermitFee" />
+                <ScalarProperty Name="Parking" ColumnName="Parking" />
+                <ScalarProperty Name="Contract_Key" ColumnName="Contract_Key" />
+                <ScalarProperty Name="ActionDt" ColumnName="ActionDt" />
+                <ScalarProperty Name="CostType_Key" ColumnName="CostType_Key" />
+                <ScalarProperty Name="Affidavit_Key" ColumnName="Affidavit_Key" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AffidavitCostsDetail">
+            <EntityTypeMapping TypeName="SWPostModel.AffidavitCostsDetail">
+              <MappingFragment StoreEntitySet="AffidavitCostsDetail">
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="RepairItem_Key" ColumnName="RepairItem_Key" />
+                <ScalarProperty Name="CostType_Key" ColumnName="CostType_Key" />
+                <ScalarProperty Name="Affidavit_Key" ColumnName="Affidavit_Key" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CityContract">
+            <EntityTypeMapping TypeName="SWPostModel.CityContract">
+              <MappingFragment StoreEntitySet="CityContract">
+                <ScalarProperty Name="ContractorName_XXX" ColumnName="ContractorName_XXX" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="RevisedBy" ColumnName="RevisedBy" />
+                <ScalarProperty Name="RevisedDate" ColumnName="RevisedDate" />
+                <ScalarProperty Name="Contractor_Key" ColumnName="Contractor_Key" />
+                <ScalarProperty Name="ContractID" ColumnName="ContractID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contractor">
+            <EntityTypeMapping TypeName="SWPostModel.Contractor">
+              <MappingFragment StoreEntitySet="Contractor">
+                <ScalarProperty Name="CityContractor" ColumnName="CityContractor" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ESB" ColumnName="ESB" />
+                <ScalarProperty Name="WBE" ColumnName="WBE" />
+                <ScalarProperty Name="MBE" ColumnName="MBE" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CCB" ColumnName="CCB" />
+                <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
+                <ScalarProperty Name="ContractorID" ColumnName="ContractorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CostType">
+            <EntityTypeMapping TypeName="SWPostModel.CostType">
+              <MappingFragment StoreEntitySet="CostType">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CostTypeID" ColumnName="CostTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrintCode">
+            <EntityTypeMapping TypeName="SWPostModel.PrintCode">
+              <MappingFragment StoreEntitySet="PrintCode">
+                <ScalarProperty Name="PrintDescription" ColumnName="PrintDescription" />
+                <ScalarProperty Name="PrintCodeID" ColumnName="PrintCodeID" />
+                <ScalarProperty Name="PrintID" ColumnName="PrintID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RepairItemRate">
+            <EntityTypeMapping TypeName="SWPostModel.RepairItemRate">
+              <MappingFragment StoreEntitySet="RepairItemRate">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="NewRate" ColumnName="NewRate" />
+                <ScalarProperty Name="CurrentRate" ColumnName="CurrentRate" />
+                <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+                <ScalarProperty Name="RateID" ColumnName="RateID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staff">
+            <EntityTypeMapping TypeName="SWPostModel.Staff">
+              <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Permit" ColumnName="Permit" />
+                <ScalarProperty Name="Final" ColumnName="Final" />
+                <ScalarProperty Name="Forms" ColumnName="Forms" />
+                <ScalarProperty Name="Inspector" ColumnName="Inspector" />
+                <ScalarProperty Name="Supervisor" ColumnName="Supervisor" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="PERNR" ColumnName="PERNR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormAndFinalInspectionRequests">
+            <EntityTypeMapping TypeName="SWPostModel.FormAndFinalInspectionRequests">
+              <MappingFragment StoreEntitySet="FormAndFinalInspectionRequests">
+                <ScalarProperty Name="SiteAddress" ColumnName="SiteAddress" />
+                <ScalarProperty Name="DatePermitExpires" ColumnName="DatePermitExpires" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="RequestedDate" ColumnName="RequestedDate" />
+                <ScalarProperty Name="TypeOfInspectionNeeded" ColumnName="TypeOfInspectionNeeded" />
+                <ScalarProperty Name="AffidavitId" ColumnName="AffidavitId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\sidewalk.logic\Database\SidewalkDB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\ssagar\Documents\Sidewalk Permit\SWPermit22Jul\Sidewalk.Logic\Database\SidewalkDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

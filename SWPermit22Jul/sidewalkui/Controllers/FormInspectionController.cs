@@ -11,7 +11,7 @@ namespace SidewalkUI.Controllers
     public class FormInspectionController : Controller
     {
         SidewalkApiController api = new SidewalkApiController();
-        public ActionResult GrantedToPour(long affidavitNo)
+        public ActionResult GrantedToPour(long affidavitNo, string redirectURL = null)
         {
             FormFinalInspectionViewModel model = new FormFinalInspectionViewModel();
             model.AffidavitDetails = api.GetAffidavitByNo(affidavitNo.ToString());
@@ -26,9 +26,10 @@ namespace SidewalkUI.Controllers
             {
                 model.FormInspection.FormPassInspectorId = model.AffidavitDetails.AffidavitInfo.Inspector.InspectorId;
             }
+            model.redirecURL = redirectURL;
             return View(model);
         }
-        public ActionResult DoNotPour(long affidavitNo)
+        public ActionResult DoNotPour(long affidavitNo, string redirectURL = null)
         {
             FormFinalInspectionViewModel model = new FormFinalInspectionViewModel();
             model.AffidavitDetails = api.GetAffidavitByNo(affidavitNo.ToString());
@@ -43,6 +44,7 @@ namespace SidewalkUI.Controllers
             {
                 model.FormInspection.FormFailInspectorId = model.AffidavitDetails.AffidavitInfo.Inspector.InspectorId;
             }
+            model.redirecURL = redirectURL;
             return View(model);
         }
 
@@ -50,14 +52,36 @@ namespace SidewalkUI.Controllers
         public ActionResult DoNotPour(FormFinalInspectionViewModel model)
         {
             api.AddAffidavitFormInspection(model.FormInspection, 5);
-            return RedirectToAction("GetAffidavitByNo", "Affidavit", new { affidavitNo = model.FormInspection.AffidavitId });
+            if (model.redirecURL == "TrackIt")
+            {
+                return RedirectToAction("GetAllTrackIT", "Home", new { affidavitNo = model.FormInspection.AffidavitId });
+            }
+            else
+            {
+                return RedirectToAction("GetAffidavitByNo", "Affidavit", new { affidavitNo = model.FormInspection.AffidavitId });
+            }
+
         }
 
         [HttpPost]
         public ActionResult GrantedToPour(FormFinalInspectionViewModel model)
         {
-            api.AddAffidavitFormInspection(model.FormInspection, 6);
-            return RedirectToAction("GetAffidavitByNo", "Affidavit", new { affidavitNo = model.FormInspection.AffidavitId });
+            if (Convert.ToBoolean(model.FormInspection.IsFormPartial))
+            {
+                api.AddAffidavitFormInspection(model.FormInspection, 15);
+            }
+            else
+            {
+                api.AddAffidavitFormInspection(model.FormInspection, 6);
+            }
+            if (model.redirecURL == "TrackIt")
+            {
+                return RedirectToAction("GetAllTrackIT", "Home", new { affidavitNo = model.FormInspection.AffidavitId });
+            }
+            else
+            {
+                return RedirectToAction("GetAffidavitByNo", "Affidavit", new { affidavitNo = model.FormInspection.AffidavitId });
+            }
         }
     }
 }

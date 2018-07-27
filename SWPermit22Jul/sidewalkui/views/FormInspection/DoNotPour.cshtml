@@ -23,9 +23,13 @@
                     @Html.HiddenFor(x => x.FormInspection.PlaceJoints)
                     @Html.HiddenFor(x => x.FormInspection.ToolDeepJoints)
                     @Html.HiddenFor(x => x.FormInspection.OtherGrantedToPour)
+                    @Html.HiddenFor(x => x.redirecURL)
                     <div class="block-content collapse in">
                         <div style="padding-left: 112px;">
                             <div class="row">
+                                <div style="text-align:center">
+                                    <img src="~/images/PBOT small.jpg" style="align-content:center" />
+                                </div>
                                 <div class="span12 reasonFont noticeInfo" style="margin-left:20px;">
                                     City of Portland, Bureau of Transportation,
                                     <br /> Sidewalk Maintenance
@@ -155,9 +159,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div style="margin-left:0px;margin-right:80px">
-                                        The City of Portland complies with all non‐discrimination, Civil Rights laws including Civil Rights Title VI and ADA Title II. To help ensure equal access to City programs, services and activities, the City of Portland will reasonably modify policies/procedures and provide auxiliary aids/services to persons with disabilities. Call 503-823-5185, TTY 503-823-6868 or Oregon Relay Service: 711 with such requests, or visit http://bit.ly/13EWaCg
-                                    </div>
+                                    @Html.Partial("~/Views/Shared/_FormFinalDescription.cshtml")
                                 </div>
                                 <div class="row">
                                     <div class="span12 reasonFont noticeInfo">

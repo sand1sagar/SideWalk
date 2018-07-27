@@ -42,7 +42,6 @@ namespace Sidewalk.Logic.Database
         public virtual DbSet<Contractor_Alias> Contractor_Alias { get; set; }
         public virtual DbSet<PermitFee> PermitFee { get; set; }
         public virtual DbSet<AffidavitAttachment> AffidavitAttachment { get; set; }
-        public virtual DbSet<Affidavit_Old> Affidavit_Old { get; set; }
         public virtual DbSet<qip> qip { get; set; }
         public virtual DbSet<AffidavitStatus> AffidavitStatus { get; set; }
         public virtual DbSet<Activity> Activity { get; set; }
@@ -53,6 +52,15 @@ namespace Sidewalk.Logic.Database
         public virtual DbSet<AffidavitHistory> AffidavitHistory { get; set; }
         public virtual DbSet<AffidavitFinalInspection> AffidavitFinalInspection { get; set; }
         public virtual DbSet<AffidavitFormInspection> AffidavitFormInspection { get; set; }
+        public virtual DbSet<AffidavitCosts> AffidavitCosts { get; set; }
+        public virtual DbSet<AffidavitCostsDetail> AffidavitCostsDetail { get; set; }
+        public virtual DbSet<CityContract> CityContract { get; set; }
+        public virtual DbSet<Contractor> Contractor { get; set; }
+        public virtual DbSet<CostType> CostType { get; set; }
+        public virtual DbSet<PrintCode> PrintCode { get; set; }
+        public virtual DbSet<RepairItemRate> RepairItemRate { get; set; }
+        public virtual DbSet<Staff> Staff { get; set; }
+        public virtual DbSet<FormAndFinalInspectionRequests> FormAndFinalInspectionRequests { get; set; }
     
         [DbFunction("SWPostEntities", "ufnGetPostCostDetail")]
         public virtual IQueryable<ufnGetPostCostDetail_Result> ufnGetPostCostDetail(Nullable<int> fy)

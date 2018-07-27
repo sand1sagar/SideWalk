@@ -99,6 +99,12 @@
     <Compile Include="Database\AffidavitAttachment.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\AffidavitCosts.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\AffidavitCostsDetail.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\AffidavitFinalInspection.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
@@ -108,10 +114,8 @@
     <Compile Include="Database\AffidavitHistory.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\AffidavitModel.cs" />
     <Compile Include="Database\AffidavitStatus.cs">
-      <DependentUpon>SidewalkDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Affidavit_Old.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\ASSESSOR.cs">
@@ -120,7 +124,16 @@
     <Compile Include="Database\CCB_DAILY_LICENSES.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\CityContract.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Contractor.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\Contractor_Alias.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\CostType.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\CustomModels.cs" />
@@ -134,6 +147,9 @@
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\ErrorLog.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\FormAndFinalInspectionRequests.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\getAffidavitByKeyword_Result.cs">
@@ -166,6 +182,7 @@
     <Compile Include="Database\Inspector.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\MultipleResultSet.cs" />
     <Compile Include="Database\Permit.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
@@ -193,7 +210,13 @@
     <Compile Include="Database\PORT_TAXLOTS_PDX.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\PrintCode.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\qip.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\RepairItemRate.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\SidewalkDB.Context.cs">
@@ -224,6 +247,9 @@
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\SP_PermitReciept_Result.cs">
+      <DependentUpon>SidewalkDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Staff.cs">
       <DependentUpon>SidewalkDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\sw_user.cs">

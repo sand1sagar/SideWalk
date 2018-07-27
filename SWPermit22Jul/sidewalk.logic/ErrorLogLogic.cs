@@ -39,6 +39,11 @@ namespace Sidewalk.Logic
                         history.InspectorId = model.FormFailInspectorId;
                         model.FormFailDate = DateTime.Now;
                     }
+                    else if(type == 15)
+                    {
+                        history.Comments = model.OtherGrantedToPour;
+                        history.InspectorId = model.FormPassInspectorId;
+                    }
                     else if (type == 6)
                     {
                         history.Comments = model.OtherGrantedToPour;
@@ -46,7 +51,7 @@ namespace Sidewalk.Logic
                         model.PermissionGranted = true;
                         model.CompletionDate = DateTime.Now;
                     }
-
+                    model.IsFormPartial = model.IsFormPartial;
                     //model.AffidavitHistory.Add(history);
                     context.AffidavitFormInspection.Add(model);
                     context.AffidavitHistory.Add(history);
@@ -65,6 +70,12 @@ namespace Sidewalk.Logic
                             history.Comments = model.OtherDoNotPour;
                             history.InspectorId = model.FormFailInspectorId;
                             model.FormFailDate = DateTime.Now;
+                        }
+                        else if (type == 15)
+                        {
+                            history.Comments = model.OtherGrantedToPour;
+                            history.InspectorId = model.FormPassInspectorId;
+                            
                         }
                         else if (type == 6)
                         {
@@ -91,6 +102,12 @@ namespace Sidewalk.Logic
                             history.Comments = model.OtherDoNotPour;
                             history.InspectorId = model.FormFailInspectorId;
                             model.FormFailDate = DateTime.Now;
+                        }
+                        else if (type == 15)
+                        {
+                            history.Comments = model.OtherGrantedToPour;
+                            history.InspectorId = model.FormPassInspectorId;
+                            existingRecord.IsFormPartial = model.IsFormPartial;
                         }
                         else if (type == 6)
                         {
@@ -120,6 +137,7 @@ namespace Sidewalk.Logic
                     existingRecord.MatchJointPattern = model.MatchJointPattern;
                     existingRecord.ToolDeepJoints = model.ToolDeepJoints;
                     existingRecord.PlaceJoints = model.PlaceJoints;
+                    existingRecord.IsFormPartial = model.IsFormPartial;
                     //existingRecord.PermissionGranted = model.PermissionGranted;
 
                     context.SaveChanges();

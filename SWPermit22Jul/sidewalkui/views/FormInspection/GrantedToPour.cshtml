@@ -31,9 +31,13 @@
                     @Html.HiddenFor(x => x.FormInspection.SawCutEdges)
                     @Html.HiddenFor(x => x.FormInspection.NoPermit)
                     @Html.HiddenFor(x => x.FormInspection.OtherDoNotPour)
+                    @Html.HiddenFor(x => x.redirecURL)
                     <div class="block-content collapse in">
                         <div style="padding-left: 112px;">
                             <div class="row">
+                                <div style="text-align:center">
+                                    <img src="~/images/PBOT small.jpg" style="align-content:center" />
+                                </div>
                                 <div class="span12 reasonFont noticeInfo" style="margin-left:20px;">
                                     City of Portland, Bureau of Transportation,
                                     <br /> Sidewalk Maintenance
@@ -87,88 +91,83 @@
                                     </div>
                                 </div>
                             </fieldset>
-                        
-                        <fieldset>
-                            <legend>Comments on Repair</legend>
 
-                            <div class="row">
-                                <div class="span12" style="margin-left: 20px;">
-                                    <div class="span12">
+                            <fieldset>
+                                <legend>Comments on Repair</legend>
+
+                                <div class="row">
+                                    <div class="span12" style="margin-left: 20px;">
                                         <div class="span12">
-                                        </div>
-                                        <div class="span12" >
-                                            @Html.CheckBoxFor(x => x.FormInspection.MatchJointPattern, new { @class = "checkbox-custom" })
-                                            Match existing joint pattern of abutting sidewalk, and use proper finishing tools after brooming lightly in direction
-                                            opposite of pedestrian travel, unless otherwise directed.
-                                        </div>
-                                        <div class="span12">
-                                            @Html.CheckBoxFor(x => x.FormInspection.PlaceJoints, new { @class = "checkbox-custom" })
-                                            Place construction/deep joints as indicated/marked/discussed.
-                                        </div>
-                                        <div class="span12">
-                                            @Html.CheckBoxFor(x => x.FormInspection.ToolDeepJoints, new { @class = "checkbox-custom" })
-                                            Tool deep joints w/max 3/8" radius edger, with back to back shine.
+                                            <div class="span12">
+                                            </div>
+                                            <div class="span12">
+                                                @Html.CheckBoxFor(x => x.FormInspection.MatchJointPattern, new { @class = "checkbox-custom" })
+                                                Match existing joint pattern of abutting sidewalk, and use proper finishing tools after brooming lightly in direction
+                                                opposite of pedestrian travel, unless otherwise directed.
+                                            </div>
+                                            <div class="span12">
+                                                @Html.CheckBoxFor(x => x.FormInspection.PlaceJoints, new { @class = "checkbox-custom" })
+                                                Place construction/deep joints as indicated/marked/discussed.
+                                            </div>
+                                            <div class="span12">
+                                                @Html.CheckBoxFor(x => x.FormInspection.ToolDeepJoints, new { @class = "checkbox-custom" })
+                                                Tool deep joints w/max 3/8" radius edger, with back to back shine.
+                                            </div>
+
                                         </div>
 
                                     </div>
-
                                 </div>
-                            </div>
-                        </fieldset>
-                        <div class="row">
-                            <div class="span12" style="margin-left:20px;align-content:center">
-                                <br />
-                                Other : @Html.TextAreaFor(x => x.FormInspection.OtherGrantedToPour, new { @class = "textarea", style = "width:80%;" })
-                                <br />
-                                <br />
-                            </div>
-                            <div style="margin-left:20px;">
-                                <br />
-                                Contractor/Property Owner is responsible for graffiti prevention and correction.
-                                <br />
-                                A final inspection is required 2 days after concrete is poured, forms removed, backfill placed and compacted to grade.
-                                <br />
-                                To complete the sidewalk repair process, you must schedule a final inspection at www.portlandoregon.gov/transportation/sidewalks or call 503-823-1711.
-
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                            </div>
-                            <div class="row reasonFont">
-                                <div class="span3">
-                                    Contractor/Property Owner:
-                                </div>
-                                <div class="span9">
-                                </div>
-                            </div>
-                            <div class="row reasonFont">
-                                <div class="span9">
-                                    Inspector : @Model.AffidavitDetails.AffidavitInfo.Inspector.FullName
-                                    @Html.HiddenFor(x => x.FormInspection.FormPassInspectorId)
-                                    @Html.HiddenFor(x => x.FormInspection.FormFailInspectorId)
-                                </div>
-
-                                <div class="span3">
-                                    Date : @DateTime.Now.ToShortDateString()
-                                </div>
-                            </div>
+                            </fieldset>
                             <div class="row">
-                                <div style="margin-left:0px;margin-right:80px">
-                                    The City of Portland complies with all non‐discrimination, Civil Rights laws including Civil Rights Title VI and
-
-                                    ADA Title II. To help ensure equal access to City programs, services and activities, the City of Portland will reasonably modify policies/procedures and
-
-                                    provide auxiliary aids/services to persons with disabilities. Call 503-823-5185, TTY 503-823-6868 or Oregon Relay Service: 711 with such requests, or visit
-
-                                    http://bit.ly/13EWaCg
+                                <div class="span12" style="margin-left:20px;align-content:center">
+                                    <br />
+                                    Other : @Html.TextAreaFor(x => x.FormInspection.OtherGrantedToPour, new { @class = "textarea", style = "width:80%;" })
+                                    <br />
+                                    <br />
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="span12 reasonFont noticeInfo">
-                                    <input type="submit" value="Save" class="btn-large" style="font-size:40px" />
+                                <div style="margin-left:20px;">
+                                    <br />
+                                    Contractor/Property Owner is responsible for graffiti prevention and correction.
+                                    <br />
+                                    A final inspection is required 2 days after concrete is poured, forms removed, backfill placed and compacted to grade.
+                                    <br />
+                                    To complete the sidewalk repair process, you must schedule a final inspection at www.portlandoregon.gov/transportation/sidewalks or call 503-823-1711.
+
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
                                 </div>
-                                <div class="span9">
+                                <div class="row reasonFont">
+                                    <div class="span3">
+                                        Contractor/Property Owner:
+                                    </div>
+                                    <div class="span9">
+                                    </div>
+                                </div>
+                                <div class="row reasonFont">
+                                    <div class="span9">
+                                        Inspector : @Model.AffidavitDetails.AffidavitInfo.Inspector.FullName
+                                        @Html.HiddenFor(x => x.FormInspection.FormPassInspectorId)
+                                        @Html.HiddenFor(x => x.FormInspection.FormFailInspectorId)
+                                    </div>
+
+                                    <div class="span3">
+                                        Date : @DateTime.Now.ToShortDateString()
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    @Html.Partial("~/Views/Shared/_FormFinalDescription.cshtml")
+                                </div>
+                                <div class="row" style="text-align:center;">
+                                    &nbsp;
+                                    @Html.CheckBoxFor(x => x.FormInspection.IsFormPartial, new { @class = "checkbox-custom" }) Please check Form Inspection of all the Partials is complete
+                                    &nbsp;
+                                    <div class="span12 reasonFont noticeInfo">
+                                        <input type="submit" value="Save" class="btn-large" style="font-size:40px" />
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -176,7 +175,5 @@
                 </div>
             </div>
         </div>
-</div>
     }
 </div>
-
