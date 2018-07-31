@@ -85,7 +85,7 @@ namespace SidewalkUI.Models
         public AffidavitDetailsViewModel AffidavitDetails { get; set; }
         public AffidavitFormInspection FormInspection { get; set; }
         public AffidavitFinalInspection FinalInspection { get; set; }
-        public string redirecURL { get; set; }
+        public string redirectURL { get; set; }
     }
     public class AffidavitViewModel
     {

@@ -31,11 +31,12 @@
                     @Html.HiddenFor(x => x.FormInspection.SawCutEdges)
                     @Html.HiddenFor(x => x.FormInspection.NoPermit)
                     @Html.HiddenFor(x => x.FormInspection.OtherDoNotPour)
-                    @Html.HiddenFor(x => x.redirecURL)
+                    @Html.HiddenFor(x => x.redirectURL)
                     <div class="block-content collapse in">
                         <div style="padding-left: 112px;">
                             <div class="row">
                                 <div style="text-align:center">
+                                    <img src="~/images/City-Seal small.png" style="align-content:center" />
                                     <img src="~/images/PBOT small.jpg" style="align-content:center" />
                                 </div>
                                 <div class="span12 reasonFont noticeInfo" style="margin-left:20px;">
@@ -154,15 +155,16 @@
                                     </div>
 
                                     <div class="span3">
-                                        Date : @DateTime.Now.ToShortDateString()
+                                        Date : @DateTime.Now
                                     </div>
                                 </div>
                                 <div class="row">
                                     @Html.Partial("~/Views/Shared/_FormFinalDescription.cshtml")
                                 </div>
                                 <div class="row" style="text-align:center;">
-                                    &nbsp;
-                                    @Html.CheckBoxFor(x => x.FormInspection.IsFormPartial, new { @class = "checkbox-custom" }) Please check Form Inspection of all the Partials is complete
+                                    <br />
+                                    <br />
+                                    @Html.CheckBoxFor(x => x.FormInspection.IsFormPartial, new { @class = "checkbox-custom" }) Please check if there are more Partial Form Inspections to do
                                     &nbsp;
                                     <div class="span12 reasonFont noticeInfo">
                                         <input type="submit" value="Save" class="btn-large" style="font-size:40px" />

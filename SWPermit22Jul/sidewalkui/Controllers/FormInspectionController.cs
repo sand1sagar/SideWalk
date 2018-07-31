@@ -26,7 +26,7 @@ namespace SidewalkUI.Controllers
             {
                 model.FormInspection.FormPassInspectorId = model.AffidavitDetails.AffidavitInfo.Inspector.InspectorId;
             }
-            model.redirecURL = redirectURL;
+            model.redirectURL = redirectURL;
             return View(model);
         }
         public ActionResult DoNotPour(long affidavitNo, string redirectURL = null)
@@ -44,7 +44,7 @@ namespace SidewalkUI.Controllers
             {
                 model.FormInspection.FormFailInspectorId = model.AffidavitDetails.AffidavitInfo.Inspector.InspectorId;
             }
-            model.redirecURL = redirectURL;
+            model.redirectURL = redirectURL;
             return View(model);
         }
 
@@ -52,7 +52,7 @@ namespace SidewalkUI.Controllers
         public ActionResult DoNotPour(FormFinalInspectionViewModel model)
         {
             api.AddAffidavitFormInspection(model.FormInspection, 5);
-            if (model.redirecURL == "TrackIt")
+            if (model.redirectURL == "TrackIt")
             {
                 return RedirectToAction("GetAllTrackIT", "Home", new { affidavitNo = model.FormInspection.AffidavitId });
             }
@@ -74,7 +74,7 @@ namespace SidewalkUI.Controllers
             {
                 api.AddAffidavitFormInspection(model.FormInspection, 6);
             }
-            if (model.redirecURL == "TrackIt")
+            if (model.redirectURL == "TrackIt")
             {
                 return RedirectToAction("GetAllTrackIT", "Home", new { affidavitNo = model.FormInspection.AffidavitId });
             }

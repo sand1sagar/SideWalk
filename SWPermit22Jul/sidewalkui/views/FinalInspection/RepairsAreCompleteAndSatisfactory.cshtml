@@ -25,11 +25,12 @@
                     @Html.HiddenFor(x => x.FinalInspection.Graffiti)
                     @Html.HiddenFor(x => x.FinalInspection.NoRightWayPermit)
                     @Html.HiddenFor(x => x.FinalInspection.OtherRepairsNotAcceptable)
-                    @Html.HiddenFor(x => x.redirecURL)
+                    @Html.HiddenFor(x => x.redirectURL)
                     <div class="block-content collapse in">
                         <div style="padding-left: 112px;">
                             <div class="row">
                                 <div style="text-align:center">
+                                    <img src="~/images/City-Seal small.png" style="align-content:center" />
                                     <img src="~/images/PBOT small.jpg" style="align-content:center" />
                                 </div>
                                 <div class="span12 reasonFont noticeInfo" style="margin-left:20px;">
@@ -127,7 +128,7 @@
                                     </div>
 
                                     <div class="span3">
-                                        Date : @DateTime.Now.ToShortDateString()
+                                        Date : @DateTime.Now
                                     </div>
                                 </div>
                                 <div class="row">

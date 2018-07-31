@@ -30,7 +30,7 @@ namespace SidewalkUI.Controllers
             {
                 model.FinalInspection.FinalPassInspectorId = model.AffidavitDetails.AffidavitInfo.Inspector.InspectorId;
             }
-            model.redirecURL = redirectURL;
+            model.redirectURL = redirectURL;
 
             return View(model);
         }
@@ -49,7 +49,7 @@ namespace SidewalkUI.Controllers
             {
                 model.FinalInspection.FinalFailInspectorId = model.AffidavitDetails.AffidavitInfo.Inspector.InspectorId;
             }
-            model.redirecURL = redirectURL;
+            model.redirectURL = redirectURL;
             return View(model);
         }
         
@@ -57,7 +57,7 @@ namespace SidewalkUI.Controllers
         public ActionResult RepairsNotAcceptable(FormFinalInspectionViewModel model)
         {
             api.AddAffidavitFinalInspection(model.FinalInspection, 8);
-            if (model.redirecURL == "TrackIt")
+            if (model.redirectURL == "TrackIt")
             {
                 return RedirectToAction("GetAllTrackIT", "Home", new { affidavitNo = model.FinalInspection.AffidavitID });
             }
@@ -71,7 +71,7 @@ namespace SidewalkUI.Controllers
         public ActionResult RepairsAreCompleteAndSatisfactory(FormFinalInspectionViewModel model)
         {
             api.AddAffidavitFinalInspection(model.FinalInspection, 12);
-            if (model.redirecURL == "TrackIt")
+            if (model.redirectURL == "TrackIt")
             {
                 return RedirectToAction("GetAllTrackIT", "Home", new { affidavitNo = model.FinalInspection.AffidavitID });
             }
